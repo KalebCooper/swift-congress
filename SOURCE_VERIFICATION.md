@@ -60,3 +60,14 @@ from Bioguide IDs; today's crosswalk does not guarantee a historical identity ma
 Preserve attribution, record-level rights, source identifiers, and original receipts. Overlapping
 official publications do not necessarily provide independent corroboration. Applications own
 filtering, joins, snapshot acceptance, durable provenance, and refresh scheduling.
+
+## House implementation validation
+
+House XML and HTML fixtures include 1990 quorum/legislative votes and 2026 roll 314.
+No member identity is inferred for missing historical name-id attributes. Published
+Aye/No and Yea/Nay strings, quorum counts, unknown XML, and original bytes survive.
+Year indexes expose official CGI vote references and independent ROLL section links.
+Six House tests pass in both Linux configurations. The codec explicitly rejects the
+entity-declaration marker before parsing because libxml can silently skip declarations
+when entity resolution is disabled. Byte, depth, and element limits are enforced.
+Six product DocC catalogs build with zero warnings on Linux. Apple/Android gates remain pending.

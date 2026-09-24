@@ -6,6 +6,9 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 
 ### Added
 
+- Independent House HTML inventories and XML roll calls, bounded decoding, historical optional IDs,
+  source receipts, fixtures, documentation, tests, and a runnable file demo.
+
 - Bioguide supplied-file import with bounded extraction, per-profile SHA-256, count/identity validation,
   original profile bytes, historical service models, and a full-archive validation demo.
 

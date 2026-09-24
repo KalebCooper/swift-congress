@@ -6,3 +6,5 @@ builder:
         - SwiftCongressBioguide
         - SwiftCongressDataModels
         - SwiftCongressData
+        - SwiftCongressHouseVotesModels
+        - SwiftCongressHouseVotes

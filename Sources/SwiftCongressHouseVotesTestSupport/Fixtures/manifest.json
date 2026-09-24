@@ -1,0 +1,72 @@
+[
+  {
+    "bytes": 55383,
+    "file": "house1990.xml",
+    "mediaType": "text/xml",
+    "providerID": "house1990",
+    "retrievedAt": "2026-09-24T00:24:40.670881+00:00",
+    "sha256": "8bf10afa1a92c5fb913ec07872b2423ceb47fd135c8371940099f8ea8f9282f6",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/1990/roll001.xml"
+  },
+  {
+    "bytes": 53497,
+    "file": "house1990-vote.xml",
+    "mediaType": "text/xml",
+    "providerID": "house1990-vote",
+    "retrievedAt": "2026-09-24T00:24:40.931071+00:00",
+    "sha256": "46694773df2f8e711d918f2f2efbce5aa3690ce62dae91a943c818a40f938c61",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/1990/roll010.xml"
+  },
+  {
+    "bytes": 82913,
+    "file": "house2026.xml",
+    "mediaType": "text/xml",
+    "providerID": "house2026",
+    "retrievedAt": "2026-09-24T00:24:41.426002+00:00",
+    "sha256": "162e33c2353018f0b80d7a4db7be0cd66cf535e6c6a3db04863f5c5b59578f21",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/2026/roll314.xml"
+  },
+  {
+    "bytes": 11163,
+    "file": "house-index.html",
+    "mediaType": "text/html",
+    "providerID": "house-index",
+    "retrievedAt": "2026-09-24T00:24:41.527623+00:00",
+    "sha256": "543511881a3c821dd378f3992c1b5df8360a34db8976b71941439349347041b6",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/2026/index.asp"
+  },
+  {
+    "bytes": 8399,
+    "file": "house-index1990.html",
+    "mediaType": "text/html",
+    "providerID": "house-index1990",
+    "retrievedAt": "2026-09-24T00:24:41.665543+00:00",
+    "sha256": "bac268277b64a8851ef575ab1a4b0cfa181db84cd7a2cc1a6675b3ea90c8cec4",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/1990/index.asp"
+  },
+  {
+    "bytes": 49735,
+    "file": "house-section1990.html",
+    "mediaType": "text/html",
+    "providerID": "house-section1990",
+    "retrievedAt": "2026-09-24T01:03:11.033602+00:00",
+    "sha256": "936243e09e4ebb742311b9505eaf8b36b3e492fe6b3b4c929bba767e68312b05",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/1990/ROLL_000.asp"
+  },
+  {
+    "bytes": 9558,
+    "file": "house-section2026.html",
+    "mediaType": "text/html",
+    "providerID": "house-section2026",
+    "retrievedAt": "2026-09-24T01:03:11.141040+00:00",
+    "sha256": "79aada298aadc68677044636757112ce248847475171705bf26d4e8064c630d3",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/2026/ROLL_300.asp"
+  }
+]

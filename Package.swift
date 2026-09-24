@@ -13,6 +13,8 @@ let package = Package(
     .library(name: "SwiftCongressBioguideModels", targets: ["SwiftCongressBioguideModels"]),
     .library(name: "SwiftCongressData", targets: ["SwiftCongressData"]),
     .library(name: "SwiftCongressDataModels", targets: ["SwiftCongressDataModels"]),
+    .library(name: "SwiftCongressHouseVotes", targets: ["SwiftCongressHouseVotes"]),
+    .library(name: "SwiftCongressHouseVotesModels", targets: ["SwiftCongressHouseVotesModels"]),
   ],
   traits: [
     .default(enabledTraits: []),
@@ -35,6 +37,10 @@ let package = Package(
     .executableTarget(
       name: "CongressDataDemo", dependencies: ["SwiftCongressData", "SwiftCongressDataModels"],
       path: "Examples/CongressDataDemo", swiftSettings: swiftSettings),
+    .executableTarget(
+      name: "CongressHouseVotesDemo",
+      dependencies: ["SwiftCongressHouseVotes", "SwiftCongressHouseVotesModels"],
+      path: "Examples/CongressHouseVotesDemo", swiftSettings: swiftSettings),
     .target(
       name: "SwiftCongressBioguide",
       dependencies: [
@@ -61,6 +67,23 @@ let package = Package(
     .target(
       name: "SwiftCongressDataTestSupport", resources: [.copy("Fixtures")],
       swiftSettings: swiftSettings),
+    .target(
+      name: "SwiftCongressHouseVotes",
+      dependencies: [
+        .product(name: "HTTPCore", package: "swifty-networking"),
+        .product(
+          name: "HTTPPortable", package: "swifty-networking",
+          condition: .when(traits: ["HTTPPortable"])),
+        .product(name: "HTTPTypes", package: "swift-http-types"),
+        .product(
+          name: "HTTPURLSession", package: "swifty-networking",
+          condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS, .visionOS, .watchOS])),
+        "SwiftCongressHouseVotesModels",
+      ], swiftSettings: swiftSettings),
+    .target(name: "SwiftCongressHouseVotesModels", swiftSettings: swiftSettings),
+    .target(
+      name: "SwiftCongressHouseVotesTestSupport", resources: [.copy("Fixtures")],
+      swiftSettings: swiftSettings),
     .testTarget(
       name: "SwiftCongressBioguideModelsTests",
       dependencies: ["SwiftCongressBioguideModels", "SwiftCongressBioguideTestSupport"],
@@ -81,6 +104,19 @@ let package = Package(
         .product(name: "HTTPTesting", package: "swifty-networking"),
         .product(name: "HTTPTypes", package: "swift-http-types"),
         "SwiftCongressData", "SwiftCongressDataModels", "SwiftCongressDataTestSupport",
+      ], swiftSettings: swiftSettings),
+    .testTarget(
+      name: "SwiftCongressHouseVotesModelsTests",
+      dependencies: ["SwiftCongressHouseVotesModels", "SwiftCongressHouseVotesTestSupport"],
+      swiftSettings: swiftSettings),
+    .testTarget(
+      name: "SwiftCongressHouseVotesTests",
+      dependencies: [
+        .product(name: "HTTPCore", package: "swifty-networking"),
+        .product(name: "HTTPTesting", package: "swifty-networking"),
+        .product(name: "HTTPTypes", package: "swift-http-types"),
+        "SwiftCongressHouseVotes", "SwiftCongressHouseVotesModels",
+        "SwiftCongressHouseVotesTestSupport",
       ], swiftSettings: swiftSettings),
   ],
   swiftLanguageModes: [.v6]

@@ -146,7 +146,7 @@ check_coordinates() {
 }
 
 # Prohibition. No em dashes anywhere written here. A recorded response body is the provider's words
-# rather than this repository's, so the scan skips `.json`, the format every recording is saved in.
+# rather than this repository's, so the scan skips recorded JSON, XML, and HTML formats.
 # The exclusion is by extension rather than by the Fixtures directory because prose this repository
 # does write lives there too, such as a README naming what each recording holds, and excluding the
 # directory would drop it from the scan with nothing to say so. A recording saved in some other
@@ -156,7 +156,7 @@ check_em_dash() {
   local name="no em dash in Sources, Tests, Scripts, .github, Package.swift, .spi.yml, README, CHANGELOG, CONTRIBUTING, recordings aside"
   local hits dash
   dash=$(printf '\342\200\224')
-  hits=$(grep -rnH --exclude='*.json' -- "$dash" "$ROOT/Sources" "$ROOT/Tests" "$ROOT/Scripts" "$ROOT/.github" "$ROOT/Package.swift" "$ROOT/.spi.yml" "$ROOT/README.md" "$ROOT/CHANGELOG.md" "$ROOT/CONTRIBUTING.md" 2>/dev/null || true)
+  hits=$(grep -rnH --exclude='*.json' --exclude='*.xml' --exclude='*.html' -- "$dash" "$ROOT/Sources" "$ROOT/Tests" "$ROOT/Scripts" "$ROOT/.github" "$ROOT/Package.swift" "$ROOT/.spi.yml" "$ROOT/README.md" "$ROOT/CHANGELOG.md" "$ROOT/CONTRIBUTING.md" 2>/dev/null || true)
   if [ -z "$hits" ]; then pass "$name"; else fail "$name"; printf '%s\n' "$hits"; fi
 }
 
@@ -168,7 +168,7 @@ check_em_dash() {
 check_test_jargon() {
   local name="no test double, driver, or seam jargon in Sources, Tests, .github, README, CHANGELOG, CONTRIBUTING, recordings aside"
   local hits
-  hits=$(grep -rnHwiE --exclude='*.json' "test doubles?|doubles|(the|a|second|no) double|the driver|the seam|a seam|seams" "$ROOT/Sources" "$ROOT/Tests" "$ROOT/.github" "$ROOT/README.md" "$ROOT/CHANGELOG.md" "$ROOT/CONTRIBUTING.md" 2>/dev/null || true)
+  hits=$(grep -rnHwiE --exclude='*.json' --exclude='*.xml' --exclude='*.html' "test doubles?|doubles|(the|a|second|no) double|the driver|the seam|a seam|seams" "$ROOT/Sources" "$ROOT/Tests" "$ROOT/.github" "$ROOT/README.md" "$ROOT/CHANGELOG.md" "$ROOT/CONTRIBUTING.md" 2>/dev/null || true)
   if [ -z "$hits" ]; then pass "$name"; else fail "$name"; printf '%s\n' "$hits"; fi
 }
 

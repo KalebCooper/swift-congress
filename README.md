@@ -15,7 +15,8 @@ stable snapshot, freshness, availability, or identity matching is guaranteed.
 Bioguide supplied-file import verifies bounded profile reads, inventory counts, SHA-256, source IDs,
 and predecessor-body affiliations. A full 13,056-profile official snapshot has passed the importer.
 House year/section discovery and roll calls are implemented independently, including historical
-rows without member IDs. Senate services remain pending. No package release exists.
+rows without member IDs. Senate session inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are
+also independent services. Historical identity gaps remain unresolved. No package release exists.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
 ## Usage
@@ -51,6 +52,8 @@ instant and a new output directory. Refresh scheduling and snapshot promotion be
 
 `Examples/CongressHouseVotesDemo` reads a supplied House roll-call XML file, or uses `--live` on Apple.
 
+`Examples/CongressSenateVotesDemo` reads a supplied Senate XML vote, or uses `--live` on Apple.
+
 ## Products
 
 | Product | Responsibility |
@@ -62,6 +65,9 @@ instant and a new output directory. Refresh scheduling and snapshot promotion be
 
 | SwiftCongressHouseVotes | Bounded House index and roll-call retrieval |
 | SwiftCongressHouseVotesModels | Independent HTML inventories, XML records, typed requests and endpoints |
+
+| SwiftCongressSenateVotes | Bounded Senate inventory, vote, and current identity retrieval |
+| SwiftCongressSenateVotesModels | Independent Senate XML records, source identities, requests and endpoints |
 
 ## Requirements
 

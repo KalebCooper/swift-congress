@@ -71,3 +71,13 @@ Six House tests pass in both Linux configurations. The codec explicitly rejects 
 entity-declaration marker before parsing because libxml can silently skip declarations
 when entity resolution is disabled. Byte, depth, and element limits are enforced.
 Six product DocC catalogs build with zero warnings on Linux. Apple/Android gates remain pending.
+
+## Senate implementation validation
+
+The independent Senate service reads the explicit session XML inventory, roll calls,
+and dated current LIS identity export. The 1989 fixture is a nomination vote without
+modify_date; the 2026 fixture is amendment cloture with nested target-document metadata.
+Empty counts, nested question text, unknown fields, and original bytes survive decoding.
+Only two historical voter LIS IDs occur in the recorded current crosswalk, and no
+automatic identity join is performed. Seven Senate tests pass in both Linux configurations.
+The full package has 38 tests across eight suites and eight zero-warning Linux DocC catalogs.

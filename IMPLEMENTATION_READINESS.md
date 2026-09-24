@@ -2,7 +2,8 @@
 
 SwiftCongressData and SwiftCongressDataModels implement Congress discovery, bill detail, bill
 inventories, and action inventories. Bioguide supplied-file import is implemented and has validated all 13,056 records in the supplied
-official archive. House source services are implemented; Senate services remain pending. Source coverage does
+official archive. Independent House and Senate vote services are implemented, including explicit inventories and
+the Senate current identity crosswalk. Source coverage does
 not establish historical completeness.
 
 The public swifty-networking 1.3.1 tag was verified September 24, 2026 UTC at
@@ -12,9 +13,9 @@ records the HTTPPortable superset. No unpublished dependency override is used.
 ## Verified locally
 
 - Strict source verification and all 47 planted source-checker arms.
-- 31 Linux Swift 6.3.3 tests in six suites, both default traits and HTTPPortable.
-- Six Congress.gov, Bioguide, and House DocC catalogs, built from Linux modules with zero warnings.
-- CongressDataDemo execution against the recorded Congress 6 bill.
+- 38 Linux Swift 6.3.3 tests in eight suites, both default traits and HTTPPortable.
+- Eight Congress.gov, Bioguide, House, and Senate DocC catalogs, built from Linux modules with zero warnings.
+- CongressDataDemo, CongressBioguideDemo, CongressHouseVotesDemo, and CongressSenateVotesDemo execution against recorded or supplied source data.
 
 ## Remaining gates
 
@@ -24,7 +25,6 @@ records the HTTPPortable superset. No unpublished dependency override is used.
 - Android emulator execution: no local Android Swift SDK or adb is installed.
 - Hosted CI, both iOS matrix entries, documentation publication, remote creation, and release.
 - Congress.gov members and text-version payload acquisition after the observed HTTP 429.
-- Independent Senate services.
 
 Fixtures record exact sanitized URLs, retrieval timestamps, statuses, media types, byte counts,
 hashes, and provider IDs. Tests do not reach live sources. See SOURCE_VERIFICATION.md.

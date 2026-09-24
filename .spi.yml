@@ -8,3 +8,5 @@ builder:
         - SwiftCongressData
         - SwiftCongressHouseVotesModels
         - SwiftCongressHouseVotes
+        - SwiftCongressSenateVotesModels
+        - SwiftCongressSenateVotes

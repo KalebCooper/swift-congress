@@ -1,0 +1,52 @@
+[
+  {
+    "bytes": 23263,
+    "file": "senate1989.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate1989",
+    "retrievedAt": "2026-09-24T00:24:42.096675+00:00",
+    "sha256": "41a78a344b155b7f5e3ccc145dedb8960501c5e67da80e411b96021fa548d05f",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1011/vote_101_1_00001.xml"
+  },
+  {
+    "bytes": 28736,
+    "file": "senate2026.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate2026",
+    "retrievedAt": "2026-09-24T00:24:42.323029+00:00",
+    "sha256": "972421a0cd97e772aacfc422b546c5454031f9a71fe818315e81ee8cb7a9e57a",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00240.xml"
+  },
+  {
+    "bytes": 158067,
+    "file": "senate-index.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate-index",
+    "retrievedAt": "2026-09-24T00:24:43.574061+00:00",
+    "sha256": "e1c3db056fd28f93261e4c5f82964f9116309e98086da869047f85dba7585fe6",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml"
+  },
+  {
+    "bytes": 67619,
+    "file": "senate-identities.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate-identities",
+    "retrievedAt": "2026-09-24T00:24:43.760987+00:00",
+    "sha256": "d3a74c1a7da3ce7a1b00ea3ee45d671ae3c409f0e24954bb4510deb58a9cf64a",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml"
+  },
+  {
+    "bytes": 149123,
+    "file": "senate-index1989.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate-index1989",
+    "retrievedAt": "2026-09-24T01:03:11.454453+00:00",
+    "sha256": "eb77e0364091184054bf7522a68ff0e7c7b6bdf68494d36e8e007d47921a3c5f",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_101_1.xml"
+  }
+]

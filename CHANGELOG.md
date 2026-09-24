@@ -6,6 +6,9 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 
 ### Added
 
+- Independent Senate session inventories, roll calls, and dated current LIS-to-Bioguide identities.
+- Open House and Senate position values and bounded, entity-rejecting system XML codecs.
+
 - Independent House HTML inventories and XML roll calls, bounded decoding, historical optional IDs,
   source receipts, fixtures, documentation, tests, and a runnable file demo.
 

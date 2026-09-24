@@ -29,7 +29,7 @@ strings and retain empty values; the library does not recompute or replace them.
 XML uses the system FoundationXML codec on Linux and Android and Foundation on Apple.
 It rejects entity declarations, never resolves external entities, and bounds bytes,
 depth, and element count. It supports source-declared character encodings. HTML is
-bounded UTF-8 and retains its original text. Malformed input fails explicitly.
+bounded UTF-8 and retains its original text. Malformed input and inventories with no recognized entries fail explicitly.
 
 Official source: [House Clerk XML information](https://xml.house.gov/).
 Attributed recordings cover 1990 quorum and legislative rolls and a 2026 roll,

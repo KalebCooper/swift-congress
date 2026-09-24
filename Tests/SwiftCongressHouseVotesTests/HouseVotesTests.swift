@@ -31,6 +31,42 @@ struct HouseVotesTests {
     }
   }
 
+  @Test func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
+    let ready = Gate(); let resume = Gate()
+    let bytes = try Fixture.house2026.data()
+    let chunks = PausedChunks(
+      prefix: bytes.prefix(10), ready: ready, resume: resume, suffix: bytes.dropFirst(10))
+    let client = HouseVotesClient(
+      transport: PausedTransport(chunks: chunks), userAgent: "CancellationTests")
+    let id = try HouseVoteIdentifier(number: 314, year: 2026)
+    let task = Task {
+      do {
+        _ = try await client.rollCall(id)
+        Issue.record("Expected cancellation before decoding the complete record")
+      } catch HouseVotesError.transport(.cancelled) {}
+    }
+    await ready.wait(); task.cancel(); await resume.open(); try await task.value
+  }
+
+  @Test func customResponseUsesTheSameExecutor() async throws {
+    struct Custom: HouseResponse {
+      let root: HouseXMLNode
+      static func decode(_ data: Data, sourceURL: URL) throws(HouseDecodingError) -> Self {
+        Self(root: try HouseXMLCodec.decode(data))
+      }
+    }
+    let id = try HouseVoteIdentifier(number: 314, year: 2026)
+    let endpoint = try #require(Endpoint<Custom>(path: Endpoint<HouseRollCall>.rollCall(id).path))
+    let mock = MockTransport(results: [
+      .success(Response(body: try Fixture.house2026.data(), status: .ok))
+    ])
+    let client = HouseVotesClient(transport: mock, userAgent: "CustomTests")
+    let value = try await client.value(for: HouseVoteRequest(endpoint: endpoint))
+    #expect(!value.root.content.isEmpty)
+    #expect(mock.requests.count == 1)
+    #expect(HouseVotePosition(rawValue: "Future Position").rawValue == "Future Position")
+  }
+
   @Test func indexesDoNotFetchSectionsOrVotes() async throws {
     let mock = MockTransport(results: [
       .success(Response(body: try Fixture.house_index.data(), status: .ok))
@@ -58,5 +94,51 @@ struct HouseVotesTests {
       Issue.record("Expected redirect refusal")
     } catch HouseVotesError.transport(.httpStatus(_, let status, _)) { #expect(status == 302) }
     #expect(redirect.requests.count == 1)
+  }
+}
+
+private actor Gate {
+  private var continuations: [CheckedContinuation<Void, Never>] = []
+  private var isOpen = false
+  func open() {
+    isOpen = true
+    for continuation in continuations { continuation.resume() }
+    continuations = []
+  }
+  func wait() async {
+    if isOpen { return }
+    await withCheckedContinuation { continuations.append($0) }
+  }
+}
+
+private struct PausedChunks: AsyncSequence, Sendable {
+  let prefix: Data
+  let ready: Gate
+  let resume: Gate
+  let suffix: Data
+  func makeAsyncIterator() -> Iterator { Iterator(base: self) }
+  struct Iterator: AsyncIteratorProtocol {
+    let base: PausedChunks
+    var index = 0
+    mutating func next() async -> Data? {
+      defer { index += 1 }
+      if index == 0 { return base.prefix }
+      if index == 1 { await base.ready.open(); await base.resume.wait(); return base.suffix }
+      return nil
+    }
+  }
+}
+
+private struct PausedTransport: Transport {
+  let chunks: PausedChunks
+  func send(_ request: HTTPRequest, body: TransportBody, options: TransportOptions)
+    async throws(TransportError) -> Response
+  {
+    throw .cancelled
+  }
+  func stream(_ request: HTTPRequest, body: TransportBody, options: TransportOptions)
+    async throws(TransportError) -> StreamedResponse
+  {
+    StreamedResponse(body: StreamedBody(chunks), headers: [:], status: .ok)
   }
 }

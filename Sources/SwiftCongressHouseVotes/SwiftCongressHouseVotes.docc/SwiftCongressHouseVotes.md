@@ -57,3 +57,6 @@ retries default to disabled; clocks and retry policies can be injected.
 The default response bound is 16 MiB, enforced while consuming transport chunks.
 No partial value is returned on size, cancellation, decoding, or HTTP failure.
 The caller supplies receipt timestamps, storage, hashing, and refresh policy.
+
+Non-success HTTP responses use HTTPCore's separate 64 KiB error-body capture bound.
+Their headers and status remain available in the transport error.

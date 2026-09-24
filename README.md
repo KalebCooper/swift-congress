@@ -17,6 +17,7 @@ and predecessor-body affiliations. A full 13,056-profile official snapshot has p
 House year/section discovery and roll calls are implemented independently, including historical
 rows without member IDs. Senate session inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are
 also independent services. Historical identity gaps remain unresolved. No package release exists.
+Member and bill-text-version operations remain pending official payload verification after rate limiting.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
 ## Usage

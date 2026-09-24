@@ -14,7 +14,7 @@ public struct HouseVoteIndex: Codable, Hashable, HouseResponse, Sendable {
   public let votes: [HouseVoteReference]
 
   /// Extracts the verified House index link forms from at most 4 MiB of UTF-8 HTML.
-  /// It skips comments and never treats a year index as XML or invents missing roll numbers.
+  /// It skips comments and raw script/style text and never treats a year index as XML or invents missing roll numbers.
   public static func decode(_ data: Data, sourceURL: URL) throws(HouseDecodingError) -> Self {
     guard !Task.isCancelled else { throw .cancelled }
     guard data.count <= 4_194_304 else { throw .limitExceeded }
@@ -35,9 +35,17 @@ public struct HouseVoteIndex: Codable, Hashable, HouseResponse, Sendable {
         guard let end = remaining.range(of: "-->") else { throw .invalidDocument }
         remaining = remaining[end.upperBound...]; continue
       }
-      guard let end = remaining.firstIndex(of: ">") else { throw .invalidDocument }
+      guard let end = tagEnd(in: remaining) else { throw .invalidDocument }
       let tag = String(remaining[remaining.index(after: remaining.startIndex)..<end])
       remaining = remaining[remaining.index(after: end)...]
+      let tagName = tag.prefix(while: { !$0.isWhitespace && $0 != "/" }).lowercased()
+      if tagName == "script" || tagName == "style" {
+        guard let closing = remaining.range(of: "</" + tagName, options: .caseInsensitive) else {
+          throw .invalidDocument
+        }
+        remaining = remaining[closing.lowerBound...]
+        continue
+      }
       guard let raw = href(in: tag) else { continue }
       let link = raw.split(separator: "&amp;", omittingEmptySubsequences: false).joined(
         separator: "&")
@@ -69,6 +77,8 @@ public struct HouseVoteIndex: Codable, Hashable, HouseResponse, Sendable {
         }
       }
     }
+    // An unrecognized or empty document must not masquerade as a complete inventory.
+    guard !votes.isEmpty || !sections.isEmpty else { throw .invalidDocument }
     return Self(html: html, sections: sections, votes: votes)
   }
 
@@ -93,6 +103,22 @@ public struct HouseVoteIndex: Codable, Hashable, HouseResponse, Sendable {
     }
     return nil
   }
+
+  private static func tagEnd(in text: Substring) -> String.Index? {
+    var quote: Character?
+    for index in text.indices {
+      let character = text[index]
+      if let current = quote {
+        if character == current { quote = nil }
+      } else if character == "\"" || character == "'" {
+        quote = character
+      } else if character == ">" {
+        return index
+      }
+    }
+    return nil
+  }
+
 }
 
 extension Endpoint where Response == HouseVoteIndex {

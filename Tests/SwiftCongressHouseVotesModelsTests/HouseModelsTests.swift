@@ -40,6 +40,20 @@ struct HouseModelsTests {
         == "/evs/2026/roll1000.xml")
   }
 
+  @Test func inventoriesIgnoreCommentsAndScriptTextAndHandleQuotedAngles() throws {
+    let html = """
+      <html><title>Roll Call</title><script>let example = '<a href="/cgi-bin/vote.asp?year=2026&rollnumber=99">';</script>
+      <!-- <a href="/cgi-bin/vote.asp?year=2026&rollnumber=98"> -->
+      <a title="a > b" href="/cgi-bin/vote.asp?year=2026&amp;rollnumber=314">Vote</a></html>
+      """
+    let url = try #require(URL(string: "https://clerk.house.gov/evs/2026/index.asp"))
+    let value = try HouseVoteIndex.decode(Data(html.utf8), sourceURL: url)
+    #expect(value.votes.map(\.identifier.number) == [314])
+    #expect(throws: HouseDecodingError.invalidDocument) {
+      try HouseVoteIndex.decode(Data("<html>Roll Call unavailable</html>".utf8), sourceURL: url)
+    }
+  }
+
   @Test func xmlPreservesMixedTextAndRejectsUnboundedOrEntityContent() throws {
     let tree = try HouseXMLCodec.decode(
       Data("<x:r xmlns:x='urn:test' unknown='yes'>before<x:v>é</x:v>after</x:r>".utf8))

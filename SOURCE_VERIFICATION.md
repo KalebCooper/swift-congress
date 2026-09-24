@@ -81,3 +81,24 @@ Empty counts, nested question text, unknown fields, and original bytes survive d
 Only two historical voter LIS IDs occur in the recorded current crosswalk, and no
 automatic identity join is performed. Seven Senate tests pass in both Linux configurations.
 The full package has 38 tests across eight suites and eight zero-warning Linux DocC catalogs.
+
+## Final local checks and unavailable gates
+
+The final deterministic suite has 43 tests in eight suites, passing with both Linux
+default and HTTPPortable graphs. It includes cancellation during streamed chamber
+body reads and custom consumer response decoding. House HTML parsing ignores comments,
+script/style text, and angle brackets inside quoted attributes; unrecognized empty
+inventories fail instead of claiming completion. The five archive preparation tests
+and 47 source-checker self-test arms also pass.
+
+The final Congress.gov attempt returned HTTP 429 with Retry-After 81242 seconds and
+X-RateLimit-Remaining 0. Member and text-version implementation remains gated by real
+official fixtures. No API limit was bypassed. The official member and bill endpoint
+contracts were re-read, but documentation is not substituted for successful payload evidence.
+
+Native Xcode MCP calls return Transport closed. A fresh bridge registered the package,
+but scoped schemes/destinations calls did not finish, even after reopening only this
+workspace. A project-template call wrote a skeleton but did not return; it remains
+ignored unfinished work. No Apple build, test, or application-demo pass is claimed.
+The host has no Android Swift SDK, adb, or emulator configured; the existing pinned
+Android CI lane remains the required execution gate. No shared service was reset.

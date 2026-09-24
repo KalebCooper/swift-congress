@@ -16,6 +16,42 @@ extension SenateVoteRequest where Response == SenateRollCall {
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct SenateVotesTests {
+  @Test func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
+    let ready = Gate(); let resume = Gate()
+    let bytes = try Fixture.senate2026.data()
+    let chunks = PausedChunks(
+      prefix: bytes.prefix(10), ready: ready, resume: resume, suffix: bytes.dropFirst(10))
+    let client = SenateVotesClient(
+      transport: PausedTransport(chunks: chunks), userAgent: "CancellationTests")
+    let id = try SenateVoteIdentifier(congress: 119, number: 240, session: 2)
+    let task = Task {
+      do {
+        _ = try await client.rollCall(id)
+        Issue.record("Expected cancellation before decoding the complete record")
+      } catch SenateVotesError.transport(.cancelled) {}
+    }
+    await ready.wait(); task.cancel(); await resume.open(); try await task.value
+  }
+
+  @Test func customResponseUsesTheSameExecutor() async throws {
+    struct Custom: SenateResponse {
+      let root: SenateXMLNode
+      static func decode(_ data: Data, sourceURL: URL) throws(SenateDecodingError) -> Self {
+        Self(root: try SenateXMLCodec.decode(data))
+      }
+    }
+    let id = try SenateVoteIdentifier(congress: 119, number: 240, session: 2)
+    let endpoint = try #require(Endpoint<Custom>(path: Endpoint<SenateRollCall>.rollCall(id).path))
+    let mock = MockTransport(results: [
+      .success(Response(body: try Fixture.senate2026.data(), status: .ok))
+    ])
+    let client = SenateVotesClient(transport: mock, userAgent: "CustomTests")
+    let value = try await client.value(for: SenateVoteRequest(endpoint: endpoint))
+    #expect(!value.root.content.isEmpty)
+    #expect(mock.requests.count == 1)
+    #expect(SenateVotePosition(rawValue: "Future Position").rawValue == "Future Position")
+  }
+
   @Test func everyExecutionLevelUsesTheSameBoundedDecoder() async throws {
     let bytes = try Fixture.senate1989.data()
     let mock = MockTransport(
@@ -69,5 +105,51 @@ struct SenateVotesTests {
     } catch SenateVotesError.transport(.httpStatus(_, let code, let headers)) {
       #expect(code == 429); #expect(headers[.retryAfter] == "60")
     }
+  }
+}
+
+private actor Gate {
+  private var continuations: [CheckedContinuation<Void, Never>] = []
+  private var isOpen = false
+  func open() {
+    isOpen = true
+    for continuation in continuations { continuation.resume() }
+    continuations = []
+  }
+  func wait() async {
+    if isOpen { return }
+    await withCheckedContinuation { continuations.append($0) }
+  }
+}
+
+private struct PausedChunks: AsyncSequence, Sendable {
+  let prefix: Data
+  let ready: Gate
+  let resume: Gate
+  let suffix: Data
+  func makeAsyncIterator() -> Iterator { Iterator(base: self) }
+  struct Iterator: AsyncIteratorProtocol {
+    let base: PausedChunks
+    var index = 0
+    mutating func next() async -> Data? {
+      defer { index += 1 }
+      if index == 0 { return base.prefix }
+      if index == 1 { await base.ready.open(); await base.resume.wait(); return base.suffix }
+      return nil
+    }
+  }
+}
+
+private struct PausedTransport: Transport {
+  let chunks: PausedChunks
+  func send(_ request: HTTPRequest, body: TransportBody, options: TransportOptions)
+    async throws(TransportError) -> Response
+  {
+    throw .cancelled
+  }
+  func stream(_ request: HTTPRequest, body: TransportBody, options: TransportOptions)
+    async throws(TransportError) -> StreamedResponse
+  {
+    StreamedResponse(body: StreamedBody(chunks), headers: [:], status: .ok)
   }
 }

@@ -63,3 +63,6 @@ return no partial value. HTTP errors preserve quota and Retry-After headers.
 
 The caller supplies receipt timestamps, hashing, storage, refresh policy, and completion
 accounting. No service imports the House, Congress.gov, or Bioguide SDK.
+
+Non-success HTTP responses use HTTPCore's separate 64 KiB error-body capture bound.
+Their headers and status remain available in the transport error.

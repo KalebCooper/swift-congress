@@ -12,7 +12,9 @@ Fixtures cover Congresses 6, 82, and 119 and the earliest Congress discovery pag
 null values, and historical source identifiers are preserved. No historical completeness,
 stable snapshot, freshness, availability, or identity matching is guaranteed.
 
-Bioguide and independent chamber services are not yet built. No package release exists.
+Bioguide supplied-file import verifies bounded profile reads, inventory counts, SHA-256, source IDs,
+and predecessor-body affiliations. A full 13,056-profile official snapshot has passed the importer.
+Independent chamber services are not yet built. No package release exists.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
 ## Usage
@@ -42,10 +44,16 @@ explicitly off Apple platforms. API keys are required and are sent only through 
 Its Apple live mode accepts `--live` and an explicit API key. The demo never supplies a default key.
 The deterministic example input is `Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`.
 
+`Examples/CongressBioguideDemo` validates every profile in a staged export directory. Prepare a
+supplied official all-profile ZIP with `Scripts/prepare-bioguide.py`; provide the actual retrieval
+instant and a new output directory. Refresh scheduling and snapshot promotion belong to the caller.
+
 ## Products
 
 | Product | Responsibility |
 | --- | --- |
+| SwiftCongressBioguide | Bounded supplied-file import, manifest and digest validation |
+| SwiftCongressBioguideModels | Profiles, source service affiliations, and archive provenance |
 | SwiftCongressData | Congress.gov execution, lazy traversal, and response capture |
 | SwiftCongressDataModels | Portable records, source identities, requests, endpoints, and continuation validation |
 

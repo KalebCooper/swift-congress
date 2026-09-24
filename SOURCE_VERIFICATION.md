@@ -35,6 +35,11 @@ M000985 retains Continental Congress 2 separately from U.S. Congresses 1 through
 string of `1806`, and missing personal service dates. Affiliation dates are not personal service
 dates. Portrait and asset rights remain source data, not package MIT licensing.
 
+The complete archive passed external extraction/CRC validation and the compiled Swift importer:
+13,056 unique profiles, including ConfederationCongress, ContinentalCongress, and USCongress.
+The importer checks all file hashes and exact source identities; this does not resolve the live
+website count discrepancy or choose a refresh policy.
+
 ## Chambers
 
 [House XML](https://xml.house.gov/) and [Senate XML](https://www.senate.gov/general/XML.htm) are

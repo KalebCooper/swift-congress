@@ -1,0 +1,32 @@
+{
+  "archiveSHA256": "71b6898bc068a046cc5dcbfc6d6486c2a22c9dfa9cffd6c4bf7810510006b27d",
+  "entries": [
+    {
+      "byteCount": 4038,
+      "filename": "A000375.json",
+      "identifier": "A000375",
+      "sha256": "c947b2fe1fd56b49afe8eac25a207aa0b90ee86f51ce27434bf0405c654f92a0"
+    },
+    {
+      "byteCount": 2635,
+      "filename": "B001323.json",
+      "identifier": "B001323",
+      "sha256": "bd87eff7930b0fa449f810a1e9d78fd8c28fea6a5b08ac45bbd1d5abb62d28e9"
+    },
+    {
+      "byteCount": 1792,
+      "filename": "H000619.json",
+      "identifier": "H000619",
+      "sha256": "febe433f5296f086cc713964b69e4e98d8c29cfcbc74409e46fafff699f5a154"
+    },
+    {
+      "byteCount": 24249,
+      "filename": "M000985.json",
+      "identifier": "M000985",
+      "sha256": "4e5f0f7f4b48910bf145b6724673f34d98cc5f588c85d109eed582971b4a4322"
+    }
+  ],
+  "profileCount": 4,
+  "retrievedAt": "2026-09-23T03:08:26Z",
+  "sourceURL": "https://bioguide.congress.gov/search"
+}

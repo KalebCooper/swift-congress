@@ -6,6 +6,9 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 
 ### Added
 
+- Bioguide supplied-file import with bounded extraction, per-profile SHA-256, count/identity validation,
+  original profile bytes, historical service models, and a full-archive validation demo.
+
 - Congress.gov discovery, bill detail and lists, and bill action lists.
 - Independent portable models, immutable typed requests/endpoints, and lazy page/item sequences.
 - Source-byte receipts, origin and continuation validation, explicit credentials, and transport injection.

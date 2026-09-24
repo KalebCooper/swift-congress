@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# Explicit scaffold mode checks infrastructure only. Default mode requires real source.
+# Source verification is the default. Scaffold checks apply only to an empty repository.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 case "${1:-}" in
   --scaffold) python3 "$ROOT/Scripts/verify-scaffold.py" ;;
   --self-test)
-    python3 "$ROOT/Scripts/verify-scaffold.py" --self-test
     bash "$ROOT/Scripts/verify-source.sh" --self-test
     ;;
   "") bash "$ROOT/Scripts/verify-source.sh" ;;

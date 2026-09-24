@@ -2,40 +2,65 @@
 
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Infrastructure for future Swift libraries covering published United States congressional records.
+Independent Swift libraries for published United States congressional records.
 
 ## Status
 
-Infrastructure only. No API, file importer, public products, sources, tests, or releases exist yet.
-Congress.gov data, Bioguide exports, and House and Senate roll calls are not yet built.
-No freshness, ordering, availability, historical completeness, or identity matching is guaranteed.
+Congress.gov discovery, bill detail, bill lists, and action lists are implemented with portable
+models, typed requests/endpoints, lazy page and item sequences, and exact source response receipts.
+Fixtures cover Congresses 6, 82, and 119 and the earliest Congress discovery page. Unknown fields,
+null values, and historical source identifiers are preserved. No historical completeness,
+stable snapshot, freshness, availability, or identity matching is guaranteed.
+
+Bioguide and independent chamber services are not yet built. No package release exists.
+See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
 ## Usage
 
-Maintainers can validate infrastructure with `bash Scripts/verify.sh --scaffold`.
-This does not validate a library implementation. The default gate fails until source exists.
+```swift
+import SwiftCongressData
+import SwiftCongressDataModels
+
+let client = CongressDataClient(apiKey: key, userAgent: "MyCivicApp/1.0")
+let source = try BillSourceIdentifier(congress: 6, number: "1", type: .houseBill)
+let detail = try await client.bill(source)
+let reusable = CongressRequest.bill(source)
+let same = try await client.value(for: reusable)
+
+for try await bill in client.bills(matching: try BillQuery(congress: 6)) {
+  print(bill.title)
+}
+```
+
+Use `response(for:)` for one endpoint receipt and `billPages(matching:)` for page receipts.
+Each receipt contains the exact decoded bytes, status, and repeated headers. Configure transports
+explicitly off Apple platforms. API keys are required and are sent only through X-Api-Key.
 
 ## Example
 
-There is no runnable consumer example yet.
+`Examples/CongressDataDemo` decodes an official recorded bill from a supplied file path.
+Its Apple live mode accepts `--live` and an explicit API key. The demo never supplies a default key.
+The deterministic example input is `Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`.
 
 ## Products
 
-| Product | Availability |
+| Product | Responsibility |
 | --- | --- |
-| None | No public products are declared. |
+| SwiftCongressData | Congress.gov execution, lazy traversal, and response capture |
+| SwiftCongressDataModels | Portable records, source identities, requests, endpoints, and continuation validation |
 
 ## Requirements
 
-The manifest declares Swift tools 6.2, Swift 6 language mode, and iOS, macOS, tvOS,
-visionOS, and watchOS 26. Linux and Android infrastructure is prepared but unverified.
-Infrastructure checks require Python 3, Git, Bash, and Swift with `swift format`.
+Swift tools 6.2, Swift 6, and iOS, macOS, tvOS, visionOS, or watchOS 26.
+Linux and Android use the optional HTTPPortable trait and an injected transport.
+No transport dependency is required to use a models product.
 
 ## Installation
 
-No installable library is available. This local repository has no remote or published version.
-See [implementation readiness](IMPLEMENTATION_READINESS.md) before adding a service.
+This repository is local and unreleased. Add it as a local Swift package and select the required
+library products. The HTTP SDK requires the verified public swifty-networking 1.3.1 or later.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). The package license does not grant rights to upstream portraits or
+other separately restricted source assets. Recorded sources are attributed in fixture manifests.

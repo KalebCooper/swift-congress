@@ -1,0 +1,70 @@
+{
+    "congresses": [
+        {
+            "endYear": "1791",
+            "name": "1st Congress",
+            "sessions": [
+                {
+                    "chamber": "House of Representatives",
+                    "endDate": "1789-09-29",
+                    "number": 1,
+                    "startDate": "1789-03-04",
+                    "type": "R"
+                },
+                {
+                    "chamber": "Senate",
+                    "endDate": "1789-09-29",
+                    "number": 1,
+                    "startDate": "1789-03-04",
+                    "type": "R"
+                },
+                {
+                    "chamber": "House of Representatives",
+                    "endDate": "1790-08-12",
+                    "number": 2,
+                    "startDate": "1790-01-04",
+                    "type": "R"
+                },
+                {
+                    "chamber": "Senate",
+                    "endDate": "1790-08-12",
+                    "number": 2,
+                    "startDate": "1790-01-04",
+                    "type": "R"
+                },
+                {
+                    "chamber": "House of Representatives",
+                    "endDate": "1791-03-03",
+                    "number": 3,
+                    "startDate": "1790-12-06",
+                    "type": "R"
+                },
+                {
+                    "chamber": "Senate",
+                    "endDate": "1791-03-03",
+                    "number": 3,
+                    "startDate": "1790-12-06",
+                    "type": "R"
+                },
+                {
+                    "chamber": "Senate",
+                    "endDate": "1791-03-03",
+                    "number": null,
+                    "startDate": "1789-03-04",
+                    "type": "R"
+                }
+            ],
+            "startYear": "1789",
+            "updateDate": "2021-06-11T19:25:39Z",
+            "url": "https://api.congress.gov/v3/congress/1?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 119,
+        "prev": "https://api.congress.gov/v3/congress?offset=116&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

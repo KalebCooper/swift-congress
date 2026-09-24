@@ -13,8 +13,6 @@ on:
 
 jobs:
   linux:
-    # Disabled until implementation, tests, and dependencies exist.
-    if: ${{ false }}
     name: swift test (Linux)
     runs-on: ubuntu-latest
     container: swift:6.3-noble
@@ -51,8 +49,6 @@ jobs:
         run: swift test --scratch-path .build-default
 
   android:
-    # Disabled until implementation, tests, and dependencies exist.
-    if: ${{ false }}
     name: swift test (Android)
     # `ubuntu-24.04` rather than `ubuntu-latest`: the action below derives the swift.org host toolchain
     # URL from the runner's os-release id, and swift.org publishes no build for a newer Ubuntu, so a
@@ -95,8 +91,6 @@ jobs:
           swift-version: '6.3.3'
 
   apple:
-    # Disabled until implementation, tests, and dependencies exist.
-    if: ${{ false }}
     name: Build & Test (iOS ${{ matrix.os }} Simulator)
     # Two runners, one job. `xcode-27` is GitHub's public preview image for Xcode 27 (arm64 only, macOS
     # 27.0, Xcode 27.0 RC as the default install; there is no `macos-27` label) and tests the newest
@@ -144,8 +138,6 @@ jobs:
       # Add the release-demo step on xcode-27 when a working demo exists.
 
   lint:
-    # Disabled until implementation, tests, and dependencies exist.
-    if: ${{ false }}
     name: swift-format lint
     runs-on: ubuntu-latest
     container: swift:6.3-noble
@@ -159,17 +151,14 @@ jobs:
       - name: Lint
         run: swift format lint --strict --recursive Sources Tests
 
-  scaffold:
-    name: Infrastructure only
+  repository:
+    name: Source conventions
     runs-on: ubuntu-latest
     container: swift:6.3-noble
-    # Provisional until measured green runs exist.
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
-      - name: Install infrastructure checker runtime
-        run: apt-get update && apt-get install -y python3
-      - name: Check infrastructure
-        run: bash Scripts/verify.sh --scaffold
-      - name: Check planted violations
-        run: bash Scripts/verify.sh --self-test
+      - name: Verify source and planted violations
+        run: |
+          bash Scripts/verify.sh
+          bash Scripts/verify.sh --self-test

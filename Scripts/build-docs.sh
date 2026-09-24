@@ -1,47 +1,47 @@
 #!/usr/bin/env bash
-# Convert only this package's two products from already-built iOS simulator modules.
-# Dependencies must compile, but their documentation is not part of this site.
+# Document every implemented pair, models first, from previously compiled modules.
 set -euo pipefail
-
-if ! find "$(dirname "$0")/../Sources" -name '*.swift' -type f -print -quit 2>/dev/null | grep -q .; then
-  echo "Not ready: source implementation is absent; no implementation checks ran." >&2
-  exit 1
-fi
-
 modules="${1:?Usage: bash Scripts/build-docs.sh MODULES_DIRECTORY OUTPUT_DIRECTORY [TARGET]}"
 output="${2:?Supply a new output directory}"
-sdk="$(xcrun --sdk iphonesimulator --show-sdk-path)"
-target="${3:-$(uname -m)-apple-ios26.0-simulator}"
-
 if [[ -e "$output" ]]; then
   echo "Output already exists: $output. Supply a new directory." >&2
   exit 1
 fi
-mkdir -p "$output/models-symbols" "$output/sdk-symbols" "$output/module-cache"
-
-xcrun swift-symbolgraph-extract -module-name SwiftCongressDataModels \
-  -target "$target" -sdk "$sdk" -I "$modules" \
-  -module-cache-path "$output/module-cache" \
-  -output-dir "$output/models-symbols" -minimum-access-level public
-xcrun docc convert Sources/SwiftCongressDataModels/SwiftCongressDataModels.docc \
-  --additional-symbol-graph-dir "$output/models-symbols" \
-  --output-dir "$output/SwiftCongressDataModels.doccarchive" \
-  --enable-experimental-external-link-support --warnings-as-errors
-
-xcrun swift-symbolgraph-extract -module-name SwiftCongressData \
-  -target "$target" -sdk "$sdk" -I "$modules" \
-  -module-cache-path "$output/module-cache" \
-  -output-dir "$output/sdk-symbols" -minimum-access-level public
-xcrun docc convert Sources/SwiftCongressData/SwiftCongressData.docc \
-  --additional-symbol-graph-dir "$output/sdk-symbols" \
-  --output-dir "$output/SwiftCongressData.doccarchive" \
-  --enable-experimental-external-link-support \
-  --dependency "$output/SwiftCongressDataModels.doccarchive" --warnings-as-errors
-
-xcrun docc merge "$output/SwiftCongressDataModels.doccarchive" "$output/SwiftCongressData.doccarchive" \
-  --synthesized-landing-page-name swift-congress --synthesized-landing-page-kind Package \
-  --output-path "$output/merged.doccarchive"
-xcrun docc process-archive transform-for-static-hosting "$output/merged.doccarchive" \
+if [[ "$(uname -s)" == Darwin ]]; then
+  target="${3:-$(uname -m)-apple-ios26.0-simulator}"
+  extract=(xcrun swift-symbolgraph-extract -sdk "$(xcrun --sdk iphonesimulator --show-sdk-path)")
+  docc=(xcrun docc)
+else
+  target="${3:-aarch64-unknown-linux-gnu}"
+  extract=(swift-symbolgraph-extract)
+  docc=(docc)
+fi
+mkdir -p "$output/module-cache"
+archives=()
+for catalog in Sources/*Models/*.docc; do
+  [[ -d "$catalog" ]] || { echo 'No implemented model catalogs.' >&2; exit 1; }
+  models="$(basename "$(dirname "$catalog")")"
+  sdk="${models%Models}"
+  for module in "$models" "$sdk"; do
+    mkdir -p "$output/$module-symbols"
+    "${extract[@]}" -module-name "$module" -target "$target" -I "$modules" \
+      -module-cache-path "$output/module-cache" -output-dir "$output/$module-symbols" \
+      -minimum-access-level public
+    dependencies=()
+    if [[ "$module" == "$sdk" ]]; then
+      dependencies=(--dependency "$output/$models.doccarchive")
+    fi
+    "${docc[@]}" convert "Sources/$module/$module.docc" \
+      --additional-symbol-graph-dir "$output/$module-symbols" \
+      --output-dir "$output/$module.doccarchive" \
+      --enable-experimental-external-link-support --warnings-as-errors \
+      ${dependencies[@]+"${dependencies[@]}"}
+    archives+=("$output/$module.doccarchive")
+  done
+done
+"${docc[@]}" merge "${archives[@]}" --synthesized-landing-page-name swift-congress \
+  --synthesized-landing-page-kind Package --output-path "$output/merged.doccarchive"
+"${docc[@]}" process-archive transform-for-static-hosting "$output/merged.doccarchive" \
   --output-path "$output/site" --hosting-base-path swift-congress
 
 # The archive's app shell has no root route under the Pages subpath.

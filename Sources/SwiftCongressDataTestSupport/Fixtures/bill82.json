@@ -1,0 +1,43 @@
+{
+    "bill": {
+        "actions": {
+            "count": 5,
+            "url": "https://api.congress.gov/v3/bill/82/s/677/actions?format=json"
+        },
+        "congress": 82,
+        "introducedDate": "1951-01-25",
+        "latestAction": {
+            "actionDate": "1952-06-28",
+            "text": "Became Public Law No. 82-416"
+        },
+        "laws": [
+            {
+                "number": "82-416",
+                "type": "Public Law"
+            }
+        ],
+        "legislationUrl": "https://www.congress.gov/bill/82th-congress/senate-bill/677",
+        "number": "677",
+        "originChamber": "Senate",
+        "originChamberCode": "S",
+        "textVersions": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/82/s/677/text?format=json"
+        },
+        "title": "An Act to fix the personnel strength of the United States Marine Corps, and to establish the relationship of the Commandant of the Marine Corps to the Joint Chiefs of Staff",
+        "titles": {
+            "count": 3,
+            "url": "https://api.congress.gov/v3/bill/82/s/677/titles?format=json"
+        },
+        "type": "S",
+        "updateDate": "2023-08-28T18:48:22Z",
+        "updateDateIncludingText": "2023-08-28T18:48:37Z"
+    },
+    "request": {
+        "billNumber": "677",
+        "billType": "s",
+        "congress": "82",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

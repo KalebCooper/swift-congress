@@ -1,0 +1,45 @@
+{
+    "bills": [
+        {
+            "congress": 6,
+            "introducedDate": "1799-12-16",
+            "latestAction": {
+                "actionDate": "1799-12-16",
+                "text": "Read the first and second time, and committed to a Committee of the House of to-morrow."
+            },
+            "number": "1",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "A Bill, Supplementary to the act, intituled, ''An act to provide for the valuation of lands and dwelling houses, and the enumeration of slaves, within the United States.''",
+            "type": "HR",
+            "updateDate": "2021-07-04",
+            "updateDateIncludingText": "2021-07-04",
+            "url": "https://api.congress.gov/v3/bill/6/hr/1?format=json"
+        },
+        {
+            "congress": 6,
+            "introducedDate": "1799-12-16",
+            "latestAction": {
+                "actionDate": "1799-12-16",
+                "text": "Read the first and second time, and committed to a Committee of the House of to-morrow."
+            },
+            "number": "2",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "An Act, For the relief of persons imprisoned for debt.",
+            "type": "HR",
+            "updateDate": "2021-07-04",
+            "updateDateIncludingText": "2021-07-04",
+            "url": "https://api.congress.gov/v3/bill/6/hr/2?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 80,
+        "next": "https://api.congress.gov/v3/bill/6?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "congress": "6",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

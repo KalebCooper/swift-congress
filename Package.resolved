@@ -1,0 +1,24 @@
+{
+  "originHash" : "b89ddbf9c91f5a9470252890956b50fb878e82e728fec92837863d76b8d77a0f",
+  "pins" : [
+    {
+      "identity" : "swift-http-types",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-http-types.git",
+      "state" : {
+        "revision" : "bff4b6903cdc99dda49649dd52f46c11cfd3ed50",
+        "version" : "1.8.0"
+      }
+    },
+    {
+      "identity" : "swifty-networking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KalebCooper/swifty-networking.git",
+      "state" : {
+        "revision" : "04bbf231eabb95b90a5be786034e07cf351ee1d5",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}

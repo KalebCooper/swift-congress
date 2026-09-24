@@ -1,0 +1,46 @@
+{
+    "bills": [
+        {
+            "congress": 6,
+            "introducedDate": "1799-12-16",
+            "latestAction": {
+                "actionDate": "1799-12-16",
+                "text": "Read the first and second time, and committed to a Committee of the whole House on Thursday next."
+            },
+            "number": "3",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "A Bill, Providing for Salvage in cases of re-capture.",
+            "type": "HR",
+            "updateDate": "2024-02-07",
+            "updateDateIncludingText": "2024-02-07",
+            "url": "https://api.congress.gov/v3/bill/6/hr/3?format=json"
+        },
+        {
+            "congress": 6,
+            "introducedDate": "1799-12-16",
+            "latestAction": {
+                "actionDate": "1799-12-16",
+                "text": "Read the first and second time, and committed to a Committee of the whole House on Wednesday next."
+            },
+            "number": "4",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "A Bill, For the preservation of Peace with the Indian Tribes.",
+            "type": "HR",
+            "updateDate": "2024-02-07",
+            "updateDateIncludingText": "2024-02-07",
+            "url": "https://api.congress.gov/v3/bill/6/hr/4?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 80,
+        "next": "https://api.congress.gov/v3/bill/6?offset=4&limit=2&format=json",
+        "prev": "https://api.congress.gov/v3/bill/6?offset=0&limit=2&format=json"
+    },
+    "request": {
+        "congress": "6",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

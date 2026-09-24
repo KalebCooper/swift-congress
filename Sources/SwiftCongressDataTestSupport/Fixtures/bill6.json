@@ -1,0 +1,37 @@
+{
+    "bill": {
+        "actions": {
+            "count": 2,
+            "url": "https://api.congress.gov/v3/bill/6/hr/1/actions?format=json"
+        },
+        "congress": 6,
+        "introducedDate": "1799-12-16",
+        "latestAction": {
+            "actionDate": "1799-12-16",
+            "text": "Read the first and second time, and committed to a Committee of the House of to-morrow."
+        },
+        "legislationUrl": "https://www.congress.gov/bill/6th-congress/house-bill/1",
+        "number": "1",
+        "originChamber": "House",
+        "originChamberCode": "H",
+        "textVersions": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/6/hr/1/text?format=json"
+        },
+        "title": "A Bill, Supplementary to the act, intituled, ''An act to provide for the valuation of lands and dwelling houses, and the enumeration of slaves, within the United States.''",
+        "titles": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/6/hr/1/titles?format=json"
+        },
+        "type": "HR",
+        "updateDate": "2021-07-04T00:15:24Z",
+        "updateDateIncludingText": "2021-07-04T00:15:24Z"
+    },
+    "request": {
+        "billNumber": "1",
+        "billType": "hr",
+        "congress": "6",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

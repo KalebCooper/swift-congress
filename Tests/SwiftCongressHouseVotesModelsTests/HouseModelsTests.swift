@@ -13,7 +13,7 @@ struct HouseModelsTests {
     #expect(quorum.totals["present-total"] == "376")
     let old = try HouseRollCall.decode(Fixture.house1990_vote.data(), sourceURL: url)
     #expect(old.recordedVoters.count == 431)
-    #expect(Set(old.recordedVoters.map(\.position)) == ["Aye", "No", "Not Voting"])
+    #expect(Set(old.recordedVoters.map(\.position.rawValue)) == ["Aye", "No", "Not Voting"])
     let current = try HouseRollCall.decode(Fixture.house2026.data(), sourceURL: url)
     #expect(current.recordedVoters.count == 433)
     #expect(current.recordedVoters.allSatisfy { $0.nameID != nil })

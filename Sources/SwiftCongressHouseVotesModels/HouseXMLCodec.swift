@@ -8,68 +8,10 @@ import class Foundation.NSObject
 // FoundationXML is a system codec dependency, never an HTTP transport.
 #if canImport(FoundationXML)
 import FoundationXML
+#else
+import class Foundation.XMLParser
+import protocol Foundation.XMLParserDelegate
 #endif
-
-/// Failure while reading one bounded House source document.
-public enum HouseDecodingError: Error, Hashable, Sendable {
-  /// The reading task was cancelled.
-  case cancelled
-  /// The document is malformed or lacks required source structure.
-  case invalidDocument
-  /// The document exceeds byte, depth, or element bounds.
-  case limitExceeded
-}
-
-/// Ordered XML content, preserving mixed text and nested elements.
-public indirect enum HouseXMLContent: Codable, Hashable, Sendable {
-  /// A nested element at its original position.
-  case element(HouseXMLNode)
-  /// Character content, including source whitespace.
-  case text(String)
-}
-
-/// One source element with unknown attributes, children, and text retained.
-public struct HouseXMLNode: Codable, Hashable, Sendable {
-  /// Attributes using original qualified names.
-  public let attributes: [String: String]
-  /// Ordered character and element content.
-  public let content: [HouseXMLContent]
-  /// The original qualified element name.
-  public let name: String
-
-  /// The local name used to interpret namespaced source variants.
-  public var localName: String { String(name.split(separator: ":").last ?? Substring(name)) }
-  /// All descendant character content in document order, without trimming.
-  public var text: String {
-    content.map { item in
-      switch item {
-      case .element(let node): node.text;
-      case .text(let value): value
-      }
-    }.joined()
-  }
-
-  /// Creates a portable element value without parsing or I/O.
-  public init(attributes: [String: String], content: [HouseXMLContent], name: String) {
-    self.attributes = attributes; self.content = content; self.name = name
-  }
-
-  /// Returns the first direct child with a matching local name.
-  public func child(_ name: String) -> Self? { children(named: name).first }
-
-  /// Returns every direct child with a matching local name, without deduplication.
-  public func children(named name: String) -> [Self] {
-    content.compactMap { item in
-      if case .element(let node) = item, node.localName == name { node } else { nil }
-    }
-  }
-}
-
-/// A source-specific response decodable without an SDK or transport.
-public protocol HouseResponse: Sendable {
-  /// Decodes the downloaded bytes using the request URL as explicit source context.
-  static func decode(_ data: Data, sourceURL: URL) throws(HouseDecodingError) -> Self
-}
 
 /// A bounded system XML reader for House documents.
 /// It never opens URLs or loads external entities. Original bytes remain in SDK receipts.
@@ -121,6 +63,11 @@ private final class XMLReader: NSObject, XMLParserDelegate {
 
   init(maximumDepth: Int, maximumElements: Int) {
     self.maximumDepth = maximumDepth; self.maximumElements = maximumElements
+  }
+
+  private func append(_ value: HouseXMLContent) {
+    guard !stack.isEmpty else { return }
+    stack[stack.count - 1].content.append(value)
   }
 
   func parser(
@@ -183,8 +130,4 @@ private final class XMLReader: NSObject, XMLParserDelegate {
     failure = .invalidDocument; parser.abortParsing(); return nil
   }
 
-  private func append(_ value: HouseXMLContent) {
-    guard !stack.isEmpty else { return }
-    stack[stack.count - 1].content.append(value)
-  }
 }

@@ -13,7 +13,7 @@ public struct HouseVoter: Codable, Hashable, Sendable {
   /// Party at the recorded vote, if present.
   public let party: String?
   /// The original position vocabulary, including Present and unknown future values.
-  public let position: String
+  public let position: HouseVotePosition
   /// Every XML field and attribute for this row.
   public let rawNode: HouseXMLNode
   /// Zero-based position in the source voter array, not a person identity.
@@ -26,6 +26,7 @@ public struct HouseVoter: Codable, Hashable, Sendable {
       throw .invalidDocument
     }
     name = person.text; nameID = person.attributes["name-id"]; party = person.attributes["party"]
-    position = vote.text; rawNode = node; rowOrdinal = ordinal; state = person.attributes["state"]
+    position = HouseVotePosition(rawValue: vote.text); rawNode = node; rowOrdinal = ordinal;
+    state = person.attributes["state"]
   }
 }

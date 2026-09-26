@@ -87,6 +87,60 @@ public struct CongressDataClient: Sendable {
     CongressItemSequence(pages: pages(for: request))
   }
 
+  /// Retrieves one member record through the typed request executor.
+  ///
+  /// The response is the provider's current record for the identifier; no freshness or completeness
+  /// guarantee is made, and fields the source omits stay absent.
+  ///
+  /// ```swift
+  /// let detail = try await client.member(try MemberIdentifier(rawValue: "L000174"))
+  /// ```
+  /// - Parameter identifier: The validated member identifier, sent as supplied.
+  /// - Returns: The decoded member detail, retaining every source field.
+  /// - Throws: `CongressDataError.transport(.cancelled)` when cancelled before or after the
+  ///   request, `CongressDataError.transport(_:)` with the HTTP status and headers for a non-success
+  ///   response, or `CongressDataError.decoding` when the body is not a member detail.
+  public func member(_ identifier: MemberIdentifier) async throws(CongressDataError)
+    -> MemberDetail
+  {
+    try await value(for: .member(identifier))
+  }
+
+  /// Creates a lazy member-page traversal without fetching its first page.
+  ///
+  /// Each page is fetched on demand and carries the exact bytes it was decoded from. Provider
+  /// continuation links are followed only when they keep the route, page size, and filters.
+  /// Counts may change during traversal; the pages are not a snapshot.
+  ///
+  /// ```swift
+  /// for try await page in client.memberPages(matching: try MemberQuery(scope: .congress(117))) {
+  ///   print(page.value.members.count)
+  /// }
+  /// ```
+  /// - Parameter query: The member inventory route, filters, and page bounds.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation` before
+  ///   yielding a page with an invalid continuation, or the transport or decoding failure.
+  public func memberPages(matching query: MemberQuery) -> CongressPageSequence<MemberPage> {
+    pages(for: .members(matching: query))
+  }
+
+  /// Creates a lazy member traversal in provider order, preserving duplicates.
+  ///
+  /// Only the current page is buffered. No page is fetched until the first item is requested, and
+  /// nothing implies complete historical membership.
+  ///
+  /// ```swift
+  /// for try await member in client.members(matching: try MemberQuery(scope: .congress(117))) {
+  ///   print(member.bioguideId)
+  /// }
+  /// ```
+  /// - Parameter query: The member inventory route, filters, and page bounds.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation`,
+  ///   `CongressDataError.transport(.cancelled)`, or the transport or decoding failure.
+  public func members(matching query: MemberQuery) -> CongressItemSequence<MemberPage> {
+    items(for: .members(matching: query))
+  }
+
   /// Creates independent page traversals; custom endpoint requests yield exactly one page.
   public func pages<Page: CongressCollection>(for request: CongressRequest<Page>)
     -> CongressPageSequence<Page>

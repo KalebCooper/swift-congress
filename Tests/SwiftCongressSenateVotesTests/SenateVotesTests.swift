@@ -10,7 +10,9 @@ import SwiftCongressSenateVotes
 
 extension SenateVoteRequest where Response == SenateRollCall {
   static var historicalExample: Self {
-    .rollCall(try! SenateVoteIdentifier(congress: 101, number: 1, session: 1))
+    get throws {
+      .rollCall(try SenateVoteIdentifier(congress: 101, number: 1, session: 1))
+    }
   }
 }
 

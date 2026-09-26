@@ -13,7 +13,9 @@ import Testing
 
 extension CongressRequest where Response == BillDetail {
   static var historicalExample: Self {
-    .bill(try! BillSourceIdentifier(congress: 6, number: "1", type: .houseBill))
+    get throws {
+      .bill(try BillSourceIdentifier(congress: 6, number: "1", type: .houseBill))
+    }
   }
 }
 

@@ -86,7 +86,10 @@ let package = Package(
           condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS, .visionOS, .watchOS])),
         "SwiftCongressHouseVotesModels",
       ], swiftSettings: swiftSettings),
-    .target(name: "SwiftCongressHouseVotesModels", swiftSettings: swiftSettings),
+    .target(
+      name: "SwiftCongressHouseVotesModels", swiftSettings: swiftSettings,
+      // The Android FoundationXML runtime omits its dependency on system zlib.
+      linkerSettings: [.linkedLibrary("z", .when(platforms: [.android]))]),
     .target(
       name: "SwiftCongressHouseVotesTestSupport", resources: [.copy("Fixtures")],
       swiftSettings: swiftSettings),
@@ -103,7 +106,10 @@ let package = Package(
           condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS, .visionOS, .watchOS])),
         "SwiftCongressSenateVotesModels",
       ], swiftSettings: swiftSettings),
-    .target(name: "SwiftCongressSenateVotesModels", swiftSettings: swiftSettings),
+    .target(
+      name: "SwiftCongressSenateVotesModels", swiftSettings: swiftSettings,
+      // The Android FoundationXML runtime omits its dependency on system zlib.
+      linkerSettings: [.linkedLibrary("z", .when(platforms: [.android]))]),
     .target(
       name: "SwiftCongressSenateVotesTestSupport", resources: [.copy("Fixtures")],
       swiftSettings: swiftSettings),

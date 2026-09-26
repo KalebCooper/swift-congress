@@ -33,7 +33,16 @@ public enum SenateXMLCodec {
     }
     let reader = XMLReader(maximumDepth: maximumDepth, maximumElements: maximumElements)
     let parser = XMLParser(data: data)
+    #if canImport(Darwin)
+    // Apple's Foundation imports `delegate` as `unowned(unsafe)`, so any reference to it from
+    // Swift, a `#keyPath` included, is an unsafe use under strict memory safety. Key-value coding
+    // reaches the setter dynamically by name, so the property is never referenced here. `reader`
+    // is a strong local that is read after `parse()` returns, so no callback can reach a freed
+    // delegate.
+    parser.setValue(reader, forKey: "delegate")
+    #else
     parser.delegate = reader
+    #endif
     parser.shouldProcessNamespaces = false
     parser.shouldResolveExternalEntities = false
     #if canImport(Darwin)

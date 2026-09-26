@@ -32,6 +32,26 @@ struct HouseVotesTests {
     }
   }
 
+  @Test("rollCall, value(for:), and response(for:) return equal tallies and legislation references")
+  func rollCallValueForAndResponseForReturnEqualTalliesAndLegislationReferences() async throws {
+    let bytes = try Fixture.house2026.data()
+    let mock = MockTransport(
+      results: Array(repeating: .success(Response(body: bytes, status: .ok)), count: 3))
+    let client = HouseVotesClient(transport: mock, userAgent: "HouseTallyTests")
+    let id = try HouseVoteIdentifier(number: 314, year: 2026)
+    let fromRollCall = try await client.rollCall(id)
+    let fromValueFor = try await client.value(for: HouseVoteRequest.rollCall(id))
+    let fromResponseFor = try await client.response(for: .rollCall(id)).value
+    #expect(fromRollCall.legislationReference?.measure?.measureType == .senateBill)
+    #expect(fromRollCall.legislationReference?.measure?.number == "2403")
+    #expect(fromRollCall.tallies?.byParty.isEmpty == false)
+    #expect(fromRollCall.tallies == fromValueFor.tallies)
+    #expect(fromRollCall.tallies == fromResponseFor.tallies)
+    #expect(fromRollCall.legislationReference == fromValueFor.legislationReference)
+    #expect(fromRollCall.legislationReference == fromResponseFor.legislationReference)
+    #expect(mock.requests.count == 3)
+  }
+
   @Test("Cancellation during body reading returns no partial record")
   func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
     let ready = Gate(); let resume = Gate()

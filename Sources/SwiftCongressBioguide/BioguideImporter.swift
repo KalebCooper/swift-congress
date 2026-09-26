@@ -53,6 +53,25 @@ public struct BioguideImporter: Sendable {
     BioguideRecords(directory: directory, importer: self)
   }
 
+  /// Creates an independent lazy traversal of the profiles with a position matching a query.
+  ///
+  /// Creating the sequence opens nothing. Every scanned profile is verified exactly as by
+  /// ``records(in:)``, so corruption in a profile that would not have matched still throws.
+  ///
+  /// ```swift
+  /// let query = BioguideServiceQuery(job: .senator, regionCode: "PA")
+  /// for try await record in importer.records(in: directory, matching: query) { store(record.body) }
+  /// ```
+  /// - Parameters:
+  ///   - directory: The immutable, caller-staged export directory.
+  ///   - query: The predicates at least one position of a yielded profile satisfies together.
+  /// - Returns: A sequence yielding each matching profile's complete record once, in manifest order.
+  public func records(in directory: URL, matching query: BioguideServiceQuery)
+    -> BioguideMatchingRecords
+  {
+    BioguideMatchingRecords(query: query, records: records(in: directory))
+  }
+
   @concurrent
   static func read(directory: URL, entry: BioguideManifestEntry, maximumBytes: Int)
     async throws(BioguideError) -> BioguideRecord

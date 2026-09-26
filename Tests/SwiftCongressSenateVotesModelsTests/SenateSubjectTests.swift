@@ -188,6 +188,71 @@ struct SenateSubjectTests {
     #expect(unknown.amendment?.child("amendment_to_document_number")?.text == "H.R. 3082")
   }
 
+  @Test("A typed document with target fields and no amendment number is that document's subject")
+  func aTypedDocumentWithTargetFieldsAndNoAmendmentNumberIsThatDocumentsSubject() throws {
+    // Test-authored mutation of the 2010 vote 289 fixture: amendment_to_document_number names the
+    // bill while amendment_number and the document stay unchanged.
+    let rollCall = try decode(
+      .senate2010_bill,
+      replacing: [
+        (
+          "<amendment_to_document_number/>",
+          "<amendment_to_document_number>H.R. 3082</amendment_to_document_number>"
+        )
+      ])
+    guard case .bill(let bill)? = rollCall.subject else {
+      Issue.record("expected a bill, got \(String(describing: rollCall.subject))")
+      return
+    }
+    #expect(bill.measureType == .houseBill)
+    #expect(bill.number == "3082")
+  }
+
+  @Test("An absent document still lets an amendment number select the amendment")
+  func anAbsentDocumentStillLetsAnAmendmentNumberSelectTheAmendment() throws {
+    // Test-authored mutation of the 2010 vote 289 fixture: document is removed and amendment_number
+    // holds a value.
+    let rollCall = try decode(
+      .senate2010_bill, removing: ["document"],
+      replacing: [("<amendment_number/>", "<amendment_number>S.Amdt. 1</amendment_number>")])
+    guard case .amendment(let amendment)? = rollCall.subject else {
+      Issue.record("expected an amendment, got \(String(describing: rollCall.subject))")
+      return
+    }
+    #expect(amendment.document == nil)
+  }
+
+  @Test("An absent amendment with an amendment-type document is unknown")
+  func anAbsentAmendmentWithAnAmendmentTypeDocumentIsUnknown() throws {
+    // Test-authored mutation of the 2010 vote 289 fixture: amendment is removed and document_type
+    // becomes S.Amdt.
+    let rollCall = try decode(
+      .senate2010_bill, removing: ["amendment"],
+      replacing: [
+        ("<document_type>H.R.</document_type>", "<document_type>S.Amdt.</document_type>")
+      ])
+    guard case .unknown(let unknown)? = rollCall.subject else {
+      Issue.record("expected unknown, got \(String(describing: rollCall.subject))")
+      return
+    }
+    #expect(unknown.reason == .amendmentNumberMissing)
+    #expect(unknown.amendment == nil)
+  }
+
+  @Test("A whitespace document type is unrecognized")
+  func aWhitespaceDocumentTypeIsUnrecognized() throws {
+    // Test-authored mutation of the 2010 vote 289 fixture: document_type holds one space.
+    let rollCall = try decode(
+      .senate2010_bill,
+      replacing: [("<document_type>H.R.</document_type>", "<document_type> </document_type>")])
+    guard case .unknown(let unknown)? = rollCall.subject else {
+      Issue.record("expected unknown, got \(String(describing: rollCall.subject))")
+      return
+    }
+    #expect(unknown.reason == .documentTypeUnrecognized)
+    #expect(unknown.document?.type == " ")
+  }
+
   @Test("An unrecognized document code is unknown and keeps its nodes")
   func anUnrecognizedDocumentCodeIsUnknownAndKeepsItsNodes() throws {
     // Test-authored mutation of the 2010 vote 289 fixture: document_type becomes S.Doc.
@@ -236,6 +301,7 @@ struct SenateSubjectTests {
       ("S.", .unknown(label: "S.")),
       ("PN 128", .unknown(label: "PN 128")),
       (" S. 4668", .unknown(label: " S. 4668")),
+      ("S. 4668 ", .unknown(label: "S. 4668 ")),
     ])
   func targetLabelsAreReadExactlyAndNeverNormalized(
     label: String, expected: SenateAmendmentTarget
@@ -343,6 +409,24 @@ struct SenateSubjectTests {
       let start = try #require(text.range(of: "<\(element)>"))
       let end = try #require(text.range(of: "</\(element)>"))
       text.replaceSubrange(start.lowerBound..<end.upperBound, with: "")
+    }
+    return try SenateRollCall.decode(Data(text.utf8), sourceURL: sourceURL)
+  }
+
+  /// Removes each named element, then applies each replacement, requiring every tag and original
+  /// text to be present.
+  private func decode(
+    _ fixture: Fixture, removing elements: [String], replacing replacements: [(String, String)]
+  ) throws -> SenateRollCall {
+    var text = try #require(String(data: fixture.data(), encoding: .utf8))
+    for element in elements {
+      let start = try #require(text.range(of: "<\(element)>"))
+      let end = try #require(text.range(of: "</\(element)>"))
+      text.replaceSubrange(start.lowerBound..<end.upperBound, with: "")
+    }
+    for (original, replacement) in replacements {
+      let range = try #require(text.range(of: original))
+      text.replaceSubrange(range, with: replacement)
     }
     return try SenateRollCall.decode(Data(text.utf8), sourceURL: sourceURL)
   }

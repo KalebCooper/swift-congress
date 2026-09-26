@@ -44,4 +44,6 @@ occurs and no ZIP dependency is required. Portable SHA-256 uses swift-crypto.
 
 - ``BioguideError``
 - ``BioguideImporter``
+- ``BioguideMatchingRecords``
 - ``BioguideRecords``
+- <doc:HistoricalServiceQueries>

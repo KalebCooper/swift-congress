@@ -14,9 +14,12 @@ stable snapshot, freshness, availability, or identity matching is guaranteed.
 
 Bioguide supplied-file import verifies bounded profile reads, inventory counts, SHA-256, source IDs,
 and predecessor-body affiliations. A full 13,056-profile official snapshot has passed the importer.
-House year/section discovery and roll calls are implemented independently, including historical
-rows without member IDs. Senate session inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are
-also independent services. Historical identity gaps remain unresolved. No package release exists.
+Historical-service queries match a profile's own positions against Congress, job, and region exactly
+as published; the query is source-service matching, not a timeline, and a filtered pass over the
+snapshot is not archive validation. House year/section discovery and roll calls are implemented
+independently, including historical rows without member IDs. Senate session inventories, roll calls,
+and the dated current LIS-to-Bioguide crosswalk are also independent services. Historical identity
+gaps remain unresolved. No package release exists.
 Member and bill-text-version operations remain pending official payload verification after rate limiting.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
@@ -50,6 +53,9 @@ The deterministic example input is `Sources/SwiftCongressDataTestSupport/Fixture
 `Examples/CongressBioguideDemo` validates every profile in a staged export directory. Prepare a
 supplied official all-profile ZIP with `Scripts/prepare-bioguide.py`; provide the actual retrieval
 instant and a new output directory. Refresh scheduling and snapshot promotion belong to the caller.
+An optional `--congress <n> --body <type> [--job <name>] [--region <code>]` filter mode prints each
+matching position's source Congress name and a matching-position count instead of validating the
+whole directory.
 
 `Examples/CongressHouseVotesDemo` reads a supplied House roll-call XML file, or uses `--live` on Apple.
 

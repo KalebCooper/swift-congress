@@ -14,6 +14,8 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 
 - Bioguide supplied-file import with bounded extraction, per-profile SHA-256, count/identity validation,
   original profile bytes, historical service models, and a full-archive validation demo.
+- Bioguide historical-service queries matching a profile's own positions by Congress, job, and
+  region, a lazy import-time filtered record sequence, and a demo filter mode.
 
 - Congress.gov discovery, bill detail and lists, and bill action lists.
 - Independent portable models, immutable typed requests/endpoints, and lazy page/item sequences.

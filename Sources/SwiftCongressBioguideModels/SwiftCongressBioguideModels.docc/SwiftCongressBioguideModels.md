@@ -31,9 +31,16 @@ Exact original JSON bytes remain available in BioguideRecord from the importer.
 
 - ``BioguideAffiliation``
 - ``BioguideCongress``
+- ``BioguideCongressIdentifier``
+- ``BioguideCongressType``
+- ``BioguideInputError``
+- ``BioguideJob``
+- ``BioguideJobName``
 - ``BioguideManifest``
 - ``BioguideManifestEntry``
 - ``BioguidePosition``
 - ``BioguideProfile``
 - ``BioguideRecord``
+- ``BioguideRegion``
+- ``BioguideServiceQuery``
 - ``JSONValue``

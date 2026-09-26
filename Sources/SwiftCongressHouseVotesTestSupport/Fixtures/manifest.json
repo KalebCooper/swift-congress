@@ -68,5 +68,15 @@
     "sha256": "79aada298aadc68677044636757112ce248847475171705bf26d4e8064c630d3",
     "status": 200,
     "url": "https://clerk.house.gov/evs/2026/ROLL_300.asp"
+  },
+  {
+    "bytes": 85579,
+    "file": "house2025-speaker.xml",
+    "mediaType": "text/xml",
+    "providerID": "house2025-speaker",
+    "retrievedAt": "2026-09-26T20:00:43.053133+00:00",
+    "sha256": "32823e0664ec72fa387d3956b09e1d6f25c939274fc1ccb7d5d3ebb9cd2984b0",
+    "status": 200,
+    "url": "https://clerk.house.gov/evs/2025/roll002.xml"
   }
 ]

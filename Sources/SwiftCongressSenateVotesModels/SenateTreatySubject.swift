@@ -3,9 +3,9 @@
 /// The subject is selected when the `document_type` is `Treaty Doc.`. ``number`` is the published
 /// `document_number` as one string, so a compound value such as `111-5` is never split into a
 /// Congress and a bill number, and a suffix survives verbatim. The number may be empty when the
-/// Senate published none. Ratification, cloture, and amendment questions stay on the roll call's
-/// `question`; an amendment to a treaty is a separate ``SenateAmendmentSubject`` whose target
-/// names the treaty.
+/// Senate published none, or nil when the element is absent. Ratification, cloture, and amendment
+/// questions stay on the roll call's `question`; an amendment to a treaty is a separate
+/// ``SenateAmendmentSubject`` whose target names the treaty.
 ///
 /// ```swift
 /// if case .treaty(let treaty)? = rollCall.subject {

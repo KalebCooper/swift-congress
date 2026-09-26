@@ -3,9 +3,9 @@
 /// The subject is selected only when the `document_type` equals one of the eight codes in
 /// ``SenateMeasureType``, so ``measureType`` is always one of those constants. Every other
 /// document field stays as published: ``number`` may be empty when the Senate published no
-/// number, and no field is validated, filled in, or joined to another service. The subject says
-/// what the vote concerned, not that the measure passed; the roll call's `question` and `result`
-/// carry that.
+/// number, or nil when the element is absent, and no field is validated, filled in, or joined to
+/// another service. The subject says what the vote concerned, not that the measure passed; the
+/// roll call's `question` and `result` carry that.
 ///
 /// ```swift
 /// if case .bill(let bill)? = rollCall.subject {

@@ -11,7 +11,8 @@
 /// ```
 public enum SenateUnknownSubjectReason: Hashable, Sendable {
   /// The `document_type` is `S.Amdt.` but `amendment_number` is empty or absent, or a target
-  /// field of the `amendment` element is nonempty while `amendment_number` is empty or absent.
+  /// field of the `amendment` element is nonempty while `amendment_number` is empty or absent and
+  /// the `document` element publishes no nonempty identifying field, so nothing else could decide.
   case amendmentNumberMissing
   /// The `document_number`, `document_name`, `document_title`, or `document_short_title` is
   /// nonempty but `document_type` is empty or absent.

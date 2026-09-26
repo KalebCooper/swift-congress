@@ -4,7 +4,7 @@ extension SenateRollCall {
   ///
   /// The cases are selected in order, comparing element text exactly and without trimming. A
   /// nonempty `amendment_number` selects ``SenateVoteSubject/amendment(_:)``; a merely present or
-  /// empty `amendment` element, as every nomination, bill, and treaty record publishes, does not.
+  /// empty `amendment` element, as the recorded nomination, bill, and treaty files do, does not.
   /// Otherwise the `document_type` decides: `PN` selects ``SenateVoteSubject/nomination(_:)``,
   /// `Treaty Doc.` selects ``SenateVoteSubject/treaty(_:)``, and one of the eight
   /// ``SenateMeasureType`` codes selects ``SenateVoteSubject/bill(_:)``. Any other nonempty

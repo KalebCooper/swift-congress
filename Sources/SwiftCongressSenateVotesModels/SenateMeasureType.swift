@@ -1,8 +1,9 @@
 /// The kind of bill or resolution named by a Senate `document_type` code.
 ///
 /// The raw value is the code exactly as the Senate publishes it, dotted and without spaces, such
-/// as `H.R.` or `S.Con.Res.`. The eight constants are the bill and resolution codes the Senate's
-/// roll call documentation lists; `H.R.` and `S.` are the two recorded in this module's fixtures.
+/// as `H.R.` or `S.Con.Res.`. The eight constants are the codes this module recognizes: the two
+/// recorded in its fixtures (`H.R.` and `S.`) and the six other bill and resolution kinds spelled
+/// the same dotted way; a spelling not on the list is `.unknown` and stays readable on its nodes.
 /// The type is open so a consumer can name a code this module does not recognize; the
 /// classification in ``SenateRollCall/subject`` and ``SenateAmendmentTarget`` never produces one
 /// on its own.

@@ -26,8 +26,8 @@ the question names what happened to it.
 ## Classification order
 
 A nonempty `amendment_number` selects `amendment(_:)` before anything else is examined; a merely
-present or published-empty amendment element, as every nomination, bill, and treaty record
-carries, does not. Otherwise the roll call's `document_type` decides: `PN` selects
+present or published-empty amendment element, as the recorded nomination, bill, and treaty files
+do, does not. Otherwise the roll call's `document_type` decides: `PN` selects
 `nomination(_:)`, `Treaty Doc.` selects `treaty(_:)`, and one of the eight bill and resolution
 codes selects `bill(_:)`. Any other nonempty substantive metadata, on either element, is
 `unknown(_:)` with a reason naming the exact shape that prevented recognition. When neither

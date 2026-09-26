@@ -63,10 +63,8 @@ instant and a new output directory. Refresh scheduling and snapshot promotion be
 | SwiftCongressBioguideModels | Profiles, source service affiliations, and archive provenance |
 | SwiftCongressData | Congress.gov execution, lazy traversal, and response capture |
 | SwiftCongressDataModels | Portable records, source identities, requests, endpoints, and continuation validation |
-
 | SwiftCongressHouseVotes | Bounded House index and roll-call retrieval |
 | SwiftCongressHouseVotesModels | Independent HTML inventories, XML records, typed requests and endpoints |
-
 | SwiftCongressSenateVotes | Bounded Senate inventory, vote, and current identity retrieval |
 | SwiftCongressSenateVotesModels | Independent Senate XML records, source identities, requests and endpoints |
 
@@ -78,8 +76,14 @@ No transport dependency is required to use a models product.
 
 ## Installation
 
-This repository is local and unreleased. Add it as a local Swift package and select the required
-library products. The HTTP SDK requires the verified public swifty-networking 1.3.1 or later.
+No release exists yet. Add the package by URL, pinned to `main` since there is no tagged version:
+
+```swift
+.package(url: "https://github.com/KalebCooper/swift-congress.git", branch: "main")
+```
+
+Or reference it as a local Swift package. Either way, select the required library products. The
+HTTP SDK requires the verified public swifty-networking 1.3.1 or later.
 
 ## License
 

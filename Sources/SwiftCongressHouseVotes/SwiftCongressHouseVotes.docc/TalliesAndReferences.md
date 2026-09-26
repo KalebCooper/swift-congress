@@ -42,9 +42,11 @@ if let reference = vote.legislationReference {
 
 `HouseRollCall.legislationReference` wraps the same `legis-num` label already retained in
 `legislation`. `HouseLegislationReference.measure` is set only for one of the eight anchored
-`HouseMeasureType` forms the Clerk's files use, spelled with a single space and a decimal number
-with no leading zero. A procedural label such as `QUORUM 1`, an empty label, and the Clerk's own
-dotted spellings (`H.R. 1514`) all keep their `rawValue` with a nil `measure`.
+`HouseMeasureType` forms this projection recognizes, patterned on the two observed in recorded
+Clerk files (`S 2403`, `H R 2190`) and the eight kinds the Clerk's DTD lists, spelled with a
+single space and a decimal number with no leading zero. A procedural label such as `QUORUM 1`, an
+empty label, and the Clerk's own dotted spellings (`H.R. 1514`) all keep their `rawValue` with a
+nil `measure`.
 
 ## What a reference does not mean
 

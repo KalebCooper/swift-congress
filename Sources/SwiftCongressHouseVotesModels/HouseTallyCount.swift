@@ -2,9 +2,11 @@
 ///
 /// The Clerk publishes every count as element text. ``rawValue`` is that text exactly, and
 /// ``value`` is derived from it: it is set only when the text is a complete nonnegative decimal
-/// made of ASCII digits that fits `Int`. Empty, signed, padded, fractional, or overflowing text
-/// keeps its ``rawValue`` and has a nil ``value``. A published zero reads as `0`, which is distinct
-/// from a field the source does not publish at all. Nothing here is summed or recomputed.
+/// made of ASCII digits that fits `Int`. Empty, signed, whitespace-padded, fractional, or
+/// overflowing text keeps its ``rawValue`` and has a nil ``value``. Leading zeros are read as the
+/// decimal they denote, so `007` has the value `7`; compare ``rawValue`` when the exact spelling
+/// matters. A published zero reads as `0`, which is distinct from a field the source does not
+/// publish at all. Nothing here is summed or recomputed.
 ///
 /// ```swift
 /// if let yeas = rollCall.tallies?.byVote.first?.yea {

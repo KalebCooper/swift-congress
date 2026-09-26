@@ -1,9 +1,11 @@
 /// A House roll call's published `legis-num` label beside its conservative reading.
 ///
 /// ``rawValue`` is the label's complete text, without trimming or normalization. ``measure`` is
-/// set only when the whole label is one of the eight spaced forms the Clerk's files use, `H R`,
-/// `H RES`, `H J RES`, `H CON RES`, `S`, `S RES`, `S J RES`, or `S CON RES`, followed by one
-/// space and a decimal number with no leading zero, such as `S 2403` or `H R 2190`. Every other
+/// set only when the whole label is one of the eight spaced forms this projection recognizes,
+/// patterned on the two observed in recorded Clerk files (`S 2403`, `H R 2190`) and the eight
+/// kinds the Clerk's DTD lists, `H R`, `H RES`, `H J RES`, `H CON RES`, `S`, `S RES`, `S J RES`,
+/// or `S CON RES`, followed by one space and a decimal number with no leading zero, such as
+/// `S 2403` or `H R 2190`. Every other
 /// label keeps its text and has a nil ``measure``: procedural labels such as `QUORUM 1`, an
 /// empty label, a label with more or fewer words, different spacing or case, a non-numeric or
 /// zero-padded number, and the dotted spellings the Clerk's DTD also documents (`H.R. 1514`,

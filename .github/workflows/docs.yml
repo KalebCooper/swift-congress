@@ -53,8 +53,8 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
-    # Publication is disabled until real documentation is verified.
-    if: ${{ false }}
+    # Publish documentation from successful builds of the main branch.
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
     # Provisional until measured green runs exist.
     timeout-minutes: 15
     environment:

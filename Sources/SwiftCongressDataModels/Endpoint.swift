@@ -79,3 +79,15 @@ extension Endpoint where Response == BillActionPage {
     )
   }
 }
+
+extension Endpoint where Response == MemberDetail {
+  /// Describes one member record by its validated identifier, spelled as supplied.
+  public static func member(_ identifier: MemberIdentifier) -> Self {
+    builtIn("/v3/member/\(identifier.rawValue)?format=json")
+  }
+}
+
+extension Endpoint where Response == MemberPage {
+  /// Describes one page of the matching member inventory.
+  public static func members(matching query: MemberQuery) -> Self { builtIn(query.path) }
+}

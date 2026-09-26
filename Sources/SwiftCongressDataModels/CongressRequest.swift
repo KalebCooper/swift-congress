@@ -51,3 +51,17 @@ extension CongressRequest where Response == BillActionPage {
     Self(collection: .actions(for: identifier, page: page))
   }
 }
+
+extension CongressRequest where Response == MemberDetail {
+  /// Describes one member detail record.
+  public static func member(_ identifier: MemberIdentifier) -> Self {
+    Self(endpoint: .member(identifier))
+  }
+}
+
+extension CongressRequest where Response == MemberPage {
+  /// Describes lazy member pages; value execution retrieves only the initial page.
+  public static func members(matching query: MemberQuery) -> Self {
+    Self(collection: .members(matching: query))
+  }
+}

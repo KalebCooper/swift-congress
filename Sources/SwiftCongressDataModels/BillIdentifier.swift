@@ -2,6 +2,8 @@
 public enum CongressInputError: Error, Hashable, Sendable {
   /// A bill identifier has an invalid Congress, code, or number.
   case invalidBillIdentifier
+  /// A member identifier is empty or is not a safe path component.
+  case invalidMemberIdentifier
   /// A query contains an invalid page size, offset, or Congress.
   case invalidQuery
 }

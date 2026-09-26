@@ -5,7 +5,8 @@ import Testing
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct SenateModelsTests {
-  @Test func currentCrosswalkDoesNotImplyHistoricalCoverage() throws {
+  @Test("Current crosswalk does not imply historical coverage")
+  func currentCrosswalkDoesNotImplyHistoricalCoverage() throws {
     let url = try #require(
       URL(string: "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml"))
     let identities = try SenateMemberIdentities.decode(
@@ -23,7 +24,8 @@ struct SenateModelsTests {
         == identities)
   }
 
-  @Test func historicalNominationAndModernAmendmentRetainDistinctShapes() throws {
+  @Test("Historical nomination and modern amendment retain distinct shapes")
+  func historicalNominationAndModernAmendmentRetainDistinctShapes() throws {
     let url = try #require(
       URL(
         string:
@@ -42,7 +44,8 @@ struct SenateModelsTests {
       try JSONDecoder().decode(SenateRollCall.self, from: JSONEncoder().encode(modern)) == modern)
   }
 
-  @Test func inventoriesPreserveNestedQuestionsAndExplicitNumbers() throws {
+  @Test("Inventories preserve nested questions and explicit numbers")
+  func inventoriesPreserveNestedQuestionsAndExplicitNumbers() throws {
     let url = try #require(
       URL(string: "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml"))
     let value = try SenateVoteIndex.decode(Fixture.senate_index.data(), sourceURL: url)
@@ -63,7 +66,8 @@ struct SenateModelsTests {
     }
   }
 
-  @Test func xmlLimitsAndEntityRejectionApplyIndependently() throws {
+  @Test("XML limits and entity rejection apply independently")
+  func xmlLimitsAndEntityRejectionApplyIndependently() throws {
     #expect(throws: SenateDecodingError.limitExceeded) {
       try SenateXMLCodec.decode(Data("<r><v/></r>".utf8), maximumDepth: 1)
     }

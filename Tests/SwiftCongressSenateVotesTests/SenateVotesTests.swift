@@ -18,7 +18,8 @@ extension SenateVoteRequest where Response == SenateRollCall {
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct SenateVotesTests {
-  @Test func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
+  @Test("Cancellation during body reading returns no partial record")
+  func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
     let ready = Gate(); let resume = Gate()
     let bytes = try Fixture.senate2026.data()
     let chunks = PausedChunks(
@@ -35,7 +36,8 @@ struct SenateVotesTests {
     await ready.wait(); task.cancel(); await resume.open(); try await task.value
   }
 
-  @Test func customResponseUsesTheSameExecutor() async throws {
+  @Test("Custom response uses the same executor")
+  func customResponseUsesTheSameExecutor() async throws {
     struct Custom: SenateResponse {
       let root: SenateXMLNode
       static func decode(_ data: Data, sourceURL: URL) throws(SenateDecodingError) -> Self {
@@ -54,7 +56,8 @@ struct SenateVotesTests {
     #expect(SenateVotePosition(rawValue: "Future Position").rawValue == "Future Position")
   }
 
-  @Test func everyExecutionLevelUsesTheSameBoundedDecoder() async throws {
+  @Test("Every execution level uses the same bounded decoder")
+  func everyExecutionLevelUsesTheSameBoundedDecoder() async throws {
     let bytes = try Fixture.senate1989.data()
     let mock = MockTransport(
       results: Array(repeating: .success(Response(body: bytes, status: .ok)), count: 5))
@@ -75,7 +78,8 @@ struct SenateVotesTests {
     }
   }
 
-  @Test func indexAndCrosswalkRemainIndependentRequests() async throws {
+  @Test("Index and crosswalk remain independent requests")
+  func indexAndCrosswalkRemainIndependentRequests() async throws {
     let mock = MockTransport(results: [
       .success(Response(body: try Fixture.senate_index.data(), status: .ok)),
       .success(Response(body: try Fixture.senate_identities.data(), status: .ok)),
@@ -88,7 +92,8 @@ struct SenateVotesTests {
     #expect(mock.requests[1].request.path == "/legislative/LIS_MEMBER/cvc_member_data.xml")
   }
 
-  @Test func sizeAndStatusFailuresRetainTheirMeaning() async throws {
+  @Test("Size and status failures retain their meaning")
+  func sizeAndStatusFailuresRetainTheirMeaning() async throws {
     let bytes = try Fixture.senate1989.data()
     let mock = MockTransport(results: [.success(Response(body: bytes, status: .ok))])
     do {

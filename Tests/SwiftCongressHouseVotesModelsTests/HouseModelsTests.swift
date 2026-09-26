@@ -5,7 +5,8 @@ import Testing
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct HouseModelsTests {
-  @Test func historicalAndCurrentRowsPreserveSourceIdentity() throws {
+  @Test("Historical and current rows preserve source identity")
+  func historicalAndCurrentRowsPreserveSourceIdentity() throws {
     let url = try #require(URL(string: "https://clerk.house.gov/evs/1990/roll001.xml"))
     let quorum = try HouseRollCall.decode(Fixture.house1990.data(), sourceURL: url)
     #expect(quorum.recordedVoters.count == 430)
@@ -22,7 +23,8 @@ struct HouseModelsTests {
       try JSONDecoder().decode(HouseRollCall.self, from: JSONEncoder().encode(current)) == current)
   }
 
-  @Test func indexesExposeOnlyPublishedLinks() throws {
+  @Test("Indexes expose only published links")
+  func indexesExposeOnlyPublishedLinks() throws {
     let index = try HouseVoteIndex.decode(
       Fixture.house_index.data(),
       sourceURL: #require(URL(string: "https://clerk.house.gov/evs/2026/index.asp")))
@@ -40,7 +42,8 @@ struct HouseModelsTests {
         == "/evs/2026/roll1000.xml")
   }
 
-  @Test func inventoriesIgnoreCommentsAndScriptTextAndHandleQuotedAngles() throws {
+  @Test("Inventories ignore comments and script text and handle quoted angles")
+  func inventoriesIgnoreCommentsAndScriptTextAndHandleQuotedAngles() throws {
     let html = """
       <html><title>Roll Call</title><script>let example = '<a href="/cgi-bin/vote.asp?year=2026&rollnumber=99">';</script>
       <!-- <a href="/cgi-bin/vote.asp?year=2026&rollnumber=98"> -->
@@ -54,7 +57,8 @@ struct HouseModelsTests {
     }
   }
 
-  @Test func xmlPreservesMixedTextAndRejectsUnboundedOrEntityContent() throws {
+  @Test("XML preserves mixed text and rejects unbounded or entity content")
+  func xmlPreservesMixedTextAndRejectsUnboundedOrEntityContent() throws {
     let tree = try HouseXMLCodec.decode(
       Data("<x:r xmlns:x='urn:test' unknown='yes'>before<x:v>é</x:v>after</x:r>".utf8))
     #expect(tree.localName == "r")

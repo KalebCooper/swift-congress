@@ -10,7 +10,8 @@ import SwiftCongressHouseVotes
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct HouseVotesTests {
-  @Test func allExecutionLevelsRetainSourceBytesAndSendOnlyOneRequest() async throws {
+  @Test("All execution levels retain source bytes and send only one request")
+  func allExecutionLevelsRetainSourceBytesAndSendOnlyOneRequest() async throws {
     let bytes = try Fixture.house2026.data()
     let mock = MockTransport(
       results: Array(repeating: .success(Response(body: bytes, status: .ok)), count: 4))
@@ -31,7 +32,8 @@ struct HouseVotesTests {
     }
   }
 
-  @Test func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
+  @Test("Cancellation during body reading returns no partial record")
+  func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
     let ready = Gate(); let resume = Gate()
     let bytes = try Fixture.house2026.data()
     let chunks = PausedChunks(
@@ -48,7 +50,8 @@ struct HouseVotesTests {
     await ready.wait(); task.cancel(); await resume.open(); try await task.value
   }
 
-  @Test func customResponseUsesTheSameExecutor() async throws {
+  @Test("Custom response uses the same executor")
+  func customResponseUsesTheSameExecutor() async throws {
     struct Custom: HouseResponse {
       let root: HouseXMLNode
       static func decode(_ data: Data, sourceURL: URL) throws(HouseDecodingError) -> Self {
@@ -67,7 +70,8 @@ struct HouseVotesTests {
     #expect(HouseVotePosition(rawValue: "Future Position").rawValue == "Future Position")
   }
 
-  @Test func indexesDoNotFetchSectionsOrVotes() async throws {
+  @Test("Indexes do not fetch sections or votes")
+  func indexesDoNotFetchSectionsOrVotes() async throws {
     let mock = MockTransport(results: [
       .success(Response(body: try Fixture.house_index.data(), status: .ok))
     ])
@@ -76,7 +80,8 @@ struct HouseVotesTests {
     #expect(mock.requests.count == 1)
   }
 
-  @Test func oversizedBodiesAndRedirectsFail() async throws {
+  @Test("Oversized bodies and redirects fail")
+  func oversizedBodiesAndRedirectsFail() async throws {
     let mock = MockTransport(results: [
       .success(Response(body: try Fixture.house2026.data(), status: .ok))
     ])

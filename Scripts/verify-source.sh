@@ -288,6 +288,84 @@ check_suite_time_limit() {
   fi
 }
 
+# Derivation. R12 requires every @Test to carry a sentence-style string title as its first
+# argument, with the function name that sentence in camel case, so a title-less test cannot land
+# silently. The subject is derived from every @Test attribute in Tests and must be non-empty, like
+# check_suite_time_limit. The scan reuses that check's wrapped-attribute handling (getline across
+# lines while parens stay unbalanced) but keeps string literal contents and quotes intact rather
+# than stripping them, because the title is a string this check has to read rather than ignore. A
+# bare `@Test func` and a `@Test(<traits only>) func`, including a wrapped multi-line trait list,
+# both count as untitled; `@Test("...", ...)` in any shape does not.
+check_test_titles() {
+  local name="every @Test in Tests carries a string-literal title"
+  local files report
+  files=$(swift_files Tests)
+  if [ -z "$files" ]; then fail "$name (no test file found; the check has lost its subject)"; return; fi
+  report=$(awk '
+    # The line with a trailing comment dropped, string contents and their quotes kept intact.
+    function stripComment(s,   i, c, out, instr, esc) {
+      out = ""; instr = 0; esc = 0
+      for (i = 1; i <= length(s); i++) {
+        c = substr(s, i, 1)
+        if (instr) {
+          out = out c
+          if (esc) esc = 0
+          else if (c == "\\") esc = 1
+          else if (c == "\"") instr = 0
+          continue
+        }
+        if (c == "\"") { instr = 1; out = out c; continue }
+        if (c == "/" && substr(s, i + 1, 1) == "/") break
+        out = out c
+      }
+      return out
+    }
+    # Parenthesis balance that does not count a paren written inside a string literal.
+    function balance(s,   i, c, d, instr, esc) {
+      d = 0; instr = 0; esc = 0
+      for (i = 1; i <= length(s); i++) {
+        c = substr(s, i, 1)
+        if (instr) {
+          if (esc) esc = 0
+          else if (c == "\\") esc = 1
+          else if (c == "\"") instr = 0
+          continue
+        }
+        if (c == "\"") { instr = 1; continue }
+        if (c == "(") d++
+        else if (c == ")") d--
+      }
+      return d
+    }
+    /^[[:space:]]*\/\// { next }
+    /(^|[[:space:]])@Test([[:space:](]|$)/ {
+      total++
+      buf = stripComment($0); loc = FILENAME ":" FNR; depth = balance(buf)
+      while (depth > 0 && (getline) > 0) {
+        chunk = stripComment($0); buf = buf " " chunk; depth += balance(chunk)
+      }
+      rest = substr(buf, index(buf, "@Test") + 5)
+      gsub(/^[[:space:]]+/, "", rest)
+      if (substr(rest, 1, 1) == "(") {
+        inner = substr(rest, 2)
+        gsub(/^[[:space:]]+/, "", inner)
+        if (substr(inner, 1, 1) != "\"") print loc ": @Test traits without a string title"
+      } else {
+        print loc ": bare @Test with no title"
+      }
+      next
+    }
+    END { if (total == 0) print "NO-TESTS" }
+  ' $files 2>/dev/null || true)
+  if [ "$report" = "NO-TESTS" ]; then
+    fail "$name (no @Test found in Tests; the check has lost its subject)"
+  elif [ -z "$report" ]; then
+    pass "$name"
+  else
+    fail "$name"; printf '%s\n' "$report"
+  fi
+}
+
 # Prohibition. Local-only files are never force-added. Not self-tested: it reads the real index.
 check_nothing_local_tracked() {
   local name="no local-only file is tracked"
@@ -324,6 +402,7 @@ SELF_TESTABLE=(
   check_swift_testing_only
   check_job_timeouts
   check_suite_time_limit
+  check_test_titles
   check_service_independence
 )
 
@@ -408,7 +487,8 @@ import Testing
 @Suite(
   "MediaType", .timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct MediaTypeTests {
-  @Test func aMediaTypeKeepsItsString() {
+  @Test("A media type keeps its string")
+  func aMediaTypeKeepsItsString() {
     #expect(true)
   }
 }
@@ -419,7 +499,8 @@ import SwiftCongressDataModels
 import Testing
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes))) struct ClientTests {
-  @Test func aClientIsMade() {
+  @Test("A client is made")
+  func aClientIsMade() {
     #expect(true)
   }
 }
@@ -514,6 +595,8 @@ plant_violation() {
       printf 'name: Extra\n\non:\n  push:\n\njobs:\n  stray:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v7\n' > "$d/.github/workflows/extra.yml" ;;
     check_suite_time_limit)
       printf 'import Testing\n\n@Suite struct UnboundedTests {\n  @Test func aTestRuns() {\n    #expect(true)\n  }\n}\n' > "$d/Tests/SwiftCongressDataTests/UnboundedTests.swift" ;;
+    check_test_titles)
+      printf 'import Testing\n\n@Suite(.timeLimit(.minutes(suiteTimeLimitMinutes))) struct UntitledTests {\n  @Test func aTestRunsWithoutATitle() {\n    #expect(true)\n  }\n}\n' > "$d/Tests/SwiftCongressDataTests/UntitledTests.swift" ;;
   esac
 }
 
@@ -543,6 +626,10 @@ plant_second_violation() {
     # see it. The outer suite carries the limit; the inner one does not.
     check_suite_time_limit)
       printf 'import SwiftCongressDataModels\nimport Testing\n\n@Suite(.timeLimit(.minutes(suiteTimeLimitMinutes))) struct OuterTests {\n  @Suite struct NestedTests {\n    @Test func aTestRuns() {\n      #expect(true)\n    }\n  }\n}\n' > "$d/Tests/SwiftCongressDataTests/NestedTests.swift" ;;
+    # Traits alone, wrapped the way swift-format wraps a long attribute, are still untitled: R12
+    # asks for a string title first, not merely a trait list.
+    check_test_titles)
+      printf 'import Testing\n\n@Suite(.timeLimit(.minutes(suiteTimeLimitMinutes))) struct TraitOnlyTests {\n  @Test(\n    .timeLimit(.minutes(1)))\n  func aTestRunsWithTraitsOnly() {\n    #expect(true)\n  }\n}\n' > "$d/Tests/SwiftCongressDataTests/TraitOnlyTests.swift" ;;
     *) return 1 ;;
   esac
 }
@@ -605,7 +692,9 @@ remove_subject() {
       rm -rf "$d/Sources/SwiftCongressDataModels" ;;
     check_darwin_guard)
       rm -f "$d/Sources/SwiftCongressData/Client+URLSession.swift" ;;
-    check_swift_testing_only)
+    # Removing every `@Test` removes check_swift_testing_only's subject the same stroke it removes
+    # check_test_titles's.
+    check_swift_testing_only | check_test_titles)
       printf 'import SwiftCongressDataModels\n' > "$d/Tests/SwiftCongressDataModelsTests/MediaTypeTests.swift"
       printf 'import SwiftCongressData\n' > "$d/Tests/SwiftCongressDataTests/ClientTests.swift" ;;
     check_job_timeouts)

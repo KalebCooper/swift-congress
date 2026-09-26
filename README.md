@@ -23,7 +23,9 @@ tallies are the Clerk's published totals, read from the same document and never 
 voter rows, and its typed legislation reference is conservative label recognition, not a
 Congress.gov crosswalk. Senate session
 inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are also independent
-services. Historical identity gaps remain unresolved. No package release exists.
+services. A Senate roll call's typed subject identifies the bill, amendment, nomination, or
+treaty document the vote concerned, read from the same document and never a Congress.gov
+crosswalk. Historical identity gaps remain unresolved. No package release exists.
 Member and bill-text-version operations remain pending official payload verification after rate limiting.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
@@ -65,7 +67,8 @@ whole directory.
 Apple, and prints the published vote totals and any recognized legislation reference alongside the
 question.
 
-`Examples/CongressSenateVotesDemo` reads a supplied Senate XML vote, or uses `--live` on Apple.
+`Examples/CongressSenateVotesDemo` reads a supplied Senate XML vote, or uses `--live` on Apple,
+and prints the recognized subject alongside the question.
 
 ## Products
 

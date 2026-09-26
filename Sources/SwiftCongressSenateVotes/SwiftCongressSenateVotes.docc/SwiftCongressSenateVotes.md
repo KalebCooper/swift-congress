@@ -66,3 +66,9 @@ accounting. No service imports the House, Congress.gov, or Bioguide SDK.
 
 Non-success HTTP responses use HTTPCore's separate 64 KiB error-body capture bound.
 Their headers and status remain available in the transport error.
+
+## Topics
+
+- ``SenateVotesClient``
+- ``SenateVotesError``
+- <doc:VoteSubjects>

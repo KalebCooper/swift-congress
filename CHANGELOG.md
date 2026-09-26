@@ -7,6 +7,8 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 ### Added
 
 - Independent Senate session inventories, roll calls, and dated current LIS-to-Bioguide identities.
+- Typed Senate bill/amendment/nomination/treaty vote subjects, read from the same roll-call
+  document, with documentation, tests, and a demo that prints them beside the raw question.
 - Open House and Senate position values and bounded, entity-rejecting system XML codecs.
 
 - Independent House HTML inventories and XML roll calls, bounded decoding, historical optional IDs,

@@ -40,3 +40,34 @@ Fixtures include the 1989 nomination vote, a 2026 amendment cloture vote, histor
 current inventories, and the current identity export. Each recording includes its URL,
 retrieval time, HTTP metadata, byte count, and SHA-256 in the fixture manifest.
 These samples do not establish complete historical coverage or future availability.
+
+## Topics
+
+- ``Endpoint``
+- ``SenateAmendmentSubject``
+- ``SenateAmendmentTarget``
+- ``SenateBillSubject``
+- ``SenateDecodingError``
+- ``SenateDocumentReference``
+- ``SenateInputError``
+- ``SenateMeasureType``
+- ``SenateMemberIdentities``
+- ``SenateMemberIdentity``
+- ``SenateNominationSubject``
+- ``SenateResponse``
+- ``SenateRollCall``
+- ``SenateTreatySubject``
+- ``SenateUnknownSubject``
+- ``SenateUnknownSubjectReason``
+- ``SenateVoteIdentifier``
+- ``SenateVoteIndex``
+- ``SenateVotePosition``
+- ``SenateVoter``
+- ``SenateVoteReference``
+- ``SenateVoteRequest``
+- ``SenateVoteSubject``
+- ``SenateXMLCodec``
+- ``SenateXMLContent``
+- ``SenateXMLNode``
+- ``SourceHeader``
+- ``SourceResponse``

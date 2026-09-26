@@ -25,7 +25,7 @@ records the HTTPPortable superset. No unpublished dependency override is used.
   MCP without a completed tool response and is preserved under ignored plans, not published as a demo.
   No shell Apple build or hand-edited project was substituted.
 - Android emulator execution: no local Android Swift SDK or adb is installed.
-- Hosted CI, both iOS matrix entries, documentation publication, remote creation, and release.
+- Hosted CI qualification on Xcode 27, documentation publication, and release.
 - Congress.gov member and text-version slices are not implemented: fresh official payload acquisition
   is blocked by HTTP 429, with Retry-After 81242 seconds on the final attempt. No substitute
   credentials or synthetic official fixtures were used. An authorized key location is awaiting owner input.

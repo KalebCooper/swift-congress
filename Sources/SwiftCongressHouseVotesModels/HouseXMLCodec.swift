@@ -36,9 +36,9 @@ public enum HouseXMLCodec {
     #if canImport(Darwin)
     // Apple's Foundation imports `delegate` as `unowned(unsafe)`, so any reference to it from
     // Swift, a `#keyPath` included, is an unsafe use under strict memory safety. Key-value coding
-    // reaches the setter dynamically by name, so the property is never referenced here. `reader`
-    // is a strong local that is read after `parse()` returns, so no callback can reach a freed
-    // delegate.
+    // reaches the setter dynamically by name, so the property is never referenced here. The parser
+    // keeps no strong reference to `reader`, so `parse()` runs inside `withExtendedLifetime(reader)`
+    // below, which guarantees that no callback can reach a freed delegate.
     parser.setValue(reader, forKey: "delegate")
     #else
     parser.delegate = reader
@@ -48,7 +48,7 @@ public enum HouseXMLCodec {
     #if canImport(Darwin)
     parser.externalEntityResolvingPolicy = .never
     #endif
-    let success = parser.parse()
+    let success = withExtendedLifetime(reader) { parser.parse() }
     if Task.isCancelled { throw .cancelled }
     if let failure = reader.failure { throw failure }
     guard success, reader.stack.isEmpty, let root = reader.root else { throw .invalidDocument }

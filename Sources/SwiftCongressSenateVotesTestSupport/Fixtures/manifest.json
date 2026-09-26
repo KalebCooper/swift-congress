@@ -48,5 +48,35 @@
     "sha256": "eb77e0364091184054bf7522a68ff0e7c7b6bdf68494d36e8e007d47921a3c5f",
     "status": 200,
     "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_101_1.xml"
+  },
+  {
+    "bytes": 23825,
+    "file": "senate2010-bill.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate2010-bill",
+    "retrievedAt": "2026-09-26T21:25:38.615846+00:00",
+    "sha256": "070420749f7e9dbac31fbdf0c56fc0cb430f060751c3a8d53db4d2261801959e",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00289.xml"
+  },
+  {
+    "bytes": 23782,
+    "file": "senate2010-treaty.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate2010-treaty",
+    "retrievedAt": "2026-09-26T21:25:39.792744+00:00",
+    "sha256": "c14737ee8a98c1fbc69ccdc7e9e9a7242553e669c970ec095340a50ee1025f6b",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00298.xml"
+  },
+  {
+    "bytes": 24359,
+    "file": "senate2010-treaty-amendment.xml",
+    "mediaType": "text/xml",
+    "providerID": "senate2010-treaty-amendment",
+    "retrievedAt": "2026-09-26T21:25:41.077022+00:00",
+    "sha256": "617206f05b45c4e24ee17f724bb061340a80a39e3aa68df22aa7f0f71e160bca",
+    "status": 200,
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00297.xml"
   }
 ]

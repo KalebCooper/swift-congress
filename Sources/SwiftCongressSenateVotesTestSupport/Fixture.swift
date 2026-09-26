@@ -9,6 +9,12 @@ package enum Fixture: String {
   case senate_index1989 = "senate-index1989.xml"
   /// Recorded https://www.senate.gov/legislative/LIS/roll_call_votes/vote1011/vote_101_1_00001.xml.
   case senate1989 = "senate1989.xml"
+  /// Recorded https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00289.xml.
+  case senate2010_bill = "senate2010-bill.xml"
+  /// Recorded https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00298.xml.
+  case senate2010_treaty = "senate2010-treaty.xml"
+  /// Recorded https://www.senate.gov/legislative/LIS/roll_call_votes/vote1112/vote_111_2_00297.xml.
+  case senate2010_treatyAmendment = "senate2010-treaty-amendment.xml"
   /// Recorded https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00240.xml.
   case senate2026 = "senate2026.xml"
 

@@ -61,6 +61,22 @@ struct BioguideServiceModelsTests {
     #expect(matches.first?.congressAffiliation?.congress?.name == "The 2nd United States Congress")
   }
 
+  @Test("A Confederation Congress query does not match Continental service with the same number")
+  func aConfederationCongressQueryDoesNotMatchContinentalServiceWithTheSameNumber() throws {
+    let profile = try decodedProfile(.confederation)
+    let confederation = try BioguideCongressIdentifier(number: 1, type: .confederationCongress)
+    let continental = try BioguideCongressIdentifier(number: 1, type: .continentalCongress)
+    let federal = try BioguideCongressIdentifier(number: 1, type: .usCongress)
+    let matches = profile.positions(
+      matching: BioguideServiceQuery(congress: confederation, job: .delegate, regionCode: "NY"))
+    #expect(matches == [profile.jobPositions[1]])
+    #expect(matches.first?.congressAffiliation?.congress?.name == "The Confederation Congress")
+    #expect(
+      profile.positions(matching: BioguideServiceQuery(congress: continental))
+        == [profile.jobPositions[0]])
+    #expect(profile.positions(matching: BioguideServiceQuery(congress: federal)).isEmpty)
+  }
+
   @Test("Modern job and region views read the retained source objects")
   func modernJobAndRegionViewsReadTheRetainedSourceObjects() throws {
     let profile = try decodedProfile(.current)
@@ -163,6 +179,30 @@ struct BioguideServiceModelsTests {
     #expect(profile.positions(matching: BioguideServiceQuery(regionCode: "TX")).count == 4)
   }
 
+  // Test-authored mutation of the A000375 fixture: the 115th Congress position loses its
+  // congressAffiliation, then separately only the affiliation's congress object.
+  @Test("A missing Congress affiliation or Congress fails only a Congress predicate")
+  func aMissingCongressAffiliationOrCongressFailsOnlyACongressPredicate() throws {
+    let withoutAffiliation = try mutatedProfile(.current, position: 0) { position in
+      position["congressAffiliation"] = nil
+    }
+    let withoutCongress = try mutatedProfile(.current, position: 0) { position in
+      var affiliation = position["congressAffiliation"]?.object ?? [:]
+      affiliation["congress"] = nil
+      position["congressAffiliation"] = .object(affiliation)
+    }
+    #expect(withoutAffiliation.jobPositions[0].congressAffiliation == nil)
+    #expect(withoutCongress.jobPositions[0].congressAffiliation?.congress == nil)
+    let congress = try BioguideCongressIdentifier(number: 115, type: .usCongress)
+    for profile in [withoutAffiliation, withoutCongress] {
+      #expect(profile.positions(matching: BioguideServiceQuery(congress: congress)).isEmpty)
+      #expect(profile.positions(matching: BioguideServiceQuery()).count == 5)
+    }
+    #expect(
+      withoutCongress.positions(matching: BioguideServiceQuery(regionCode: "TX"))
+        .contains(withoutCongress.jobPositions[0]))
+  }
+
   // Test-authored mutation of the A000375 fixture: non-object job and represents values.
   @Test("Non-object job and represents values produce no views and stay raw")
   func nonObjectJobAndRepresentsValuesProduceNoViewsAndStayRaw() throws {
@@ -214,7 +254,7 @@ struct BioguideServiceModelsTests {
 
   @Test(
     "Reading service views leaves every profile's encoding unchanged",
-    arguments: [Fixture.current, .historical, .noService, .restricted])
+    arguments: [Fixture.confederation, .current, .historical, .noService, .restricted])
   func readingServiceViewsLeavesEveryProfilesEncodingUnchanged(fixture: Fixture) throws {
     let bytes = try fixture.data()
     let profile = try JSONDecoder().decode(BioguideProfile.self, from: bytes)

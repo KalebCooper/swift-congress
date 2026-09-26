@@ -34,6 +34,8 @@ establish a supported filtering rule. No unattended refresh contract is claimed.
 M000985 retains Continental Congress 2 separately from U.S. Congresses 1 through 3, a death-date
 string of `1806`, and missing personal service dates. Affiliation dates are not personal service
 dates. Portrait and asset rights remain source data, not package MIT licensing.
+H000205 retains Continental Congress 1 and Confederation Congress 1 as two positions with the same
+Congress number and different body types.
 
 The complete archive passed external extraction/CRC validation and the compiled Swift importer:
 13,056 unique profiles, including ConfederationCongress, ContinentalCongress, and USCongress.

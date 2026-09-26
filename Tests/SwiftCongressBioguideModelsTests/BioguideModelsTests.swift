@@ -11,7 +11,7 @@ import Testing
 struct BioguideModelsTests {
   @Test(
     "All profile fields survive a Codable round trip",
-    arguments: [Fixture.current, .historical, .noService, .restricted])
+    arguments: [Fixture.confederation, .current, .historical, .noService, .restricted])
   func allProfileFieldsSurviveACodableRoundTrip(fixture: Fixture) throws {
     let bytes = try fixture.data()
     let profile = try JSONDecoder().decode(BioguideProfile.self, from: bytes)

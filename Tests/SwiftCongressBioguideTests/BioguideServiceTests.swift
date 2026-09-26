@@ -55,7 +55,7 @@ struct BioguideServiceTests {
       in: directory, matching: BioguideServiceQuery())
     var identifiers: [String] = []
     for try await record in records { identifiers.append(record.entry.identifier) }
-    #expect(identifiers == ["A000375", "B001323", "M000985"])
+    #expect(identifiers == ["A000375", "B001323", "H000205", "M000985"])
   }
 
   @Test("Cancellation after a match stops the scan before the next read")

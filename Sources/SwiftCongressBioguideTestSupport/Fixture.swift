@@ -1,6 +1,8 @@
 import Foundation
 
 package enum Fixture: String {
+  /// H000205.json from the same archive, including Continental and Confederation Congress service.
+  case confederation = "H000205.json"
   /// A000375.json from the official all-profile archive identified in manifest.json.
   case current = "A000375.json"
   /// M000985.json from the same archive, including Continental Congress service.

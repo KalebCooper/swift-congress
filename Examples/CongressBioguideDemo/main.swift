@@ -4,6 +4,11 @@ import SwiftCongressBioguideModels
 
 @main
 struct CongressBioguideDemo {
+  /// Verifies every profile in an export directory, or lists the positions matching a filter.
+  /// - Throws: `DemoError.arguments` when no export directory is given or the filter is malformed,
+  ///   `BioguideInputError.invalidCongress` for a Congress number below 1, a Foundation read or
+  ///   decoding error when the first argument is not a directory holding `manifest.json`, and
+  ///   `BioguideError` from the import itself.
   static func main() async throws {
     let arguments = CommandLine.arguments.dropFirst()
     guard let path = arguments.first else { throw DemoError.arguments }
@@ -41,8 +46,9 @@ struct CongressBioguideDemo {
   /// Parses an optional `--congress <n> --body <type> [--job <name>] [--region <code>]` filter.
   /// - Parameter arguments: The command-line arguments following the export directory path.
   /// - Returns: The query, or nil when no filter arguments were given.
-  /// - Throws: `DemoError.arguments` for an unrecognized flag, a flag missing its value, or a
-  ///   filter missing `--congress` or `--body`.
+  /// - Throws: `DemoError.arguments` for an unrecognized or repeated flag, a flag missing its
+  ///   value, a non-integer `--congress`, or a filter missing `--congress` or `--body`;
+  ///   `BioguideInputError.invalidCongress` for a `--congress` value below 1.
   static func parsedQuery(from arguments: ArraySlice<String>) throws -> BioguideServiceQuery? {
     guard !arguments.isEmpty else { return nil }
     var congressNumber: Int?
@@ -53,10 +59,18 @@ struct CongressBioguideDemo {
     while let flag = iterator.next() {
       guard let value = iterator.next() else { throw DemoError.arguments }
       switch flag {
-      case "--body": congressType = value
-      case "--congress": congressNumber = Int(value)
-      case "--job": jobName = value
-      case "--region": regionCode = value
+      case "--body":
+        guard congressType == nil else { throw DemoError.arguments }
+        congressType = value
+      case "--congress":
+        guard congressNumber == nil, let number = Int(value) else { throw DemoError.arguments }
+        congressNumber = number
+      case "--job":
+        guard jobName == nil else { throw DemoError.arguments }
+        jobName = value
+      case "--region":
+        guard regionCode == nil else { throw DemoError.arguments }
+        regionCode = value
       default: throw DemoError.arguments
       }
     }

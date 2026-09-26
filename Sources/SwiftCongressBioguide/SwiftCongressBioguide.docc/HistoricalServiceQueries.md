@@ -6,6 +6,7 @@ them, with no timeline and no completeness claim.
 ## Query one loaded profile
 
 ```swift
+import Foundation
 import SwiftCongressBioguideModels
 
 let profile = try JSONDecoder().decode(BioguideProfile.self, from: bytes)
@@ -20,9 +21,10 @@ predicate a `BioguideServiceQuery` sets. Congress and body are compared together
 satisfy the same query. Job and region come from the position's own job and affiliation views,
 never another position's. Every set predicate needs its own evidence on that position; an absent,
 null, or non-string field never satisfies it. A query with no predicates matches every position.
-Comparison is exact and case-sensitive against the published raw strings: `BioguideJobName` and
-`BioguideCongressType` keep an unrecognized source spelling through `init(rawValue:)` rather than
-rejecting it.
+A profile with no positions never matches, even an empty query; use ``BioguideRecords`` for every
+profile. Comparison is exact and case-sensitive against the published raw strings:
+`BioguideJobName` and `BioguideCongressType` keep an unrecognized source spelling through
+`init(rawValue:)` rather than rejecting it.
 
 ## Filter while importing
 

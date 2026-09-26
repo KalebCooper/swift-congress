@@ -4,9 +4,10 @@ import SwiftCongressBioguideModels
 ///
 /// Each call to `next()` reads and verifies profiles in manifest order until one has at least one
 /// position satisfying the query, and yields that profile's complete original record once, however
-/// many of its positions match. Profiles that do not match are still fully verified: a corrupt,
-/// undecodable, or mismatched profile throws even when it would not have matched. Nothing is read
-/// ahead, and only the record under evaluation is held in memory.
+/// many of its positions match. A profile with no positions never matches, even an empty query;
+/// use ``BioguideRecords`` for every profile. Profiles that do not match are still fully verified:
+/// a corrupt, undecodable, or mismatched profile throws even when it would not have matched.
+/// Nothing is read ahead, and only the record under evaluation is held in memory.
 ///
 /// Filtering has the same exact raw-equality semantics as `BioguideProfile.positions(matching:)`
 /// and no date or as-of semantics. A finished traversal lists the matching profiles of the supplied

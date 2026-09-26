@@ -57,6 +57,8 @@ public struct BioguideImporter: Sendable {
   ///
   /// Creating the sequence opens nothing. Every scanned profile is verified exactly as by
   /// ``records(in:)``, so corruption in a profile that would not have matched still throws.
+  /// A profile with no positions never matches, even an empty query; use ``BioguideRecords`` for
+  /// every profile.
   ///
   /// ```swift
   /// let query = BioguideServiceQuery(job: .senator, regionCode: "PA")

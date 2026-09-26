@@ -15,11 +15,12 @@ stable snapshot, freshness, availability, or identity matching is guaranteed.
 Bioguide supplied-file import verifies bounded profile reads, inventory counts, SHA-256, source IDs,
 and predecessor-body affiliations. A full 13,056-profile official snapshot has passed the importer.
 Historical-service queries match a profile's own positions against Congress, job, and region exactly
-as published; the query is source-service matching, not a timeline, and a filtered pass over the
-snapshot is not archive validation. House year/section discovery and roll calls are implemented
-independently, including historical rows without member IDs. Senate session inventories, roll calls,
-and the dated current LIS-to-Bioguide crosswalk are also independent services. Historical identity
-gaps remain unresolved. No package release exists.
+as published; the query is source-service matching, not a timeline. Filtered results are not a
+validation report; an early break validates nothing beyond the scanned profiles, and the
+whole-directory demo mode remains the validation path. House year/section discovery and roll calls
+are implemented independently, including historical rows without member IDs. Senate session
+inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are also independent
+services. Historical identity gaps remain unresolved. No package release exists.
 Member and bill-text-version operations remain pending official payload verification after rate limiting.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 

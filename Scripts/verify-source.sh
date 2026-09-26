@@ -57,6 +57,29 @@ swift_files() {
   find "$ROOT/$1" -name '*.swift' -type f 2>/dev/null | sort
 }
 
+# Settles an awk scan. The scan's END block prints one sentinel as its last line: `OK <count>` when
+# it has read every file and counted a non-empty subject, or `NO-<SUBJECT>` when the subject is
+# empty. An awk that stops early prints no sentinel (BSD awk and mawk abort on a file they cannot
+# open) or exits nonzero (gawk skips the file and reports it at exit), and either one fails here,
+# because an empty report from a scan that never finished proves nothing. The file list is
+# word-split, so a path holding a space reaches awk as paths that do not exist and fails closed.
+settle_scan() {
+  # $1: check name, $2: awk exit status, $3: awk output, $4: what an empty subject means
+  local name="$1" status="$2" report="$3" lost="$4" sentinel body
+  sentinel=${report##*$'\n'}
+  body=${report%"$sentinel"}
+  body=${body%$'\n'}
+  if [ "$status" -ne 0 ] || ! [[ "$sentinel" =~ ^(OK\ [1-9][0-9]*|NO-[A-Z]+)$ ]]; then
+    fail "$name (the scan stopped before reading every file, awk exit $status; the check cannot vouch for its subject)"
+  elif [[ "$sentinel" == NO-* ]]; then
+    fail "$name ($lost; the check has lost its subject)"
+  elif [ -z "$body" ]; then
+    pass "$name"
+  else
+    fail "$name"; printf '%s\n' "$body"
+  fi
+}
+
 # ---------------------------------------------------------------------------------------------------
 # Checks. Each is a function that calls pass or fail exactly once.
 # ---------------------------------------------------------------------------------------------------
@@ -74,13 +97,14 @@ check_force_ops() {
 # only under the `#else` of a `#if canImport(FoundationEssentials)`.
 check_models_foundation_import() {
   local name="every import Foundation in Sources/${SERVICE_MODULE}Models sits under #else"
-  local files hits
+  local files hits status=0
   files=$(swift_files Sources/${SERVICE_MODULE}Models)
   if [ -z "$files" ]; then fail "$name (Sources/${SERVICE_MODULE}Models holds no Swift file; the check has lost its subject)"; return; fi
   # awk rather than grep -B1: a file whose first line is the import has no preceding line for -B1 to
-  # show, and the filter would drop the hit.
-  hits=$(awk 'FNR == 1 { prev = "" } /^import Foundation$/ && prev != "#else" { print FILENAME ":" FNR ": " $0 } { prev = $0 }' $files 2>/dev/null || true)
-  if [ -z "$hits" ]; then pass "$name"; else fail "$name"; printf '%s\n' "$hits"; fi
+  # show, and the filter would drop the hit. The sentinel counts the files handed to awk rather than
+  # the lines read, so a models directory of empty files still reads as scanned.
+  hits=$(awk 'FNR == 1 { prev = "" } /^import Foundation$/ && prev != "#else" { print FILENAME ":" FNR ": " $0 } { prev = $0 } END { print "OK " (ARGC - 1) }' $files) || status=$?
+  settle_scan "$name" "$status" "$hits" "no file handed to the scan"
 }
 
 # Prohibition. ${SERVICE_MODULE}Models is usable on any data layer, so it reaches for no networking stack: not
@@ -192,7 +216,7 @@ check_swift_testing_only() {
 # making its job invisible to the scan.
 check_job_timeouts() {
   local name="every job in .github/workflows carries a timeout-minutes"
-  local files report
+  local files report status=0
   files=$(find "$ROOT/.github/workflows" \( -name '*.yml' -o -name '*.yaml' \) -type f 2>/dev/null | sort)
   if [ -z "$files" ]; then fail "$name (no workflow file found; the check has lost its subject)"; return; fi
   # `jobs:` is the only top-level block whose two-space keys are job names, so the scan tracks which
@@ -209,15 +233,9 @@ check_job_timeouts() {
       close_job(); job = $0; sub(/^  /, "", job); sub(/:[[:space:]]*$/, "", job); jobfile = FILENAME; next
     }
     in_jobs && job != "" && /^    timeout-minutes:[[:space:]]*[0-9]+[[:space:]]*(#.*)?$/ { has = 1; next }
-    END { close_job(); if (total == 0) print "NO-JOBS" }
-  ' $files 2>/dev/null || true)
-  if [ "$report" = "NO-JOBS" ]; then
-    fail "$name (no job found in any workflow; the check has lost its subject)"
-  elif [ -z "$report" ]; then
-    pass "$name"
-  else
-    fail "$name"; printf '%s\n' "$report"
-  fi
+    END { close_job(); if (total == 0) print "NO-JOBS"; else print "OK " total }
+  ' $files) || status=$?
+  settle_scan "$name" "$status" "$report" "no job found in any workflow"
 }
 
 # Derivation. Every suite under Tests carries the shared time limit, so a test that stops making
@@ -232,7 +250,7 @@ check_job_timeouts() {
 # matter what the suites carry; it is refused here rather than left to be discovered by a hang.
 check_suite_time_limit() {
   local name="every suite in Tests carries the shared time limit"
-  local files report
+  local files report status=0
   files=$(swift_files Tests)
   if [ -z "$files" ]; then fail "$name (no test file found; the check has lost its subject)"; return; fi
   report=$(awk '
@@ -277,15 +295,9 @@ check_suite_time_limit() {
       if (index(buf, "suiteTimeLimitMinutes") == 0) print loc ": " buf
       next
     }
-    END { if (total == 0) print "NO-SUITES" }
-  ' $files 2>/dev/null || true)
-  if [ "$report" = "NO-SUITES" ]; then
-    fail "$name (no suite found in Tests; the check has lost its subject)"
-  elif [ -z "$report" ]; then
-    pass "$name"
-  else
-    fail "$name"; printf '%s\n' "$report"
-  fi
+    END { if (total == 0) print "NO-SUITES"; else print "OK " total }
+  ' $files) || status=$?
+  settle_scan "$name" "$status" "$report" "no suite found in Tests"
 }
 
 # Derivation. R12 requires every @Test to carry a sentence-style string title as its first
@@ -298,7 +310,7 @@ check_suite_time_limit() {
 # both count as untitled; `@Test("...", ...)` in any shape does not.
 check_test_titles() {
   local name="every @Test in Tests carries a string-literal title"
-  local files report
+  local files report status=0
   files=$(swift_files Tests)
   if [ -z "$files" ]; then fail "$name (no test file found; the check has lost its subject)"; return; fi
   report=$(awk '
@@ -355,15 +367,9 @@ check_test_titles() {
       }
       next
     }
-    END { if (total == 0) print "NO-TESTS" }
-  ' $files 2>/dev/null || true)
-  if [ "$report" = "NO-TESTS" ]; then
-    fail "$name (no @Test found in Tests; the check has lost its subject)"
-  elif [ -z "$report" ]; then
-    pass "$name"
-  else
-    fail "$name"; printf '%s\n' "$report"
-  fi
+    END { if (total == 0) print "NO-TESTS"; else print "OK " total }
+  ' $files) || status=$?
+  settle_scan "$name" "$status" "$report" "no @Test found in Tests"
 }
 
 # Prohibition. Local-only files are never force-added. Not self-tested: it reads the real index.
@@ -683,6 +689,24 @@ plant_fifth_violation() {
   esac
 }
 
+# A further negative for each check that scans with awk: a Finder-style duplicate whose name holds a
+# space. The word-split file list hands awk paths that do not exist, so the scan stops early, and a
+# scan that stops early must fail rather than pass on its empty report. A mode-000 file would not
+# do: the Linux lane runs as root, which reads it.
+break_scan() {
+  # $1: directory, $2: check function; returns 1 when the check does not scan with awk
+  local d="$1"
+  case "$2" in
+    check_models_foundation_import)
+      cp "$d/Sources/SwiftCongressDataModels/MediaType.swift" "$d/Sources/SwiftCongressDataModels/MediaType copy.swift" ;;
+    check_job_timeouts)
+      cp "$d/.github/workflows/ci.yml" "$d/.github/workflows/ci copy.yml" ;;
+    check_suite_time_limit | check_test_titles)
+      cp "$d/Tests/SwiftCongressDataTests/ClientTests.swift" "$d/Tests/SwiftCongressDataTests/ClientTests copy.swift" ;;
+    *) return 1 ;;
+  esac
+}
+
 # A further negative for each check that guards its subject: remove the subject, which must also fail.
 remove_subject() {
   # $1: directory, $2: check function; returns 1 when the check has no subject to remove
@@ -760,6 +784,14 @@ self_test() {
       got=$(outcome_of "$planted" "$check")
       arms=$((arms + 1))
       if [ "$got" = FAIL ]; then pass "self-test: $check trips on its fifth planted violation"; else fail "self-test: $check MISSED its fifth planted violation"; fi
+    fi
+
+    planted="$scratch/unscanned-$check"
+    write_clean_tree "$planted"
+    if break_scan "$planted" "$check"; then
+      got=$(outcome_of "$planted" "$check")
+      arms=$((arms + 1))
+      if [ "$got" = FAIL ]; then pass "self-test: $check fails when its scan stops early"; else fail "self-test: $check PASSED a scan that stopped early"; fi
     fi
 
     planted="$scratch/subjectless-$check"

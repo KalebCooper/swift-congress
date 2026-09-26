@@ -26,7 +26,12 @@ inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are als
 services. A Senate roll call's typed subject identifies the bill, amendment, nomination, or
 treaty document the vote concerned, read from the same document and never a Congress.gov
 crosswalk. Historical identity gaps remain unresolved. No package release exists.
-Member and bill-text-version operations remain pending official payload verification after rate limiting.
+Congress.gov member browsing and single-member detail are implemented: the unscoped and
+per-Congress list routes and the by-identifier detail route, with the raw `currentMember`
+filter kept separate from a member's typed historical `terms`, and `partyHistory`,
+`leadership`, `previousNames`, and `addressInformation` kept as raw fields only. The API
+returns the members it publishes; this library asserts no complete historical membership.
+Bill-text-version operations remain pending official payload verification after rate limiting.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
 ## Usage
@@ -52,9 +57,12 @@ explicitly off Apple platforms. API keys are required and are sent only through 
 
 ## Example
 
-`Examples/CongressDataDemo` decodes an official recorded bill from a supplied file path.
-Its Apple live mode accepts `--live` and an explicit API key. The demo never supplies a default key.
-The deterministic example input is `Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`.
+`Examples/CongressDataDemo` decodes an official recorded bill from a supplied file path, or a
+recorded member detail or member list page with `--member <path>` and `--members <path>`. Its
+Apple live mode accepts `--live` and an explicit API key for the bill route, unchanged. The demo
+never supplies a default key. Deterministic example inputs include
+`Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`, `member-L000174.json`, and
+`members117-first.json`.
 
 `Examples/CongressBioguideDemo` validates every profile in a staged export directory. Prepare a
 supplied official all-profile ZIP with `Scripts/prepare-bioguide.py`; provide the actual retrieval

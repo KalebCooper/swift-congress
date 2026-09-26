@@ -21,6 +21,9 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 - Bioguide historical-service queries matching a profile's own positions by Congress, job, and
   region, a lazy import-time filtered record sequence, and a demo filter mode.
 
+- Congress.gov member browsing (unscoped and per-Congress lists) and single-member detail
+  retrieval, distinguishing the raw `currentMember` filter from historical terms, with
+  documentation and a demo that prints recorded member files.
 - Congress.gov discovery, bill detail and lists, and bill action lists.
 - Independent portable models, immutable typed requests/endpoints, and lazy page/item sequences.
 - Source-byte receipts, origin and continuation validation, explicit credentials, and transport injection.

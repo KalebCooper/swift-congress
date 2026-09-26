@@ -39,6 +39,12 @@ incomplete page is an error. Counts can change; no stable snapshot is promised.
 - ``Congress``
 - ``CongressSession``
 - ``JSONValue``
+- ``MemberDepiction``
+- ``MemberDetail``
+- ``MemberProfile``
+- ``MemberSummary``
+- ``MemberTerm``
+- ``MemberTermSummary``
 - ``ResourceLink``
 
 ### Requests
@@ -51,6 +57,8 @@ incomplete page is an error. Counts can change; no stable snapshot is promised.
 - ``CongressQuery``
 - ``CongressRequest``
 - ``Endpoint``
+- ``MemberIdentifier``
+- ``MemberQuery``
 
 ### Pages and receipts
 
@@ -60,6 +68,7 @@ incomplete page is an error. Counts can change; no stable snapshot is promised.
 - ``CongressContinuation``
 - ``CongressPage``
 - ``CongressPaginationError``
+- ``MemberPage``
 - ``Pagination``
 - ``SourceHeader``
 - ``SourceResponse``

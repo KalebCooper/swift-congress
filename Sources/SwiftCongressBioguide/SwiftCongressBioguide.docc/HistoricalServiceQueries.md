@@ -10,7 +10,7 @@ import Foundation
 import SwiftCongressBioguideModels
 
 let profile = try JSONDecoder().decode(BioguideProfile.self, from: bytes)
-let congress = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+let congress = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
 let query = BioguideServiceQuery(congress: congress, job: .delegate, regionCode: "PA")
 let matches = profile.positions(matching: query)
 ```

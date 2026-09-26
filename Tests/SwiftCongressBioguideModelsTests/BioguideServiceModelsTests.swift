@@ -12,18 +12,19 @@ struct BioguideServiceModelsTests {
   @Test("A Congress number below one is rejected", arguments: [0, -1, Int.min])
   func aCongressNumberBelowOneIsRejected(number: Int) {
     #expect(throws: BioguideInputError.invalidCongress) {
-      try BioguideCongressIdentifier(number: number, type: .usCongress)
+      try BioguideCongressIdentifier(congressType: .usCongress, number: number)
     }
   }
 
   @Test("The same number in two bodies names two Congresses")
   func theSameNumberInTwoBodiesNamesTwoCongresses() throws {
-    let continental = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
-    let federal = try BioguideCongressIdentifier(number: 2, type: .usCongress)
-    let repeated = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+    let continental = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
+    let federal = try BioguideCongressIdentifier(congressType: .usCongress, number: 2)
+    let repeated = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
     #expect(continental != federal)
     #expect(continental == repeated)
-    #expect(try BioguideCongressIdentifier(number: 1_000, type: .usCongress).number == 1_000)
+    #expect(
+      try BioguideCongressIdentifier(congressType: .usCongress, number: 1_000).number == 1_000)
   }
 
   @Test("Vocabulary constants keep the exact source spellings")
@@ -42,7 +43,7 @@ struct BioguideServiceModelsTests {
   @Test("A Continental Delegate query returns only the Continental position")
   func aContinentalDelegateQueryReturnsOnlyTheContinentalPosition() throws {
     let profile = try decodedProfile(.historical)
-    let continental = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+    let continental = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
     let query = BioguideServiceQuery(congress: continental, job: .delegate, regionCode: "PA")
     let matches = profile.positions(matching: query)
     #expect(matches == [profile.jobPositions[0]])
@@ -53,7 +54,7 @@ struct BioguideServiceModelsTests {
   @Test("A U.S. Congress query does not match predecessor service")
   func aUSCongressQueryDoesNotMatchPredecessorService() throws {
     let profile = try decodedProfile(.historical)
-    let federal = try BioguideCongressIdentifier(number: 2, type: .usCongress)
+    let federal = try BioguideCongressIdentifier(congressType: .usCongress, number: 2)
     let query = BioguideServiceQuery(congress: federal)
     let matches = profile.positions(matching: query)
     #expect(matches == [profile.jobPositions[2]])
@@ -64,9 +65,10 @@ struct BioguideServiceModelsTests {
   @Test("A Confederation Congress query does not match Continental service with the same number")
   func aConfederationCongressQueryDoesNotMatchContinentalServiceWithTheSameNumber() throws {
     let profile = try decodedProfile(.confederation)
-    let confederation = try BioguideCongressIdentifier(number: 1, type: .confederationCongress)
-    let continental = try BioguideCongressIdentifier(number: 1, type: .continentalCongress)
-    let federal = try BioguideCongressIdentifier(number: 1, type: .usCongress)
+    let confederation = try BioguideCongressIdentifier(
+      congressType: .confederationCongress, number: 1)
+    let continental = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 1)
+    let federal = try BioguideCongressIdentifier(congressType: .usCongress, number: 1)
     let matches = profile.positions(
       matching: BioguideServiceQuery(congress: confederation, job: .delegate, regionCode: "NY"))
     #expect(matches == [profile.jobPositions[1]])
@@ -80,7 +82,7 @@ struct BioguideServiceModelsTests {
   @Test("Modern job and region views read the retained source objects")
   func modernJobAndRegionViewsReadTheRetainedSourceObjects() throws {
     let profile = try decodedProfile(.current)
-    let congress = try BioguideCongressIdentifier(number: 117, type: .usCongress)
+    let congress = try BioguideCongressIdentifier(congressType: .usCongress, number: 117)
     let matches = profile.positions(
       matching: BioguideServiceQuery(congress: congress, job: .representative, regionCode: "TX"))
     #expect(matches == [profile.jobPositions[2]])
@@ -100,8 +102,8 @@ struct BioguideServiceModelsTests {
   @Test("Predicates combine on one position, never across positions")
   func predicatesCombineOnOnePositionNeverAcrossPositions() throws {
     let profile = try decodedProfile(.historical)
-    let continental = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
-    let firstFederal = try BioguideCongressIdentifier(number: 1, type: .usCongress)
+    let continental = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
+    let firstFederal = try BioguideCongressIdentifier(congressType: .usCongress, number: 1)
     #expect(
       profile.positions(matching: BioguideServiceQuery(congress: continental, job: .senator))
         .isEmpty)
@@ -148,14 +150,14 @@ struct BioguideServiceModelsTests {
       ])
     }
     let unknownBody = try BioguideCongressIdentifier(
-      number: 2, type: BioguideCongressType(rawValue: "ProvincialCongress"))
+      congressType: BioguideCongressType(rawValue: "ProvincialCongress"), number: 2)
     let matches = profile.positions(
       matching: BioguideServiceQuery(
         congress: unknownBody, job: BioguideJobName(rawValue: "Deputy")))
     #expect(matches == [profile.jobPositions[0]])
     #expect(matches.first?.jobDetails?.name?.rawValue == "Deputy")
     #expect(matches.first?.jobDetails?.rawFields["tenure"] == .string("unrecognized"))
-    let continental = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+    let continental = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
     #expect(profile.positions(matching: BioguideServiceQuery(congress: continental)).isEmpty)
     #expect(profile.positions(matching: BioguideServiceQuery(job: .delegate)).isEmpty)
   }
@@ -171,7 +173,7 @@ struct BioguideServiceModelsTests {
     let position = profile.jobPositions[2]
     #expect(position.congressAffiliation?.represents == nil)
     #expect(position.congressAffiliation?.representedRegion == nil)
-    let congress = try BioguideCongressIdentifier(number: 117, type: .usCongress)
+    let congress = try BioguideCongressIdentifier(congressType: .usCongress, number: 117)
     #expect(
       profile.positions(matching: BioguideServiceQuery(congress: congress, regionCode: "TX"))
         .isEmpty)
@@ -193,7 +195,7 @@ struct BioguideServiceModelsTests {
     }
     #expect(withoutAffiliation.jobPositions[0].congressAffiliation == nil)
     #expect(withoutCongress.jobPositions[0].congressAffiliation?.congress == nil)
-    let congress = try BioguideCongressIdentifier(number: 115, type: .usCongress)
+    let congress = try BioguideCongressIdentifier(congressType: .usCongress, number: 115)
     for profile in [withoutAffiliation, withoutCongress] {
       #expect(profile.positions(matching: BioguideServiceQuery(congress: congress)).isEmpty)
       #expect(profile.positions(matching: BioguideServiceQuery()).count == 5)
@@ -228,7 +230,7 @@ struct BioguideServiceModelsTests {
       position["startCirca"] = .boolean(true)
       position["startDate"] = .string("1789")
     }
-    let congress = try BioguideCongressIdentifier(number: 1, type: .usCongress)
+    let congress = try BioguideCongressIdentifier(congressType: .usCongress, number: 1)
     let matches = profile.positions(matching: BioguideServiceQuery(congress: congress))
     #expect(matches == [profile.jobPositions[1]])
     #expect(matches.first?.startDate == "1789")
@@ -246,7 +248,7 @@ struct BioguideServiceModelsTests {
     root["jobPositions"] = .array(positions)
     let profile = try JSONDecoder().decode(
       BioguideProfile.self, from: JSONEncoder().encode(JSONValue.object(root)))
-    let congress = try BioguideCongressIdentifier(number: 117, type: .usCongress)
+    let congress = try BioguideCongressIdentifier(congressType: .usCongress, number: 117)
     let matches = profile.positions(matching: BioguideServiceQuery(congress: congress))
     #expect(matches == [profile.jobPositions[2], profile.jobPositions[5]])
     #expect(matches[0] == matches[1])

@@ -10,7 +10,7 @@ extension BioguideProfile {
   /// result reflects this profile as published and makes no claim that the export is complete.
   ///
   /// ```swift
-  /// let congress = try BioguideCongressIdentifier(number: 2, type: .usCongress)
+  /// let congress = try BioguideCongressIdentifier(congressType: .usCongress, number: 2)
   /// for position in profile.positions(matching: BioguideServiceQuery(congress: congress)) {
   ///   print(position.startDate ?? "no published start date")
   /// }

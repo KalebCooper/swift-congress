@@ -12,24 +12,24 @@ public enum BioguideInputError: Error, Hashable, Sendable {
 /// membership, or coverage of the export.
 ///
 /// ```swift
-/// let continental = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
-/// let federal = try BioguideCongressIdentifier(number: 2, type: .usCongress)
+/// let continental = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
+/// let federal = try BioguideCongressIdentifier(congressType: .usCongress, number: 2)
 /// assert(continental != federal)
 /// ```
 public struct BioguideCongressIdentifier: Hashable, Sendable {
+  /// The body the number counts within, compared with a source affiliation's `congressType`.
+  public let congressType: BioguideCongressType
   /// The positive Congress number within its body.
   public let number: Int
-  /// The body the number counts within.
-  public let type: BioguideCongressType
 
   /// Creates a Congress identity for comparison with source affiliations.
   /// - Parameters:
+  ///   - congressType: The source body type; unknown types are accepted unchanged.
   ///   - number: The Congress number within its body, 1 or greater.
-  ///   - type: The source body type; unknown types are accepted unchanged.
   /// - Throws: `BioguideInputError.invalidCongress` when `number` is less than 1.
-  public init(number: Int, type: BioguideCongressType) throws(BioguideInputError) {
+  public init(congressType: BioguideCongressType, number: Int) throws(BioguideInputError) {
     guard number >= 1 else { throw .invalidCongress }
+    self.congressType = congressType
     self.number = number
-    self.type = type
   }
 }

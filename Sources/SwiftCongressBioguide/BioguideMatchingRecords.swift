@@ -15,7 +15,7 @@ import SwiftCongressBioguideModels
 /// the affected iterator.
 ///
 /// ```swift
-/// let congress = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+/// let congress = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
 /// let query = BioguideServiceQuery(congress: congress, job: .delegate)
 /// for try await record in importer.records(in: directory, matching: query) {
 ///   print(record.profile.usCongressBioId)

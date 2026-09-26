@@ -76,7 +76,7 @@ struct CongressBioguideDemo {
     }
     guard let congressNumber, let congressType else { throw DemoError.arguments }
     let congress = try BioguideCongressIdentifier(
-      number: congressNumber, type: BioguideCongressType(rawValue: congressType))
+      congressType: BioguideCongressType(rawValue: congressType), number: congressNumber)
     return BioguideServiceQuery(
       congress: congress, job: jobName.map(BioguideJobName.init(rawValue:)), regionCode: regionCode)
   }

@@ -10,7 +10,7 @@
 /// semantics, infers no chamber or identity, and says nothing about the completeness of the export.
 ///
 /// ```swift
-/// let congress = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+/// let congress = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
 /// let query = BioguideServiceQuery(congress: congress, job: .delegate, regionCode: "PA")
 /// let positions = profile.positions(matching: query)
 /// ```
@@ -40,7 +40,7 @@ public struct BioguideServiceQuery: Hashable, Sendable {
     let affiliation = position.congressAffiliation
     if let congress {
       guard let source = affiliation?.congress, source.congressNumber == congress.number,
-        source.congressType == congress.type.rawValue
+        source.congressType == congress.congressType.rawValue
       else { return false }
     }
     if let job, position.jobDetails?.name != job { return false }

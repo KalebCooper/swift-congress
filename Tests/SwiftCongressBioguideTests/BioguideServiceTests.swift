@@ -122,7 +122,7 @@ struct BioguideServiceTests {
     let directory = try stage()
     defer { try? FileManager.default.removeItem(at: directory) }
     let source = try manifest()
-    let congress = try BioguideCongressIdentifier(number: 2, type: .continentalCongress)
+    let congress = try BioguideCongressIdentifier(congressType: .continentalCongress, number: 2)
     var iterator = try BioguideImporter(manifest: source).records(
       in: directory,
       matching: BioguideServiceQuery(congress: congress, job: .delegate, regionCode: "PA")

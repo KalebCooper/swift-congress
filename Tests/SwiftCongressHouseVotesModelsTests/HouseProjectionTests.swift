@@ -245,8 +245,141 @@ struct HouseProjectionTests {
     #expect(rollCall.totals["yea-total"] == "401")
   }
 
+  @Test("A current Senate bill label is recognized with the document's Congress")
+  func aCurrentSenateBillLabelIsRecognizedWithTheDocumentsCongress() throws {
+    let rollCall = try decode(.house2026, "https://clerk.house.gov/evs/2026/roll314.xml")
+    let reference = try #require(rollCall.legislationReference)
+    #expect(reference.rawValue == "S 2403")
+    #expect(reference.rawValue == rollCall.legislation)
+    let measure = try #require(reference.measure)
+    #expect(measure.congress == 119)
+    #expect(measure.measureType == .senateBill)
+    #expect(measure.measureType.rawValue == "S")
+    #expect(measure.number == "2403")
+  }
+
+  @Test("A historical House bill label is recognized with its own Congress")
+  func aHistoricalHouseBillLabelIsRecognizedWithItsOwnCongress() throws {
+    let rollCall = try decode(.house1990_vote, "https://clerk.house.gov/evs/1990/roll010.xml")
+    let reference = try #require(rollCall.legislationReference)
+    #expect(reference.rawValue == "H R 2190")
+    let measure = try #require(reference.measure)
+    #expect(measure.congress == 101)
+    #expect(measure.measureType == .houseBill)
+    #expect(measure.number == "2190")
+  }
+
+  @Test("A quorum call label is kept with no recognized measure")
+  func aQuorumCallLabelIsKeptWithNoRecognizedMeasure() throws {
+    let rollCall = try decode(.house1990, "https://clerk.house.gov/evs/1990/roll001.xml")
+    let reference = try #require(rollCall.legislationReference)
+    #expect(reference.rawValue == "QUORUM 1")
+    #expect(reference.measure == nil)
+  }
+
+  @Test("An election of the Speaker has no legislation reference")
+  func anElectionOfTheSpeakerHasNoLegislationReference() throws {
+    let rollCall = try decode(.house2025_speaker, "https://clerk.house.gov/evs/2025/roll002.xml")
+    #expect(rollCall.legislationReference == nil)
+    #expect(rollCall.legislation == nil)
+  }
+
+  @Test(
+    "Each anchored label form is recognized as its measure type",
+    arguments: [
+      ("H R 1", HouseMeasureType.houseBill, "1"),
+      ("H RES 5", .houseResolution, "5"),
+      ("H J RES 7", .houseJointResolution, "7"),
+      ("H CON RES 9", .houseConcurrentResolution, "9"),
+      ("S J RES 2", .senateJointResolution, "2"),
+      ("S RES 3", .senateResolution, "3"),
+      ("S CON RES 4", .senateConcurrentResolution, "4"),
+      ("S 10", .senateBill, "10"),
+      ("H R 9223372036854775808", .houseBill, "9223372036854775808"),
+    ])
+  func eachAnchoredLabelFormIsRecognizedAsItsMeasureType(
+    label: String, measureType: HouseMeasureType, number: String
+  ) throws {
+    // Test-authored mutation of the 2026 roll 314 fixture: legis-num text is replaced.
+    let reference = try #require(
+      try house2026(replacingLegislationWith: "<legis-num>\(label)</legis-num>")
+        .legislationReference)
+    #expect(reference.rawValue == label)
+    let measure = try #require(reference.measure)
+    #expect(measure.congress == 119)
+    #expect(measure.measureType == measureType)
+    #expect(measure.number == number)
+  }
+
+  @Test(
+    "An unanchored label keeps its text and yields no measure",
+    arguments: [
+      "", " ", "S", "H R", "H R ", " H R 1", "H R 1 ", "H  R 1", "H R  1", "h r 1", "H.R. 1",
+      "S.J.RES. 42", "H R 1 2", "H R 1a", "H R 01", "H R 0", "H R -1", "H R +1", "H R 1.0",
+      "H R １", "H B 1", "S CON 4", "QUORUM 1", "H R 1 and H R 2", "H R\u{00A0}1", "H R 1\n",
+    ])
+  func anUnanchoredLabelKeepsItsTextAndYieldsNoMeasure(label: String) throws {
+    // Test-authored mutation of the 2026 roll 314 fixture: legis-num text is replaced.
+    let reference = try #require(
+      try house2026(replacingLegislationWith: "<legis-num>\(label)</legis-num>")
+        .legislationReference)
+    #expect(reference.rawValue == label)
+    #expect(reference.measure == nil)
+  }
+
+  @Test("A removed label yields no reference and a repeated label uses the first")
+  func aRemovedLabelYieldsNoReferenceAndARepeatedLabelUsesTheFirst() throws {
+    // Test-authored mutations of the 2026 roll 314 fixture: legis-num removed, then doubled.
+    let removed = try house2026(replacingLegislationWith: "")
+    #expect(removed.legislationReference == nil)
+    #expect(removed.legislation == nil)
+    let repeated = try house2026(
+      replacingLegislationWith: "<legis-num>H R 1</legis-num><legis-num>S 2</legis-num>")
+    #expect(repeated.legislationReference?.rawValue == "H R 1")
+    #expect(repeated.legislationReference?.rawValue == repeated.legislation)
+    #expect(repeated.legislationReference?.measure?.measureType == .houseBill)
+  }
+
+  @Test("A consumer can name a measure type the projection never produces")
+  func aConsumerCanNameAMeasureTypeTheProjectionNeverProduces() throws {
+    let custom = HouseMeasureType(rawValue: "H B")
+    #expect(custom.rawValue == "H B")
+    #expect(custom != .houseBill)
+    let reference = try #require(
+      try house2026(replacingLegislationWith: "<legis-num>H B 1</legis-num>")
+        .legislationReference)
+    #expect(reference.measure == nil)
+  }
+
+  @Test(
+    "Reading the legislation reference leaves stored values and encoding unchanged",
+    arguments: [Fixture.house1990, .house1990_vote, .house2025_speaker, .house2026])
+  func readingTheLegislationReferenceLeavesStoredValuesAndEncodingUnchanged(fixture: Fixture)
+    throws
+  {
+    let rollCall = try decode(fixture, "https://clerk.house.gov/evs/")
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = .sortedKeys
+    let before = try encoder.encode(rollCall)
+    _ = rollCall.legislationReference
+    #expect(try encoder.encode(rollCall) == before)
+    #expect(try JSONDecoder().decode(HouseRollCall.self, from: before) == rollCall)
+    let object = try #require(try JSONSerialization.jsonObject(with: before) as? [String: Any])
+    #expect(object["legislationReference"] == nil)
+    #expect(object["measure"] == nil)
+  }
+
   private func decode(_ fixture: Fixture, _ source: String) throws -> HouseRollCall {
     try HouseRollCall.decode(fixture.data(), sourceURL: #require(URL(string: source)))
+  }
+
+  private func house2026(replacingLegislationWith replacement: String) throws -> HouseRollCall {
+    var text = try #require(String(data: Fixture.house2026.data(), encoding: .utf8))
+    let element = try #require(text.range(of: "<legis-num>S 2403</legis-num>"))
+    text.replaceSubrange(element, with: replacement)
+    return try HouseRollCall.decode(
+      Data(text.utf8),
+      sourceURL: #require(URL(string: "https://clerk.house.gov/evs/2026/roll314.xml")))
   }
 
   private func house2026(replacingVoteTotalsWith replacement: String) throws -> HouseRollCall {

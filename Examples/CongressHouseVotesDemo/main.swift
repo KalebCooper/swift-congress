@@ -42,6 +42,10 @@ struct CongressHouseVotesDemo {
           print("Vote total \(count.name): \(display)")
         }
       }
+      for row in tallies.byCandidate {
+        let display = row.count.map { $0.value.map(String.init) ?? "raw: \($0.rawValue)" } ?? "no candidate-total"
+        print("Candidate total \(row.candidate ?? "unlabeled"): \(display)")
+      }
     } else {
       print("Vote totals: none published")
     }

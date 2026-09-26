@@ -13,10 +13,10 @@ package enum Fixture: String {
   case house1990 = "house1990.xml"
   /// Recorded https://clerk.house.gov/evs/1990/roll010.xml.
   case house1990_vote = "house1990-vote.xml"
-  /// Recorded https://clerk.house.gov/evs/2026/roll314.xml.
-  case house2026 = "house2026.xml"
   /// Recorded https://clerk.house.gov/evs/2025/roll002.xml.
   case house2025_speaker = "house2025-speaker.xml"
+  /// Recorded https://clerk.house.gov/evs/2026/roll314.xml.
+  case house2026 = "house2026.xml"
 
   package func data() throws -> Data {
     guard

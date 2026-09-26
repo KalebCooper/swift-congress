@@ -93,6 +93,8 @@ struct HouseProjectionTests {
     _ = rollCall.tallies
     #expect(try encoder.encode(rollCall) == before)
     #expect(try JSONDecoder().decode(HouseRollCall.self, from: before) == rollCall)
+    let object = try #require(try JSONSerialization.jsonObject(with: before) as? [String: Any])
+    #expect(object["tallies"] == nil)
   }
 
   @Test("The encoded roll call keeps exactly its stored keys")
@@ -166,7 +168,7 @@ struct HouseProjectionTests {
     arguments: [
       ("0", 0), ("007", 7), ("9223372036854775807", Int.max), ("", nil), ("-1", nil),
       ("9223372036854775808", nil), (" 5", nil), ("5 ", nil), ("+5", nil), ("1.0", nil),
-      ("5a", nil),
+      ("5a", nil), ("５", nil),
     ] as [(String, Int?)])
   func countsThatAreNotCompleteNonnegativeDecimalsKeepTheirRawTextOnly(
     raw: String, expected: Int?

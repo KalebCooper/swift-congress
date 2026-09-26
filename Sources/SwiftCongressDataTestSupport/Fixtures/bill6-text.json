@@ -1,0 +1,29 @@
+{
+    "pagination": {
+        "count": 1
+    },
+    "request": {
+        "billNumber": "1",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/6/hr/1?format=json",
+        "congress": "6",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "textVersions": [
+        {
+            "date": "1799-12-16T12:00:00Z",
+            "formats": [
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/6/llhb/1.pdf"
+                },
+                {
+                    "type": "Plain Text",
+                    "url": "https://www.congress.gov/6/llhb/6_HR1_BillTextVersion1_12161799.txt"
+                }
+            ],
+            "type": "Bill Text Version 1"
+        }
+    ]
+}

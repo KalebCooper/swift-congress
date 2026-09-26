@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "bioguideId": "S001175",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/f46859965a87477ff0d819b150a1b0aa_200.jpg"
+            },
+            "district": 14,
+            "name": "Speier, Jackie",
+            "partyName": "Democratic",
+            "state": "California",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2023,
+                        "startYear": 2008
+                    }
+                ]
+            },
+            "updateDate": "2026-09-23T16:00:35Z",
+            "url": "https://api.congress.gov/v3/member/S001175?format=json"
+        },
+        {
+            "bioguideId": "G000359",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/29c09ee2f48f20442f562980da6579ba_200.jpg"
+            },
+            "name": "Graham, Lindsey",
+            "partyName": "Republican",
+            "state": "South Carolina",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2003,
+                        "startYear": 1995
+                    },
+                    {
+                        "chamber": "Senate",
+                        "endYear": 2026,
+                        "startYear": 2003
+                    }
+                ]
+            },
+            "updateDate": "2026-09-21T20:00:32Z",
+            "url": "https://api.congress.gov/v3/member/G000359?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 97,
+        "next": "https://api.congress.gov/v3/member?fromDateTime=2026-09-01T00:00:00Z&toDateTime=2026-09-25T00:00:00Z&offset=2&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

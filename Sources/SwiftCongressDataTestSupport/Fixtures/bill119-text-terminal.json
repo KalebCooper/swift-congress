@@ -1,0 +1,34 @@
+{
+    "pagination": {
+        "count": 6,
+        "prev": "https://api.congress.gov/v3/bill/119/hr/1/text?offset=3&limit=2&format=json"
+    },
+    "request": {
+        "billNumber": "1",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/119/hr/1?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "textVersions": [
+        {
+            "date": "2025-07-05T03:59:59Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.pdf"
+                },
+                {
+                    "type": "United States Legislative Markup",
+                    "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21_uslm.xml"
+                }
+            ],
+            "type": "Public Law"
+        }
+    ]
+}

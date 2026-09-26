@@ -1,0 +1,34 @@
+{
+    "members": [
+        {
+            "bioguideId": "H000324",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/h000324_200.jpg"
+            },
+            "district": 20,
+            "name": "Hastings, Alcee L.",
+            "partyName": "Democratic",
+            "state": "Florida",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2021,
+                        "startYear": 1993
+                    }
+                ]
+            },
+            "updateDate": "2023-01-03T20:38:05Z",
+            "url": "https://api.congress.gov/v3/member/H000324?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 557,
+        "prev": "https://api.congress.gov/v3/member/congress/117?currentMember=false&offset=554&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

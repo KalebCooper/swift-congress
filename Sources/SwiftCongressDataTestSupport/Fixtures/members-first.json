@@ -1,0 +1,53 @@
+{
+    "members": [
+        {
+            "bioguideId": "G000608",
+            "depiction": {
+                "attribution": "Official U.S. Senate Photo",
+                "imageUrl": "https://www.congress.gov/img/member/6ab6df93aeae0a5cbbfbea84_200.jpg"
+            },
+            "name": "Graham, Darline",
+            "partyName": "Republican",
+            "state": "South Carolina",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "startYear": 2026
+                    }
+                ]
+            },
+            "updateDate": "2026-09-26T11:00:28Z",
+            "url": "https://api.congress.gov/v3/member/G000608?format=json"
+        },
+        {
+            "bioguideId": "W000832",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/6a986b632a68122e10181e6b_200.jpg"
+            },
+            "district": 14,
+            "name": "Wahab, Aisha",
+            "partyName": "Democratic",
+            "state": "California",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2026
+                    }
+                ]
+            },
+            "updateDate": "2026-09-26T07:40:30Z",
+            "url": "https://api.congress.gov/v3/member/W000832?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 2696,
+        "next": "https://api.congress.gov/v3/member?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

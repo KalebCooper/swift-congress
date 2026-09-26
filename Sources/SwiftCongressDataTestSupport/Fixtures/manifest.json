@@ -88,5 +88,145 @@
     "sha256": "337485e5f0e6c13f825247e160e996d034d6acb8825072fe41ae0a540eb01bec",
     "status": 200,
     "url": "https://api.congress.gov/v3/bill/119/hr/1/actions?format=json&limit=250"
+  },
+  {
+    "bytes": 1722,
+    "file": "members-first.json",
+    "mediaType": "application/json",
+    "providerID": "members-first",
+    "retrievedAt": "2026-09-26T22:27:29.242939+00:00",
+    "sha256": "fdc0062a76fa0eeb341114a7171c23813d85b31b6b2f753799288b5a445302b1",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member?format=json&limit=2&offset=0"
+  },
+  {
+    "bytes": 2236,
+    "file": "members-window.json",
+    "mediaType": "application/json",
+    "providerID": "members-window",
+    "retrievedAt": "2026-09-26T22:27:30.737686+00:00",
+    "sha256": "8f1d9363e30c38b25c56e4a17d7057a3884a4a0d8330cb9e15cd33ca4a1c1a9a",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member?format=json&fromDateTime=2026-09-01T00:00:00Z&limit=2&offset=0&toDateTime=2026-09-25T00:00:00Z"
+  },
+  {
+    "bytes": 1756,
+    "file": "members117-first.json",
+    "mediaType": "application/json",
+    "providerID": "members117-first",
+    "retrievedAt": "2026-09-26T22:27:32.299050+00:00",
+    "sha256": "fa1fe30312ab016e8ea7871ea95307843a8705ecfe7c7832c4b59bc2e5a9fb89",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/congress/117?currentMember=false&format=json&limit=2&offset=0"
+  },
+  {
+    "bytes": 1883,
+    "file": "members117-next.json",
+    "mediaType": "application/json",
+    "providerID": "members117-next",
+    "retrievedAt": "2026-09-26T22:27:33.929643+00:00",
+    "sha256": "4f788f1127c98b00bdd573cb0f11e7de8a40d6285235092bc2ec9d84619ce7db",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/congress/117?currentMember=false&offset=2&limit=2&format=json"
+  },
+  {
+    "bytes": 1086,
+    "file": "members117-terminal.json",
+    "mediaType": "application/json",
+    "providerID": "members117-terminal",
+    "retrievedAt": "2026-09-26T22:27:35.473121+00:00",
+    "sha256": "7baeec2e2787c02ea89d49ba34e1e5de7aab50f08400c3ecfe1f4c9c00ba0590",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/congress/117?currentMember=false&offset=556&limit=2&format=json"
+  },
+  {
+    "bytes": 1755,
+    "file": "members117-current.json",
+    "mediaType": "application/json",
+    "providerID": "members117-current",
+    "retrievedAt": "2026-09-26T22:27:36.975704+00:00",
+    "sha256": "5ed31fb8735d7b8b0ff06036290cc6fa0441832bb229fbf57c8b3b8ae1c1533d",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/congress/117?currentMember=true&format=json&limit=2&offset=0"
+  },
+  {
+    "bytes": 4451,
+    "file": "member-A000375.json",
+    "mediaType": "application/json",
+    "providerID": "member-A000375",
+    "retrievedAt": "2026-09-26T22:27:38.251460+00:00",
+    "sha256": "38db8379ea4b08da7b66a4884e7705ac3402f7c5747ff47a7f609f85fb0a5fdf",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/A000375?format=json"
+  },
+  {
+    "bytes": 8848,
+    "file": "member-L000174.json",
+    "mediaType": "application/json",
+    "providerID": "member-L000174",
+    "retrievedAt": "2026-09-26T22:27:39.771352+00:00",
+    "sha256": "f133d8a5f212494959b573c8ca76510f0ba82e0e427e5dcf991a8f8eb7c270de",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/L000174?format=json"
+  },
+  {
+    "bytes": 4595,
+    "file": "member-P000610.json",
+    "mediaType": "application/json",
+    "providerID": "member-P000610",
+    "retrievedAt": "2026-09-26T22:27:47.400404+00:00",
+    "sha256": "62e97fa97e48da28a43d2e86b3516795127527a557ba75e001a8160e75e44d65",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/P000610?format=json"
+  },
+  {
+    "bytes": 2558,
+    "file": "bill119-text-first.json",
+    "mediaType": "application/json",
+    "providerID": "bill119-text-first",
+    "retrievedAt": "2026-09-26T22:27:48.896706+00:00",
+    "sha256": "85501d020760e1dd62942a3a999ee507633142bf47d464e4146a68e259fc8f74",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/bill/119/hr/1/text?format=json&limit=2&offset=0"
+  },
+  {
+    "bytes": 2478,
+    "file": "bill119-text-next.json",
+    "mediaType": "application/json",
+    "providerID": "bill119-text-next",
+    "retrievedAt": "2026-09-26T22:27:50.573470+00:00",
+    "sha256": "41eb50b60693bb683762df8218880a83772fb3d91a65ff588aad900011abb990",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/bill/119/hr/1/text?offset=2&limit=2&format=json"
+  },
+  {
+    "bytes": 1087,
+    "file": "bill119-text-terminal.json",
+    "mediaType": "application/json",
+    "providerID": "bill119-text-terminal",
+    "retrievedAt": "2026-09-26T22:27:52.138418+00:00",
+    "sha256": "d07fc5061d5f30b1c22a572ae5d3bf24509c76428d38ffc87b544cef68f3a356",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/bill/119/hr/1/text?offset=5&limit=2&format=json"
+  },
+  {
+    "bytes": 781,
+    "file": "bill6-text.json",
+    "mediaType": "application/json",
+    "providerID": "bill6-text",
+    "retrievedAt": "2026-09-26T22:27:53.640120+00:00",
+    "sha256": "7372a612a4a615052d6a22a7faf038e1bc73ac0c1e1f3b1b84ff2c49470f6035",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/bill/6/hr/1/text?format=json"
+  },
+  {
+    "bytes": 632,
+    "file": "bill82-text.json",
+    "mediaType": "application/json",
+    "providerID": "bill82-text",
+    "retrievedAt": "2026-09-26T22:27:55.108204+00:00",
+    "sha256": "35cb6a718bca5d6536627e40f4aa26ec57cc01bf9299337bd740e70e123cb063",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/bill/82/s/677/text?format=json"
   }
 ]

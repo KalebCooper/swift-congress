@@ -1,0 +1,55 @@
+{
+    "members": [
+        {
+            "bioguideId": "F000472",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/f000472_200.jpg"
+            },
+            "district": 15,
+            "name": "Franklin, Scott",
+            "partyName": "Republican",
+            "state": "Florida",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2021
+                    }
+                ]
+            },
+            "updateDate": "2026-09-26T07:40:29Z",
+            "url": "https://api.congress.gov/v3/member/F000472?format=json"
+        },
+        {
+            "bioguideId": "M001205",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/m001205_200.jpg"
+            },
+            "district": 3,
+            "name": "Miller, Carol D.",
+            "partyName": "Republican",
+            "state": "West Virginia",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2019
+                    }
+                ]
+            },
+            "updateDate": "2026-09-26T07:40:29Z",
+            "url": "https://api.congress.gov/v3/member/M001205?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 557,
+        "next": "https://api.congress.gov/v3/member/congress/117?currentMember=false&offset=4&limit=2&format=json",
+        "prev": "https://api.congress.gov/v3/member/congress/117?currentMember=false&offset=0&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -18,6 +18,31 @@ extension SenateVoteRequest where Response == SenateRollCall {
 
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct SenateVotesTests {
+  @Test("rollCall, value(for:), and response(for:) return equal subjects")
+  func rollCallValueForAndResponseForReturnEqualSubjects() async throws {
+    let bytes = try Fixture.senate2026.data()
+    let mock = MockTransport(
+      results: Array(repeating: .success(Response(body: bytes, status: .ok)), count: 3))
+    let client = SenateVotesClient(transport: mock, userAgent: "SenateSubjectTests")
+    let id = try SenateVoteIdentifier(congress: 119, number: 240, session: 2)
+    let fromRollCall = try await client.rollCall(id)
+    let fromValueFor = try await client.value(for: SenateVoteRequest.rollCall(id))
+    let fromResponseFor = try await client.response(for: .rollCall(id)).value
+    guard case .amendment(let amendment) = fromRollCall.subject else {
+      Issue.record("expected an amendment, got \(String(describing: fromRollCall.subject))")
+      return
+    }
+    #expect(amendment.number == "S.Amdt. 6776")
+    #expect(amendment.target == .bill(.senateBill, number: "4668"))
+    #expect(fromRollCall.subject == fromValueFor.subject)
+    #expect(fromRollCall.subject == fromResponseFor.subject)
+    for call in mock.requests {
+      #expect(
+        call.request.path == "/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00240.xml")
+    }
+    #expect(mock.requests.count == 3)
+  }
+
   @Test("Cancellation during body reading returns no partial record")
   func cancellationDuringBodyReadingReturnsNoPartialRecord() async throws {
     let ready = Gate(); let resume = Gate()

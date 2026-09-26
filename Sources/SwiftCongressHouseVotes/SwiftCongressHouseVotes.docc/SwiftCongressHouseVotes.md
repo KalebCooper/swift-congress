@@ -60,3 +60,9 @@ The caller supplies receipt timestamps, storage, hashing, and refresh policy.
 
 Non-success HTTP responses use HTTPCore's separate 64 KiB error-body capture bound.
 Their headers and status remain available in the transport error.
+
+## Topics
+
+- ``HouseVotesClient``
+- ``HouseVotesError``
+- <doc:TalliesAndReferences>

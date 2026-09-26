@@ -18,7 +18,10 @@ Historical-service queries match a profile's own positions against Congress, job
 as published; the query is source-service matching, not a timeline. Filtered results are not a
 validation report; an early break validates nothing beyond the scanned profiles, and the
 whole-directory demo mode remains the validation path. House year/section discovery and roll calls
-are implemented independently, including historical rows without member IDs. Senate session
+are implemented independently, including historical rows without member IDs. A roll call's typed
+tallies are the Clerk's published totals, read from the same document and never recomputed from
+voter rows, and its typed legislation reference is conservative label recognition, not a
+Congress.gov crosswalk. Senate session
 inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are also independent
 services. Historical identity gaps remain unresolved. No package release exists.
 Member and bill-text-version operations remain pending official payload verification after rate limiting.
@@ -58,7 +61,9 @@ An optional `--congress <n> --body <type> [--job <name>] [--region <code>]` filt
 matching position's source Congress name and a matching-position count instead of validating the
 whole directory.
 
-`Examples/CongressHouseVotesDemo` reads a supplied House roll-call XML file, or uses `--live` on Apple.
+`Examples/CongressHouseVotesDemo` reads a supplied House roll-call XML file, or uses `--live` on
+Apple, and prints the published vote totals and any recognized legislation reference alongside the
+question.
 
 `Examples/CongressSenateVotesDemo` reads a supplied Senate XML vote, or uses `--live` on Apple.
 

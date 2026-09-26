@@ -23,6 +23,28 @@ struct CongressHouseVotesDemo {
       "House Congress \(value.congress), roll \(value.number): \(value.recordedVoters.count) recorded rows"
     )
     print(value.question ?? "Question unavailable")
+    if let reference = value.legislationReference {
+      print("Legislation: \(reference.rawValue)")
+      if let measure = reference.measure {
+        print(
+          "Recognized measure: \(measure.measureType.rawValue) \(measure.number) (Congress \(measure.congress))"
+        )
+      } else {
+        print("Recognized measure: none")
+      }
+    } else {
+      print("Legislation: none published")
+    }
+    if let tallies = value.tallies {
+      for row in tallies.byVote {
+        for count in row.counts {
+          let display = count.value.map(String.init) ?? "raw: \(count.rawValue)"
+          print("Vote total \(count.name): \(display)")
+        }
+      }
+    } else {
+      print("Vote totals: none published")
+    }
   }
   enum DemoError: Error { case arguments }
 }

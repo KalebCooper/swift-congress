@@ -36,3 +36,30 @@ Attributed recordings cover 1990 quorum and legislative rolls and a 2026 roll,
 plus both historical and current inventory pages. Recording URLs, retrieval times,
 HTTP status, media types, byte counts, and SHA-256 hashes accompany the fixtures.
 Historical observations establish sample behavior, not a claim of complete coverage.
+
+## Topics
+
+- ``Endpoint``
+- ``HouseCandidateTally``
+- ``HouseDecodingError``
+- ``HouseInputError``
+- ``HouseLegislationReference``
+- ``HouseMeasureReference``
+- ``HouseMeasureType``
+- ``HousePartyTally``
+- ``HouseResponse``
+- ``HouseRollCall``
+- ``HouseTallyCount``
+- ``HouseTallyGroup``
+- ``HouseVoteIdentifier``
+- ``HouseVoteIndex``
+- ``HouseVotePosition``
+- ``HouseVoter``
+- ``HouseVoteReference``
+- ``HouseVoteRequest``
+- ``HouseVoteTallies``
+- ``HouseXMLCodec``
+- ``HouseXMLContent``
+- ``HouseXMLNode``
+- ``SourceHeader``
+- ``SourceResponse``

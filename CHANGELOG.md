@@ -11,6 +11,8 @@ This project follows Keep a Changelog and Semantic Versioning. No version has be
 
 - Independent House HTML inventories and XML roll calls, bounded decoding, historical optional IDs,
   source receipts, fixtures, documentation, tests, and a runnable file demo.
+- Typed House vote-total tallies and conservative legislation-label recognition, read from the
+  same roll-call document, with documentation, tests, and a demo that prints both.
 
 - Bioguide supplied-file import with bounded extraction, per-profile SHA-256, count/identity validation,
   original profile bytes, historical service models, and a full-archive validation demo.

@@ -267,6 +267,104 @@ public struct CongressDataClient: Sendable {
     try await response(for: endpoint).value
   }
 
+  /// Creates a lazy text-version page traversal for a source bill record without fetching.
+  ///
+  /// Each page is fetched on demand and carries the exact bytes it was decoded from. Provider
+  /// continuation links are followed only when they keep the route and page size. Format links are
+  /// supplied metadata; no request is sent to them. A full traversal can yield the provider's
+  /// repeated version more than once, and versions are never de-duplicated. No completeness
+  /// guarantee is made.
+  ///
+  /// ```swift
+  /// let identifier = try BillSourceIdentifier(congress: 119, number: "1", type: .houseBill)
+  /// for try await page in client.textVersionPages(for: identifier) {
+  ///   print(page.value.textVersions.count)
+  /// }
+  /// ```
+  /// - Parameters:
+  ///   - identifier: The bill record whose text versions are listed.
+  ///   - page: The page bounds; the default is 20 records from offset zero.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation` before
+  ///   yielding a page with an invalid continuation, `CongressDataError.transport(_:)` with the
+  ///   HTTP status and headers for a non-success response, or `CongressDataError.decoding`.
+  public func textVersionPages(
+    for identifier: BillSourceIdentifier, page: CongressQuery = .init()
+  ) -> CongressPageSequence<BillTextVersionPage> {
+    pages(for: .textVersions(for: identifier, page: page))
+  }
+
+  /// Creates a lazy text-version page traversal for a numbered bill without fetching.
+  ///
+  /// The request is the one its source key produces. Format links are supplied metadata; no
+  /// request is sent to them. A full traversal can yield the provider's repeated version more than
+  /// once, and versions are never de-duplicated.
+  ///
+  /// ```swift
+  /// let identifier = try BillIdentifier(congress: 119, number: "1", type: .houseBill)
+  /// for try await page in client.textVersionPages(for: identifier) {
+  ///   print(page.status, page.value.textVersions.count)
+  /// }
+  /// ```
+  /// - Parameters:
+  ///   - identifier: The validated numbered bill identity.
+  ///   - page: The page bounds; the default is 20 records from offset zero.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation` before
+  ///   yielding a page with an invalid continuation, `CongressDataError.transport(_:)` with the
+  ///   HTTP status and headers for a non-success response, or `CongressDataError.decoding`.
+  public func textVersionPages(for identifier: BillIdentifier, page: CongressQuery = .init())
+    -> CongressPageSequence<BillTextVersionPage>
+  {
+    pages(for: .textVersions(for: identifier, page: page))
+  }
+
+  /// Creates a lazy text-version traversal for a source bill record in provider order.
+  ///
+  /// Only the current page is buffered, and no page is fetched until the first version is
+  /// requested. A full traversal can yield the provider's repeated version more than once;
+  /// versions are never de-duplicated. An empty inventory ends only after a successful response.
+  ///
+  /// ```swift
+  /// let identifier = try BillSourceIdentifier(congress: 119, number: "1", type: .houseBill)
+  /// for try await version in client.textVersions(for: identifier) {
+  ///   print(version.type ?? "", version.date ?? "")
+  /// }
+  /// ```
+  /// - Parameters:
+  ///   - identifier: The bill record whose text versions are listed.
+  ///   - page: The initial page bounds; the default is 20 records from offset zero.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation`,
+  ///   `CongressDataError.transport(.cancelled)`, `CongressDataError.transport(_:)` for a
+  ///   non-success response, or `CongressDataError.decoding`.
+  public func textVersions(for identifier: BillSourceIdentifier, page: CongressQuery = .init())
+    -> CongressItemSequence<BillTextVersionPage>
+  {
+    items(for: .textVersions(for: identifier, page: page))
+  }
+
+  /// Creates a lazy text-version traversal for a numbered bill in provider order.
+  ///
+  /// The request is the one its source key produces. A full traversal can yield the provider's
+  /// repeated version more than once; versions are never de-duplicated, and format links are
+  /// never fetched.
+  ///
+  /// ```swift
+  /// let identifier = try BillIdentifier(congress: 119, number: "1", type: .houseBill)
+  /// for try await version in client.textVersions(for: identifier) {
+  ///   print(version.formats?.compactMap(\.url) ?? [])
+  /// }
+  /// ```
+  /// - Parameters:
+  ///   - identifier: The validated numbered bill identity.
+  ///   - page: The initial page bounds; the default is 20 records from offset zero.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation`,
+  ///   `CongressDataError.transport(.cancelled)`, `CongressDataError.transport(_:)` for a
+  ///   non-success response, or `CongressDataError.decoding`.
+  public func textVersions(for identifier: BillIdentifier, page: CongressQuery = .init())
+    -> CongressItemSequence<BillTextVersionPage>
+  {
+    items(for: .textVersions(for: identifier, page: page))
+  }
+
   /// Executes the first response of an immutable request.
   public func value<Value: Decodable & Sendable>(for request: CongressRequest<Value>)
     async throws(CongressDataError) -> Value

@@ -21,6 +21,12 @@ struct BillTextModelsTests {
     .bill119_text_first, .bill119_text_next, .bill119_text_terminal, .bill6_text, .bill82_text,
   ]
 
+  private struct ConsumerTextPage: CongressCollection {
+    let pagination: Pagination
+    let textVersions: [BillTextVersion]
+    var items: [BillTextVersion] { textVersions }
+  }
+
   private func decode<Value: Decodable>(_ type: Value.Type, _ fixture: Fixture) throws -> Value {
     try JSONDecoder().decode(type, from: fixture.data())
   }
@@ -169,6 +175,55 @@ struct BillTextModelsTests {
     #expect(throws: CongressPaginationError.invalidContinuation) {
       try CongressContinuation.next(after: otherBill, endpoint: endpoint)
     }
+  }
+
+  @Test("A text version page under its limit advances by its returned count")
+  func aTextVersionPageUnderItsLimitAdvancesByItsReturnedCount() throws {
+    let endpoint = try Endpoint.textVersions(for: houseBill119(), page: CongressQuery(limit: 2))
+    func trimmed(next: String) throws -> BillTextVersionPage {
+      try decode(BillTextVersionPage.self, .bill119_text_first) { object in
+        let versions = object["textVersions"]?.array ?? []
+        object["textVersions"] = .array(Array(versions.prefix(1)))
+        object["pagination"] = .object(["count": .number(6), "next": .string(next)])
+      }
+    }
+    // One version at offset 0 with limit 2: the next offset is 0 + min(1, 2) = 1.
+    let byCount = try trimmed(
+      next: "https://api.congress.gov/v3/bill/119/hr/1/text?offset=1&limit=2&format=json")
+    #expect(byCount.textVersions.count == 1)
+    let next = try CongressContinuation.next(after: byCount, endpoint: endpoint)
+    #expect(next?.path == "/v3/bill/119/hr/1/text?offset=1&limit=2&format=json")
+    let byLimit = try trimmed(
+      next: "https://api.congress.gov/v3/bill/119/hr/1/text?offset=2&limit=2&format=json")
+    #expect(throws: CongressPaginationError.invalidContinuation) {
+      try CongressContinuation.next(after: byLimit, endpoint: endpoint)
+    }
+  }
+
+  @Test("A consumer collection on the text route rejects a page one version over its limit")
+  func aConsumerCollectionOnTheTextRouteRejectsAPageOneVersionOverItsLimit() throws {
+    let page = try decode(ConsumerTextPage.self, .bill119_text_first)
+    #expect(page.items.count == 3)
+    let endpoint = try #require(
+      Endpoint<ConsumerTextPage>(path: "/v3/bill/119/hr/1/text?format=json&limit=2&offset=0"))
+    #expect(throws: CongressPaginationError.invalidContinuation) {
+      try CongressContinuation.next(after: page, endpoint: endpoint)
+    }
+  }
+
+  @Test("Recorded Congress 119 pages hold five distinct versions against a count of six")
+  func recordedCongress119PagesHoldFiveDistinctVersionsAgainstACountOfSix() throws {
+    // Recorded offsets are 0, 2, and 5; the page at offset 4 is not recorded.
+    let pages = try [Fixture.bill119_text_first, .bill119_text_next, .bill119_text_terminal].map {
+      try decode(BillTextVersionPage.self, $0)
+    }
+    #expect(pages.map(\.pagination.count) == [6, 6, 6])
+    #expect(pages.map(\.textVersions.count) == [3, 3, 1])
+    #expect(
+      Set(pages.flatMap(\.textVersions).compactMap(\.type)) == [
+        "Engrossed Amendment Senate", "Engrossed in House", "Enrolled Bill",
+        "Placed on Calendar Senate", "Public Law",
+      ])
   }
 
   @Test("Other collections still reject a page one record over its limit")

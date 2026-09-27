@@ -342,19 +342,3 @@ struct MemberTests {
     #expect(mock.requests.count == 1)
   }
 }
-
-private actor Gate {
-  private var continuations: [CheckedContinuation<Void, Never>] = []
-  private var isOpen = false
-
-  func open() {
-    isOpen = true
-    for continuation in continuations { continuation.resume() }
-    continuations = []
-  }
-
-  func wait() async {
-    if isOpen { return }
-    await withCheckedContinuation { continuations.append($0) }
-  }
-}

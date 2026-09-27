@@ -178,19 +178,3 @@ struct CongressDataTests {
       configuration: .init(apiKey: "test-key", userAgent: "CongressTests"), transport: transport)
   }
 }
-
-private actor Gate {
-  private var continuations: [CheckedContinuation<Void, Never>] = []
-  private var isOpen = false
-
-  func open() {
-    isOpen = true
-    for continuation in continuations { continuation.resume() }
-    continuations = []
-  }
-
-  func wait() async {
-    if isOpen { return }
-    await withCheckedContinuation { continuations.append($0) }
-  }
-}

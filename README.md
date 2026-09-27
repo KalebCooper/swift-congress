@@ -8,8 +8,15 @@ Independent Swift libraries for published United States congressional records.
 
 Congress.gov discovery, bill detail, bill lists, and action lists are implemented with portable
 models, typed requests/endpoints, lazy page and item sequences, and exact source response receipts.
-Fixtures cover Congresses 6, 82, and 119 and the earliest Congress discovery page. Unknown fields,
-null values, and historical source identifiers are preserved. No historical completeness,
+Fixtures cover Congresses 6, 82, and 119 and the earliest Congress discovery page. Member browsing
+and single-member detail are also implemented: the unscoped and per-Congress list routes and the
+by-identifier detail route, with the raw `currentMember` filter kept separate from a member's typed
+historical `terms`, and `partyHistory`, `leadership`, `previousNames`, and `addressInformation` kept
+as raw fields only. Bill text versions are implemented for both bill identifier forms: lazy page and
+version traversal, with format links kept as supplied metadata and never fetched. Text fixtures cover
+the historical Congress 6 `hr 1`, Congress 82 `s 677`, and modern Congress 119 `hr 1` bills; nothing
+beyond these recorded bills, or beyond the members the API publishes, is claimed. Unknown fields,
+null values, and historical source identifiers are preserved throughout. No historical completeness,
 stable snapshot, freshness, availability, or identity matching is guaranteed.
 
 Bioguide supplied-file import verifies bounded profile reads, inventory counts, SHA-256, source IDs,
@@ -17,25 +24,20 @@ and predecessor-body affiliations. A full 13,056-profile official snapshot has p
 Historical-service queries match a profile's own positions against Congress, job, and region exactly
 as published; the query is source-service matching, not a timeline. Filtered results are not a
 validation report; an early break validates nothing beyond the scanned profiles, and the
-whole-directory demo mode remains the validation path. House year/section discovery and roll calls
-are implemented independently, including historical rows without member IDs. A roll call's typed
-tallies are the Clerk's published totals, read from the same document and never recomputed from
-voter rows, and its typed legislation reference is conservative label recognition, not a
-Congress.gov crosswalk. Senate session
-inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are also independent
-services. A Senate roll call's typed subject identifies the bill, amendment, nomination, or
-treaty document the vote concerned, read from the same document and never a Congress.gov
-crosswalk. Historical identity gaps remain unresolved. No package release exists.
-Congress.gov member browsing and single-member detail are implemented: the unscoped and
-per-Congress list routes and the by-identifier detail route, with the raw `currentMember`
-filter kept separate from a member's typed historical `terms`, and `partyHistory`,
-`leadership`, `previousNames`, and `addressInformation` kept as raw fields only. The API
-returns the members it publishes; this library asserts no complete historical membership.
-Congress.gov bill text versions are implemented for both bill identifier forms: lazy page and
-version traversal, with format links kept as supplied metadata and never fetched. Fixtures cover
-the historical Congress 6 `hr 1`, Congress 82 `s 677`, and modern Congress 119 `hr 1` bills; nothing
-beyond these recorded bills is claimed.
-See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
+whole-directory demo mode remains the validation path.
+
+House year/section discovery and roll calls are implemented independently, including historical rows
+without member IDs. A roll call's typed tallies are the Clerk's published totals, read from the same
+document and never recomputed from voter rows, and its typed legislation reference is conservative
+label recognition, not a Congress.gov crosswalk.
+
+Senate session inventories, roll calls, and the dated current LIS-to-Bioguide crosswalk are also
+independent services. A Senate roll call's typed subject identifies the bill, amendment, nomination,
+or treaty document the vote concerned, read from the same document and never a Congress.gov
+crosswalk. Historical identity gaps remain unresolved.
+
+No package release exists. See [implementation readiness](IMPLEMENTATION_READINESS.md) for
+validation status.
 
 ## Usage
 

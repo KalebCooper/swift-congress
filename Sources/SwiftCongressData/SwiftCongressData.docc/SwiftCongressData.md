@@ -1,6 +1,7 @@
 # ``SwiftCongressData``
 
-Discover Congresses and retrieve bill records and actions through Congress.gov.
+Discover Congresses and retrieve bill records, actions, text-version metadata, and members
+through Congress.gov.
 
 ## Overview
 
@@ -8,17 +9,17 @@ Supply an API.data.gov key and application identity explicitly. On Apple platfor
 
 ```swift
 let client = CongressDataClient(apiKey: key, userAgent: "MyCivicApp/1.0")
-let key = try BillSourceIdentifier(congress: 6, number: "1", type: .houseBill)
-let detail = try await client.bill(key)
+let source = try BillSourceIdentifier(congress: 6, number: "1", type: .houseBill)
+let detail = try await client.bill(source)
 ```
 
 Everyday methods delegate to immutable requests and typed endpoints. A stored request
 can be inspected, reused, or given a consumer-defined name:
 
 ```swift
-let request = CongressRequest.bill(key)
+let request = CongressRequest.bill(source)
 let detail = try await client.value(for: request)
-let same = try await client.send(Endpoint.bill(key))
+let same = try await client.send(Endpoint.bill(source))
 ```
 
 On Linux and Android, enable the HTTPPortable trait and inject a transport. Each SDK
@@ -53,8 +54,9 @@ request explicitly describes pagination.
 
 Congress.gov documents a default page size of 20, a maximum of 250, and 5,000
 requests per hour for standard keys. Demo-key limits are lower. Returned inventories
-can change during traversal and are not stable snapshots. Bill queries support
-provider modification windows; the library does not claim complete historical coverage.
+can change during traversal and are not stable snapshots. Bill and unscoped member
+queries support provider modification windows; the library does not claim complete
+historical coverage.
 
 Credentials are sent only through X-Api-Key. Endpoint construction rejects another
 origin, URL credentials, fragments, and api_key query parameters. Redirects are

@@ -32,6 +32,9 @@ public struct HouseRollCall: Codable, Hashable, HouseResponse, Sendable {
   public let voteType: String?
 
   /// Decodes one bounded source document without resolving any member identity.
+  /// - Throws: `HouseDecodingError.invalidDocument` when the root is not rollcall-vote or lacks
+  ///   vote-metadata with a positive congress and rollcall-num, or lacks vote-data; `.limitExceeded`
+  ///   and `.cancelled` from the bounded codec.
   public static func decode(_ data: Data, sourceURL: URL) throws(HouseDecodingError) -> Self {
     let root = try HouseXMLCodec.decode(data)
     guard root.localName == "rollcall-vote", let metadata = root.child("vote-metadata"),

@@ -295,20 +295,27 @@ struct BillTextTests {
     expectTextRequests(mock)
   }
 
-  @Test("Text pages follow the recorded provider link and yield the repeated version again")
-  func textPagesFollowTheRecordedProviderLinkAndYieldTheRepeatedVersionAgain() async throws {
+  @Test("Text pages follow every recorded provider link to the end and yield repeats again")
+  func textPagesFollowEveryRecordedProviderLinkToTheEndAndYieldRepeatsAgain() async throws {
     let first = try Fixture.bill119_text_first.data()
     let second = try Fixture.bill119_text_next.data()
-    // The page at offset 4 is unrecorded, so each request for it is answered with a 503
-    // rather than a fabricated or substituted body.
-    let mock = MockTransport(results: [
-      .success(Response(body: first, status: .ok)),
-      .success(Response(body: second, status: .ok)),
-      .success(Response(status: .serviceUnavailable)),
-      .success(Response(body: first, status: .ok)),
-      .success(Response(body: second, status: .ok)),
-      .success(Response(status: .serviceUnavailable)),
-    ])
+    let offset4 = try Fixture.bill119_text_offset4.data()
+    let offset2Path = "/v3/bill/119/hr/1/text?offset=2&limit=2&format=json"
+    let offset4Path = "/v3/bill/119/hr/1/text?offset=4&limit=2&format=json"
+    // Each recorded page answers only its exact recorded request target; the page at offset 5
+    // answers only if a provider link names that target.
+    let recorded = [
+      Self.firstPath: first, offset2Path: second, offset4Path: offset4,
+      "/v3/bill/119/hr/1/text?offset=5&limit=2&format=json":
+        try Fixture.bill119_text_terminal.data(),
+    ]
+    let mock = MockTransport()
+    mock.setHandler(forPath: "/v3/bill/119/hr/1/text") { request in
+      guard let path = request.path, let body = recorded[path] else {
+        return .success(MockTransport.Answer(Response(status: .notFound)))
+      }
+      return .success(MockTransport.Answer(Response(body: body, status: .ok)))
+    }
     let identifier = try modernBill()
     let query = try CongressQuery(limit: 2)
     var pages = client(mock).textVersionPages(for: identifier, page: query).makeAsyncIterator()
@@ -318,31 +325,31 @@ struct BillTextTests {
     let next = try #require(try await pages.next())
     #expect(next.body == second)
     #expect(next.value.pagination.next == textOrigin + "?offset=4&limit=2&format=json")
-    let unrecorded = await #expect(throws: CongressDataError.self) { _ = try await pages.next() }
-    if case .transport(.httpStatus(_, let code, _))? = unrecorded {
-      #expect(code == 503)
-    } else {
-      Issue.record("Expected a 503 response")
-    }
+    let last = try #require(try await pages.next())
+    #expect(last.body == offset4)
+    #expect(last.value.pagination.count == 6)
+    #expect(last.value.pagination.next == nil)
     #expect(try await pages.next() == nil)
 
     var versions = client(mock).textVersions(for: identifier, page: query).makeAsyncIterator()
     var yielded: [BillTextVersion] = []
-    for _ in 0..<6 { yielded.append(try #require(try await versions.next())) }
+    for _ in 0..<8 { yielded.append(try #require(try await versions.next())) }
+    #expect(try await versions.next() == nil)
     #expect(
       yielded.map(\.type) == [
         "Enrolled Bill", "Engrossed Amendment Senate", "Public Law", "Placed on Calendar Senate",
-        "Engrossed in House", "Public Law",
+        "Engrossed in House", "Public Law", "Reported in House", "Public Law",
+      ])
+    #expect(
+      yielded.map(\.date) == [
+        nil, "2025-07-01T04:00:00Z", "2025-07-05T03:59:59Z", "2025-06-28T04:00:00Z",
+        "2025-05-22T04:00:00Z", "2025-07-05T03:59:59Z", "2025-05-20T04:00:00Z",
+        "2025-07-05T03:59:59Z",
       ])
     #expect(yielded[2] == yielded[5])
-    #expect(yielded[5].date == "2025-07-05T03:59:59Z")
-    await #expect(throws: CongressDataError.self) { _ = try await versions.next() }
-    #expect(try await versions.next() == nil)
+    #expect(yielded[5] == yielded[7])
 
-    let traversal = [
-      Self.firstPath, "/v3/bill/119/hr/1/text?offset=2&limit=2&format=json",
-      "/v3/bill/119/hr/1/text?offset=4&limit=2&format=json",
-    ]
+    let traversal = [Self.firstPath, offset2Path, offset4Path]
     #expect(mock.requests.map(\.request.path) == traversal + traversal)
     expectTextRequests(mock)
   }

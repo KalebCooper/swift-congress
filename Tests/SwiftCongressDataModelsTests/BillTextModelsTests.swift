@@ -18,7 +18,8 @@ extension CongressRequest where Response == BillTextVersionPage {
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct BillTextModelsTests {
   private static let textFixtures: [Fixture] = [
-    .bill119_text_first, .bill119_text_next, .bill119_text_terminal, .bill6_text, .bill82_text,
+    .bill119_text_first, .bill119_text_next, .bill119_text_offset4, .bill119_text_terminal,
+    .bill6_text, .bill82_text,
   ]
 
   private struct ConsumerTextPage: CongressCollection {
@@ -133,6 +134,10 @@ struct BillTextModelsTests {
     let third = try CongressContinuation.next(
       after: decode(BillTextVersionPage.self, .bill119_text_next), endpoint: #require(next))
     #expect(third?.path == "/v3/bill/119/hr/1/text?offset=4&limit=2&format=json")
+    let offset4 = try decode(BillTextVersionPage.self, .bill119_text_offset4)
+    #expect(offset4.pagination.next == nil)
+    let offset4Endpoint = try #require(third)
+    #expect(try CongressContinuation.next(after: offset4, endpoint: offset4Endpoint) == nil)
 
     let terminal = try decode(BillTextVersionPage.self, .bill119_text_terminal)
     #expect(terminal.pagination.next == nil)
@@ -211,19 +216,33 @@ struct BillTextModelsTests {
     }
   }
 
-  @Test("Recorded Congress 119 pages hold five distinct versions against a count of six")
-  func recordedCongress119PagesHoldFiveDistinctVersionsAgainstACountOfSix() throws {
-    // Recorded offsets are 0, 2, and 5; the page at offset 4 is not recorded.
-    let pages = try [Fixture.bill119_text_first, .bill119_text_next, .bill119_text_terminal].map {
-      try decode(BillTextVersionPage.self, $0)
-    }
-    #expect(pages.map(\.pagination.count) == [6, 6, 6])
-    #expect(pages.map(\.textVersions.count) == [3, 3, 1])
+  @Test("Recorded Congress 119 pages hold six distinct versions against a count of six")
+  func recordedCongress119PagesHoldSixDistinctVersionsAgainstACountOfSix() throws {
+    // Recorded offsets are 0, 2, and 4 through provider links, and 5 requested directly.
+    let pages = try [
+      Fixture.bill119_text_first, .bill119_text_next, .bill119_text_offset4, .bill119_text_terminal,
+    ].map { try decode(BillTextVersionPage.self, $0) }
+    #expect(pages.map(\.pagination.count) == [6, 6, 6, 6])
+    #expect(pages.map(\.textVersions.count) == [3, 3, 2, 1])
     #expect(
       Set(pages.flatMap(\.textVersions).compactMap(\.type)) == [
         "Engrossed Amendment Senate", "Engrossed in House", "Enrolled Bill",
-        "Placed on Calendar Senate", "Public Law",
+        "Placed on Calendar Senate", "Public Law", "Reported in House",
       ])
+  }
+
+  @Test("The recorded page at offset 4 holds two versions and no next link")
+  func theRecordedPageAtOffset4HoldsTwoVersionsAndNoNextLink() throws {
+    let offset4 = try decode(BillTextVersionPage.self, .bill119_text_offset4)
+    let terminal = try decode(BillTextVersionPage.self, .bill119_text_terminal)
+    #expect(offset4.textVersions.map(\.type) == ["Reported in House", "Public Law"])
+    #expect(offset4.textVersions.map(\.date) == ["2025-05-20T04:00:00Z", "2025-07-05T03:59:59Z"])
+    #expect(offset4.textVersions[1] == terminal.textVersions[0])
+    #expect(offset4.pagination.count == 6)
+    #expect(offset4.pagination.next == nil)
+    #expect(
+      offset4.pagination.prev
+        == "https://api.congress.gov/v3/bill/119/hr/1/text?offset=2&limit=2&format=json")
   }
 
   @Test("Other collections still reject a page one record over its limit")

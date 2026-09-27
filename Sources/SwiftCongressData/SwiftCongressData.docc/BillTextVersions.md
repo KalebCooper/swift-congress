@@ -37,14 +37,17 @@ link with a scheme and host.
 
 Fixtures cover text versions for three bills: the historical House bill at Congress 6 (`hr 1`,
 one version), the Senate bill at Congress 82 (`s 677`, one version), and the modern House bill at
-Congress 119 (`hr 1`), whose provider count is six. Three of its limit-2 pages are recorded: offset
-0, offset 2 from the provider's `next` link, and offset 5 requested directly. They hold 3, 3, and 1
-versions, five distinct by type. The page at offset 4 is not recorded. Nothing beyond these
+Congress 119 (`hr 1`), whose provider count is six. Four of its limit-2 pages are recorded: offset
+0, offsets 2 and 4 from the provider's `next` links, and offset 5 requested directly. They hold 3,
+3, 2, and 1 versions, six distinct by type. The page at offset 4 carries no `next` link, so a
+traversal from offset 0 ends there after three requests and eight versions. Nothing beyond these
 recorded bills and pages is claimed, and no statement here generalizes to Congress.gov's
 text-version coverage for other bills.
 
 The two recorded Congress 119 pages with a `next` link each held three versions instead of two,
-the third identical to the only version on the recorded page at offset 5. `BillTextVersionPage`
+the third identical to the last version on the recorded page at offset 4 and to the only version
+on the recorded page at offset 5. The page at offset 4 held two versions, its limit, so the
+traversal from offset 0 yields that version three times. `BillTextVersionPage`
 accepts at most one version beyond the limit; a page that carries the extra version advances the
 offset by the requested limit, and any other page by its returned count. Versions are never
 de-duplicated, so a traversal over pages shaped this way can yield the same version more than

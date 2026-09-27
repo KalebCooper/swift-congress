@@ -1,12 +1,13 @@
 /// The BillTextVersionPage response as published by Congress.gov.
 ///
 /// Versions keep provider order and repeats. The recorded pages with a `next` link each carried one
-/// version beyond the requested limit, identical to the only version on the recorded page at offset
-/// 5; the page at offset 4 is not recorded. Continuation therefore accepts at most one version
-/// beyond the limit on this page type: a page that carries the extra version advances the offset by
-/// the requested limit, and any other page by its returned count. A page that exceeds the limit by
-/// more than one fails before yielding. Items are never de-duplicated, so a traversal can yield the
-/// same version more than once.
+/// version beyond the requested limit, identical to the last version on the recorded page at offset
+/// 4, which holds two versions and no `next` link, and to the only version on the recorded page at
+/// offset 5. Continuation therefore accepts at most one version beyond the limit on this page type:
+/// a page that carries the extra version advances the offset by the requested limit, and any other
+/// page by its returned count. A page that exceeds the limit by more than one fails before
+/// yielding. Items are never de-duplicated, so a traversal can yield the same version more than
+/// once.
 ///
 /// ```swift
 /// let page = try JSONDecoder().decode(BillTextVersionPage.self, from: data)

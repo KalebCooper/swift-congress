@@ -307,6 +307,35 @@ struct MemberTests {
         == "/v3/member/congress/117?currentMember=true&offset=2&limit=2&format=json")
   }
 
+  @Test("Member traversal with the default query follows the unscoped provider link")
+  func memberTraversalWithTheDefaultQueryFollowsTheUnscopedProviderLink() async throws {
+    let first = try Fixture.members_default_first.data()
+    let second = try Fixture.members_default_next.data()
+    let mock = MockTransport(results: [
+      .success(Response(body: first, status: .ok)),
+      .success(Response(body: second, status: .ok)),
+      .success(Response(body: first, status: .ok)),
+      .success(Response(body: second, status: .ok)),
+    ])
+    let query = try MemberQuery(limit: 2)
+    var pages = client(mock).memberPages(matching: query).makeAsyncIterator()
+    #expect(try await pages.next()?.body == first)
+    #expect(try await pages.next()?.body == second)
+    var members = client(mock).members(matching: query).makeAsyncIterator()
+    var identifiers: [String] = []
+    for _ in 0..<4 {
+      identifiers.append(try #require(try await members.next()).bioguideId)
+    }
+    #expect(identifiers == ["G000608", "W000832", "B001328", "G000607"])
+    #expect(
+      mock.requests.map(\.request.path) == [
+        "/v3/member?currentMember=false&format=json&limit=2&offset=0",
+        "/v3/member?currentMember=false&offset=2&limit=2&format=json",
+        "/v3/member?currentMember=false&format=json&limit=2&offset=0",
+        "/v3/member?currentMember=false&offset=2&limit=2&format=json",
+      ])
+  }
+
   @Test("Member value, send, and custom requests retrieve only one response")
   func memberValueSendAndCustomRequestsRetrieveOnlyOneResponse() async throws {
     let first = try Fixture.members117_first.data()

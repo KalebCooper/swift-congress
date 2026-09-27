@@ -16,8 +16,8 @@ extension CongressRequest where Response == MemberDetail {
 @Suite(.timeLimit(.minutes(suiteTimeLimitMinutes)))
 struct MemberModelsTests {
   private static let listFixtures: [Fixture] = [
-    .members_first, .members_window, .members117_first, .members117_next,
-    .members117_terminal, .members117_current,
+    .members_default_first, .members_default_next, .members_first, .members_window,
+    .members117_first, .members117_next, .members117_terminal, .members117_current,
   ]
 
   private func decodePage(_ fixture: Fixture) throws -> MemberPage {
@@ -34,7 +34,7 @@ struct MemberModelsTests {
 
   @Test(
     "All source fields survive member detail decoding and encoding",
-    arguments: [Fixture.member_A000375, .member_L000174, .member_P000610])
+    arguments: [Fixture.member_A000375, .member_H000324, .member_L000174, .member_P000610])
   func allSourceFieldsSurviveMemberDetailDecodingAndEncoding(fixture: Fixture) throws {
     let bytes = try fixture.data()
     let detail = try JSONDecoder().decode(MemberDetail.self, from: bytes)
@@ -43,9 +43,6 @@ struct MemberModelsTests {
     #expect(try JSONDecoder().decode(JSONValue.self, from: encoded) == original)
     #expect(detail.member.bioguideId == String(fixture.rawValue.dropFirst(7).dropLast(5)))
     #expect(detail.member.birthYear?.count == 4)
-    #expect(detail.member.deathYear == nil)
-    // The recorded details omit the key; a null value would also decode as nil.
-    #expect(detail.member.rawFields["deathYear"] == nil)
     #expect(detail.member.rawFields["partyHistory"]?.array?.isEmpty == false)
     #expect(detail.member.sponsoredLegislation?.url?.hasPrefix("https://api.congress.gov/") == true)
     #expect(detail.request?.object?["format"] == .string("json"))
@@ -129,6 +126,22 @@ struct MemberModelsTests {
     #expect(senators.members.first?.rawFields["district"] == nil)
   }
 
+  @Test("A published death year decodes as the source string")
+  func aPublishedDeathYearDecodesAsTheSourceString() throws {
+    let deceased = try JSONDecoder().decode(MemberDetail.self, from: Fixture.member_H000324.data())
+    #expect(deceased.member.birthYear == "1936")
+    #expect(deceased.member.currentMember == false)
+    #expect(deceased.member.deathYear == "2021")
+    #expect(deceased.member.rawFields["deathYear"] == .string("2021"))
+    #expect(deceased.member.terms?.last?.endYear == 2021)
+    // The recorded living members omit the key; a null value would also decode as nil.
+    for fixture in [Fixture.member_A000375, .member_L000174, .member_P000610] {
+      let living = try JSONDecoder().decode(MemberDetail.self, from: fixture.data())
+      #expect(living.member.deathYear == nil)
+      #expect(living.member.rawFields["deathYear"] == nil)
+    }
+  }
+
   @Test("Unknown vocabulary, nulls, and unknown keys are preserved")
   func unknownVocabularyNullsAndUnknownKeysArePreserved() throws {
     let page = try decodePage(.members117_first) { object in
@@ -194,6 +207,16 @@ struct MemberModelsTests {
     #expect(serving.pagination.count == 377)
     #expect(unfiltered.members.prefix(2).map(\.bioguideId) == ["R000579", "M001212"])
     #expect(serving.members.prefix(2).map(\.bioguideId) == ["R000579", "M001212"])
+  }
+
+  @Test("An unscoped false member filter matched the omitted filter in recorded pages")
+  func anUnscopedFalseMemberFilterMatchedTheOmittedFilterInRecordedPages() throws {
+    let filtered = try decodePage(.members_default_first)
+    let omitted = try decodePage(.members_first)
+    #expect(filtered.pagination.count == 2696)
+    #expect(omitted.pagination.count == 2696)
+    #expect(filtered.members.map(\.bioguideId) == ["G000608", "W000832"])
+    #expect(omitted.members.map(\.bioguideId) == ["G000608", "W000832"])
   }
 
   @Test("Member queries encode exact routes")
@@ -327,6 +350,25 @@ struct MemberModelsTests {
       after: decodePage(.members_first),
       endpoint: .members(matching: MemberQuery(currentMember: nil, limit: 2)))
     #expect(unscoped?.path == "/v3/member?offset=2&limit=2&format=json")
+  }
+
+  @Test("Continuation keeps the default member status on the unscoped inventory")
+  func continuationKeepsTheDefaultMemberStatusOnTheUnscopedInventory() throws {
+    let query = try MemberQuery(limit: 2)
+    #expect(
+      Endpoint.members(matching: query).path
+        == "/v3/member?currentMember=false&format=json&limit=2&offset=0")
+    let first = try decodePage(.members_default_first)
+    #expect(
+      first.pagination.next
+        == "https://api.congress.gov/v3/member?currentMember=false&offset=2&limit=2&format=json")
+    let next = try CongressContinuation.next(after: first, endpoint: .members(matching: query))
+    #expect(next?.path == "/v3/member?currentMember=false&offset=2&limit=2&format=json")
+    let second = try decodePage(.members_default_next)
+    #expect(second.members.map(\.bioguideId) == ["B001328", "G000607"])
+    let recorded = try #require(next)
+    let third = try CongressContinuation.next(after: second, endpoint: recorded)
+    #expect(third?.path == "/v3/member?currentMember=false&offset=4&limit=2&format=json")
   }
 
   @Test(

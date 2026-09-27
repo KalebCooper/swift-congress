@@ -1,4 +1,7 @@
 /// The MemberPage response as published by Congress.gov.
+///
+/// A list record without `bioguideId` or `name` fails the whole page with a decoding error rather
+/// than being skipped.
 public struct MemberPage: Codable, Hashable, Sendable {
   /// The source `members` value.
   public let members: [MemberSummary]

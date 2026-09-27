@@ -88,7 +88,4 @@ each record's rawFields. Source overlap is not independent corroboration.
 
 ### Member browsing
 
-- ``CongressDataClient/member(_:)``
-- ``CongressDataClient/memberPages(matching:)``
-- ``CongressDataClient/members(matching:)``
 - <doc:BrowsingMembers>

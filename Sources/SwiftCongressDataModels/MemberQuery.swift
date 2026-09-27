@@ -20,8 +20,9 @@ public struct MemberQuery: Hashable, Sendable {
 
   /// The provider's `currentMember` filter, or nil to omit the parameter.
   ///
-  /// The initializer defaults to `false`, which asks the source for its historical listing.
-  /// Neither value promises complete membership; counts are the provider's.
+  /// The initializer defaults to `false`; in the recorded Congress 117 listing that value returned
+  /// current and former members alike. Neither value promises complete membership; counts are the
+  /// provider's.
   public let currentMember: Bool?
   /// The provider's inclusive lower modification timestamp, as supplied.
   public let fromDateTime: String?
@@ -58,7 +59,8 @@ public struct MemberQuery: Hashable, Sendable {
   /// Modification timestamps apply only to the unscoped inventory; the Congress route does not
   /// accept them.
   /// - Parameters:
-  ///   - currentMember: The `currentMember` filter; nil omits it and `false` is the default.
+  ///   - currentMember: The `currentMember` filter; nil omits it and `false` is the default. A
+  ///     `false` value is not a former-members filter.
   ///   - fromDateTime: The lower modification bound, passed through unchanged.
   ///   - limit: The page size, from 1 through 250.
   ///   - offset: The nonnegative initial offset.

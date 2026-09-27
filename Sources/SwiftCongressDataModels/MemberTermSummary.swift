@@ -1,7 +1,8 @@
 /// One entry of a member list record's `terms.item` array as published by Congress.gov.
 ///
-/// List entries carry only a chamber and years; Congress numbers, roles, and districts appear
-/// on the detail record's ``MemberTerm``. Years are source integers, not dates.
+/// The recorded list entries carry only a chamber and years; Congress numbers, roles, and
+/// districts appear on the detail record's ``MemberTerm``, and any other key lands in
+/// ``rawFields``. Years are source integers, not dates.
 public struct MemberTermSummary: Codable, Hashable, Sendable {
   /// The source `chamber` value; absent or null values remain nil.
   public let chamber: String?

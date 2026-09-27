@@ -2,7 +2,8 @@
 ///
 /// Typed fields are views over ``rawFields``. Contact, leadership, previous-name, and
 /// party-history data (`addressInformation`, `leadership`, `previousNames`, `partyHistory`)
-/// are retained only in ``rawFields``. Birth and death years are the source's strings.
+/// are retained only in ``rawFields``. Birth years are the source's strings; ``deathYear`` is read
+/// as a string and no recorded detail publishes one.
 /// `currentMember` is the source's status at retrieval, separate from the historical ``terms``.
 public struct MemberProfile: Codable, Hashable, Sendable {
   /// The source `bioguideId` value.
@@ -13,7 +14,9 @@ public struct MemberProfile: Codable, Hashable, Sendable {
   public let cosponsoredLegislation: ResourceLink?
   /// The source `currentMember` value; absent or null values remain nil.
   public let currentMember: Bool?
-  /// The source `deathYear` value; absent or null values remain nil.
+  /// The source `deathYear` value, read as a string; absent or null values remain nil.
+  ///
+  /// No recorded detail publishes this key, so its wire type is not yet confirmed.
   public let deathYear: String?
   /// The source `depiction` value; absent or null values remain nil.
   public let depiction: MemberDepiction?

@@ -1,4 +1,4 @@
-/// The MemberDepiction response as published by Congress.gov.
+/// A member's depiction object as published by Congress.gov.
 ///
 /// The image is not fetched and no license is inferred from the attribution text.
 public struct MemberDepiction: Codable, Hashable, Sendable {

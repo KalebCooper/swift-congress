@@ -34,34 +34,116 @@ public struct CongressDataClient: Sendable {
       retryPolicy: retryPolicy, transport: transport)
   }
 
-  /// Creates a lazy action-page traversal with exact source receipts.
+  /// Creates a lazy action-page traversal without fetching its first page.
+  ///
+  /// Each page is fetched on demand and carries the exact bytes it was decoded from. Provider
+  /// continuation links are followed only when they keep the route and page size. Actions are the
+  /// provider's published history for the record; no completeness guarantee is made.
+  ///
+  /// ```swift
+  /// let identifier = try BillSourceIdentifier(congress: 119, number: "1", type: .houseBill)
+  /// for try await page in client.actionPages(for: identifier) {
+  ///   print(page.value.actions.count)
+  /// }
+  /// ```
+  /// - Parameters:
+  ///   - identifier: The bill record whose actions are listed.
+  ///   - page: The page bounds; the default is 20 records from offset zero.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation` before
+  ///   yielding a page with an invalid continuation, or the transport or decoding failure.
   public func actionPages(for identifier: BillSourceIdentifier, page: CongressQuery = .init())
     -> CongressPageSequence<BillActionPage>
   { pages(for: .actions(for: identifier, page: page)) }
 
-  /// Creates a lazy action traversal in provider order.
+  /// Creates a lazy action traversal in provider order, preserving duplicates.
+  ///
+  /// Only the current page is buffered, and no page is fetched until the first action is
+  /// requested.
+  ///
+  /// ```swift
+  /// let identifier = try BillSourceIdentifier(congress: 119, number: "1", type: .houseBill)
+  /// for try await action in client.actions(for: identifier) {
+  ///   print(action.actionDate ?? "", action.text ?? "")
+  /// }
+  /// ```
+  /// - Parameters:
+  ///   - identifier: The bill record whose actions are listed.
+  ///   - page: The initial page bounds; the default is 20 records from offset zero.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation`,
+  ///   `CongressDataError.transport(.cancelled)`, or the transport or decoding failure.
   public func actions(for identifier: BillSourceIdentifier, page: CongressQuery = .init())
     -> CongressItemSequence<BillActionPage>
   { items(for: .actions(for: identifier, page: page)) }
 
   /// Retrieves a source bill record, retaining its provider envelope.
-  /// - Throws: `CongressDataError` for decoding or transport failures.
+  ///
+  /// Use this overload for early records whose numbers may be surrogates; no official bill number
+  /// is asserted. The response is the provider's current record, and fields the source omits stay
+  /// absent.
+  ///
+  /// ```swift
+  /// let detail = try await client.bill(
+  ///   try BillSourceIdentifier(congress: 6, number: "1", type: .houseBill))
+  /// ```
+  /// - Parameter identifier: The validated source key, sent as normalized.
+  /// - Returns: The decoded bill detail, retaining every source field.
+  /// - Throws: `CongressDataError.transport(.cancelled)` when cancelled before or after the
+  ///   request, `CongressDataError.transport(_:)` with the HTTP status and headers for a non-success
+  ///   response, or `CongressDataError.decoding` when the body is not a bill detail.
   public func bill(_ identifier: BillSourceIdentifier) async throws(CongressDataError) -> BillDetail
   {
     try await value(for: .bill(identifier))
   }
 
   /// Retrieves a numbered bill through the same typed request executor.
+  ///
+  /// The request is the one its source key produces. The response is the provider's current
+  /// record, and fields the source omits stay absent.
+  ///
+  /// ```swift
+  /// let detail = try await client.bill(
+  ///   try BillIdentifier(congress: 119, number: "1", type: .houseBill))
+  /// ```
+  /// - Parameter identifier: The validated numbered bill identity.
+  /// - Returns: The decoded bill detail, retaining every source field.
+  /// - Throws: `CongressDataError.transport(.cancelled)` when cancelled before or after the
+  ///   request, `CongressDataError.transport(_:)` with the HTTP status and headers for a non-success
+  ///   response, or `CongressDataError.decoding` when the body is not a bill detail.
   public func bill(_ identifier: BillIdentifier) async throws(CongressDataError) -> BillDetail {
     try await value(for: .bill(identifier))
   }
 
   /// Creates a lazy bill-page traversal without fetching its first page.
+  ///
+  /// Each page is fetched on demand and carries the exact bytes it was decoded from. Provider
+  /// continuation links are followed only when they keep the route, page size, and filters.
+  /// Counts may change during traversal; the pages are not a snapshot.
+  ///
+  /// ```swift
+  /// for try await page in client.billPages(matching: try BillQuery(congress: 6, limit: 2)) {
+  ///   print(page.value.bills.count)
+  /// }
+  /// ```
+  /// - Parameter query: The bill inventory scope, filters, sort, and page bounds.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation` before
+  ///   yielding a page with an invalid continuation, or the transport or decoding failure.
   public func billPages(matching query: BillQuery) -> CongressPageSequence<BillPage> {
     pages(for: .bills(matching: query))
   }
 
   /// Creates a lazy bill traversal, preserving source order and duplicates.
+  ///
+  /// Only the current page is buffered. No page is fetched until the first bill is requested, and
+  /// nothing implies a complete historical collection.
+  ///
+  /// ```swift
+  /// for try await bill in client.bills(matching: try BillQuery(congress: 6, limit: 2)) {
+  ///   print(bill.number, bill.title)
+  /// }
+  /// ```
+  /// - Parameter query: The bill inventory scope, filters, sort, and page bounds.
+  /// - Returns: A sequence whose iteration throws `CongressDataError.invalidContinuation`,
+  ///   `CongressDataError.transport(.cancelled)`, or the transport or decoding failure.
   public func bills(matching query: BillQuery) -> CongressItemSequence<BillPage> {
     items(for: .bills(matching: query))
   }

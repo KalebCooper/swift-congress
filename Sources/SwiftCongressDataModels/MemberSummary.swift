@@ -1,8 +1,10 @@
 /// A member list record retaining every source field.
 ///
 /// The source publishes list terms inside a `terms` object whose `item` array holds the entries;
-/// ``terms`` exposes that array and ``rawFields`` keeps the wrapper. `district` is nil for a
-/// senator and is preserved as zero when the source publishes zero.
+/// ``terms`` exposes that array and ``rawFields`` keeps the wrapper. `district` is nil when the
+/// source omits it, as the recorded senator entries do, and is preserved as zero when the source
+/// publishes zero. A record without `bioguideId` or `name` fails its page with a decoding error
+/// rather than being skipped.
 public struct MemberSummary: Codable, Hashable, Sendable {
   /// The source `bioguideId` value.
   public let bioguideId: String

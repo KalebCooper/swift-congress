@@ -258,5 +258,15 @@
     "sha256": "3c4926ffd6548235485c24650ec96bc1496e04fe6128f71301f79abaeb8c1651",
     "status": 200,
     "url": "https://api.congress.gov/v3/member?currentMember=false&offset=2&limit=2&format=json"
+  },
+  {
+    "bytes": 1729,
+    "file": "bill119-text-offset4.json",
+    "mediaType": "application/json",
+    "providerID": "bill119-text-offset4",
+    "retrievedAt": "2026-09-27T13:32:57.474902+00:00",
+    "sha256": "06c622c75ae2240f3d7c83fe6b33a553df5a1a95296758ff39f2354bb1a0fb1f",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/bill/119/hr/1/text?offset=4&limit=2&format=json"
   }
 ]

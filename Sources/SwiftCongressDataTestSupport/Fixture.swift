@@ -10,6 +10,8 @@ package enum Fixture: String {
   case bill119_text_first = "bill119-text-first.json"
   /// Recorded https://api.congress.gov/v3/bill/119/hr/1/text?offset=2&limit=2&format=json.
   case bill119_text_next = "bill119-text-next.json"
+  /// Recorded https://api.congress.gov/v3/bill/119/hr/1/text?offset=4&limit=2&format=json.
+  case bill119_text_offset4 = "bill119-text-offset4.json"
   /// Recorded https://api.congress.gov/v3/bill/119/hr/1/text?offset=5&limit=2&format=json.
   case bill119_text_terminal = "bill119-text-terminal.json"
   /// Recorded https://api.congress.gov/v3/bill/6/hr/1?format=json.

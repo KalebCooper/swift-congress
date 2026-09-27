@@ -1,0 +1,52 @@
+{
+    "pagination": {
+        "count": 6,
+        "prev": "https://api.congress.gov/v3/bill/119/hr/1/text?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "billNumber": "1",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/119/hr/1?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "textVersions": [
+        {
+            "date": "2025-05-20T04:00:00Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1rh.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1rh.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1rh.xml"
+                }
+            ],
+            "type": "Reported in House"
+        },
+        {
+            "date": "2025-07-05T03:59:59Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.pdf"
+                },
+                {
+                    "type": "United States Legislative Markup",
+                    "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21_uslm.xml"
+                }
+            ],
+            "type": "Public Law"
+        }
+    ]
+}

@@ -186,6 +186,16 @@ struct MemberModelsTests {
     #expect(detail.member.rawFields["currentMember"] == .null)
   }
 
+  @Test("A false member filter can return currently serving members")
+  func aFalseMemberFilterCanReturnCurrentlyServingMembers() throws {
+    let unfiltered = try decodePage(.members117_first)
+    let serving = try decodePage(.members117_current)
+    #expect(unfiltered.pagination.count == 557)
+    #expect(serving.pagination.count == 377)
+    #expect(unfiltered.members.prefix(2).map(\.bioguideId) == ["R000579", "M001212"])
+    #expect(serving.members.prefix(2).map(\.bioguideId) == ["R000579", "M001212"])
+  }
+
   @Test("Member queries encode exact routes")
   func memberQueriesEncodeExactRoutes() throws {
     #expect(

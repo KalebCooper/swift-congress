@@ -295,7 +295,12 @@ struct MemberTests {
     #expect(
       mock.requests.last?.request.path
         == "/v3/member/congress/117?currentMember=true&format=json&limit=2&offset=0")
-    await #expect(throws: CongressDataError.self) { _ = try await serving.next() }
+    let failure = await #expect(throws: CongressDataError.self) { _ = try await serving.next() }
+    if case .transport(.httpStatus(_, let code, _))? = failure {
+      #expect(code == 503)
+    } else {
+      Issue.record("Expected a 503 response")
+    }
     #expect(mock.requests.count == 4)
     #expect(
       mock.requests.last?.request.path

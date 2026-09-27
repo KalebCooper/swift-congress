@@ -109,8 +109,16 @@ No release exists yet. Add the package by URL, pinned to `main` since there is n
 .package(url: "https://github.com/KalebCooper/swift-congress.git", branch: "main")
 ```
 
-Or reference it as a local Swift package. Either way, select the required library products. The
-HTTP SDK requires the verified public swifty-networking 1.3.1 or later.
+On Linux or Android, enable the trait:
+
+```swift
+.package(
+  url: "https://github.com/KalebCooper/swift-congress.git", branch: "main",
+  traits: ["HTTPPortable"])
+```
+
+Or reference it as a local Swift package. Either way, select the required library products.
+The HTTP SDKs require swifty-networking 1.3.1 or later.
 
 ## License
 

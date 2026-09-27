@@ -1,10 +1,11 @@
 /// The BillTextVersionPage response as published by Congress.gov.
 ///
-/// Versions keep provider order and repeats. Recorded pages with a `next` link carried one version
-/// beyond the requested limit, identical to the inventory's final version. Continuation therefore
-/// accepts at most one version beyond the limit on this page type, advances the offset by the
-/// requested limit rather than by the returned count, and still fails before yielding a page that
-/// exceeds the limit by more than one. Items are never de-duplicated, so a traversal can yield the
+/// Versions keep provider order and repeats. The recorded pages with a `next` link each carried one
+/// version beyond the requested limit, identical to the only version on the recorded page at offset
+/// 5; the page at offset 4 is not recorded. Continuation therefore accepts at most one version
+/// beyond the limit on this page type: a page that carries the extra version advances the offset by
+/// the requested limit, and any other page by its returned count. A page that exceeds the limit by
+/// more than one fails before yielding. Items are never de-duplicated, so a traversal can yield the
 /// same version more than once.
 ///
 /// ```swift

@@ -10,8 +10,9 @@ public protocol CongressCollection: Codable, Sendable {
 
 /// A collection whose recorded pages can carry records beyond the requested page size.
 ///
-/// Continuation accepts up to `pageOverrunAllowance` extra records on a page and advances the
-/// offset by the requested limit. Collections without this conformance allow none.
+/// Continuation accepts up to `pageOverrunAllowance` extra records on a page. A page at or over the
+/// requested limit advances the offset by the limit, and any other page by its returned count.
+/// Collections without this conformance allow none.
 protocol CongressPageOverrun {
   /// The number of records a page may carry beyond its requested limit.
   static var pageOverrunAllowance: Int { get }

@@ -16,7 +16,8 @@ public enum CongressContinuation {
   ///
   /// Filters and page size must stay unchanged, and offsets must advance by the returned record
   /// count. A ``BillTextVersionPage`` may carry one record beyond the requested limit; its offset
-  /// then advances by the limit.
+  /// then advances by the limit. Other page types, including consumer collections on the same
+  /// route, allow none.
   /// - Throws: `CongressPaginationError.invalidContinuation` before exposing an invalid page.
   public static func next<Page: CongressCollection>(after page: Page, endpoint: Endpoint<Page>)
     throws(CongressPaginationError) -> Endpoint<Page>?

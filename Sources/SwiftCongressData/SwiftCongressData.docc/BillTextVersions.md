@@ -37,17 +37,19 @@ link with a scheme and host.
 
 Fixtures cover text versions for three bills: the historical House bill at Congress 6 (`hr 1`,
 one version), the Senate bill at Congress 82 (`s 677`, one version), and the modern House bill at
-Congress 119 (`hr 1`, six versions across three pages). Nothing beyond these recorded bills and
-pages is claimed, and no statement here generalizes to Congress.gov's text-version coverage for
-other bills.
+Congress 119 (`hr 1`), whose provider count is six. Three of its limit-2 pages are recorded: offset
+0, offset 2 from the provider's `next` link, and offset 5 requested directly. They hold 3, 3, and 1
+versions, five distinct by type. The page at offset 4 is not recorded. Nothing beyond these
+recorded bills and pages is claimed, and no statement here generalizes to Congress.gov's
+text-version coverage for other bills.
 
-The recorded Congress 119 pages (limit 2) each carried one version beyond the requested limit: a
-page with a `next` link held three versions instead of two, with the third identical to the
-inventory's final, terminal version. `BillTextVersionPage` accepts this recorded overrun and
-still advances the offset by the requested limit. Versions are never de-duplicated, so a full
-traversal of a page shaped this way yields that repeated final version more than once. This is
-stated only as the recorded behavior for these fixtures; whether it holds for every text-version
-inventory is not asserted.
+The two recorded Congress 119 pages with a `next` link each held three versions instead of two,
+the third identical to the only version on the recorded page at offset 5. `BillTextVersionPage`
+accepts at most one version beyond the limit; a page that carries the extra version advances the
+offset by the requested limit, and any other page by its returned count. Versions are never
+de-duplicated, so a traversal over pages shaped this way can yield the same version more than
+once. This is stated only as the recorded behavior for these fixtures; whether it holds for every
+text-version inventory is not asserted.
 
 ## Dates are unparsed
 

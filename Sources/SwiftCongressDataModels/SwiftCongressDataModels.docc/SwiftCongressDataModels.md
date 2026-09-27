@@ -36,6 +36,8 @@ incomplete page is an error. Counts can change; no stable snapshot is promised.
 - ``Bill``
 - ``BillAction``
 - ``BillDetail``
+- ``BillTextFormat``
+- ``BillTextVersion``
 - ``Congress``
 - ``CongressSession``
 - ``JSONValue``
@@ -64,6 +66,7 @@ incomplete page is an error. Counts can change; no stable snapshot is promised.
 
 - ``BillActionPage``
 - ``BillPage``
+- ``BillTextVersionPage``
 - ``CongressCollection``
 - ``CongressContinuation``
 - ``CongressPage``

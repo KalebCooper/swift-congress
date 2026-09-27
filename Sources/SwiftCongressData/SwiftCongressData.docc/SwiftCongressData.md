@@ -89,3 +89,7 @@ each record's rawFields. Source overlap is not independent corroboration.
 ### Member browsing
 
 - <doc:BrowsingMembers>
+
+### Bill text versions
+
+- <doc:BillTextVersions>

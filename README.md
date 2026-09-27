@@ -31,7 +31,10 @@ per-Congress list routes and the by-identifier detail route, with the raw `curre
 filter kept separate from a member's typed historical `terms`, and `partyHistory`,
 `leadership`, `previousNames`, and `addressInformation` kept as raw fields only. The API
 returns the members it publishes; this library asserts no complete historical membership.
-Bill-text-version operations remain pending official payload verification after rate limiting.
+Congress.gov bill text versions are implemented for both bill identifier forms: lazy page and
+version traversal, with format links kept as supplied metadata and never fetched. Fixtures cover
+the historical Congress 6 `hr 1`, Congress 82 `s 677`, and modern Congress 119 `hr 1` bills; nothing
+beyond these recorded bills is claimed.
 See [implementation readiness](IMPLEMENTATION_READINESS.md) for validation status.
 
 ## Usage
@@ -58,11 +61,12 @@ explicitly off Apple platforms. API keys are required and are sent only through 
 ## Example
 
 `Examples/CongressDataDemo` decodes an official recorded bill from a supplied file path, or a
-recorded member detail or member list page with `--member <path>` and `--members <path>`. Its
-Apple live mode accepts `--live` and an explicit API key for the bill route, unchanged. The demo
-never supplies a default key. Deterministic example inputs include
-`Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`, `member-L000174.json`, and
-`members117-first.json`.
+recorded member detail or member list page with `--member <path>` and `--members <path>`, or a
+recorded bill text-version page with `--text <path>`, listing each version's type and date and
+each format's type and raw url. Its Apple live mode accepts `--live` and an explicit API key for
+the bill route, unchanged. The demo never supplies a default key and never fetches a format link.
+Deterministic example inputs include `Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`,
+`member-L000174.json`, `members117-first.json`, and `bill119-text-first.json`.
 
 `Examples/CongressBioguideDemo` validates every profile in a staged export directory. Prepare a
 supplied official all-profile ZIP with `Scripts/prepare-bioguide.py`; provide the actual retrieval

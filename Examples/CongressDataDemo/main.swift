@@ -2,8 +2,9 @@ import Foundation
 import SwiftCongressData
 import SwiftCongressDataModels
 
-// Offline: pass a recorded Congress.gov bill JSON path, or a recorded member detail or member
-// list page with --member/--members. Live Apple lookup: pass --live and a key (bill route only).
+// Offline: pass a recorded Congress.gov bill JSON path, a recorded member detail or member
+// list page with --member/--members, or a recorded bill text-version page with --text. Live
+// Apple lookup: pass --live and a key (bill route only).
 @main
 struct CongressDataDemo {
   static func main() async throws {
@@ -34,6 +35,17 @@ struct CongressDataDemo {
           print(
             "  term chamber=\(term.chamber ?? "-") startYear=\(term.startYear.map(String.init) ?? "-") endYear=\(term.endYear.map(String.init) ?? "-")"
           )
+        }
+      }
+    } else if arguments.first == "--text" {
+      guard arguments.count == 2 else { throw DemoError.arguments }
+      let bytes = try Data(contentsOf: URL(fileURLWithPath: arguments[1]))
+      let page = try JSONDecoder().decode(BillTextVersionPage.self, from: bytes)
+      print("pagination.count \(page.pagination.count)")
+      for version in page.textVersions {
+        print("type \(version.type ?? "-"), date \(version.date ?? "(none)")")
+        for format in version.formats ?? [] {
+          print("  format type=\(format.type ?? "-") url=\(format.url ?? "-")")
         }
       }
     } else {

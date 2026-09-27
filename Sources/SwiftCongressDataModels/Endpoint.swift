@@ -91,3 +91,20 @@ extension Endpoint where Response == MemberPage {
   /// Describes one page of the matching member inventory.
   public static func members(matching query: MemberQuery) -> Self { builtIn(query.path) }
 }
+
+extension Endpoint where Response == BillTextVersionPage {
+  /// Describes one page of text-version metadata for a bill source record.
+  public static func textVersions(
+    for identifier: BillSourceIdentifier, page: CongressQuery = .init()
+  ) -> Self {
+    builtIn(
+      "/v3/bill/\(identifier.congress)/\(identifier.type.rawValue)/\(identifier.number)/text?format=json&limit=\(page.limit)&offset=\(page.offset)"
+    )
+  }
+  /// Describes one page of text-version metadata for a numbered bill.
+  public static func textVersions(for identifier: BillIdentifier, page: CongressQuery = .init())
+    -> Self
+  {
+    textVersions(for: identifier.source, page: page)
+  }
+}

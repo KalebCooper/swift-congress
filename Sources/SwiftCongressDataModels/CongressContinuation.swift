@@ -13,18 +13,22 @@ public enum CongressPaginationError: Error, Hashable, Sendable {
 /// Pure validation of Congress.gov continuation links and query identity.
 public enum CongressContinuation {
   /// Validates the next link without performing I/O.
-  /// Filters and page size must stay unchanged; offsets must advance by returned record count.
+  ///
+  /// Filters and page size must stay unchanged, and offsets must advance by the returned record
+  /// count. A ``BillTextVersionPage`` may carry one record beyond the requested limit; its offset
+  /// then advances by the limit.
   /// - Throws: `CongressPaginationError.invalidContinuation` before exposing an invalid page.
   public static func next<Page: CongressCollection>(after page: Page, endpoint: Endpoint<Page>)
     throws(CongressPaginationError) -> Endpoint<Page>?
   {
+    let allowance = (Page.self as? any CongressPageOverrun.Type)?.pageOverrunAllowance ?? 0
     guard let current = URLComponents(string: "https://api.congress.gov" + endpoint.path),
       let query = parameters(current), let offset = Int(query["offset"] ?? "0"), offset >= 0,
       let limit = Int(query["limit"] ?? "20"), (1...250).contains(limit),
-      page.pagination.count >= 0, page.items.count <= limit,
-      offset <= Int.max - page.items.count
+      page.pagination.count >= 0, page.items.count <= limit + allowance,
+      offset <= Int.max - min(page.items.count, limit)
     else { throw .invalidContinuation }
-    let end = offset + page.items.count
+    let end = offset + min(page.items.count, limit)
     guard let link = page.pagination.next else {
       guard end >= page.pagination.count else { throw .invalidContinuation }
       return nil

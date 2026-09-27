@@ -65,3 +65,21 @@ extension CongressRequest where Response == MemberPage {
     Self(collection: .members(matching: query))
   }
 }
+
+extension CongressRequest where Response == BillTextVersionPage {
+  /// Describes lazy text-version metadata for a source bill record.
+  ///
+  /// Value execution retrieves only the initial page. Format links are supplied metadata; no
+  /// executor retrieves the linked text.
+  public static func textVersions(
+    for identifier: BillSourceIdentifier, page: CongressQuery = .init()
+  ) -> Self {
+    Self(collection: .textVersions(for: identifier, page: page))
+  }
+  /// Describes lazy text-version metadata for a numbered bill.
+  public static func textVersions(for identifier: BillIdentifier, page: CongressQuery = .init())
+    -> Self
+  {
+    textVersions(for: identifier.source, page: page)
+  }
+}

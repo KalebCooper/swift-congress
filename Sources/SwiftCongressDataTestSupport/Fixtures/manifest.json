@@ -228,5 +228,35 @@
     "sha256": "35cb6a718bca5d6536627e40f4aa26ec57cc01bf9299337bd740e70e123cb063",
     "status": 200,
     "url": "https://api.congress.gov/v3/bill/82/s/677/text?format=json"
+  },
+  {
+    "bytes": 6713,
+    "file": "member-H000324.json",
+    "mediaType": "application/json",
+    "providerID": "member-H000324",
+    "retrievedAt": "2026-09-27T02:17:43.912517+00:00",
+    "sha256": "0859e9ab500c17ff11d84bb244223babe21f76766086800600a7e752ad19a133",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member/H000324?format=json"
+  },
+  {
+    "bytes": 1742,
+    "file": "members-default-first.json",
+    "mediaType": "application/json",
+    "providerID": "members-default-first",
+    "retrievedAt": "2026-09-27T02:17:45.491870+00:00",
+    "sha256": "48565217b39dd026a71e6ab62336c8164d32afaebfcadadcb9727f076d953164",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member?currentMember=false&format=json&limit=2&offset=0"
+  },
+  {
+    "bytes": 1825,
+    "file": "members-default-next.json",
+    "mediaType": "application/json",
+    "providerID": "members-default-next",
+    "retrievedAt": "2026-09-27T02:17:47.094312+00:00",
+    "sha256": "3c4926ffd6548235485c24650ec96bc1496e04fe6128f71301f79abaeb8c1651",
+    "status": 200,
+    "url": "https://api.congress.gov/v3/member?currentMember=false&offset=2&limit=2&format=json"
   }
 ]

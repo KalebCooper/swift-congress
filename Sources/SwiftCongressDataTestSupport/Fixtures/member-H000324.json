@@ -1,0 +1,202 @@
+{
+    "member": {
+        "bioguideId": "H000324",
+        "birthYear": "1936",
+        "cosponsoredLegislation": {
+            "count": 8265,
+            "url": "https://api.congress.gov/v3/member/H000324/cosponsored-legislation"
+        },
+        "currentMember": false,
+        "deathYear": "2021",
+        "depiction": {
+            "attribution": "Collection of the U.S. House of Representatives",
+            "imageUrl": "https://www.congress.gov/img/member/h000324_200.jpg"
+        },
+        "directOrderName": "Alcee L. Hastings",
+        "district": 20,
+        "firstName": "ALCEE",
+        "invertedOrderName": "Hastings, Alcee L.",
+        "lastName": "HASTINGS",
+        "middleName": "L.",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1993
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Alcee L. Hastings",
+                "firstName": "ALCEE",
+                "invertedOrderName": "Hastings, Alcee L.",
+                "lastName": "HASTINGS",
+                "middleName": "L.",
+                "startDate": "1993-01-03T17:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 530,
+            "url": "https://api.congress.gov/v3/member/H000324/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 23,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 23,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 23,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 23,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 23,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 23,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 23,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 23,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 23,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 23,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 20,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 20,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 20,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 20,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 20,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2023-01-03T20:38:05Z"
+    },
+    "request": {
+        "bioguideId": "h000324",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

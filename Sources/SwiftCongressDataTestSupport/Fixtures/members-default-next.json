@@ -1,0 +1,54 @@
+{
+    "members": [
+        {
+            "bioguideId": "B001328",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/6a9869d92a68122e10181e62_200.jpg"
+            },
+            "district": 13,
+            "name": "Blair, Everton",
+            "partyName": "Democratic",
+            "state": "Georgia",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2026
+                    }
+                ]
+            },
+            "updateDate": "2026-09-26T07:40:30Z",
+            "url": "https://api.congress.gov/v3/member/B001328?format=json"
+        },
+        {
+            "bioguideId": "G000607",
+            "depiction": {
+                "imageUrl": "https://www.congress.gov/img/member/6a29d4f81c6ce0de6fbae1f7_200.jpg"
+            },
+            "district": 1,
+            "name": "Gallagher, James",
+            "partyName": "Republican",
+            "state": "California",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2026
+                    }
+                ]
+            },
+            "updateDate": "2026-09-26T07:40:30Z",
+            "url": "https://api.congress.gov/v3/member/G000607?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 2696,
+        "next": "https://api.congress.gov/v3/member?currentMember=false&offset=4&limit=2&format=json",
+        "prev": "https://api.congress.gov/v3/member?currentMember=false&offset=0&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

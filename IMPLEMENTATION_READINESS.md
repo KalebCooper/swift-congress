@@ -27,8 +27,8 @@ the Apple `swift-congress-Package` test plan passes in full (323 of 323) on iPho
 simulator, with 0 source build warnings; all four demos (CongressBioguideDemo, CongressDataDemo,
 CongressHouseVotesDemo, CongressSenateVotesDemo) build and each ran at least once offline through
 `xcrun simctl spawn` against a recorded or supplied fixture, output matching the fixture; and all
-eight product DocC catalogs plus the merged archive build with zero warnings. This evidence is the
-Q2 through Q4 qualification pass, 2026-09-27 09:03..09:08 CT, at `b5a94f7`.
+eight product DocC catalogs plus the merged archive build with zero warnings. This evidence is from
+a local qualification run on 2026-09-27, at `b5a94f7`.
 
 Android emulator execution was not run here: no local Android Swift SDK or `adb` is installed; the
 pinned hosted Android lane remains the required execution gate. Hosted CI (all four GitHub Actions

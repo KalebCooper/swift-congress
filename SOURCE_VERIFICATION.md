@@ -122,6 +122,6 @@ and each ran at least once offline through `xcrun simctl spawn` against a record
 fixture, matching that fixture's known output. All eight product DocC catalogs plus the merged
 archive build with zero warnings, from Apple build products.
 
-This is the Q2 through Q4 qualification pass, 2026-09-27 09:03..09:08 CT, at `b5a94f7`. Not run
-here: Android emulator execution (no local Android Swift SDK or `adb`) and hosted CI. No API limit
-was bypassed and no shared service was reset while gathering this evidence.
+This is a local qualification run, 2026-09-27, at `b5a94f7`. Not run here: Android emulator
+execution (no local Android Swift SDK or `adb`) and hosted CI. No API limit was bypassed and no
+shared service was reset while gathering this evidence.

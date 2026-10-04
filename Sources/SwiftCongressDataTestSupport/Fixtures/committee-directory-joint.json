@@ -1,0 +1,377 @@
+{
+    "committees": [
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Commission or Caucus",
+            "name": "U.S.-China Economic and Security Review Commission",
+            "systemCode": "jcuc00",
+            "updateDate": "2026-07-09T10:55:50Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcuc00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Economic Committee",
+            "systemCode": "jjec00",
+            "updateDate": "2026-05-13T17:49:00Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jjec00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Commission or Caucus",
+            "name": "Congressional Oversight Commission",
+            "systemCode": "jcov00",
+            "updateDate": "2026-02-18T18:41:09Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcov00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Economic Committee",
+            "systemCode": "jhje00",
+            "updateDate": "2025-05-16T20:39:59Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jhje00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Commission or Caucus",
+            "name": "Congressional-Executive Commission on China",
+            "systemCode": "jcpk00",
+            "updateDate": "2025-02-24T16:33:20Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcpk00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Committee on Taxation",
+            "systemCode": "jstx00",
+            "updateDate": "2025-01-03T20:48:18Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jstx00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Committee on Printing",
+            "systemCode": "jspr00",
+            "updateDate": "2025-01-03T20:48:17Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jspr00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Committee on the Library",
+            "systemCode": "jslc00",
+            "updateDate": "2025-01-03T20:48:17Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jslc00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Economic Committee",
+            "subcommittees": [
+                {
+                    "name": "International Economic Policy Subcommittee",
+                    "systemCode": "jsec01",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec01?format=json"
+                },
+                {
+                    "name": "Investment, Jobs, and Prices Subcommittee",
+                    "systemCode": "jsec02",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec02?format=json"
+                },
+                {
+                    "name": "Technology and National Security Subcommittee",
+                    "systemCode": "jsec04",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec04?format=json"
+                },
+                {
+                    "name": "Economic Growth, Trade, and Taxes Subcommittee",
+                    "systemCode": "jsec05",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec05?format=json"
+                },
+                {
+                    "name": "Fiscal and Monetary Policy Subcommittee",
+                    "systemCode": "jsec06",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec06?format=json"
+                },
+                {
+                    "name": "Economic Resources and Competitiveness Subcommittee",
+                    "systemCode": "jsec07",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec07?format=json"
+                },
+                {
+                    "name": "Education and Health Subcommittee",
+                    "systemCode": "jsec08",
+                    "url": "https://api.congress.gov/v3/committee/joint/jsec08?format=json"
+                },
+                {
+                    "name": "Economic Goals and Intergovernmental Policy Subcommittee",
+                    "systemCode": "jsec03",
+                    "url": "https://api.congress.gov/v3/committee/senate/jsec03?format=json"
+                }
+            ],
+            "systemCode": "jsec00",
+            "updateDate": "2025-01-03T20:48:16Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Commission or Caucus",
+            "name": "Commission on Security and Cooperation in Europe (U.S. Helsinki Commission)",
+            "systemCode": "jcse00",
+            "updateDate": "2025-01-03T20:48:16Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcse00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Select",
+            "name": "Joint Select Deficit Reduction Committee",
+            "systemCode": "jsdf00",
+            "updateDate": "2024-08-19T13:18:23Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsdf00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Select Committee on Budget and Appropriations Process Reform",
+            "systemCode": "jsba00",
+            "updateDate": "2024-08-19T13:04:50Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsba00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Select Committee on Solvency of Multiemployer Pension Plans",
+            "systemCode": "jspp00",
+            "updateDate": "2021-01-11T18:41:51Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jspp00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Other",
+            "name": "Congressional Oversight Panel",
+            "systemCode": "jocp00",
+            "updateDate": "2020-11-16T17:44:41Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jocp00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 2004 Committee",
+            "systemCode": "jsie00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsie00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 2008 Committee",
+            "systemCode": "jsif00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsif00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Defense Production Committee",
+            "systemCode": "jsjx00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsjx00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Organization of Congress Committee",
+            "systemCode": "jsoc00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsoc00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 2012 Committee",
+            "systemCode": "jsig00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsig00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Other",
+            "name": "The Pepper Commission Committee",
+            "systemCode": "jchc00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jchc00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 1992 Committee",
+            "systemCode": "jsib00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsib00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Congressional Operations Committee",
+            "systemCode": "jsjy00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsjy00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 2000 Committee",
+            "systemCode": "jsid00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsid00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Budget Control Committee",
+            "systemCode": "jsjz00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsjz00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 2016 Committee",
+            "systemCode": "jsih00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsih00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Other",
+            "name": "Medicare Commission Committee",
+            "systemCode": "jcfm00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcfm00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Other",
+            "name": "IRS Restructuring Commission Committee",
+            "systemCode": "jcir00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcir00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 1988 Committee",
+            "systemCode": "jsia00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsia00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Inaugural Ceremonies - 1996 Committee",
+            "systemCode": "jsic00",
+            "updateDate": "2017-07-19T14:06:31Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsic00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "International Economic Policy Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec01",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec01?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Education and Health Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec08",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec08?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Economic Resources and Competitiveness Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec07",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec07?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Fiscal and Monetary Policy Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec06",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec06?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Economic Growth, Trade, and Taxes Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec05",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec05?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Technology and National Security Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec04",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec04?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Investment, Jobs, and Prices Subcommittee",
+            "parent": {
+                "name": "Joint Economic Committee",
+                "systemCode": "jsec00",
+                "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+            },
+            "systemCode": "jsec02",
+            "updateDate": "2015-11-02T17:00:45Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec02?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 36
+    },
+    "request": {
+        "chamber": "joint",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

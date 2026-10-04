@@ -1,0 +1,30 @@
+{
+    "cosponsors": [
+        {
+            "bioguideId": "G000597",
+            "district": 2,
+            "firstName": "Andrew",
+            "fullName": "Rep. Garbarino, Andrew R. [R-NY-2]",
+            "isOriginalCosponsor": true,
+            "lastName": "Garbarino",
+            "middleName": "R.",
+            "party": "R",
+            "sponsorshipDate": "2025-01-03",
+            "state": "NY",
+            "url": "https://api.congress.gov/v3/member/G000597?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 110,
+        "countIncludingWithdrawnCosponsors": 110,
+        "next": "https://api.congress.gov/v3/bill/119/hr/22/cosponsors?offset=1&limit=1&format=json"
+    },
+    "request": {
+        "billNumber": "22",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/119/hr/22?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

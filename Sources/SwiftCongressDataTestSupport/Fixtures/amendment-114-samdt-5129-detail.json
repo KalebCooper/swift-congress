@@ -1,0 +1,85 @@
+{
+    "amendment": {
+        "actions": {
+            "count": 12,
+            "url": "https://api.congress.gov/v3/amendment/114/samdt/5129/actions?format=json"
+        },
+        "amendedBill": {
+            "congress": 114,
+            "number": "3336",
+            "originChamber": "Senate",
+            "originChamberCode": "S",
+            "title": "A bill to provide installation reutilization authority for arsenals, depots, and plants.",
+            "type": "S",
+            "updateDateIncludingText": "2026-03-04",
+            "url": "https://api.congress.gov/v3/bill/114/s/3336?format=json"
+        },
+        "chamber": "Senate",
+        "congress": 114,
+        "latestAction": {
+            "actionDate": "2016-12-10",
+            "links": [
+                {
+                    "name": "SA 5129",
+                    "url": "https://www.congress.gov/amendment/114th-congress/senate-amendment/5129"
+                }
+            ],
+            "text": "Amendment SA 5129 agreed to in Senate by Unanimous Consent."
+        },
+        "notes": [
+            {
+                "text": "The Senate agreed to the amendment on 12/5/2016, then vitiated its adoption on 12/5/2016, then agreed to the amendment on 12/10/2016."
+            }
+        ],
+        "number": "5129",
+        "onBehalfOfSponsor": [
+            {
+                "bioguideId": "M000355",
+                "firstName": "Mitch",
+                "fullName": "Sen. McConnell, Mitch [R-KY]",
+                "lastName": "McConnell",
+                "party": "R",
+                "state": "KY",
+                "type": "Submitted on behalf of",
+                "url": "https://api.congress.gov/v3/member/M000355?format=json"
+            },
+            {
+                "bioguideId": "B001236",
+                "firstName": "John",
+                "fullName": "Sen. Boozman, John [R-AR]",
+                "lastName": "Boozman",
+                "party": "R",
+                "state": "AR",
+                "type": "Proposed on behalf of",
+                "url": "https://api.congress.gov/v3/member/B001236?format=json"
+            }
+        ],
+        "proposedDate": "2016-12-10T05:00:00Z",
+        "purpose": "To amend the title.",
+        "sponsors": [
+            {
+                "bioguideId": "E000295",
+                "firstName": "Joni",
+                "fullName": "Sen. Ernst, Joni [R-IA]",
+                "lastName": "Ernst",
+                "party": "R",
+                "state": "IA",
+                "url": "https://api.congress.gov/v3/member/E000295?format=json"
+            }
+        ],
+        "submittedDate": "2016-12-05T05:00:00Z",
+        "textVersions": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/amendment/114/samdt/5129/text?format=json"
+        },
+        "type": "SAMDT",
+        "updateDate": "2026-03-04T12:59:13Z"
+    },
+    "request": {
+        "amendmentNumber": "5129",
+        "amendmentType": "samdt",
+        "congress": "114",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

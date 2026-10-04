@@ -1,0 +1,16 @@
+{
+    "pagination": {
+        "count": 0
+    },
+    "request": {
+        "billNumber": "677",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/82/s/677?format=json",
+        "congress": "82",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "subjects": {
+        "legislativeSubjects": []
+    }
+}

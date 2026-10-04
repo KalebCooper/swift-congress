@@ -1,0 +1,38 @@
+{
+    "houseCommunications": [
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 114,
+            "number": 2055,
+            "referralDate": "2015-07-07",
+            "updateDate": "2018-02-02",
+            "url": "https://api.congress.gov/v3/house-communication/114/ec/2055?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 114,
+            "number": 5874,
+            "referralDate": "2016-07-01",
+            "updateDate": "2018-02-02",
+            "url": "https://api.congress.gov/v3/house-communication/114/ec/5874?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 15,
+        "next": "https://api.congress.gov/v3/committee/house/hsso00/house-communication?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "chamber": "house",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hsso00"
+    }
+}

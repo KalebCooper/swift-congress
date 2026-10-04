@@ -1,0 +1,38 @@
+{
+    "amendments": [
+        {
+            "congress": 117,
+            "description": "An amendment to elect officers of the House.",
+            "latestAction": {
+                "actionDate": "2021-01-03",
+                "actionTime": "19:12:21",
+                "text": "On agreeing to the Cheney amendment (A001) Failed by voice vote. "
+            },
+            "number": "1",
+            "type": "HAMDT",
+            "updateDate": "2021-01-14T19:04:53Z",
+            "url": "https://api.congress.gov/v3/amendment/117/hamdt/1?format=json"
+        },
+        {
+            "congress": 117,
+            "description": "Pursuant to the provisions of H. Res. 38, the amendment to the preamble printed in House Report 117-1 is adopted.",
+            "latestAction": {
+                "actionDate": "2021-01-12",
+                "text": "On agreeing to the Rules amendment (A001) Agreed to without objection. "
+            },
+            "number": "2",
+            "type": "HAMDT",
+            "updateDate": "2021-01-13T08:16:59Z",
+            "url": "https://api.congress.gov/v3/amendment/117/hamdt/2?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 6961,
+        "next": "https://api.congress.gov/v3/amendment/117?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

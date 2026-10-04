@@ -1,0 +1,57 @@
+{
+    "amendment": {
+        "actions": {
+            "count": 2,
+            "url": "https://api.congress.gov/v3/amendment/97/suamdt/3/actions?format=json"
+        },
+        "amendedBill": {
+            "congress": 97,
+            "number": "1553",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "A bill to provide for a temporary increase in the public debt limit.",
+            "type": "HR",
+            "updateDateIncludingText": "2024-02-07",
+            "url": "https://api.congress.gov/v3/bill/97/hr/1553?format=json"
+        },
+        "chamber": "Senate",
+        "congress": 97,
+        "latestAction": {
+            "actionDate": "1981-02-05",
+            "links": [
+                {
+                    "name": "SP 2",
+                    "url": "https://www.congress.gov/amendment/97th-congress/senate-amendment/2"
+                }
+            ],
+            "text": "Ordered to be printed.  SP 2 "
+        },
+        "number": "3",
+        "sponsors": [
+            {
+                "bioguideId": "J000101",
+                "firstName": "ROGER",
+                "fullName": "Sen. Jepsen, Roger W. [R-IA]",
+                "lastName": "JEPSEN",
+                "middleName": "WILLIAM",
+                "party": "R",
+                "state": "IA",
+                "url": "https://api.congress.gov/v3/member/J000101?format=json"
+            }
+        ],
+        "submittedDate": "1981-02-05T05:00:00Z",
+        "textVersions": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/amendment/97/suamdt/3/text?format=json"
+        },
+        "type": "SUAMDT",
+        "updateDate": "2021-09-25T05:29:00Z"
+    },
+    "request": {
+        "amendmentNumber": "3",
+        "amendmentType": "suamdt",
+        "congress": "97",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

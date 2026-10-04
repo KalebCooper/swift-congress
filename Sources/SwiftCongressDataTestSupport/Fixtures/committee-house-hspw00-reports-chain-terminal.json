@@ -1,0 +1,135 @@
+{
+    "pagination": {
+        "count": 24,
+        "prev": "https://api.congress.gov/v3/committee/house/hspw00/reports?fromDateTime=2015-03-20T00:04:12Z&toDateTime=2015-03-20T00:06:53Z&offset=0&limit=12&format=json"
+    },
+    "reports": [
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-609",
+            "congress": 109,
+            "number": 609,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:32+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/609?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-610",
+            "congress": 109,
+            "number": 610,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:25+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/610?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-709",
+            "congress": 109,
+            "number": 709,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:04:45+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/709?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-596",
+            "congress": 109,
+            "number": 596,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:33+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/596?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-569",
+            "congress": 109,
+            "number": 569,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:04:37+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/569?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-512",
+            "congress": 109,
+            "number": 512,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:04:37+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/512?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-519,Part 2",
+            "congress": 109,
+            "number": 519,
+            "part": 2,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:26+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/519?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-669",
+            "congress": 109,
+            "number": 669,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:28+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/669?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-608",
+            "congress": 109,
+            "number": 608,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:04:45+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/608?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-90",
+            "congress": 109,
+            "number": 90,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:56+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/90?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-269",
+            "congress": 109,
+            "number": 269,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:46+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/269?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-738",
+            "congress": 109,
+            "number": 738,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:05:08+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/738?format=json"
+        }
+    ],
+    "request": {
+        "chamber": "house",
+        "committeeUrl": "https://api.congress.gov/v3/committee/house/hspw00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hspw00"
+    }
+}

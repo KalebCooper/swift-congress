@@ -1,0 +1,35 @@
+{
+    "pagination": {
+        "count": 931,
+        "next": "https://api.congress.gov/v3/committee/house/hspw00/reports?offset=2&limit=2&format=json"
+    },
+    "reports": [
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-570",
+            "congress": 109,
+            "number": 570,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:04:12+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/570?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 109-121",
+            "congress": 109,
+            "number": 121,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2015-03-20 00:06:53+00:00",
+            "url": "https://api.congress.gov/v3/committee-report/109/HRPT/121?format=json"
+        }
+    ],
+    "request": {
+        "chamber": "house",
+        "committeeUrl": "https://api.congress.gov/v3/committee/house/hspw00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hspw00"
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "members": [
+        {
+            "bioguideId": "B001323",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/6774217e0b34857ecc909040_200.jpg"
+            },
+            "name": "Begich, Nicholas J.",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2025
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:20Z",
+            "url": "https://api.congress.gov/v3/member/B001323?format=json"
+        },
+        {
+            "bioguideId": "S001198",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/s001198_200.jpg"
+            },
+            "name": "Sullivan, Dan",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "startYear": 2015
+                    }
+                ]
+            },
+            "updateDate": "2026-03-08T10:32:48Z",
+            "url": "https://api.congress.gov/v3/member/S001198?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 3,
+        "next": "https://api.congress.gov/v3/member/AK?currentMember=true&offset=2&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

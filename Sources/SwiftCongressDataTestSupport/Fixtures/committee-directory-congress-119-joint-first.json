@@ -1,0 +1,29 @@
+{
+    "committees": [
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Commission or Caucus",
+            "name": "U.S.-China Economic and Security Review Commission",
+            "systemCode": "jcuc00",
+            "updateDate": "2026-07-09T10:55:50Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcuc00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Economic Committee",
+            "systemCode": "jjec00",
+            "updateDate": "2026-05-13T17:49:00Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jjec00?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 9,
+        "next": "https://api.congress.gov/v3/committee/119/joint?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "chamber": "joint",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

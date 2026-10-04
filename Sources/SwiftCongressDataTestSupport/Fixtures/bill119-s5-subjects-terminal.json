@@ -1,0 +1,42 @@
+{
+    "pagination": {
+        "count": 12,
+        "prev": "https://api.congress.gov/v3/bill/119/s/5/subjects?offset=0&limit=6&format=json"
+    },
+    "request": {
+        "billNumber": "5",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/119/s/5?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "subjects": {
+        "legislativeSubjects": [
+            {
+                "name": "Immigration status and procedures",
+                "updateDate": "2025-01-10T15:38:18Z"
+            },
+            {
+                "name": "Intergovernmental relations",
+                "updateDate": "2025-01-10T15:38:18Z"
+            },
+            {
+                "name": "Refugees, asylum, displaced persons",
+                "updateDate": "2025-01-10T15:38:18Z"
+            },
+            {
+                "name": "State and local government operations",
+                "updateDate": "2025-01-10T15:38:18Z"
+            },
+            {
+                "name": "Violent crime",
+                "updateDate": "2025-01-23T19:50:51Z"
+            },
+            {
+                "name": "Visas and passports",
+                "updateDate": "2025-01-10T15:38:18Z"
+            }
+        ]
+    }
+}

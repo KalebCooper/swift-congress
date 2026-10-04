@@ -1,0 +1,139 @@
+{
+    "amendments": [
+        {
+            "congress": 117,
+            "number": "4946",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4946?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4945",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4945?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4944",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4944?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4943",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4943?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4942",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4942?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4941",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4941?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4940",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4940?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4939",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4939?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4938",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:21Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4938?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4937",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:21Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4937?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4936",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:23Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4936?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4935",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:23Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4935?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4934",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:23Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4934?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4933",
+            "type": "SAMDT",
+            "updateDate": "2022-09-03T04:15:55Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4933?format=json"
+        },
+        {
+            "congress": 117,
+            "description": "An amendment numbered 1 printed in House Report 117-243 to clarifiy the roles and responsibilities of the Office of Personnel Management, the Social Security Administration, and the Centers for Medicare & Medicaid Services regarding the information postal employees will need to enroll in Medicare Part B; specify that performance standards must be submitted to the Postal Regulatory Commission for each product; and make other technical and conforming changes to the bill.",
+            "latestAction": {
+                "actionDate": "2022-02-08",
+                "actionTime": "15:39:53",
+                "text": "On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote. "
+            },
+            "number": "173",
+            "type": "HAMDT",
+            "updateDate": "2022-02-18T05:14:00Z",
+            "url": "https://api.congress.gov/v3/amendment/117/hamdt/173?format=json"
+        },
+        {
+            "congress": 117,
+            "description": "Pursuant to the provisions of H. Res. 912, the amendment in the nature of a substitute consisting of the text of Rules Committee Print 117-32 is considered as adopted.",
+            "latestAction": {
+                "actionDate": "2022-02-08",
+                "text": "On agreeing to the Rules amendment (A001) Agreed to without objection. "
+            },
+            "number": "172",
+            "type": "HAMDT",
+            "updateDate": "2022-02-18T05:14:00Z",
+            "url": "https://api.congress.gov/v3/amendment/117/hamdt/172?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 48,
+        "prev": "https://api.congress.gov/v3/bill/117/hr/3076/amendments?offset=16&limit=16&format=json"
+    },
+    "request": {
+        "billNumber": "3076",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/3076?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

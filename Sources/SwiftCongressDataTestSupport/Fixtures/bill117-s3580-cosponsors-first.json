@@ -1,0 +1,184 @@
+{
+    "cosponsors": [
+        {
+            "bioguideId": "T000250",
+            "firstName": "John",
+            "fullName": "Sen. Thune, John [R-SD]",
+            "isOriginalCosponsor": true,
+            "lastName": "Thune",
+            "middleName": "R.",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "SD",
+            "url": "https://api.congress.gov/v3/member/T000250?format=json"
+        },
+        {
+            "bioguideId": "B001230",
+            "firstName": "Tammy",
+            "fullName": "Sen. Baldwin, Tammy [D-WI]",
+            "isOriginalCosponsor": true,
+            "lastName": "Baldwin",
+            "party": "D",
+            "sponsorshipDate": "2022-02-03",
+            "state": "WI",
+            "url": "https://api.congress.gov/v3/member/B001230?format=json"
+        },
+        {
+            "bioguideId": "H001061",
+            "firstName": "John",
+            "fullName": "Sen. Hoeven, John [R-ND]",
+            "isOriginalCosponsor": true,
+            "lastName": "Hoeven",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "ND",
+            "url": "https://api.congress.gov/v3/member/H001061?format=json"
+        },
+        {
+            "bioguideId": "S000770",
+            "firstName": "Debbie",
+            "fullName": "Sen. Stabenow, Debbie [D-MI]",
+            "isOriginalCosponsor": true,
+            "lastName": "Stabenow",
+            "party": "D",
+            "sponsorshipDate": "2022-02-03",
+            "state": "MI",
+            "url": "https://api.congress.gov/v3/member/S000770?format=json"
+        },
+        {
+            "bioguideId": "M001198",
+            "firstName": "Roger",
+            "fullName": "Sen. Marshall, Roger [R-KS]",
+            "isOriginalCosponsor": true,
+            "lastName": "Marshall",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "KS",
+            "url": "https://api.congress.gov/v3/member/M001198?format=json"
+        },
+        {
+            "bioguideId": "P000595",
+            "firstName": "Gary",
+            "fullName": "Sen. Peters, Gary C. [D-MI]",
+            "isOriginalCosponsor": true,
+            "lastName": "Peters",
+            "party": "D",
+            "sponsorshipDate": "2022-02-03",
+            "state": "MI",
+            "url": "https://api.congress.gov/v3/member/P000595?format=json"
+        },
+        {
+            "bioguideId": "M000934",
+            "firstName": "Jerry",
+            "fullName": "Sen. Moran, Jerry [R-KS]",
+            "isOriginalCosponsor": true,
+            "lastName": "Moran",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "KS",
+            "url": "https://api.congress.gov/v3/member/M000934?format=json"
+        },
+        {
+            "bioguideId": "B001277",
+            "firstName": "Richard",
+            "fullName": "Sen. Blumenthal, Richard [D-CT]",
+            "isOriginalCosponsor": true,
+            "lastName": "Blumenthal",
+            "party": "D",
+            "sponsorshipDate": "2022-02-03",
+            "state": "CT",
+            "url": "https://api.congress.gov/v3/member/B001277?format=json"
+        },
+        {
+            "bioguideId": "Y000064",
+            "firstName": "Todd",
+            "fullName": "Sen. Young, Todd [R-IN]",
+            "isOriginalCosponsor": true,
+            "lastName": "Young",
+            "middleName": "C.",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "IN",
+            "url": "https://api.congress.gov/v3/member/Y000064?format=json"
+        },
+        {
+            "bioguideId": "K000377",
+            "firstName": "Mark",
+            "fullName": "Sen. Kelly, Mark [D-AZ]",
+            "isOriginalCosponsor": true,
+            "lastName": "Kelly",
+            "party": "D",
+            "sponsorshipDate": "2022-02-03",
+            "state": "AZ",
+            "url": "https://api.congress.gov/v3/member/K000377?format=json"
+        },
+        {
+            "bioguideId": "B001243",
+            "firstName": "Marsha",
+            "fullName": "Sen. Blackburn, Marsha [R-TN]",
+            "isOriginalCosponsor": true,
+            "lastName": "Blackburn",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "TN",
+            "url": "https://api.congress.gov/v3/member/B001243?format=json"
+        },
+        {
+            "bioguideId": "B001288",
+            "firstName": "Cory",
+            "fullName": "Sen. Booker, Cory A. [D-NJ]",
+            "isOriginalCosponsor": true,
+            "lastName": "Booker",
+            "party": "D",
+            "sponsorshipDate": "2022-02-03",
+            "state": "NJ",
+            "url": "https://api.congress.gov/v3/member/B001288?format=json"
+        },
+        {
+            "bioguideId": "E000295",
+            "firstName": "Joni",
+            "fullName": "Sen. Ernst, Joni [R-IA]",
+            "isOriginalCosponsor": true,
+            "lastName": "Ernst",
+            "party": "R",
+            "sponsorshipDate": "2022-02-03",
+            "state": "IA",
+            "url": "https://api.congress.gov/v3/member/E000295?format=json"
+        },
+        {
+            "bioguideId": "S001203",
+            "firstName": "Tina",
+            "fullName": "Sen. Smith, Tina [D-MN]",
+            "isOriginalCosponsor": false,
+            "lastName": "Smith",
+            "party": "D",
+            "sponsorshipDate": "2022-02-08",
+            "state": "MN",
+            "url": "https://api.congress.gov/v3/member/S001203?format=json"
+        },
+        {
+            "bioguideId": "C000880",
+            "firstName": "Mike",
+            "fullName": "Sen. Crapo, Mike [R-ID]",
+            "isOriginalCosponsor": false,
+            "lastName": "Crapo",
+            "party": "R",
+            "sponsorshipDate": "2022-02-08",
+            "state": "ID",
+            "url": "https://api.congress.gov/v3/member/C000880?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 30,
+        "countIncludingWithdrawnCosponsors": 31,
+        "next": "https://api.congress.gov/v3/bill/117/s/3580/cosponsors?offset=15&limit=15&format=json"
+    },
+    "request": {
+        "billNumber": "3580",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/117/s/3580?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

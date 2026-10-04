@@ -1,0 +1,1215 @@
+{
+    "cosponsoredLegislation": [
+        {
+            "congress": 119,
+            "introducedDate": "2026-03-02",
+            "latestAction": {
+                "actionDate": "2025-10-13",
+                "text": "Referred to the Subcommittee on Transportation and Maritime Security."
+            },
+            "number": "5732",
+            "policyArea": {
+                "name": "Transportation and Public Works"
+            },
+            "title": "Keep Air Travel Safe Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5732?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-26",
+            "latestAction": {
+                "actionDate": "2026-02-26",
+                "text": "Referred to the House Committee on House Administration."
+            },
+            "number": "7740",
+            "policyArea": {
+                "name": "Arts, Culture, Religion"
+            },
+            "title": "African American History Act of 2026",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/7740?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-25",
+            "latestAction": {
+                "actionDate": "2026-02-25",
+                "text": "Referred to the House Committee on Oversight and Government Reform."
+            },
+            "number": "1080",
+            "policyArea": {
+                "name": "Civil Rights and Liberties, Minority Issues"
+            },
+            "title": "Original Black History Month Resolution of 2026",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/1080?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-23",
+            "latestAction": {
+                "actionDate": "2025-04-28",
+                "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "3045",
+            "policyArea": {
+                "name": "International Affairs"
+            },
+            "title": "West Bank Violence Prevention Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3045?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-20",
+            "latestAction": {
+                "actionDate": "2025-02-04",
+                "text": "Referred to the Committee on Financial Services, and in addition to the Committee on House Administration, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "945",
+            "policyArea": {
+                "name": "Civil Rights and Liberties, Minority Issues"
+            },
+            "title": "To award a Congressional Gold Medal to the Freedom Riders, collectively, in recognition of their unique contribution to Civil Rights, which inspired a revolutionary movement for equality in interstate travel.",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/945?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-12",
+            "latestAction": {
+                "actionDate": "2026-02-12",
+                "text": "Referred to the House Committee on Oversight and Government Reform."
+            },
+            "number": "1061",
+            "policyArea": {
+                "name": "Arts, Culture, Religion"
+            },
+            "title": "Recognizing the cultural and historical significance of Lunar New Year in 2026.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/1061?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-09",
+            "latestAction": {
+                "actionDate": "2025-11-07",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "5973",
+            "policyArea": {
+                "name": "Immigration"
+            },
+            "title": "Stop Excessive Force in Immigration Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5973?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-09",
+            "latestAction": {
+                "actionDate": "2025-12-04",
+                "text": "Referred to the Subcommittee on Oversight, Investigations, and Accountability."
+            },
+            "number": "6397",
+            "policyArea": {
+                "name": "Immigration"
+            },
+            "title": "Dignity for Detained Immigrants Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6397?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-09",
+            "latestAction": {
+                "actionDate": "2025-03-03",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "1787",
+            "policyArea": {
+                "name": "Finance and Financial Sector"
+            },
+            "title": "Roberto Clemente Commemorative Coin Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1787?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-09",
+            "latestAction": {
+                "actionDate": "2025-05-08",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committees on Education and Workforce, and Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "3277",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Ensuring Lasting Smiles Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3277?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-09",
+            "latestAction": {
+                "actionDate": "2026-04-22",
+                "text": "Ordered to be Reported by the Yeas and Nays: 41 - 3."
+            },
+            "number": "5543",
+            "policyArea": {
+                "name": "International Affairs"
+            },
+            "title": "Baltic Security Assessment Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5543?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-04",
+            "latestAction": {
+                "actionDate": "2025-06-26",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "4167",
+            "policyArea": {
+                "name": "Finance and Financial Sector"
+            },
+            "title": "Expanding Access to Lending Options Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4167?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-04",
+            "latestAction": {
+                "actionDate": "2026-01-14",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "996",
+            "policyArea": {
+                "name": "Government Operations and Politics"
+            },
+            "title": "Impeaching Kristi Lynn Arnold Noem, Secretary of Homeland Security, for high crimes and misdemeanors.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/996?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-03",
+            "latestAction": {
+                "actionDate": "2026-01-13",
+                "text": "Referred to the House Committee on Oversight and Government Reform."
+            },
+            "number": "7033",
+            "policyArea": {
+                "name": "Government Operations and Politics"
+            },
+            "title": "Federal Correctional Officer Paycheck Protection Act of 2026",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/7033?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-02-03",
+            "latestAction": {
+                "actionDate": "2025-12-04",
+                "text": "Referred to the Subcommittee on Border Security and Enforcement."
+            },
+            "number": "6390",
+            "policyArea": {
+                "name": "Taxation"
+            },
+            "title": "Make Housing Affordable and Defend Democracy Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6390?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-01-27",
+            "latestAction": {
+                "actionDate": "2026-01-27",
+                "text": "Referred to the House Committee on Veterans' Affairs."
+            },
+            "number": "144",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to \"Reproductive Health Services\".",
+            "type": "HJRES",
+            "url": "https://api.congress.gov/v3/bill/119/hjres/144?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-01-15",
+            "latestAction": {
+                "actionDate": "2026-01-15",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "1004",
+            "policyArea": {
+                "name": "Civil Rights and Liberties, Minority Issues"
+            },
+            "title": "Honoring Reverend Dr. Martin Luther King, Jr., by celebrating diversity, promoting tolerance, and condemning hate.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/1004?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-01-08",
+            "latestAction": {
+                "actionDate": "2026-01-22",
+                "actionTime": "17:33:46",
+                "text": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "number": "68",
+            "policyArea": {
+                "name": "International Affairs"
+            },
+            "title": "To direct the removal of United States Armed Forces from Venezuela that have not been authorized by Congress.",
+            "type": "HCONRES",
+            "url": "https://api.congress.gov/v3/bill/119/hconres/68?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-01-08",
+            "latestAction": {
+                "actionDate": "2026-01-08",
+                "text": "Referred to the House Committee on Oversight and Government Reform."
+            },
+            "number": "69",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Recognizing the 15th Anniversary of the January 8, 2011, Tucson, Arizona, shooting and honoring the survivors, victims, and former Congresswoman Gabby Giffords, a gun violence survivor, and one of the Nation's most influential voices of courage in the fight to end gun violence.",
+            "type": "HCONRES",
+            "url": "https://api.congress.gov/v3/bill/119/hconres/69?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-01-07",
+            "latestAction": {
+                "actionDate": "2025-02-05",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "116",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Condemning the pardons for individuals who were found guilty of assaulting Capitol Police Officers.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/116?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-01-07",
+            "latestAction": {
+                "actionDate": "2025-03-26",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "2368",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Raise the Age Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2368?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-18",
+            "latestAction": {
+                "actionDate": "2025-04-01",
+                "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committees on the Judiciary, Financial Services, Ways and Means, and Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "2548",
+            "policyArea": {
+                "name": "International Affairs"
+            },
+            "title": "Sanctioning Russia Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2548?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-17",
+            "latestAction": {
+                "actionDate": "2026-02-02",
+                "text": "Referred to the Subcommittee on Railroads, Pipelines, and Hazardous Materials."
+            },
+            "number": "6803",
+            "policyArea": {
+                "name": "Transportation and Public Works"
+            },
+            "title": "To designate Newark Penn Station in Newark, New Jersey as the \"Donald M. Payne, Jr. Transit Center at Newark Penn Station\".",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6803?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-16",
+            "latestAction": {
+                "actionDate": "2025-03-11",
+                "text": "Referred to the House Committee on Education and Workforce."
+            },
+            "number": "2028",
+            "policyArea": {
+                "name": "Education"
+            },
+            "title": "REDI Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2028?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-16",
+            "latestAction": {
+                "actionDate": "2026-09-16",
+                "text": "Ordered to be Reported by the Yeas and Nays: 29 - 0."
+            },
+            "number": "4464",
+            "policyArea": {
+                "name": "Economics and Public Finance"
+            },
+            "title": "Preventive Health Savings Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4464?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-16",
+            "latestAction": {
+                "actionDate": "2025-05-05",
+                "text": "Referred to the Committee on Natural Resources, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "381",
+            "policyArea": {
+                "name": "Native Americans"
+            },
+            "title": "Expressing support for the designation of May 5, 2025, as the \"National Day of Awareness for Missing and Murdered Indigenous Women and Girls\".",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/381?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-16",
+            "latestAction": {
+                "actionDate": "2025-09-17",
+                "text": "Referred to the House Committee on Natural Resources."
+            },
+            "number": "733",
+            "policyArea": {
+                "name": "Environmental Protection"
+            },
+            "title": "Expressing support for the designation of the week of September 20 through September 27, 2025, as \"National Estuaries Week\".",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/733?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-16",
+            "latestAction": {
+                "actionDate": "2025-09-18",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "5469",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "SHINE for Autumn Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5469?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-10",
+            "latestAction": {
+                "actionDate": "2025-09-17",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "5428",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Medical Student Education Authorization Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5428?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-10",
+            "latestAction": {
+                "actionDate": "2025-04-30",
+                "text": "Referred to the House Committee on Agriculture."
+            },
+            "number": "3112",
+            "policyArea": {
+                "name": "Animals"
+            },
+            "title": "Better CARE for Animals Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3112?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-10",
+            "latestAction": {
+                "actionDate": "2025-09-16",
+                "text": "Referred to the House Committee on Armed Services."
+            },
+            "number": "723",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Recognizing the 180th anniversary of the United States Naval Academy.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/723?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-10",
+            "latestAction": {
+                "actionDate": "2025-04-01",
+                "text": "Referred to the House Committee on House Administration."
+            },
+            "number": "2585",
+            "policyArea": {
+                "name": "Congress"
+            },
+            "title": "Armenian Genocide Education Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2585?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-10",
+            "latestAction": {
+                "actionDate": "2025-09-02",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "5081",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Telehealth Modernization Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5081?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-09",
+            "latestAction": {
+                "actionDate": "2025-03-28",
+                "text": "Referred to the Subcommittee on Livestock, Dairy, and Poultry."
+            },
+            "number": "1661",
+            "policyArea": {
+                "name": "Agriculture and Food"
+            },
+            "title": "SAFE Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1661?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-09",
+            "latestAction": {
+                "actionDate": "2025-02-26",
+                "text": "Referred to the Committee on Financial Services, and in addition to the Committee on House Administration, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "1628",
+            "policyArea": {
+                "name": "Finance and Financial Sector"
+            },
+            "title": "761st Tank Battalion Congressional Gold Medal Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1628?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-09",
+            "latestAction": {
+                "actionDate": "2025-11-20",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "6217",
+            "policyArea": {
+                "name": "Housing and Community Development"
+            },
+            "title": "Revitalize Our Neighborhoods Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6217?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-09",
+            "latestAction": {
+                "actionDate": "2025-06-04",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "3701",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Family Vaccine Protection Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3701?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-09",
+            "latestAction": {
+                "actionDate": "2025-04-04",
+                "text": "Referred to the Subcommittee on Livestock, Dairy, and Poultry."
+            },
+            "number": "2253",
+            "policyArea": {
+                "name": "Animals"
+            },
+            "title": "Puppy Protection Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2253?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-04",
+            "latestAction": {
+                "actionDate": "2025-10-14",
+                "text": "Referred to the House Committee on Natural Resources."
+            },
+            "number": "5762",
+            "policyArea": {
+                "name": "Environmental Protection"
+            },
+            "title": "New York-New Jersey Watershed Protection Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5762?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-04",
+            "latestAction": {
+                "actionDate": "2026-05-21",
+                "text": "Received in the Senate."
+            },
+            "number": "1993",
+            "policyArea": {
+                "name": "Finance and Financial Sector"
+            },
+            "title": "25th Anniversary of 9/11 Commemorative Coin Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1993?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-03",
+            "latestAction": {
+                "actionDate": "2025-02-18",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "1410",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "9/11 Responder and Survivor Health Funding Correction Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1410?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-01",
+            "latestAction": {
+                "actionDate": "2025-07-23",
+                "text": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "4731",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Resident Physician Shortage Reduction Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4731?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-25",
+            "latestAction": {
+                "actionDate": "2025-03-11",
+                "text": "Referred to the House Committee on Ways and Means."
+            },
+            "number": "2036",
+            "policyArea": {
+                "name": "Taxation"
+            },
+            "title": "Credit for Caring Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2036?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-18",
+            "latestAction": {
+                "actionDate": "2026-01-13",
+                "text": "Referred to the Subcommittee on Nutrition and Foreign Agriculture."
+            },
+            "number": "6088",
+            "policyArea": {
+                "name": "Agriculture and Food"
+            },
+            "title": "Restoring Food Security for American Families and Farmers Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6088?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-18",
+            "latestAction": {
+                "actionDate": "2025-06-24",
+                "text": "Subcommittee Hearings Held"
+            },
+            "number": "2055",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Caring for Survivors Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2055?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-10",
+            "latestAction": {
+                "actionDate": "2026-07-16",
+                "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs."
+            },
+            "number": "6007",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "To name the Department of Veterans Affairs community-based outpatient clinic in Newton, New Jersey, as the \"Anthony 'Tony' J. Gallopo VA Clinic\".",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6007?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-10",
+            "latestAction": {
+                "actionDate": "2025-11-17",
+                "text": "Referred to the Subcommittee on Oversight and Investigations."
+            },
+            "number": "6014",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Right to Representation for Department of Veterans Affairs Workers Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6014?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-10",
+            "latestAction": {
+                "actionDate": "2025-11-20",
+                "text": "Referred to the Subcommittee on Oversight and Investigations."
+            },
+            "number": "6015",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "VA Care and Benefits Accountability Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6015?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-07",
+            "latestAction": {
+                "actionDate": "2025-07-23",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committees on Education and Workforce, and Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "4710",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "No Surprises Act Enforcement Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4710?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-07",
+            "latestAction": {
+                "actionDate": "2026-01-26",
+                "text": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+            },
+            "number": "3496",
+            "policyArea": {
+                "name": "Commerce"
+            },
+            "title": "Northern Mariana Islands Small Business Access Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3496?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-07",
+            "latestAction": {
+                "actionDate": "2025-06-24",
+                "text": "Referred to the House Committee on Education and Workforce."
+            },
+            "number": "4101",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Cancer Drug Parity Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4101?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-04",
+            "latestAction": {
+                "actionDate": "2025-09-11",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "5309",
+            "policyArea": {
+                "name": "Civil Rights and Liberties, Minority Issues"
+            },
+            "title": "Congressional Tribute to Constance Baker Motley Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5309?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-04",
+            "latestAction": {
+                "actionDate": "2025-03-11",
+                "text": "Referred to the House Committee on Ways and Means."
+            },
+            "number": "2048",
+            "policyArea": {
+                "name": "Social Welfare"
+            },
+            "title": "Metastatic Breast Cancer Access to Care Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2048?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-04",
+            "latestAction": {
+                "actionDate": "2025-02-13",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "12",
+            "policyArea": {
+                "name": "Science, Technology, Communications"
+            },
+            "title": "Supporting the Local Radio Freedom Act.",
+            "type": "HCONRES",
+            "url": "https://api.congress.gov/v3/bill/119/hconres/12?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-24",
+            "latestAction": {
+                "actionDate": "2025-02-12",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "1269",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Honoring Our Fallen Heroes Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1269?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-21",
+            "latestAction": {
+                "actionDate": "2025-09-18",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committees on Ways and Means, and Education and Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "5448",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Protecting Free Vaccines Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5448?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-08",
+            "latestAction": {
+                "actionDate": "2025-10-08",
+                "text": "Referred to the House Committee on Education and Workforce."
+            },
+            "number": "5705",
+            "policyArea": {
+                "name": "Agriculture and Food"
+            },
+            "title": "To authorize the reimbursement by the Federal Government of State funds used to maintain participation in the Special Supplemental Nutrition Program for Women, Infants, and Children in the event of a Government shutdown.",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5705?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-08",
+            "latestAction": {
+                "actionDate": "2025-07-22",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "108",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Proposing an amendment to the Constitution of the United States providing that there is no immunity from criminal prosecution for an act on the grounds that such act was within the constitutional authority or official duties of an individual, and providing that the President may not grant a pardon to himself or herself.",
+            "type": "HJRES",
+            "url": "https://api.congress.gov/v3/bill/119/hjres/108?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-08",
+            "latestAction": {
+                "actionDate": "2025-06-26",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "4206",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "CONNECT for Health Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4206?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-08",
+            "latestAction": {
+                "actionDate": "2025-12-02",
+                "text": "Committee Consideration and Mark-up Session Held"
+            },
+            "number": "5717",
+            "policyArea": {
+                "name": "Government Operations and Politics"
+            },
+            "title": "To designate the facility of the United States Postal Service located at 514 Frelinghuysen Avenue in Newark, New Jersey, as the \"Mildred Joyce Coleman Crump Post Office Building\".",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5717?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-08",
+            "latestAction": {
+                "actionDate": "2025-10-08",
+                "text": "Referred to the House Committee on Foreign Affairs."
+            },
+            "number": "795",
+            "policyArea": {
+                "name": "International Affairs"
+            },
+            "title": "Condemning the Hamas attacks of October 7, 2023, and calling for Hamas and its leaders to immediately and unconditionally surrender and to release the hostages, including Americans.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/795?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-10-03",
+            "latestAction": {
+                "actionDate": "2025-09-16",
+                "text": "Referred to the House Committee on Appropriations."
+            },
+            "number": "5401",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Pay Our Troops Act of 2026",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5401?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-30",
+            "latestAction": {
+                "actionDate": "2025-09-17",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "123",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Patient Protection and Affordable Care Act; Marketplace Integrity and Affordability\".",
+            "type": "HJRES",
+            "url": "https://api.congress.gov/v3/bill/119/hjres/123?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-30",
+            "latestAction": {
+                "actionDate": "2025-09-30",
+                "text": "Referred to the House Committee on Appropriations."
+            },
+            "number": "5660",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Pay Our Military Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5660?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-30",
+            "latestAction": {
+                "actionDate": "2025-06-12",
+                "text": "Referred to the House Committee on Agriculture."
+            },
+            "number": "3946",
+            "policyArea": {
+                "name": "Animals"
+            },
+            "title": "FIGHT Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3946?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-26",
+            "latestAction": {
+                "actionDate": "2025-09-23",
+                "text": "Referred to the House Committee on Education and Workforce."
+            },
+            "number": "761",
+            "policyArea": {
+                "name": "Arts, Culture, Religion"
+            },
+            "title": "Expressing support for the designation of September 23, 2025, as national \"Bruce Springsteen Day\", and honoring his contributions to music, New Jersey, and the Nation.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/761?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-23",
+            "latestAction": {
+                "actionDate": "2026-05-13",
+                "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+            },
+            "number": "2853",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Combating Organized Retail Crime Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2853?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-19",
+            "latestAction": {
+                "actionDate": "2025-03-25",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "2343",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "John W. Walsh Alpha-1 Home Infusion Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/2343?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-18",
+            "latestAction": {
+                "actionDate": "2025-09-18",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "746",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Expressing the sense of the House of Representatives condemning all forms of political violence and rejecting rhetoric that dehumanizes or demonizes political opponents.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/746?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-16",
+            "latestAction": {
+                "actionDate": "2025-03-27",
+                "text": "Referred to the Subcommittee on Health."
+            },
+            "number": "1970",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Providing Veterans Essential Medications Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1970?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-16",
+            "latestAction": {
+                "actionDate": "2025-09-16",
+                "text": "Referred to the House Committee on Ways and Means."
+            },
+            "number": "5390",
+            "policyArea": {
+                "name": "Labor and Employment"
+            },
+            "title": "FAMILY Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5390?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-15",
+            "latestAction": {
+                "actionDate": "2026-02-24",
+                "text": "Forwarded by Subcommittee to Full Committee by Voice Vote."
+            },
+            "number": "1965",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Veteran Education Assistance Adjustment Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/1965?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-15",
+            "latestAction": {
+                "actionDate": "2025-01-09",
+                "text": "Referred to the House Committee on Ways and Means."
+            },
+            "number": "247",
+            "policyArea": {
+                "name": "Taxation"
+            },
+            "title": "Health Care Affordability Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/247?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-09",
+            "latestAction": {
+                "actionDate": "2026-09-16",
+                "text": "Received in the Senate. Read twice. Placed on Senate Legislative Calendar under General Orders. Calendar No. 622."
+            },
+            "number": "979",
+            "policyArea": {
+                "name": "Science, Technology, Communications"
+            },
+            "title": "AM Radio for Every Vehicle Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/979?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-08",
+            "latestAction": {
+                "actionDate": "2025-02-14",
+                "text": "Referred to the Subcommittee on Livestock, Dairy, and Poultry."
+            },
+            "number": "349",
+            "policyArea": {
+                "name": "Animals"
+            },
+            "title": "Goldie’s Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/349?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-08",
+            "latestAction": {
+                "actionDate": "2025-05-16",
+                "text": "Referred to the Subcommittee on Highways and Transit."
+            },
+            "number": "3449",
+            "policyArea": {
+                "name": "Transportation and Public Works"
+            },
+            "title": "Stronger Communities through Better Transit Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3449?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-04",
+            "latestAction": {
+                "actionDate": "2025-09-04",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "5152",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "BOP Release Card ID Act of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5152?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-03",
+            "latestAction": {
+                "actionDate": "2025-04-30",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "3115",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "Assault Weapons Ban of 2025",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/3115?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-08-08",
+            "latestAction": {
+                "actionDate": "2026-03-18",
+                "text": "Committee Hearings Held"
+            },
+            "number": "4876",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Reproductive Freedom for Veterans Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4876?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-07-29",
+            "latestAction": {
+                "actionDate": "2025-07-22",
+                "text": "Referred to the Committee on Education and Workforce, and in addition to the Committees on Oversight and Government Reform, and House Administration, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "4582",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "To amend the Family and Medical Leave Act of 1993 and title 5, United States Code, to clarify that organ donation surgery qualifies as a serious health condition.",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/4582?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 239,
+        "next": "https://api.congress.gov/v3/member/C001136/cosponsored-legislation?offset=160&limit=80&format=json",
+        "prev": "https://api.congress.gov/v3/member/C001136/cosponsored-legislation?offset=0&limit=80&format=json"
+    },
+    "request": {
+        "bioguideId": "c001136",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

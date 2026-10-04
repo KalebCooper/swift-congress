@@ -1,0 +1,85 @@
+{
+    "bill": {
+        "actions": {
+            "count": 25,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/actions?format=json"
+        },
+        "cboCostEstimates": [
+            {
+                "description": "As ordered reported by the House Committee on the Judiciary on September 29, 2021\n",
+                "pubDate": "2022-01-11T16:06:06Z",
+                "title": "H.R. 681, Immigration-Relief Legislation",
+                "url": "https://www.cbo.gov/publication/57743"
+            }
+        ],
+        "committeeReports": [
+            {
+                "citation": "H. Rept. 117-238",
+                "url": "https://api.congress.gov/v3/committee-report/117/HRPT/238?format=json"
+            }
+        ],
+        "committees": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/committees?format=json"
+        },
+        "congress": 117,
+        "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 167, Number 18 (Monday, February 1, 2021)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. YOUNG:\nH.R. 681\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, section 8, clause 4 of the Constitution provides\nthat Congress shall have power to ``establish an uniform Rule\nof Naturalization''.\n[Page H263]\n</pre>",
+        "introducedDate": "2021-02-01",
+        "latestAction": {
+            "actionDate": "2022-12-27",
+            "text": "Became Private Law No: 117-1."
+        },
+        "laws": [
+            {
+                "number": "117-1",
+                "type": "Private Law"
+            }
+        ],
+        "legislationUrl": "https://www.congress.gov/bill/117th-congress/house-bill/681",
+        "number": "681",
+        "originChamber": "House",
+        "originChamberCode": "H",
+        "relatedBills": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/relatedbills?format=json"
+        },
+        "sponsors": [
+            {
+                "bioguideId": "Y000033",
+                "firstName": "DON",
+                "fullName": "Rep. Young, Don [R-AK-At Large]",
+                "isByRequest": "N",
+                "lastName": "YOUNG",
+                "middleName": "E.",
+                "party": "R",
+                "state": "AK",
+                "url": "https://api.congress.gov/v3/member/Y000033?format=json"
+            }
+        ],
+        "subjects": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/subjects?format=json"
+        },
+        "summaries": {
+            "count": 3,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/summaries?format=json"
+        },
+        "textVersions": {
+            "count": 6,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/text?format=json"
+        },
+        "title": "For the relief of Rebecca Trimble.",
+        "titles": {
+            "count": 2,
+            "url": "https://api.congress.gov/v3/bill/117/hr/681/titles?format=json"
+        },
+        "type": "HR",
+        "updateDate": "2025-04-07T15:02:04Z",
+        "updateDateIncludingText": "2025-04-07T15:02:04Z"
+    },
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

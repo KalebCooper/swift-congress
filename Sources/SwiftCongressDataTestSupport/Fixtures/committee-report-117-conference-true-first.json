@@ -1,0 +1,11 @@
+{
+    "pagination": {
+        "count": 0
+    },
+    "reports": [],
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

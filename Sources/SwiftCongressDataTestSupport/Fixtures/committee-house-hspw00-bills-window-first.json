@@ -1,0 +1,28 @@
+{
+    "committee-bills": {
+        "bills": [
+            {
+                "actionDate": "2007-01-22T17:34:25Z",
+                "congress": 110,
+                "number": "40",
+                "relationshipType": "Referred To",
+                "type": "HCONRES",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hconres/40?format=json"
+            }
+        ],
+        "count": 109,
+        "url": "https://api.congress.gov/v3/committee/house/hspw00/bills?format=json"
+    },
+    "pagination": {
+        "count": 109,
+        "next": "https://api.congress.gov/v3/committee/house/hspw00/bills?fromDateTime=2015-12-07T16:53:38Z&toDateTime=2015-12-07T16:53:40Z&offset=1&limit=1&format=json"
+    },
+    "request": {
+        "chamber": "house",
+        "committeeUrl": "https://api.congress.gov/v3/committee/house/hspw00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hspw00"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "CRSReports": [
+        {
+            "contentType": "Reports",
+            "id": "R45546",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Management of the Colorado River: Water Allocations, Drought, and the Federal Role",
+            "updateDate": "2026-10-03T12:22:58Z",
+            "url": "https://api.congress.gov/v3/crsreport/R45546",
+            "version": 42
+        }
+    ],
+    "pagination": {
+        "count": 1
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

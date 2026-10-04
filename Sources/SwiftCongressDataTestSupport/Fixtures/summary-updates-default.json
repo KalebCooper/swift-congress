@@ -1,0 +1,52 @@
+{
+    "pagination": {
+        "count": 32,
+        "next": "https://api.congress.gov/v3/summaries?sort=updateDate+asc&offset=2&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "summaries": [
+        {
+            "actionDate": "2025-10-14",
+            "actionDesc": "Introduced in House",
+            "bill": {
+                "congress": 119,
+                "number": "805",
+                "originChamber": "House",
+                "originChamberCode": "H",
+                "title": "Recognizing October 2025 as \"American Pharmacists Month\" in honor of the contribution of pharmacists to provide safe, accessible, affordable, and beneficial patient care services and products to all residents and protect the public health of our communities.",
+                "type": "HRES",
+                "updateDateIncludingText": "2026-09-29",
+                "url": "https://api.congress.gov/v3/bill/119/hres/805?format=json"
+            },
+            "currentChamber": "House",
+            "currentChamberCode": "H",
+            "lastSummaryUpdateDate": "2026-09-29T21:23:55Z",
+            "text": "<p>This resolution recognizes American Pharmacists Month.</p>",
+            "updateDate": "2026-09-29T21:24:01Z",
+            "versionCode": "00"
+        },
+        {
+            "actionDate": "2025-10-08",
+            "actionDesc": "Introduced in House",
+            "bill": {
+                "congress": 119,
+                "number": "796",
+                "originChamber": "House",
+                "originChamberCode": "H",
+                "title": "Expressing support for the designation of October 9 through October 16, 2025, as \"National Dyspraxia/Developmental Coordination Disorder (DCD) Awareness Week\" and a commitment to raise awareness of dyspraxia/DCD in the United States.",
+                "type": "HRES",
+                "updateDateIncludingText": "2026-09-29",
+                "url": "https://api.congress.gov/v3/bill/119/hres/796?format=json"
+            },
+            "currentChamber": "House",
+            "currentChamberCode": "H",
+            "lastSummaryUpdateDate": "2026-09-29T21:14:19Z",
+            "text": "<p>This resolution expresses support for the designation of National Dyspraxia/Developmental Coordination Disorder (DCD) Awareness Week.</p>",
+            "updateDate": "2026-09-29T21:14:24Z",
+            "versionCode": "00"
+        }
+    ]
+}

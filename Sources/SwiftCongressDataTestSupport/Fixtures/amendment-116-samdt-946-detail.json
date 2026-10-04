@@ -1,0 +1,57 @@
+{
+    "amendment": {
+        "actions": {
+            "count": 6,
+            "url": "https://api.congress.gov/v3/amendment/116/samdt/946/actions?format=json"
+        },
+        "amendedTreaty": {
+            "congress": 116,
+            "treatyNumber": 1,
+            "url": "https://api.congress.gov/v3/treaty/116/1?format=json"
+        },
+        "amendmentsToAmendment": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/amendment/116/samdt/946/amendments?format=json"
+        },
+        "chamber": "Senate",
+        "congress": 116,
+        "latestAction": {
+            "actionDate": "2019-10-22",
+            "links": [
+                {
+                    "name": "SA 946",
+                    "url": "https://www.congress.gov/amendment/116th-congress/senate-amendment/946"
+                }
+            ],
+            "text": "Proposed amendment SA 946 withdrawn in Senate. "
+        },
+        "number": "946",
+        "proposedDate": "2019-10-17T04:00:00Z",
+        "purpose": "Of a perfecting nature.",
+        "sponsors": [
+            {
+                "bioguideId": "M000355",
+                "firstName": "Mitch",
+                "fullName": "Sen. McConnell, Mitch [R-KY]",
+                "lastName": "McConnell",
+                "party": "R",
+                "state": "KY",
+                "url": "https://api.congress.gov/v3/member/M000355?format=json"
+            }
+        ],
+        "submittedDate": "2019-10-17T04:00:00Z",
+        "textVersions": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/amendment/116/samdt/946/text?format=json"
+        },
+        "type": "SAMDT",
+        "updateDate": "2020-12-15T15:49:05Z"
+    },
+    "request": {
+        "amendmentNumber": "946",
+        "amendmentType": "samdt",
+        "congress": "116",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

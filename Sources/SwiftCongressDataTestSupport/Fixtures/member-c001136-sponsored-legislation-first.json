@@ -1,0 +1,88 @@
+{
+    "pagination": {
+        "count": 15,
+        "next": "https://api.congress.gov/v3/member/C001136/sponsored-legislation?offset=5&limit=5&format=json"
+    },
+    "request": {
+        "bioguideId": "c001136",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "sponsoredLegislation": [
+        {
+            "congress": 119,
+            "introducedDate": "2026-04-16",
+            "latestAction": {
+                "actionDate": "2026-07-22",
+                "text": "Ordered to be Reported by Voice Vote."
+            },
+            "number": "8326",
+            "policyArea": {
+                "name": "Government Operations and Politics"
+            },
+            "title": "To designate the facility of the United States Postal Service located at 16 Rev Dr Martin Luther King Jr Drive in Willingboro, New Jersey, as the \"James A. Cotten Post Office\".",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/8326?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-07-16",
+            "latestAction": {
+                "actionDate": "2026-07-16",
+                "text": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "9734",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Protecting Patients from Automated Denials Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/9734?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-05-20",
+            "latestAction": {
+                "actionDate": "2026-05-20",
+                "text": "Referred to the House Committee on Natural Resources."
+            },
+            "number": "8924",
+            "policyArea": {
+                "name": "Public Lands and Natural Resources"
+            },
+            "title": "Mullica River Watershed Wild and Scenic River Study Act of 2026",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/8924?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2026-03-24",
+            "latestAction": {
+                "actionDate": "2026-05-20",
+                "text": "Committee Hearings Held"
+            },
+            "number": "8044",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "Get Justice-Involved Veterans BACK HOME Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/8044?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-18",
+            "latestAction": {
+                "actionDate": "2025-12-18",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "6844",
+            "policyArea": {
+                "name": "Health"
+            },
+            "title": "Tobacco TRACE Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6844?format=json"
+        }
+    ]
+}

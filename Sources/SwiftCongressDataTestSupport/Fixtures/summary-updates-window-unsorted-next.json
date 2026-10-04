@@ -1,0 +1,53 @@
+{
+    "pagination": {
+        "count": 7,
+        "next": "https://api.congress.gov/v3/summaries?fromDateTime=2026-09-01T00:00:00Z&toDateTime=2026-09-02T00:00:00Z&offset=4&limit=2&format=json",
+        "prev": "https://api.congress.gov/v3/summaries?fromDateTime=2026-09-01T00:00:00Z&toDateTime=2026-09-02T00:00:00Z&offset=0&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "summaries": [
+        {
+            "actionDate": "2025-03-13",
+            "actionDesc": "Introduced in Senate",
+            "bill": {
+                "congress": 119,
+                "number": "1032",
+                "originChamber": "Senate",
+                "originChamberCode": "S",
+                "title": "Major Richard Star Act",
+                "type": "S",
+                "updateDateIncludingText": "2026-09-01",
+                "url": "https://api.congress.gov/v3/bill/119/s/1032?format=json"
+            },
+            "currentChamber": "Senate",
+            "currentChamberCode": "S",
+            "lastSummaryUpdateDate": "2026-09-01T19:49:39Z",
+            "text": "<p><strong>Major Richard Star Act</strong></p><p>This bill allows a veteran with a combat-related disability to receive retirement pay, without reduction, concurrently with their disability compensation. This includes veterans with a combat-related disability and fewer than 20 years of creditable service. (Currently, veterans who receive combat-related special compensation and retirement pay are subject to an offset in retirement pay for concurrent receipt of such benefits.)</p>",
+            "updateDate": "2026-09-01T19:49:56Z",
+            "versionCode": "00"
+        },
+        {
+            "actionDate": "2025-02-12",
+            "actionDesc": "Introduced in Senate",
+            "bill": {
+                "congress": 119,
+                "number": "547",
+                "originChamber": "Senate",
+                "originChamberCode": "S",
+                "title": "Train More Nurses Act",
+                "type": "S",
+                "updateDateIncludingText": "2026-09-01",
+                "url": "https://api.congress.gov/v3/bill/119/s/547?format=json"
+            },
+            "currentChamber": "Senate",
+            "currentChamberCode": "S",
+            "lastSummaryUpdateDate": "2026-09-01T19:47:52Z",
+            "text": "<p><strong>Train More Nurses Act</strong></p><p>This bill requires the Department of Health and Human Services and the Department of Labor to jointly report on existing grant programs that support the nurse workforce.</p><p>The report must include recommendations on how to change the grant programs to (1) increase nurse faculty in underserved areas, (2) provide more pathways for experienced nurses to become faculty at schools of nursing, and (3) support pathways for licensed practical nurses to become registered nurses.</p>",
+            "updateDate": "2026-09-01T19:48:10Z",
+            "versionCode": "00"
+        }
+    ]
+}

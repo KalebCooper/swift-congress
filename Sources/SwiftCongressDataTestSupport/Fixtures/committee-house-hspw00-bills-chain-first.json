@@ -1,0 +1,559 @@
+{
+    "committee-bills": {
+        "bills": [
+            {
+                "actionDate": "2007-01-22T17:34:25Z",
+                "congress": 110,
+                "number": "40",
+                "relationshipType": "Referred To",
+                "type": "HCONRES",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hconres/40?format=json"
+            },
+            {
+                "actionDate": "2007-05-02T14:57:02Z",
+                "congress": 110,
+                "number": "124",
+                "relationshipType": "Markup By",
+                "type": "HCONRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hconres/124?format=json"
+            },
+            {
+                "actionDate": "2007-05-02T14:58:12Z",
+                "congress": 110,
+                "number": "79",
+                "relationshipType": "Markup By",
+                "type": "HCONRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hconres/79?format=json"
+            },
+            {
+                "actionDate": "2007-05-02T14:57:35Z",
+                "congress": 110,
+                "number": "123",
+                "relationshipType": "Markup By",
+                "type": "HCONRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hconres/123?format=json"
+            },
+            {
+                "actionDate": "2007-05-09T14:01:10Z",
+                "congress": 110,
+                "number": "146",
+                "relationshipType": "Referred To",
+                "type": "HCONRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hconres/146?format=json"
+            },
+            {
+                "actionDate": "2007-05-02T14:59:03Z",
+                "congress": 110,
+                "number": "352",
+                "relationshipType": "Markup By",
+                "type": "HRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hres/352?format=json"
+            },
+            {
+                "actionDate": "2007-05-01T14:33:50Z",
+                "congress": 110,
+                "number": "354",
+                "relationshipType": "Referred To",
+                "type": "HRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hres/354?format=json"
+            },
+            {
+                "actionDate": "2007-04-26T14:00:48Z",
+                "congress": 110,
+                "number": "339",
+                "relationshipType": "Referred To",
+                "type": "HRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hres/339?format=json"
+            },
+            {
+                "actionDate": "2007-04-26T14:04:00Z",
+                "congress": 110,
+                "number": "343",
+                "relationshipType": "Referred To",
+                "type": "HRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hres/343?format=json"
+            },
+            {
+                "actionDate": "2007-03-29T14:10:05Z",
+                "congress": 110,
+                "number": "286",
+                "relationshipType": "Referred To",
+                "type": "HRES",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hres/286?format=json"
+            },
+            {
+                "actionDate": "2007-05-09T14:03:15Z",
+                "congress": 110,
+                "number": "386",
+                "relationshipType": "Referred To",
+                "type": "HRES",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hres/386?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:37:38Z",
+                "congress": 110,
+                "number": "342",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/342?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:38:39Z",
+                "congress": 110,
+                "number": "430",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/430?format=json"
+            },
+            {
+                "actionDate": "2007-01-12T14:01:20Z",
+                "congress": 110,
+                "number": "461",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/461?format=json"
+            },
+            {
+                "actionDate": "2007-01-10T15:01:40Z",
+                "congress": 110,
+                "number": "384",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/384?format=json"
+            },
+            {
+                "actionDate": "2007-01-17T15:05:35Z",
+                "congress": 110,
+                "number": "535",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/535?format=json"
+            },
+            {
+                "actionDate": "2007-01-10T15:04:00Z",
+                "congress": 110,
+                "number": "389",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/389?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:37:55Z",
+                "congress": 110,
+                "number": "399",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/399?format=json"
+            },
+            {
+                "actionDate": "2007-01-11T15:02:31Z",
+                "congress": 110,
+                "number": "409",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/409?format=json"
+            },
+            {
+                "actionDate": "2007-01-16T17:33:45Z",
+                "congress": 110,
+                "number": "494",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/494?format=json"
+            },
+            {
+                "actionDate": "2007-01-24T15:04:20Z",
+                "congress": 110,
+                "number": "670",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/670?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:38:21Z",
+                "congress": 110,
+                "number": "429",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/429?format=json"
+            },
+            {
+                "actionDate": "2007-01-24T15:05:10Z",
+                "congress": 110,
+                "number": "680",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/680?format=json"
+            },
+            {
+                "actionDate": "2007-01-29T19:02:35Z",
+                "congress": 110,
+                "number": "700",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/700?format=json"
+            },
+            {
+                "actionDate": "2007-01-17T15:05:25Z",
+                "congress": 110,
+                "number": "534",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/534?format=json"
+            },
+            {
+                "actionDate": "2007-01-17T15:07:05Z",
+                "congress": 110,
+                "number": "544",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/544?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:15:07Z",
+                "congress": 110,
+                "number": "720",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/720?format=json"
+            },
+            {
+                "actionDate": "2007-01-19T15:01:15Z",
+                "congress": 110,
+                "number": "587",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/587?format=json"
+            },
+            {
+                "actionDate": "2007-01-24T15:00:45Z",
+                "congress": 110,
+                "number": "651",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/651?format=json"
+            },
+            {
+                "actionDate": "2007-01-18T15:02:50Z",
+                "congress": 110,
+                "number": "574",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/574?format=json"
+            },
+            {
+                "actionDate": "2007-01-22T17:34:35Z",
+                "congress": 110,
+                "number": "617",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/617?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:39:28Z",
+                "congress": 110,
+                "number": "584",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/584?format=json"
+            },
+            {
+                "actionDate": "2007-03-01T18:53:45Z",
+                "congress": 110,
+                "number": "735",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/735?format=json"
+            },
+            {
+                "actionDate": "2007-03-20T16:11:31Z",
+                "congress": 110,
+                "number": "802",
+                "relationshipType": "Reported By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/802?format=json"
+            },
+            {
+                "actionDate": "2007-01-18T15:03:15Z",
+                "congress": 110,
+                "number": "553",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/553?format=json"
+            },
+            {
+                "actionDate": "2007-01-11T15:02:26Z",
+                "congress": 110,
+                "number": "408",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/408?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:19:14Z",
+                "congress": 110,
+                "number": "569",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/569?format=json"
+            },
+            {
+                "actionDate": "2007-02-05T19:02:10Z",
+                "congress": 110,
+                "number": "805",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/805?format=json"
+            },
+            {
+                "actionDate": "2007-02-06T15:31:45Z",
+                "congress": 110,
+                "number": "862",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/862?format=json"
+            },
+            {
+                "actionDate": "2007-02-05T19:03:40Z",
+                "congress": 110,
+                "number": "801",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/801?format=json"
+            },
+            {
+                "actionDate": "2007-01-16T17:34:25Z",
+                "congress": 110,
+                "number": "478",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/478?format=json"
+            },
+            {
+                "actionDate": "2007-01-30T15:30:54Z",
+                "congress": 110,
+                "number": "734",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/734?format=json"
+            },
+            {
+                "actionDate": "2007-01-24T15:06:50Z",
+                "congress": 110,
+                "number": "693",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/693?format=json"
+            },
+            {
+                "actionDate": "2007-01-30T15:32:35Z",
+                "congress": 110,
+                "number": "723",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/723?format=json"
+            },
+            {
+                "actionDate": "2007-02-08T15:05:20Z",
+                "congress": 110,
+                "number": "955",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/955?format=json"
+            },
+            {
+                "actionDate": "2007-03-26T18:05:00Z",
+                "congress": 110,
+                "number": "753",
+                "relationshipType": "Reported By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/753?format=json"
+            },
+            {
+                "actionDate": "2007-01-22T17:33:50Z",
+                "congress": 110,
+                "number": "626",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/626?format=json"
+            },
+            {
+                "actionDate": "2007-02-14T15:03:15Z",
+                "congress": 110,
+                "number": "1052",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1052?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:27:33Z",
+                "congress": 110,
+                "number": "799",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/799?format=json"
+            },
+            {
+                "actionDate": "2007-03-12T23:26:04Z",
+                "congress": 110,
+                "number": "1045",
+                "relationshipType": "Reported By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1045?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T15:05:00Z",
+                "congress": 110,
+                "number": "889",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/889?format=json"
+            },
+            {
+                "actionDate": "2007-02-16T13:11:35Z",
+                "congress": 110,
+                "number": "1125",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1125?format=json"
+            },
+            {
+                "actionDate": "2007-02-08T15:00:15Z",
+                "congress": 110,
+                "number": "909",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/909?format=json"
+            },
+            {
+                "actionDate": "2007-02-07T14:26:19Z",
+                "congress": 110,
+                "number": "798",
+                "relationshipType": "Markup By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/798?format=json"
+            },
+            {
+                "actionDate": "2007-03-22T00:21:02Z",
+                "congress": 110,
+                "number": "1195",
+                "relationshipType": "Reported By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1195?format=json"
+            },
+            {
+                "actionDate": "2007-02-16T13:07:35Z",
+                "congress": 110,
+                "number": "1181",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1181?format=json"
+            },
+            {
+                "actionDate": "2007-02-13T14:04:35Z",
+                "congress": 110,
+                "number": "1033",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1033?format=json"
+            },
+            {
+                "actionDate": "2007-03-01T15:06:25Z",
+                "congress": 110,
+                "number": "1300",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:39Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1300?format=json"
+            },
+            {
+                "actionDate": "2007-03-26T18:15:00Z",
+                "congress": 110,
+                "number": "1019",
+                "relationshipType": "Reported By",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:40Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/1019?format=json"
+            },
+            {
+                "actionDate": "2007-02-06T15:33:20Z",
+                "congress": 110,
+                "number": "858",
+                "relationshipType": "Referred To",
+                "type": "HR",
+                "updateDate": "2015-12-07T16:53:38Z",
+                "url": "https://api.congress.gov/v3/bill/110/hr/858?format=json"
+            }
+        ],
+        "count": 109,
+        "url": "https://api.congress.gov/v3/committee/house/hspw00/bills?format=json"
+    },
+    "pagination": {
+        "count": 109,
+        "next": "https://api.congress.gov/v3/committee/house/hspw00/bills?fromDateTime=2015-12-07T16:53:38Z&toDateTime=2015-12-07T16:53:40Z&offset=60&limit=60&format=json"
+    },
+    "request": {
+        "chamber": "house",
+        "committeeUrl": "https://api.congress.gov/v3/committee/house/hspw00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hspw00"
+    }
+}

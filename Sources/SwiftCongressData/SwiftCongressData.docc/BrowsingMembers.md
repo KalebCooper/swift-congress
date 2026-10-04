@@ -15,8 +15,8 @@ print(detail.member.directOrderName ?? detail.member.bioguideId)
 
 ## Browse the member inventories
 
-``CongressDataClient/memberPages(matching:)`` yields page receipts and
-``CongressDataClient/members(matching:)`` yields list records. Each loop below reads
+`CongressDataClient.memberPages(matching:)` yields page receipts and
+`CongressDataClient.members(matching:)` yields list records. Each loop below reads
 a bounded prefix; without the `break`, a loop fetches every page of the inventory,
 one request per page.
 
@@ -38,6 +38,9 @@ for try await member in client.members(matching: query) {
 `/v3/member/congress/{n}` inventory. The API returns the members it publishes for a
 scope; this library asserts nothing about whether that is a complete historical
 membership, and item and page counts can change between requests.
+
+Geographic state, district, and Congress/district routes use `MemberGeographyQuery` with
+those same methods. See <doc:MemberGeography> for their route-specific controls.
 
 ## The currentMember filter is not history
 

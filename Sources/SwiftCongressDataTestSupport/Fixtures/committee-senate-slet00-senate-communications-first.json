@@ -1,0 +1,38 @@
+{
+    "pagination": {
+        "count": 31,
+        "next": "https://api.congress.gov/v3/committee/senate/slet00/senate-communication?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "chamber": "senate",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "slet00"
+    },
+    "senateCommunications": [
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 113,
+            "number": 6935,
+            "referralDate": "2014-09-15",
+            "updateDate": "2019-02-19",
+            "url": "https://api.congress.gov/v3/senate-communication/113/ec/6935?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 105,
+            "number": 189,
+            "referralDate": "1997-01-07",
+            "updateDate": "2015-10-03",
+            "url": "https://api.congress.gov/v3/senate-communication/105/ec/189?format=json"
+        }
+    ]
+}

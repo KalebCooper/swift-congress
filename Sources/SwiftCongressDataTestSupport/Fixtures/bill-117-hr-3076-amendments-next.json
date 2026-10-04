@@ -1,0 +1,134 @@
+{
+    "amendments": [
+        {
+            "congress": 117,
+            "number": "4965",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4965?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4964",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4964?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4963",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:15Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4963?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4962",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:21Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4962?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4961",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:21Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4961?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4959",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4959?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4958",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4958?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4957",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:15Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4957?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4956",
+            "type": "SAMDT",
+            "updateDate": "2022-03-03T05:16:21Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4956?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-03-08",
+                "text": "Proposed amendment SA 4955 withdrawn in Senate. "
+            },
+            "number": "4955",
+            "purpose": "To modify the deadline for the initial report on the operations and financial condition of the United States Postal Service.",
+            "type": "SAMDT",
+            "updateDate": "2022-09-03T00:47:04Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4955?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4952",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4952?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4951",
+            "type": "SAMDT",
+            "updateDate": "2022-09-03T03:18:17Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4951?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4950",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4950?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4949",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4949?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4948",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4948?format=json"
+        },
+        {
+            "congress": 117,
+            "number": "4947",
+            "type": "SAMDT",
+            "updateDate": "2022-03-02T05:16:22Z",
+            "url": "https://api.congress.gov/v3/amendment/117/samdt/4947?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 48,
+        "next": "https://api.congress.gov/v3/bill/117/hr/3076/amendments?offset=32&limit=16&format=json",
+        "prev": "https://api.congress.gov/v3/bill/117/hr/3076/amendments?offset=0&limit=16&format=json"
+    },
+    "request": {
+        "billNumber": "3076",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/3076?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

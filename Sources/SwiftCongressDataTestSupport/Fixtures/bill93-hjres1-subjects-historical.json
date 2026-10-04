@@ -1,0 +1,37 @@
+{
+    "pagination": {
+        "count": 5
+    },
+    "request": {
+        "billNumber": "1",
+        "billType": "hjres",
+        "billUrl": "https://api.congress.gov/v3/bill/93/hjres/1?format=json",
+        "congress": "93",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "subjects": {
+        "legislativeSubjects": [
+            {
+                "name": "Congress",
+                "updateDate": "2013-12-10T19:37:05Z"
+            },
+            {
+                "name": "Congressional joint committees",
+                "updateDate": "2013-12-10T19:37:05Z"
+            },
+            {
+                "name": "Federal budgets",
+                "updateDate": "2013-12-10T19:37:05Z"
+            },
+            {
+                "name": "Government Operations and Politics",
+                "updateDate": "2013-12-10T19:37:05Z"
+            }
+        ],
+        "policyArea": {
+            "name": "Economics and Public Finance",
+            "updateDate": "2013-12-10T19:37:05Z"
+        }
+    }
+}

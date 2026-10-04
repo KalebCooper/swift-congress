@@ -1,0 +1,45 @@
+{
+    "committees": [
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Committee on Printing",
+            "systemCode": "jspr00",
+            "updateDate": "2025-01-03T20:48:17Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jspr00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Committee on the Library",
+            "systemCode": "jslc00",
+            "updateDate": "2025-01-03T20:48:17Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jslc00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Commission or Caucus",
+            "name": "Commission on Security and Cooperation in Europe (U.S. Helsinki Commission)",
+            "systemCode": "jcse00",
+            "updateDate": "2025-01-03T20:48:16Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jcse00?format=json"
+        },
+        {
+            "chamber": "Joint",
+            "committeeTypeCode": "Joint",
+            "name": "Joint Economic Committee",
+            "systemCode": "jsec00",
+            "updateDate": "2025-01-03T20:48:16Z",
+            "url": "https://api.congress.gov/v3/committee/joint/jsec00?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 9,
+        "prev": "https://api.congress.gov/v3/committee/119/joint?offset=0&limit=5&format=json"
+    },
+    "request": {
+        "chamber": "joint",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

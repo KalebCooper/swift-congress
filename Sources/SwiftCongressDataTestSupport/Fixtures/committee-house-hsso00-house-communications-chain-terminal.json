@@ -1,0 +1,74 @@
+{
+    "houseCommunications": [
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 117,
+            "number": 4951,
+            "referralDate": "2022-07-27",
+            "updateDate": "2022-07-28",
+            "url": "https://api.congress.gov/v3/house-communication/117/ec/4951?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 119,
+            "number": 1438,
+            "referralDate": "2025-07-16",
+            "updateDate": "2026-04-19",
+            "url": "https://api.congress.gov/v3/house-communication/119/ec/1438?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 4997,
+            "referralDate": "2024-07-26",
+            "updateDate": "2026-04-17",
+            "url": "https://api.congress.gov/v3/house-communication/118/ec/4997?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 1411,
+            "referralDate": "2023-07-18",
+            "updateDate": "2026-04-17",
+            "url": "https://api.congress.gov/v3/house-communication/118/ec/1411?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 119,
+            "number": 4093,
+            "referralDate": "2026-07-15",
+            "updateDate": "2026-07-16",
+            "url": "https://api.congress.gov/v3/house-communication/119/ec/4093?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 15,
+        "prev": "https://api.congress.gov/v3/committee/house/hsso00/house-communication?offset=5&limit=5&format=json"
+    },
+    "request": {
+        "chamber": "house",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hsso00"
+    }
+}

@@ -1,0 +1,187 @@
+{
+    "cosponsors": [
+        {
+            "bioguideId": "C001113",
+            "firstName": "Catherine",
+            "fullName": "Sen. Cortez Masto, Catherine [D-NV]",
+            "isOriginalCosponsor": false,
+            "lastName": "Cortez Masto",
+            "party": "D",
+            "sponsorshipDate": "2022-02-15",
+            "state": "NV",
+            "url": "https://api.congress.gov/v3/member/C001113?format=json"
+        },
+        {
+            "bioguideId": "B001310",
+            "firstName": "Mike",
+            "fullName": "Sen. Braun, Mike [R-IN]",
+            "isOriginalCosponsor": false,
+            "lastName": "Braun",
+            "party": "R",
+            "sponsorshipDate": "2022-02-15",
+            "state": "IN",
+            "url": "https://api.congress.gov/v3/member/B001310?format=json"
+        },
+        {
+            "bioguideId": "W000790",
+            "firstName": "Raphael",
+            "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+            "isOriginalCosponsor": false,
+            "lastName": "Warnock",
+            "middleName": "G.",
+            "party": "D",
+            "sponsorshipDate": "2022-02-28",
+            "state": "GA",
+            "url": "https://api.congress.gov/v3/member/W000790?format=json"
+        },
+        {
+            "bioguideId": "R000584",
+            "firstName": "James",
+            "fullName": "Sen. Risch, James E. [R-ID]",
+            "isOriginalCosponsor": false,
+            "lastName": "Risch",
+            "middleName": "E.",
+            "party": "R",
+            "sponsorshipDate": "2022-02-28",
+            "state": "ID",
+            "url": "https://api.congress.gov/v3/member/R000584?format=json"
+        },
+        {
+            "bioguideId": "B001267",
+            "firstName": "Michael",
+            "fullName": "Sen. Bennet, Michael F. [D-CO]",
+            "isOriginalCosponsor": false,
+            "lastName": "Bennet",
+            "party": "D",
+            "sponsorshipDate": "2022-02-28",
+            "state": "CO",
+            "url": "https://api.congress.gov/v3/member/B001267?format=json"
+        },
+        {
+            "bioguideId": "C001096",
+            "firstName": "Kevin",
+            "fullName": "Sen. Cramer, Kevin [R-ND]",
+            "isOriginalCosponsor": false,
+            "lastName": "Cramer",
+            "party": "R",
+            "sponsorshipDate": "2022-02-28",
+            "state": "ND",
+            "url": "https://api.congress.gov/v3/member/C001096?format=json"
+        },
+        {
+            "bioguideId": "W000779",
+            "firstName": "Ron",
+            "fullName": "Sen. Wyden, Ron [D-OR]",
+            "isOriginalCosponsor": false,
+            "lastName": "Wyden",
+            "party": "D",
+            "sponsorshipDate": "2022-02-28",
+            "state": "OR",
+            "url": "https://api.congress.gov/v3/member/W000779?format=json"
+        },
+        {
+            "bioguideId": "B000575",
+            "firstName": "Roy",
+            "fullName": "Sen. Blunt, Roy [R-MO]",
+            "isOriginalCosponsor": false,
+            "lastName": "Blunt",
+            "party": "R",
+            "sponsorshipDate": "2022-02-28",
+            "state": "MO",
+            "url": "https://api.congress.gov/v3/member/B000575?format=json"
+        },
+        {
+            "bioguideId": "V000128",
+            "firstName": "Chris",
+            "fullName": "Sen. Van Hollen, Chris [D-MD]",
+            "isOriginalCosponsor": false,
+            "lastName": "Van Hollen",
+            "party": "D",
+            "sponsorshipDate": "2022-03-03",
+            "state": "MD",
+            "url": "https://api.congress.gov/v3/member/V000128?format=json"
+        },
+        {
+            "bioguideId": "B001236",
+            "firstName": "John",
+            "fullName": "Sen. Boozman, John [R-AR]",
+            "isOriginalCosponsor": false,
+            "lastName": "Boozman",
+            "party": "R",
+            "sponsorshipDate": "2022-03-03",
+            "state": "AR",
+            "url": "https://api.congress.gov/v3/member/B001236?format=json"
+        },
+        {
+            "bioguideId": "P000145",
+            "firstName": "Alex",
+            "fullName": "Sen. Padilla, Alex [D-CA]",
+            "isOriginalCosponsor": false,
+            "lastName": "Padilla",
+            "party": "D",
+            "sponsorshipDate": "2022-03-10",
+            "state": "CA",
+            "url": "https://api.congress.gov/v3/member/P000145?format=json"
+        },
+        {
+            "bioguideId": "F000463",
+            "firstName": "Deb",
+            "fullName": "Sen. Fischer, Deb [R-NE]",
+            "isOriginalCosponsor": false,
+            "lastName": "Fischer",
+            "party": "R",
+            "sponsorshipDate": "2022-03-10",
+            "state": "NE",
+            "url": "https://api.congress.gov/v3/member/F000463?format=json"
+        },
+        {
+            "bioguideId": "H000273",
+            "firstName": "John",
+            "fullName": "Sen. Hickenlooper, John W. [D-CO]",
+            "isOriginalCosponsor": false,
+            "lastName": "Hickenlooper",
+            "middleName": "W.",
+            "party": "D",
+            "sponsorshipDate": "2022-03-15",
+            "state": "CO",
+            "url": "https://api.congress.gov/v3/member/H000273?format=json"
+        },
+        {
+            "bioguideId": "H000601",
+            "firstName": "Bill",
+            "fullName": "Sen. Hagerty, Bill [R-TN]",
+            "isOriginalCosponsor": false,
+            "lastName": "Hagerty",
+            "party": "R",
+            "sponsorshipDate": "2022-03-15",
+            "sponsorshipWithdrawnDate": "2022-03-21",
+            "state": "TN",
+            "url": "https://api.congress.gov/v3/member/H000601?format=json"
+        },
+        {
+            "bioguideId": "C000127",
+            "firstName": "Maria",
+            "fullName": "Sen. Cantwell, Maria [D-WA]",
+            "isOriginalCosponsor": false,
+            "lastName": "Cantwell",
+            "party": "D",
+            "sponsorshipDate": "2022-03-24",
+            "state": "WA",
+            "url": "https://api.congress.gov/v3/member/C000127?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 30,
+        "countIncludingWithdrawnCosponsors": 31,
+        "next": "https://api.congress.gov/v3/bill/117/s/3580/cosponsors?offset=30&limit=15&format=json",
+        "prev": "https://api.congress.gov/v3/bill/117/s/3580/cosponsors?offset=0&limit=15&format=json"
+    },
+    "request": {
+        "billNumber": "3580",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/117/s/3580?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

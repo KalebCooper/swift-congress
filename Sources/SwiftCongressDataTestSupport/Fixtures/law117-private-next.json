@@ -1,0 +1,35 @@
+{
+    "bills": [
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-12-27",
+                "text": "Became Private Law No: 117-1."
+            },
+            "laws": [
+                {
+                    "number": "117-1",
+                    "type": "Private Law"
+                }
+            ],
+            "number": "681",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "For the relief of Rebecca Trimble.",
+            "type": "HR",
+            "updateDate": "2025-04-07",
+            "updateDateIncludingText": "2025-04-07",
+            "url": "https://api.congress.gov/v3/bill/117/hr/681?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 3,
+        "next": "https://api.congress.gov/v3/law/117/priv?offset=2&limit=1&format=json",
+        "prev": "https://api.congress.gov/v3/law/117/priv?offset=0&limit=1&format=json"
+    },
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

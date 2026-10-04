@@ -8,6 +8,8 @@ public struct Bill: Codable, Hashable, Sendable {
   public let introducedDate: String?
   /// The source `latestAction` value; absent or null values remain nil.
   public let latestAction: BillAction?
+  /// Source law citations in provider order; missing or null remains nil.
+  public let laws: [BillLawReference]?
   /// The source `legislationUrl` value; absent or null values remain nil.
   public let legislationUrl: String?
   /// The source `number` value.
@@ -37,6 +39,7 @@ public struct Bill: Codable, Hashable, Sendable {
     congress = try c.decode(Int.self, forKey: .congress)
     introducedDate = try c.decodeIfPresent(String.self, forKey: .introducedDate)
     latestAction = try c.decodeIfPresent(BillAction.self, forKey: .latestAction)
+    laws = try c.decodeIfPresent([BillLawReference].self, forKey: .laws)
     legislationUrl = try c.decodeIfPresent(String.self, forKey: .legislationUrl)
     number = try c.decode(String.self, forKey: .number)
     originChamber = try c.decodeIfPresent(String.self, forKey: .originChamber)
@@ -56,6 +59,7 @@ public struct Bill: Codable, Hashable, Sendable {
     case congress
     case introducedDate
     case latestAction
+    case laws
     case legislationUrl
     case number
     case originChamber

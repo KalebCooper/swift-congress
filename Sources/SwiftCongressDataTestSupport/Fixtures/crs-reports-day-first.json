@@ -1,0 +1,62 @@
+{
+    "CRSReports": [
+        {
+            "contentType": "Resources",
+            "id": "IF10199",
+            "publishDate": "2026-06-30T04:00:00Z",
+            "status": "Active",
+            "title": "U.S.-Japan Relations",
+            "updateDate": "2026-10-03T16:53:27Z",
+            "url": "https://api.congress.gov/v3/crsreport/IF10199",
+            "version": 41
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49457",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Measuring Housing Affordability",
+            "updateDate": "2026-10-03T16:08:51Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49457",
+            "version": 1
+        },
+        {
+            "contentType": "Reports",
+            "id": "R48568",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Federal Power Act: The Department of Energy’s Emergency Authority",
+            "updateDate": "2026-10-03T15:57:32Z",
+            "url": "https://api.congress.gov/v3/crsreport/R48568",
+            "version": 1
+        },
+        {
+            "contentType": "Reports",
+            "id": "RS21852",
+            "publishDate": "2026-09-30T04:00:00Z",
+            "status": "Active",
+            "title": "The United Arab Emirates (UAE): Issues for U.S. Policy",
+            "updateDate": "2026-10-03T15:53:35Z",
+            "url": "https://api.congress.gov/v3/crsreport/RS21852",
+            "version": 153
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49436",
+            "publishDate": "2026-09-29T04:00:00Z",
+            "status": "Active",
+            "title": "Digital Health Information Interoperability: Background and Selected Policy Considerations",
+            "updateDate": "2026-10-03T13:38:25Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49436",
+            "version": 1
+        }
+    ],
+    "pagination": {
+        "count": 9,
+        "next": "https://api.congress.gov/v3/crsreport?fromDateTime=2026-10-03T00:00:00Z&toDateTime=2026-10-04T00:00:00Z&offset=5&limit=5&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -19,6 +19,81 @@ beyond these recorded bills, or beyond the members the API publishes, is claimed
 null values, and historical source identifiers are preserved throughout. No historical completeness,
 stable snapshot, freshness, availability, or identity matching is guaranteed.
 
+Bill summary versions and the publication feed are implemented with raw HTML, open version codes,
+separate bill/feed records, and lazy pages and items. Feed scopes include all bills, one Congress,
+and one Congress/bill type. Omitted dates retain the provider's recent-day default; use finite
+windows for backfills. See [bill summaries](Sources/SwiftCongressData/SwiftCongressData.docc/BillSummaries.md).
+
+Bill cosponsors retain original flags, sponsorship and withdrawal dates, and both active and
+withdrawal-inclusive totals. Lazy traversal follows the inclusive total when published while
+preserving raw metadata. See [bill cosponsors](Sources/SwiftCongressData/SwiftCongressData.docc/BillCosponsors.md).
+
+Bill related records preserve every relationship authority and duplicate row. Legislative subjects
+and their separate policy areas retain source vocabulary and raw counts. Committee associations
+include ordered activities and nested subcommittees without fetching linked profiles. Each route
+provides typed requests/endpoints, lazy pages/items, and exact receipts. See
+[bill associations](Sources/SwiftCongressData/SwiftCongressData.docc/BillAssociations.md).
+
+Committee bill retrieval preserves source relationship labels, action/update dates, string bill
+numbers and separate resource/pagination counts. Typed requests and strict lazy traversal support
+modification windows without fetching linked bill details. See
+[committee bills](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeBills.md).
+
+Committee directories support all, chamber, Congress, and Congress/chamber scopes. Profiles retain
+ordered history, current status, explicit parent/subcommittee references and scoped resource links.
+No profile name, chamber, relationship or continuation is inferred from other fields. See
+[committee directories](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeDirectory.md).
+
+Committee House communication references preserve open type codes and names, separate referral/update
+dates and source links. House-only typed factories reject unsupported chambers before HTTP; strict
+lazy traversal retains ordered duplicates without fetching standalone details. See
+[committee House communications](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeHouseCommunications.md).
+
+Committee nomination references preserve integer numbers, string parts including leading zeroes,
+raw dates, latest actions and civilian/military flags. Senate-only typed factories reject unsupported
+chambers before HTTP; strict lazy traversal retains ordered duplicates without fetching details. See
+[committee nominations](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeNominations.md).
+
+Committee report references preserve integer report numbers and parts, exact citations, open
+source types and raw dates/links. Typed page/window queries and strict lazy traversal retain
+ordered duplicates without fetching report detail or documents. See
+[committee reports](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeReports.md).
+
+Amendment inventories cover three scopes, detail and bill-associated lists, with open codes,
+independent bill/amendment/treaty targets and strict lazy traversal. Source dates, sponsors,
+on-behalf roles, notes and resource counts remain separate. No nested resource or text asset is
+fetched automatically. See [amendments](Sources/SwiftCongressData/SwiftCongressData.docc/Amendments.md).
+Offline Data demo modes are `--amendments` and `--amendment`.
+
+Standalone committee report inventories support three scopes, optional conference values and date
+windows. Detail retains every ordered report part with separate bill/treaty references; strict
+text traversal preserves nested format links and open errata strings without retrieving assets.
+See [standalone reports](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeReportInventory.md).
+Offline Data demo modes are `--committee-reports`, `--committee-report` and `--committee-report-text`.
+
+Committee Senate communication references preserve open type codes and names, separate referral/update
+dates and source links. Senate-only typed factories reject unsupported chambers before HTTP; strict
+lazy traversal retains ordered duplicates without fetching standalone details. See
+[committee Senate communications](Sources/SwiftCongressData/SwiftCongressData.docc/CommitteeSenateCommunications.md).
+
+CRS report lists and detail preserve authors, topics, format links, related materials, and separate
+source dates and versions. Typed requests, strict lazy traversal, and exact receipts support
+metadata ingestion without downloading assets. See [CRS reports](Sources/SwiftCongressData/SwiftCongressData.docc/CRSReports.md).
+
+Law inventories and public/private law-number lookup return the originating bill envelopes.
+Typed law lookup keys stay separate from bill identities; `Bill.laws` retains the provider's
+citation numbers and open category labels. See [laws](Sources/SwiftCongressData/SwiftCongressData.docc/Laws.md).
+
+Geographic member browsing supports state/territory, district, and Congress/district routes
+through `MemberGeographyQuery` and the existing member methods. Route-specific controls preserve
+missing districts and redistricting results without inferring historical membership. See
+[member geography](Sources/SwiftCongressData/SwiftCongressData.docc/MemberGeography.md).
+
+Member sponsored and cosponsored legislation have separate page envelopes and lazy traversal.
+Records preserve bill titles and policy areas, and amendment numbers when published. Missing bill
+fields and null amendment types remain missing; no identifier is inferred from a URL.
+See [member legislation](Sources/SwiftCongressData/SwiftCongressData.docc/MemberLegislation.md).
+
 Bioguide supplied-file import verifies bounded profile reads, inventory counts, SHA-256, source IDs,
 and predecessor-body affiliations. A full 13,056-profile official snapshot has passed the importer.
 Historical-service queries match a profile's own positions against Congress, job, and region exactly
@@ -69,6 +144,39 @@ each format's type and raw url. Its Apple live mode accepts `--live` and an expl
 the bill route, unchanged. The demo never supplies a default key and never fetches a format link.
 Deterministic example inputs include `Sources/SwiftCongressDataTestSupport/Fixtures/bill6.json`,
 `member-L000174.json`, `members117-first.json`, and `bill119-text-first.json`.
+Use `--members <path>` with `members-ak-current-first.json`, `members-dc-district0-current.json`,
+or `members118-tx15-historical.json` to inspect geographic inventories in that fixture directory.
+Use `--cosponsors <path>` with `bill117-s3580-cosponsors-next.json` in that fixture directory
+to inspect source names, original flags, district values, sponsorship and withdrawal dates,
+and both active and withdrawal-inclusive totals.
+Use `--related-bills <path>`, `--subjects <path>`, or `--committees <path>` with
+`bill119-s5-related-first.json`, `bill119-s5-subjects-first.json`, or
+`bill117-hr3076-committees-first.json` to inspect authorities, policy areas, and committee activities.
+Use `--committee-bills <path>` with `committee-house-hspw00-bills-chain-terminal.json`
+to inspect source bill relationships, dates, links and separate nested/pagination counts.
+Use `--committee-directory <path>` with `committee-directory-congress-119-joint-chain-first.json`,
+or `--committee <path>` with `committee-118-house-hspw00.json`, to inspect directory metadata,
+profile history and relationship/resource counts. The `--committees` mode still reads bill associations.
+Use `--committee-house-communications <path>` with
+`committee-house-hsso00-house-communications-chain-first.json` to inspect original communication
+identity, type, name, chamber, separate dates and links.
+Use `--committee-nominations <path>` with `committee-senate-slia00-nominations-chain-first.json`
+to inspect nomination numbers, unchanged parts, citations, dates and links.
+Use `--committee-report-references <path>` with `committee-house-hspw00-reports-chain-terminal.json`
+to inspect report parts, citations, source dates and links.
+Use `--committee-senate-communications <path>` with
+`committee-senate-slet00-senate-communications-chain-first.json` to inspect original communication
+identity, type, name, chamber, separate dates and links.
+Use `--crs-report <path>` with `crs-report-r47175.json`, or `--crs-reports <path>` with
+`crs-reports-day-first.json`, to inspect compact report metadata without printing entire summaries.
+Use `--law <path>` with `law119-public1.json` or `law93-public1.json`, and `--laws <path>`
+with `law117-private-first.json`, to inspect originating bill identities and source law citations.
+The same demo accepts `--summaries <path>` and `--summary-updates <path>` for recorded summary
+pages, printing source HTML and version metadata. Inputs include `bill119-summaries-first.json`
+and `summary-updates-window-unsorted-first.json` in that fixture directory.
+Use `--sponsored-legislation <path>` or `--cosponsored-legislation <path>` with
+`member-c001136-sponsored-legislation-first.json` or
+`member-l000174-cosponsored-legislation-discovery.json` to inspect bill and amendment rows.
 
 `Examples/CongressBioguideDemo` validates every profile in a staged export directory. Prepare a
 supplied official all-profile ZIP with `Scripts/prepare-bioguide.py`; provide the actual retrieval

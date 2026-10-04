@@ -1,0 +1,34 @@
+{
+    "bills": [
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2023-01-05",
+                "text": "Became Private Law No: 117-3."
+            },
+            "laws": [
+                {
+                    "number": "117-3",
+                    "type": "Private Law"
+                }
+            ],
+            "number": "680",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "For the relief of Arpita Kurdekar, Girish Kurdekar, and Vandana Kurdekar.",
+            "type": "HR",
+            "updateDate": "2026-08-10",
+            "updateDateIncludingText": "2026-08-10",
+            "url": "https://api.congress.gov/v3/bill/117/hr/680?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 3,
+        "next": "https://api.congress.gov/v3/law/117/priv?offset=1&limit=1&format=json"
+    },
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

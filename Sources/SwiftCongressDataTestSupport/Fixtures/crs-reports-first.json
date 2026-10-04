@@ -1,0 +1,32 @@
+{
+    "CRSReports": [
+        {
+            "contentType": "Resources",
+            "id": "IF10199",
+            "publishDate": "2026-06-30T04:00:00Z",
+            "status": "Active",
+            "title": "U.S.-Japan Relations",
+            "updateDate": "2026-10-03T16:53:27Z",
+            "url": "https://api.congress.gov/v3/crsreport/IF10199",
+            "version": 41
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49457",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Measuring Housing Affordability",
+            "updateDate": "2026-10-03T16:08:51Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49457",
+            "version": 1
+        }
+    ],
+    "pagination": {
+        "count": 14162,
+        "next": "https://api.congress.gov/v3/crsreport?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

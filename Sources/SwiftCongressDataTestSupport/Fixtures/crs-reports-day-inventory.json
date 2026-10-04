@@ -1,0 +1,101 @@
+{
+    "CRSReports": [
+        {
+            "contentType": "Resources",
+            "id": "IF10199",
+            "publishDate": "2026-06-30T04:00:00Z",
+            "status": "Active",
+            "title": "U.S.-Japan Relations",
+            "updateDate": "2026-10-03T16:53:27Z",
+            "url": "https://api.congress.gov/v3/crsreport/IF10199",
+            "version": 41
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49457",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Measuring Housing Affordability",
+            "updateDate": "2026-10-03T16:08:51Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49457",
+            "version": 1
+        },
+        {
+            "contentType": "Reports",
+            "id": "R48568",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Federal Power Act: The Department of Energy’s Emergency Authority",
+            "updateDate": "2026-10-03T15:57:32Z",
+            "url": "https://api.congress.gov/v3/crsreport/R48568",
+            "version": 1
+        },
+        {
+            "contentType": "Reports",
+            "id": "RS21852",
+            "publishDate": "2026-09-30T04:00:00Z",
+            "status": "Active",
+            "title": "The United Arab Emirates (UAE): Issues for U.S. Policy",
+            "updateDate": "2026-10-03T15:53:35Z",
+            "url": "https://api.congress.gov/v3/crsreport/RS21852",
+            "version": 153
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49436",
+            "publishDate": "2026-09-29T04:00:00Z",
+            "status": "Active",
+            "title": "Digital Health Information Interoperability: Background and Selected Policy Considerations",
+            "updateDate": "2026-10-03T13:38:25Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49436",
+            "version": 1
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49432",
+            "publishDate": "2026-09-30T04:00:00Z",
+            "status": "Active",
+            "title": "Online Scam Centers in Southeast Asia: Background and U.S. Responses",
+            "updateDate": "2026-10-03T13:08:25Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49432",
+            "version": 1
+        },
+        {
+            "contentType": "Reports",
+            "id": "R45546",
+            "publishDate": "2026-10-01T04:00:00Z",
+            "status": "Active",
+            "title": "Management of the Colorado River: Water Allocations, Drought, and the Federal Role",
+            "updateDate": "2026-10-03T12:22:58Z",
+            "url": "https://api.congress.gov/v3/crsreport/R45546",
+            "version": 42
+        },
+        {
+            "contentType": "Reports",
+            "id": "R49477",
+            "publishDate": "2026-10-02T04:00:00Z",
+            "status": "Active",
+            "title": "Classwide Scheduling of Controlled Substances",
+            "updateDate": "2026-10-03T11:08:01Z",
+            "url": "https://api.congress.gov/v3/crsreport/R49477",
+            "version": 1
+        },
+        {
+            "contentType": "Resources",
+            "id": "IF12892",
+            "publishDate": "2026-10-02T04:00:00Z",
+            "status": "Active",
+            "title": "Prevailing Wage Requirements for H-1B, H-1B1, and E-3 Workers in Specialty Occupations",
+            "updateDate": "2026-10-03T10:08:04Z",
+            "url": "https://api.congress.gov/v3/crsreport/IF12892",
+            "version": 4
+        }
+    ],
+    "pagination": {
+        "count": 9
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,591 @@
+{
+    "nominations": [
+        {
+            "citation": "PN1022-10",
+            "congress": 119,
+            "description": "Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Roselyn Tso, resigned.",
+            "latestAction": {
+                "actionDate": "2026-08-07",
+                "text": "Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1022,
+            "partNumber": "10",
+            "receivedDate": "2026-06-01",
+            "updateDate": "2026-08-08T15:49:45Z",
+            "url": "https://api.congress.gov/v3/nomination/119/1022-10?format=json"
+        },
+        {
+            "citation": "PN129-13",
+            "congress": 119,
+            "description": "John Simermeyer, of North Carolina, to be Chairman of the National Indian Gaming Commission for the term of three years, vice E. Sequoyah Simermeyer, term expired.",
+            "latestAction": {
+                "actionDate": "2025-06-16",
+                "text": "Received message of withdrawal of nomination from the President."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 129,
+            "partNumber": "13",
+            "receivedDate": "2025-04-29",
+            "updateDate": "2025-06-17T11:00:20Z",
+            "url": "https://api.congress.gov/v3/nomination/119/129-13?format=json"
+        },
+        {
+            "citation": "PN22-14",
+            "congress": 119,
+            "description": "William Kirkland, of Georgia, to be an Assistant Secretary of the Interior, vice Bryan Todd Newland, resigned.",
+            "latestAction": {
+                "actionDate": "2025-10-07",
+                "text": "Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 22,
+            "partNumber": "14",
+            "receivedDate": "2025-02-03",
+            "updateDate": "2026-01-06T19:18:04Z",
+            "url": "https://api.congress.gov/v3/nomination/119/22-14?format=json"
+        },
+        {
+            "citation": "PN1983",
+            "congress": 118,
+            "description": "Patrice H. Kunesh, of Minnesota, to be Chairman of the National Indian Gaming Commission for the term of three years, vice E. Sequoyah Simermeyer, term expired.",
+            "latestAction": {
+                "actionDate": "2025-01-03",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1983,
+            "partNumber": "00",
+            "receivedDate": "2024-07-23",
+            "updateDate": "2026-04-15T15:29:56Z",
+            "url": "https://api.congress.gov/v3/nomination/118/1983?format=json"
+        },
+        {
+            "citation": "PN1840",
+            "congress": 117,
+            "description": "Roselyn Tso, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Michael D. Weahkee.",
+            "latestAction": {
+                "actionDate": "2022-09-21",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1840,
+            "partNumber": "00",
+            "receivedDate": "2022-03-10",
+            "updateDate": "2023-09-08T17:10:40Z",
+            "url": "https://api.congress.gov/v3/nomination/117/1840?format=json"
+        },
+        {
+            "citation": "PN457",
+            "congress": 117,
+            "description": "Bryan Todd Newland, of Michigan, to be an Assistant Secretary of the Interior, vice Tara Sweeney.",
+            "latestAction": {
+                "actionDate": "2021-08-07",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 457,
+            "partNumber": "00",
+            "receivedDate": "2021-04-27",
+            "updateDate": "2021-08-08T04:12:26Z",
+            "url": "https://api.congress.gov/v3/nomination/117/457?format=json"
+        },
+        {
+            "citation": "PN1250",
+            "congress": 116,
+            "description": "Michael D. Weahkee, of New Mexico, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Yvette Roubideaux, term expired.",
+            "latestAction": {
+                "actionDate": "2020-04-21",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1250,
+            "partNumber": "00",
+            "receivedDate": "2019-10-30",
+            "updateDate": "2019-10-31T04:40:28Z",
+            "url": "https://api.congress.gov/v3/nomination/116/1250?format=json"
+        },
+        {
+            "citation": "PN901",
+            "congress": 116,
+            "description": "E. Sequoyah Simermeyer, of Maryland, to be Chairman of the National Indian Gaming Commission for the term of three years, vice Jonodev Osceola Chaudhuri, term expired.",
+            "latestAction": {
+                "actionDate": "2019-11-21",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 901,
+            "partNumber": "00",
+            "receivedDate": "2019-06-26",
+            "updateDate": "2019-11-22T05:55:41Z",
+            "url": "https://api.congress.gov/v3/nomination/116/901?format=json"
+        },
+        {
+            "citation": "PN1180",
+            "congress": 115,
+            "description": "Robert M. Weaver, of Oklahoma, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Yvette Roubideaux, term expired.",
+            "latestAction": {
+                "actionDate": "2018-02-27",
+                "text": "Received message of withdrawal of nomination from the President."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1180,
+            "partNumber": "00",
+            "receivedDate": "2017-10-24",
+            "updateDate": "2019-10-23T21:31:15Z",
+            "url": "https://api.congress.gov/v3/nomination/115/1180?format=json"
+        },
+        {
+            "citation": "PN1179",
+            "congress": 115,
+            "description": "Tara Sweeney, of Alaska, to be an Assistant Secretary of the Interior, vice Kevin K. Washburn, resigned.",
+            "latestAction": {
+                "actionDate": "2018-06-28",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1179,
+            "partNumber": "00",
+            "receivedDate": "2017-10-24",
+            "updateDate": "2019-10-23T21:31:15Z",
+            "url": "https://api.congress.gov/v3/nomination/115/1179?format=json"
+        },
+        {
+            "citation": "PN59",
+            "congress": 114,
+            "description": "Jonodev Osceola Chaudhuri, of Arizona, to be Chairman of the National Indian Gaming Commission for the term of three years, vice Tracie Stevens.",
+            "latestAction": {
+                "actionDate": "2015-04-16",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 59,
+            "partNumber": "00",
+            "receivedDate": "2015-01-08",
+            "updateDate": "2017-03-31T20:19:54Z",
+            "url": "https://api.congress.gov/v3/nomination/114/59?format=json"
+        },
+        {
+            "citation": "PN1923",
+            "congress": 113,
+            "description": "Jonodev Osceola Chaudhuri, of Arizona, to be Chairman of the National Indian Gaming Commission for the term of three years, vice Tracie Stevens.",
+            "latestAction": {
+                "actionDate": "2014-12-17",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1923,
+            "partNumber": "00",
+            "receivedDate": "2014-07-22",
+            "updateDate": "2019-10-23T20:28:16Z",
+            "url": "https://api.congress.gov/v3/nomination/113/1923?format=json"
+        },
+        {
+            "citation": "PN1177",
+            "congress": 113,
+            "description": "Vincent G. Logan, of New York, to be Special Trustee, Office of Special Trustee for American Indians, Department of the Interior, vice Ross Owen Swimmer, resigned.",
+            "latestAction": {
+                "actionDate": "2014-06-26",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1177,
+            "partNumber": "00",
+            "receivedDate": "2014-01-06",
+            "updateDate": "2019-10-23T20:27:45Z",
+            "url": "https://api.congress.gov/v3/nomination/113/1177?format=json"
+        },
+        {
+            "citation": "PN1176",
+            "congress": 113,
+            "description": "Yvette Roubideaux, of Maryland, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years. (Reappointment)",
+            "latestAction": {
+                "actionDate": "2014-12-17",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1176,
+            "partNumber": "00",
+            "receivedDate": "2014-01-06",
+            "updateDate": "2019-10-23T20:27:45Z",
+            "url": "https://api.congress.gov/v3/nomination/113/1176?format=json"
+        },
+        {
+            "citation": "PN340",
+            "congress": 113,
+            "description": "Yvette Roubideaux, of Maryland, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years. (Reappointment)",
+            "latestAction": {
+                "actionDate": "2014-01-03",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 340,
+            "partNumber": "00",
+            "receivedDate": "2013-04-23",
+            "updateDate": "2019-10-23T20:27:09Z",
+            "url": "https://api.congress.gov/v3/nomination/113/340?format=json"
+        },
+        {
+            "citation": "PN175",
+            "congress": 113,
+            "description": "Vincent G. Logan, of New York, to be Special Trustee, Office of Special Trustee for American Indians, Department of the Interior, vice Ross Owen Swimmer, resigned.",
+            "latestAction": {
+                "actionDate": "2014-01-03",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 175,
+            "partNumber": "00",
+            "receivedDate": "2013-02-27",
+            "updateDate": "2019-10-23T20:27:00Z",
+            "url": "https://api.congress.gov/v3/nomination/113/175?format=json"
+        },
+        {
+            "citation": "PN1967",
+            "congress": 112,
+            "description": "Vincent G. Logan, of New York, to be Special Trustee, Office of Special Trustee for American Indians, Department of the Interior, vice Ross Owen Swimmer, resigned.",
+            "latestAction": {
+                "actionDate": "2013-01-03",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1967,
+            "partNumber": "00",
+            "receivedDate": "2012-09-21",
+            "updateDate": "2019-02-17T12:04:25Z",
+            "url": "https://api.congress.gov/v3/nomination/112/1967?format=json"
+        },
+        {
+            "citation": "PN1877",
+            "congress": 112,
+            "description": "Kevin K. Washburn, of New Mexico, to be an Assistant Secretary of the Interior, vice Larry J. Echo Hawk, resigned.",
+            "latestAction": {
+                "actionDate": "2012-09-22",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1877,
+            "partNumber": "00",
+            "receivedDate": "2012-08-02",
+            "updateDate": "2019-02-17T12:04:18Z",
+            "url": "https://api.congress.gov/v3/nomination/112/1877?format=json"
+        },
+        {
+            "citation": "PN1820",
+            "congress": 112,
+            "description": "Bidtah N. Becker, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2018, vice Perry R. Eaton, term expired.",
+            "latestAction": {
+                "actionDate": "2013-01-03",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1820,
+            "partNumber": "00",
+            "receivedDate": "2012-07-17",
+            "updateDate": "2019-02-17T12:04:15Z",
+            "url": "https://api.congress.gov/v3/nomination/112/1820?format=json"
+        },
+        {
+            "citation": "PN415",
+            "congress": 112,
+            "description": "Deborah Downing Goodman, of Oklahoma, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring October 18, 2014, vice Jeanne Givens, term expired.",
+            "latestAction": {
+                "actionDate": "2011-08-02",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 415,
+            "partNumber": "00",
+            "receivedDate": "2011-04-08",
+            "updateDate": "2019-02-17T12:02:51Z",
+            "url": "https://api.congress.gov/v3/nomination/112/415?format=json"
+        },
+        {
+            "citation": "PN416",
+            "congress": 112,
+            "description": "Cynthia Chavez Lamar, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2016.  (Reappointment)",
+            "latestAction": {
+                "actionDate": "2011-08-02",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 416,
+            "partNumber": "00",
+            "receivedDate": "2011-04-08",
+            "updateDate": "2019-02-17T12:02:51Z",
+            "url": "https://api.congress.gov/v3/nomination/112/416?format=json"
+        },
+        {
+            "citation": "PN414",
+            "congress": 112,
+            "description": "Barbara Jeanne Ells, of Colorado, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring October 18, 2016, vice Lisa Genevieve Nason, term expired.",
+            "latestAction": {
+                "actionDate": "2011-08-02",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 414,
+            "partNumber": "00",
+            "receivedDate": "2011-04-08",
+            "updateDate": "2019-02-17T12:02:51Z",
+            "url": "https://api.congress.gov/v3/nomination/112/414?format=json"
+        },
+        {
+            "citation": "PN1731",
+            "congress": 111,
+            "description": "Tracie Stevens, of Washington, to be Chairman of the National Indian Gaming Commission for the term of three years, vice Philip N. Hogen, resigned.",
+            "latestAction": {
+                "actionDate": "2010-06-22",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1731,
+            "partNumber": "00",
+            "receivedDate": "2010-04-29",
+            "updateDate": "2017-04-17T20:55:25Z",
+            "url": "https://api.congress.gov/v3/nomination/111/1731?format=json"
+        },
+        {
+            "citation": "PN1358",
+            "congress": 111,
+            "description": "JoAnn Lynn Balzer, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2012, vice Letitia Chambers, term expired.",
+            "latestAction": {
+                "actionDate": "2010-06-22",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1358,
+            "partNumber": "00",
+            "receivedDate": "2010-01-20",
+            "updateDate": "2017-04-17T20:50:56Z",
+            "url": "https://api.congress.gov/v3/nomination/111/1358?format=json"
+        },
+        {
+            "citation": "PN1357",
+            "congress": 111,
+            "description": "Cynthia Chavez Lamar, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2010, vice Allen E. Carrier.",
+            "latestAction": {
+                "actionDate": "2010-06-22",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1357,
+            "partNumber": "00",
+            "receivedDate": "2010-01-20",
+            "updateDate": "2017-04-17T20:50:56Z",
+            "url": "https://api.congress.gov/v3/nomination/111/1357?format=json"
+        },
+        {
+            "citation": "PN1112",
+            "congress": 111,
+            "description": "Lillian A. Sparks, of Maryland, to be Commissioner of the Administration for Native Americans, Department of Health and Human Services, vice Quanah Crossland Stamps, resigned.",
+            "latestAction": {
+                "actionDate": "2010-03-03",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1112,
+            "partNumber": "00",
+            "receivedDate": "2009-10-22",
+            "updateDate": "2017-04-17T20:48:55Z",
+            "url": "https://api.congress.gov/v3/nomination/111/1112?format=json"
+        },
+        {
+            "citation": "PN325",
+            "congress": 111,
+            "description": "Larry J. Echo Hawk, of Utah, to be an Assistant Secretary of the Interior, vice Carl Joseph Artman, resigned.",
+            "latestAction": {
+                "actionDate": "2009-05-19",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 325,
+            "partNumber": "00",
+            "receivedDate": "2009-04-20",
+            "updateDate": "2017-04-17T20:40:40Z",
+            "url": "https://api.congress.gov/v3/nomination/111/325?format=json"
+        },
+        {
+            "citation": "PN251",
+            "congress": 111,
+            "description": "Yvette Roubideaux, of Arizona, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Robert G. McSwain, resigned.",
+            "latestAction": {
+                "actionDate": "2009-05-06",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 251,
+            "partNumber": "00",
+            "receivedDate": "2009-03-26",
+            "updateDate": "2017-04-17T20:40:03Z",
+            "url": "https://api.congress.gov/v3/nomination/111/251?format=json"
+        },
+        {
+            "citation": "PN1167",
+            "congress": 110,
+            "description": "Robert G. McSwain, of Maryland, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Charles W. Grim, resigned.",
+            "latestAction": {
+                "actionDate": "2008-04-29",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1167,
+            "partNumber": "00",
+            "receivedDate": "2007-12-19",
+            "updateDate": "2017-04-17T22:03:10Z",
+            "url": "https://api.congress.gov/v3/nomination/110/1167?format=json"
+        },
+        {
+            "citation": "PN580",
+            "congress": 110,
+            "description": "Charles W. Grim, of Oklahoma, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years.  (Reappointment)",
+            "latestAction": {
+                "actionDate": "2007-09-04",
+                "text": "Received message of withdrawal of nomination from the President."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 580,
+            "partNumber": "00",
+            "receivedDate": "2007-05-21",
+            "updateDate": "2017-04-17T21:57:09Z",
+            "url": "https://api.congress.gov/v3/nomination/110/580?format=json"
+        },
+        {
+            "citation": "PN250",
+            "congress": 110,
+            "description": "Perry R. Eaton, of Alaska, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2012, vice A. David Lester, term expired.",
+            "latestAction": {
+                "actionDate": "2007-10-04",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 250,
+            "partNumber": "00",
+            "receivedDate": "2007-02-12",
+            "updateDate": "2017-04-17T21:53:54Z",
+            "url": "https://api.congress.gov/v3/nomination/110/250?format=json"
+        },
+        {
+            "citation": "PN249",
+            "congress": 110,
+            "description": "Sonya Kelliher-Combs, of Alaska, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2008, vice Michael A. Naranjo, term expired.",
+            "latestAction": {
+                "actionDate": "2007-10-04",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 249,
+            "partNumber": "00",
+            "receivedDate": "2007-02-12",
+            "updateDate": "2017-04-17T21:53:54Z",
+            "url": "https://api.congress.gov/v3/nomination/110/249?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 96,
+        "next": "https://api.congress.gov/v3/committee/senate/slia00/nominations?offset=32&limit=32&format=json"
+    },
+    "request": {
+        "chamber": "senate",
+        "committeeUrl": "https://api.congress.gov/v3/committee/senate/slia00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "slia00"
+    }
+}

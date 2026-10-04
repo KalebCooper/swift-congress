@@ -1,0 +1,26 @@
+{
+    "committee": {
+        "history": [
+            {
+                "committeeTypeCode": "Commission or Caucus",
+                "endDate": "2023-07-01T03:59:00Z",
+                "establishingAuthority": "116 PL 136",
+                "libraryOfCongressName": "Congressional Oversight Commission",
+                "locLinkedDataId": "no2021068631",
+                "officialName": "Congressional Oversight Commission",
+                "startDate": "2020-03-27T04:00:00Z",
+                "updateDate": "2026-02-02T14:59:16Z"
+            }
+        ],
+        "isCurrent": false,
+        "systemCode": "jcov00",
+        "type": "Commission or Caucus",
+        "updateDate": "2026-02-18T18:41:09Z"
+    },
+    "request": {
+        "chamber": "joint",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "jcov00"
+    }
+}

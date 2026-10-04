@@ -1,6 +1,6 @@
 # ``SwiftCongressData``
 
-Discover Congresses and retrieve bill records, actions, text-version metadata, and members
+Discover Congresses and retrieve bill records, actions, committees, cosponsors, related bills, subjects, summaries, law inventories and lookup, text-version metadata, CRS reports, and members
 through Congress.gov.
 
 ## Overview
@@ -88,9 +88,63 @@ each record's rawFields. Source overlap is not independent corroboration.
 - ``CongressPageSequence``
 - ``CongressItemSequence``
 
+### Amendments
+
+- <doc:Amendments>
+
+### Bill associations
+
+- <doc:BillAssociations>
+
+### Bill cosponsors
+
+- <doc:BillCosponsors>
+
+### Bill summaries
+
+- <doc:BillSummaries>
+
+### Committee bills
+
+- <doc:CommitteeBills>
+
+### Committee directories
+
+- <doc:CommitteeDirectory>
+
+### Committee House communication references
+
+- <doc:CommitteeHouseCommunications>
+
+### Committee nomination references
+
+- <doc:CommitteeNominations>
+
+### Committee report inventories and detail
+
+- <doc:CommitteeReportInventory>
+
+### Committee report references
+
+- <doc:CommitteeReports>
+
+### Committee Senate communication references
+
+- <doc:CommitteeSenateCommunications>
+
+### CRS reports
+
+- <doc:CRSReports>
+
+### Laws
+
+- <doc:Laws>
+
 ### Member browsing
 
 - <doc:BrowsingMembers>
+- <doc:MemberGeography>
+- <doc:MemberLegislation>
 
 ### Bill text versions
 

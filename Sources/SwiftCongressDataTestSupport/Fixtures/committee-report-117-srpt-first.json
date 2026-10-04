@@ -1,0 +1,36 @@
+{
+    "pagination": {
+        "count": 286,
+        "next": "https://api.congress.gov/v3/committee-report/117/srpt?offset=2&limit=2&format=json"
+    },
+    "reports": [
+        {
+            "chamber": "Senate",
+            "citation": "S. Rept. 117-1",
+            "cmte_rpt_id": 221113,
+            "congress": 117,
+            "number": 1,
+            "part": 1,
+            "type": "SRPT",
+            "updateDate": "2025-04-07T15:03:50Z",
+            "url": "https://api.congress.gov/v3/committee-report/117/SRPT/1?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "citation": "S. Rept. 117-3",
+            "cmte_rpt_id": 221123,
+            "congress": 117,
+            "number": 3,
+            "part": 1,
+            "type": "SRPT",
+            "updateDate": "2025-04-07T15:03:10Z",
+            "url": "https://api.congress.gov/v3/committee-report/117/SRPT/3?format=json"
+        }
+    ],
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json",
+        "reportType": "srpt"
+    }
+}

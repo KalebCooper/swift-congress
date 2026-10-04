@@ -1,5 +1,6 @@
 // Public execution APIs name Transport and TransportError.
 @_exported import HTTPCore
+import SwiftCongressDataModels
 
 /// A Congress.gov execution failure.
 public enum CongressDataError: Error {
@@ -7,6 +8,8 @@ public enum CongressDataError: Error {
   case decoding
   /// A continuation is missing, invalid, or does not advance the same query.
   case invalidContinuation
+  /// Request input was rejected before any HTTP operation.
+  case invalidInput(CongressInputError)
   /// The networking layer rejected or failed the request, retaining status and headers.
   case transport(TransportError)
 

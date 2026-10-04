@@ -1,0 +1,29 @@
+{
+    "cosponsors": [
+        {
+            "bioguideId": "W000437",
+            "firstName": "Roger",
+            "fullName": "Sen. Wicker, Roger F. [R-MS]",
+            "isOriginalCosponsor": false,
+            "lastName": "Wicker",
+            "middleName": "F.",
+            "party": "R",
+            "sponsorshipDate": "2022-03-24",
+            "state": "MS",
+            "url": "https://api.congress.gov/v3/member/W000437?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 30,
+        "countIncludingWithdrawnCosponsors": 31,
+        "prev": "https://api.congress.gov/v3/bill/117/s/3580/cosponsors?offset=15&limit=15&format=json"
+    },
+    "request": {
+        "billNumber": "3580",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/117/s/3580?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

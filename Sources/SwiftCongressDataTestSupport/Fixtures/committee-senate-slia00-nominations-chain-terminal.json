@@ -1,0 +1,591 @@
+{
+    "nominations": [
+        {
+            "citation": "PN1210",
+            "congress": 104,
+            "description": "Michael A. Naranjo, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2002, vice Beatrice Rivas Sanchez, term expired.",
+            "latestAction": {
+                "actionDate": "1996-10-04",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1210,
+            "partNumber": "00",
+            "receivedDate": "1996-07-24",
+            "updateDate": "2017-04-18T05:48:17Z",
+            "url": "https://api.congress.gov/v3/nomination/104/1210?format=json"
+        },
+        {
+            "citation": "PN1185",
+            "congress": 104,
+            "description": "Barbara Blum, of the District of Columbia, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2002. (Reappointment)",
+            "latestAction": {
+                "actionDate": "1996-10-04",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1185,
+            "partNumber": "00",
+            "receivedDate": "1996-06-28",
+            "updateDate": "2017-04-18T05:47:10Z",
+            "url": "https://api.congress.gov/v3/nomination/104/1185?format=json"
+        },
+        {
+            "citation": "PN1113",
+            "congress": 104,
+            "description": "Jeanne Givens, of Idaho, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring October 18, 2002, vice Piestewa Robert Harold Ames, term expiring.",
+            "latestAction": {
+                "actionDate": "1996-10-04",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1113,
+            "partNumber": "00",
+            "receivedDate": "1996-05-23",
+            "updateDate": "2017-04-18T05:45:28Z",
+            "url": "https://api.congress.gov/v3/nomination/104/1113?format=json"
+        },
+        {
+            "citation": "PN546",
+            "congress": 104,
+            "description": "Paul M. Homan, of the District of Columbia, to be Special Trustee, Office of Special Trustee for American Indians, Department of the Interior. (New Position)",
+            "latestAction": {
+                "actionDate": "1995-09-18",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 546,
+            "partNumber": "00",
+            "receivedDate": "1995-07-25",
+            "updateDate": "2017-04-18T05:28:10Z",
+            "url": "https://api.congress.gov/v3/nomination/104/546?format=json"
+        },
+        {
+            "citation": "PN286",
+            "congress": 104,
+            "description": "Catherine Baker Stetson, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for the remainder of the term expiring May 19, 2000, vice LaDonna Harris, resigned.",
+            "latestAction": {
+                "actionDate": "1996-10-04",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 286,
+            "partNumber": "00",
+            "receivedDate": "1995-03-30",
+            "updateDate": "2017-04-18T05:18:56Z",
+            "url": "https://api.congress.gov/v3/nomination/104/286?format=json"
+        },
+        {
+            "citation": "PN89",
+            "congress": 104,
+            "description": "Catherine Baker Stetson, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2000, vice James D. Santini, term expired.",
+            "latestAction": {
+                "actionDate": "1995-03-30",
+                "text": "Received message of withdrawal of nomination from the President."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 89,
+            "partNumber": "00",
+            "receivedDate": "1995-01-05",
+            "updateDate": "2017-04-18T05:06:36Z",
+            "url": "https://api.congress.gov/v3/nomination/104/89?format=json"
+        },
+        {
+            "citation": "PN1931",
+            "congress": 103,
+            "description": "Catherine Baker Stetson, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2000, vice James D. Santini, term expired.",
+            "latestAction": {
+                "actionDate": "1994-12-01",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1931,
+            "partNumber": "00",
+            "receivedDate": "1994-12-01",
+            "updateDate": "2017-04-18T07:45:19Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1931?format=json"
+        },
+        {
+            "citation": "PN1792",
+            "congress": 103,
+            "description": "Catherine Baker Stetson, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2000, vice James D. Santini, term expired.",
+            "latestAction": {
+                "actionDate": "1994-11-14",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1792,
+            "partNumber": "00",
+            "receivedDate": "1994-09-22",
+            "updateDate": "2017-04-18T07:43:37Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1792?format=json"
+        },
+        {
+            "citation": "PN1789",
+            "congress": 103,
+            "description": "Barbara Blum, of the District of Columbia, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for the remainder of the term expiring May 19, 1996, vice Wiley T. Buchanan, resigned.",
+            "latestAction": {
+                "actionDate": "1994-10-04",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1789,
+            "partNumber": "00",
+            "receivedDate": "1994-09-22",
+            "updateDate": "2017-04-18T07:43:36Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1789?format=json"
+        },
+        {
+            "citation": "PN1790",
+            "congress": 103,
+            "description": "LaDonna Harris, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 2000, vice Gail Bird, term expired.",
+            "latestAction": {
+                "actionDate": "1994-10-04",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1790,
+            "partNumber": "00",
+            "receivedDate": "1994-09-22",
+            "updateDate": "2017-04-18T07:43:36Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1790?format=json"
+        },
+        {
+            "citation": "PN1791",
+            "congress": 103,
+            "description": "Loren Kieve, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for the remainder of the term expiring May 19, 1996, vice William Stewart Johnson, resigned.",
+            "latestAction": {
+                "actionDate": "1994-10-04",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1791,
+            "partNumber": "00",
+            "receivedDate": "1994-09-22",
+            "updateDate": "2017-04-18T07:43:37Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1791?format=json"
+        },
+        {
+            "citation": "PN1618",
+            "congress": 103,
+            "description": "Peter J. Osetek, of Arizona, to be Commissioner on Navajo and Hopi Relocation, Office of Navajo and Hopi Indian Relocation, for a term of two years, vice Carl J. Kunasek, term expired.",
+            "latestAction": {
+                "actionDate": "1994-11-14",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1618,
+            "partNumber": "00",
+            "receivedDate": "1994-07-29",
+            "updateDate": "2017-04-18T07:42:01Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1618?format=json"
+        },
+        {
+            "citation": "PN1606",
+            "congress": 103,
+            "description": "Gary Niles Kimble, of Montana, to be Commissioner of the Administration for Native Americans, Department of Health and Human Services. (New Position)",
+            "latestAction": {
+                "actionDate": "1994-10-08",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1606,
+            "partNumber": "00",
+            "receivedDate": "1994-07-27",
+            "updateDate": "2017-04-18T07:41:55Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1606?format=json"
+        },
+        {
+            "citation": "PN1557",
+            "congress": 103,
+            "description": "Harold A. Monteau, of Montana, to be Chairman of the National Indian Gaming Commission for the term of three years, vice Anthony J. Hope, term expired.",
+            "latestAction": {
+                "actionDate": "1994-09-30",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1557,
+            "partNumber": "00",
+            "receivedDate": "1994-07-12",
+            "updateDate": "2017-04-18T07:41:19Z",
+            "url": "https://api.congress.gov/v3/nomination/103/1557?format=json"
+        },
+        {
+            "citation": "PN984",
+            "congress": 103,
+            "description": "Michael H. Trujillo, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services, for a term of four years. (New Position)",
+            "latestAction": {
+                "actionDate": "1994-03-25",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 984,
+            "partNumber": "00",
+            "receivedDate": "1993-11-22",
+            "updateDate": "2017-04-18T07:31:51Z",
+            "url": "https://api.congress.gov/v3/nomination/103/984?format=json"
+        },
+        {
+            "citation": "PN450",
+            "congress": 103,
+            "description": "Ada E. Deer, of Wisconsin, to be an Assistant Secretary of the Interior, vice Eddie F. Brown.",
+            "latestAction": {
+                "actionDate": "1993-07-16",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 450,
+            "partNumber": "00",
+            "receivedDate": "1993-06-30",
+            "updateDate": "2017-04-18T07:24:33Z",
+            "url": "https://api.congress.gov/v3/nomination/103/450?format=json"
+        },
+        {
+            "citation": "PN3",
+            "congress": 103,
+            "description": "Marion G. Chambers, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 1998, vice James Courtney Jennings, term expired.",
+            "latestAction": {
+                "actionDate": "1993-11-29",
+                "text": "Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 3,
+            "partNumber": "00",
+            "receivedDate": "1993-01-05",
+            "updateDate": "2017-04-18T07:15:41Z",
+            "url": "https://api.congress.gov/v3/nomination/103/3?format=json"
+        },
+        {
+            "citation": "PN930",
+            "congress": 102,
+            "description": "Carl J. Kunasek, of Arizona, to be Commissioner on Navajo and Hopi Relocation, Office of Navajo and Hopi Indian Relocation, for a term of two years.(Reappointment)",
+            "latestAction": {
+                "actionDate": "1992-03-24",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 930,
+            "partNumber": "00",
+            "receivedDate": "1992-03-04",
+            "updateDate": "2017-04-18T09:38:42Z",
+            "url": "https://api.congress.gov/v3/nomination/102/930?format=json"
+        },
+        {
+            "citation": "PN736",
+            "congress": 102,
+            "description": "Wiley T. Buchanan, of the District of Columbia, to be a member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 1996, vice Edith Colvard Crutcher, term expired.",
+            "latestAction": {
+                "actionDate": "1991-11-21",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 736,
+            "partNumber": "00",
+            "receivedDate": "1991-10-25",
+            "updateDate": "2017-04-18T09:32:38Z",
+            "url": "https://api.congress.gov/v3/nomination/102/736?format=json"
+        },
+        {
+            "citation": "PN711",
+            "congress": 102,
+            "description": "Piestwa Robert Harold Ames, of California, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring October 18, 1996, vice Herman Agoyo, term expired.",
+            "latestAction": {
+                "actionDate": "1991-11-21",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 711,
+            "partNumber": "00",
+            "receivedDate": "1991-10-17",
+            "updateDate": "2017-04-18T09:32:07Z",
+            "url": "https://api.congress.gov/v3/nomination/102/711?format=json"
+        },
+        {
+            "citation": "PN690",
+            "congress": 102,
+            "description": "A. David Lester, of Colorado, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for the remainder of the term expiring May 19, 1994, vice Irving James Toddy, resigned.",
+            "latestAction": {
+                "actionDate": "1991-11-21",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 690,
+            "partNumber": "00",
+            "receivedDate": "1991-10-15",
+            "updateDate": "2017-04-18T09:31:57Z",
+            "url": "https://api.congress.gov/v3/nomination/102/690?format=json"
+        },
+        {
+            "citation": "PN648",
+            "congress": 102,
+            "description": "William Stewart Johnson, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term expiring May 19, 1996. (Reappointment)",
+            "latestAction": {
+                "actionDate": "1991-11-21",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 648,
+            "partNumber": "00",
+            "receivedDate": "1991-09-19",
+            "updateDate": "2017-04-18T09:31:24Z",
+            "url": "https://api.congress.gov/v3/nomination/102/648?format=json"
+        },
+        {
+            "citation": "PN1192",
+            "congress": 101,
+            "description": "Anthony J. Hope, of California, to be Chairman of the National Indian Gaming Commission for a term of three years. (New Position)",
+            "latestAction": {
+                "actionDate": "1990-05-16",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1192,
+            "partNumber": "00",
+            "receivedDate": "1990-04-19",
+            "updateDate": "2017-04-18T11:47:48Z",
+            "url": "https://api.congress.gov/v3/nomination/101/1192?format=json"
+        },
+        {
+            "citation": "PN1163",
+            "congress": 101,
+            "description": "Carl J. Kunasek, of Arizona, to be Commissioner on Navajo and Hopi Relocation. (New Position)",
+            "latestAction": {
+                "actionDate": "1990-05-22",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1163,
+            "partNumber": "00",
+            "receivedDate": "1990-03-26",
+            "updateDate": "2017-04-18T11:47:30Z",
+            "url": "https://api.congress.gov/v3/nomination/101/1163?format=json"
+        },
+        {
+            "citation": "PN411",
+            "congress": 101,
+            "description": "Eddie F. Brown, of Arizona, to be an Assistant Secretary of the Interior, vice Ross O. Swimmer, resigned.",
+            "latestAction": {
+                "actionDate": "1989-06-21",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 411,
+            "partNumber": "00",
+            "receivedDate": "1989-06-06",
+            "updateDate": "2017-04-18T11:29:30Z",
+            "url": "https://api.congress.gov/v3/nomination/101/411?format=json"
+        },
+        {
+            "citation": "PN1372",
+            "congress": 100,
+            "description": "Thomas A. Thompson, of Montana, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term of years prescribed by Public Law 99-498 of October 17, 1986. (New Position)",
+            "latestAction": {
+                "actionDate": "1988-10-14",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1372,
+            "partNumber": "00",
+            "receivedDate": "1988-09-22",
+            "updateDate": "2017-04-18T14:26:02Z",
+            "url": "https://api.congress.gov/v3/nomination/100/1372?format=json"
+        },
+        {
+            "citation": "PN1360",
+            "congress": 100,
+            "description": "Herman Agoyo, of New Mexico, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term of years prescribed by Public Law 99-498 of October 17, 1986. (New Position)",
+            "latestAction": {
+                "actionDate": "1988-10-14",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1360,
+            "partNumber": "00",
+            "receivedDate": "1988-09-14",
+            "updateDate": "2017-04-18T14:25:28Z",
+            "url": "https://api.congress.gov/v3/nomination/100/1360?format=json"
+        },
+        {
+            "citation": "PN1345",
+            "congress": 100,
+            "description": "Kenneth Blankenship, of North Carolina, to be a Member of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term of years prescribed by Public Law 99-498 of October 17, 1986. (New Position)",
+            "latestAction": {
+                "actionDate": "1988-10-14",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1345,
+            "partNumber": "00",
+            "receivedDate": "1988-09-08",
+            "updateDate": "2017-04-18T14:24:55Z",
+            "url": "https://api.congress.gov/v3/nomination/100/1345?format=json"
+        },
+        {
+            "citation": "PN893",
+            "congress": 100,
+            "description": "The following-named persons to be Members of the Board of Trustees of the Institute of American Indian and Alaska Native Culture and Arts Development for a term of years prescribed by Public Law 99-498 of October 17, 1986 (New Positions): \t\t Gail Bird, of New Mexico \t\t Edith Colvard Crutcher, of Kansas \t\t Roy M. Huhndorf, of Alaska \t\t James Courtney Jennings, of Virginia \t\t William Stewart Johnson, of the District of Columbia \t\t Dwane H. King, of Oklahoma \t\t Alfred H. Qoyawayma, of Arizona \t\t Beatrice Rivas Sanchez, of Michigan \t\t James D. Santini, of Nevada \t\t Irving James Toddy, of Arizona.",
+            "latestAction": {
+                "actionDate": "1988-05-19",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 893,
+            "partNumber": "00",
+            "receivedDate": "1988-03-14",
+            "updateDate": "2017-04-18T14:07:40Z",
+            "url": "https://api.congress.gov/v3/nomination/100/893?format=json"
+        },
+        {
+            "citation": "PN616",
+            "congress": 99,
+            "description": "Ross O. Swimmer, of Oklahoma, to be an Assistant Secretary of the Interior, vice Kenneth L. Smith, resigned.",
+            "latestAction": {
+                "actionDate": "1985-12-04",
+                "text": "Confirmed by the Senate by Voice Vote."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 616,
+            "partNumber": "00",
+            "receivedDate": "1985-09-27",
+            "updateDate": "2017-04-18T16:21:08Z",
+            "url": "https://api.congress.gov/v3/nomination/99/616?format=json"
+        },
+        {
+            "citation": "PN188",
+            "congress": 97,
+            "description": "Kenneth L. Smith, of Oregon, to be an Assistant Secretary of the Interior, vice Thomas W. Fredericks, resigned.",
+            "latestAction": {
+                "actionDate": "1981-05-13",
+                "text": "Confirmed by the Senate by Unanimous Consent."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 188,
+            "partNumber": "00",
+            "receivedDate": "1981-04-14",
+            "updateDate": "2019-06-17T19:41:06Z",
+            "url": "https://api.congress.gov/v3/nomination/97/188?format=json"
+        },
+        {
+            "citation": "PN21",
+            "congress": 97,
+            "description": "Thomas W. Fredericks, of Colorado, to be an Assistant Secretary of the Interior, vice Forrest J. Gerard, resigned, to which office he was appointed during the last recess of the Senate.",
+            "latestAction": {
+                "actionDate": "1981-01-22",
+                "text": "Returned to the President."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 21,
+            "partNumber": "00",
+            "receivedDate": "1981-01-08",
+            "updateDate": "2019-06-17T19:41:05Z",
+            "url": "https://api.congress.gov/v3/nomination/97/21?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 96,
+        "prev": "https://api.congress.gov/v3/committee/senate/slia00/nominations?offset=32&limit=32&format=json"
+    },
+    "request": {
+        "chamber": "senate",
+        "committeeUrl": "https://api.congress.gov/v3/committee/senate/slia00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "slia00"
+    }
+}

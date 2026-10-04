@@ -1,0 +1,23 @@
+{
+    "pagination": {
+        "count": 12,
+        "next": "https://api.congress.gov/v3/bill/119/s/5/subjects?offset=2&limit=1&format=json",
+        "prev": "https://api.congress.gov/v3/bill/119/s/5/subjects?offset=0&limit=1&format=json"
+    },
+    "request": {
+        "billNumber": "5",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/119/s/5?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "subjects": {
+        "legislativeSubjects": [
+            {
+                "name": "Border security and unlawful immigration",
+                "updateDate": "2025-01-10T15:38:18Z"
+            }
+        ]
+    }
+}

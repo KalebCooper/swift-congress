@@ -1,0 +1,89 @@
+{
+    "pagination": {
+        "count": 15,
+        "next": "https://api.congress.gov/v3/member/C001136/sponsored-legislation?offset=10&limit=5&format=json",
+        "prev": "https://api.congress.gov/v3/member/C001136/sponsored-legislation?offset=0&limit=5&format=json"
+    },
+    "request": {
+        "bioguideId": "c001136",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "sponsoredLegislation": [
+        {
+            "congress": 119,
+            "introducedDate": "2025-12-18",
+            "latestAction": {
+                "actionDate": "2025-12-18",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "6845",
+            "policyArea": {
+                "name": "Crime and Law Enforcement"
+            },
+            "title": "S.T.O.P. Illicit Vapes Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/6845?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-10",
+            "latestAction": {
+                "actionDate": "2026-05-14",
+                "text": "Ordered to be Reported (Amended) by Voice Vote."
+            },
+            "number": "5999",
+            "policyArea": {
+                "name": "Armed Forces and National Security"
+            },
+            "title": "To amend title 38, United States Code, to direct the Secretary of Veterans Affairs to furnish an opioid antagonist to a veteran without requiring a prescription or copayment.",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5999?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-11-10",
+            "latestAction": {
+                "actionDate": "2025-11-10",
+                "text": "Referred to the House Committee on Oversight and Government Reform."
+            },
+            "number": "5998",
+            "policyArea": {
+                "name": "Government Operations and Politics"
+            },
+            "title": "To provide for the continued operation of the Hatch Act Unit of the Office of Special Counsel during a lapse in appropriations, and for other purposes.",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5998?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-26",
+            "latestAction": {
+                "actionDate": "2025-09-26",
+                "text": "Referred to the House Committee on Appropriations."
+            },
+            "number": "5568",
+            "policyArea": {
+                "name": "Commerce"
+            },
+            "title": "Funding Small Businesses During Shutdown Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5568?format=json"
+        },
+        {
+            "congress": 119,
+            "introducedDate": "2025-09-11",
+            "latestAction": {
+                "actionDate": "2025-09-11",
+                "text": "Referred to the House Committee on Education and Workforce."
+            },
+            "number": "5308",
+            "policyArea": {
+                "name": "Education"
+            },
+            "title": "Service Starts At Home Act",
+            "type": "HR",
+            "url": "https://api.congress.gov/v3/bill/119/hr/5308?format=json"
+        }
+    ]
+}

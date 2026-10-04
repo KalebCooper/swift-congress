@@ -1,0 +1,53 @@
+{
+    "members": [
+        {
+            "bioguideId": "G000581",
+            "depiction": {
+                "attribution": "Congressional Pictorial Directory",
+                "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg"
+            },
+            "district": 34,
+            "name": "Gonzalez, Vicente",
+            "partyName": "Democratic",
+            "state": "Texas",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2017
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:28Z",
+            "url": "https://api.congress.gov/v3/member/G000581?format=json"
+        },
+        {
+            "bioguideId": "D000594",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/66d9fd54f440bf1dc174fbf6_200.jpg"
+            },
+            "district": 15,
+            "name": "De La Cruz, Monica",
+            "partyName": "Republican",
+            "state": "Texas",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2023
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:27Z",
+            "url": "https://api.congress.gov/v3/member/D000594?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 2
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

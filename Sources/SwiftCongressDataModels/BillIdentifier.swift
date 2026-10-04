@@ -1,11 +1,23 @@
 /// Invalid Congress.gov request input.
 public enum CongressInputError: Error, Hashable, Sendable {
+  /// An amendment key has an invalid Congress, code, or number.
+  case invalidAmendmentIdentifier
   /// A bill identifier has an invalid Congress, code, or number.
   case invalidBillIdentifier
+  /// A committee code is empty or is not a safe path component.
+  case invalidCommitteeIdentifier
+  /// A committee report key has an invalid Congress, code, or number.
+  case invalidCommitteeReportIdentifier
+  /// A CRS report identifier is empty or is not a safe path component.
+  case invalidCRSReportIdentifier
+  /// A law lookup has an invalid Congress or law number.
+  case invalidLawIdentifier
   /// A member identifier is empty or is not a safe path component.
   case invalidMemberIdentifier
   /// A query contains an invalid page size, offset, or Congress.
   case invalidQuery
+  /// The requested committee subresource does not support this chamber.
+  case unsupportedCommitteeResource
 }
 
 /// A source-numbered bill identity. Early surrogate identifiers use BillSourceIdentifier.

@@ -1,0 +1,34 @@
+{
+    "bills": [
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-12-27",
+                "text": "Became Private Law No: 117-2."
+            },
+            "laws": [
+                {
+                    "number": "117-2",
+                    "type": "Private Law"
+                }
+            ],
+            "number": "785",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "For the relief of Maria Isabel Bueso Barrera, Alberto Bueso Mendoza, and Karla Maria Barrera De Bueso.",
+            "type": "HR",
+            "updateDate": "2026-09-08",
+            "updateDateIncludingText": "2026-09-08",
+            "url": "https://api.congress.gov/v3/bill/117/hr/785?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 3,
+        "prev": "https://api.congress.gov/v3/law/117/priv?offset=1&limit=1&format=json"
+    },
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

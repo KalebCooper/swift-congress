@@ -1,0 +1,55 @@
+{
+    "pagination": {
+        "count": 4,
+        "prev": "https://api.congress.gov/v3/bill/119/s/5/relatedbills?offset=0&limit=2&format=json"
+    },
+    "relatedBills": [
+        {
+            "congress": 119,
+            "latestAction": {
+                "actionDate": "2025-01-22",
+                "actionTime": "14:07:22",
+                "text": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "number": 53,
+            "relationshipDetails": [
+                {
+                    "identifiedBy": "House",
+                    "type": "Procedurally related"
+                }
+            ],
+            "title": "Providing for consideration of the bill (H.R. 471) to expedite under the National Environmental Policy Act of 1969 and improve forest management activities on National Forest System lands, on public lands under the jurisdiction of the Bureau of Land Management, and on Tribal lands to return resilience to overgrown, fire-prone forested lands, and for other purposes, and providing for consideration of the bill (S. 5) to require the Secretary of Homeland Security to take into custody aliens who have been charged in the United States with theft, and for other purposes.",
+            "type": "HRES",
+            "url": "https://api.congress.gov/v3/bill/119/hres/53?format=json"
+        },
+        {
+            "congress": 119,
+            "latestAction": {
+                "actionDate": "2025-01-17",
+                "text": "Read twice and referred to the Committee on the Judiciary."
+            },
+            "number": 149,
+            "relationshipDetails": [
+                {
+                    "identifiedBy": "CRS",
+                    "type": "Public law contains the text"
+                },
+                {
+                    "identifiedBy": "CRS",
+                    "type": "Related bill"
+                }
+            ],
+            "title": "Public Safety First Act",
+            "type": "S",
+            "url": "https://api.congress.gov/v3/bill/119/s/149?format=json"
+        }
+    ],
+    "request": {
+        "billNumber": "5",
+        "billType": "s",
+        "billUrl": "https://api.congress.gov/v3/bill/119/s/5?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

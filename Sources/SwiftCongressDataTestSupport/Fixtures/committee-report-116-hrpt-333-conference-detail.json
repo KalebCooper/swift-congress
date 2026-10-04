@@ -1,0 +1,38 @@
+{
+    "committeeReports": [
+        {
+            "associatedBill": [
+                {
+                    "congress": 116,
+                    "number": "1790",
+                    "type": "S",
+                    "url": "https://api.congress.gov/v3/bill/116/s/1790?format=json"
+                }
+            ],
+            "chamber": "House",
+            "citation": "H. Rept. 116-333",
+            "committees": [],
+            "congress": 116,
+            "isConferenceReport": true,
+            "issueDate": "2019-12-09T05:00:00Z",
+            "number": 333,
+            "part": 1,
+            "reportType": "H.Rept.",
+            "sessionNumber": 1,
+            "text": {
+                "count": 2,
+                "url": "https://api.congress.gov/v3/committee-report/116/hrpt/333/text?format=json"
+            },
+            "title": "NATIONAL DEFENSE AUTHORIZATION ACT FOR FISCAL YEAR 2020",
+            "type": "HRPT",
+            "updateDate": "2025-04-07T15:17:50Z"
+        }
+    ],
+    "request": {
+        "congress": "116",
+        "contentType": "application/json",
+        "format": "json",
+        "reportNumber": "333",
+        "reportType": "hrpt"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "pagination": {
+        "count": 31,
+        "prev": "https://api.congress.gov/v3/committee/senate/slet00/senate-communication?offset=11&limit=11&format=json"
+    },
+    "request": {
+        "chamber": "senate",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "slet00"
+    },
+    "senateCommunications": [
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 2200,
+            "referralDate": "2023-09-20",
+            "updateDate": "2023-09-21",
+            "url": "https://api.congress.gov/v3/senate-communication/118/ec/2200?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 3961,
+            "referralDate": "2024-04-09",
+            "updateDate": "2024-04-10",
+            "url": "https://api.congress.gov/v3/senate-communication/118/ec/3961?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 3962,
+            "referralDate": "2024-04-09",
+            "updateDate": "2024-04-10",
+            "url": "https://api.congress.gov/v3/senate-communication/118/ec/3962?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 5844,
+            "referralDate": "2024-09-09",
+            "updateDate": "2024-09-10",
+            "url": "https://api.congress.gov/v3/senate-communication/118/ec/5844?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 119,
+            "number": 721,
+            "referralDate": "2025-04-04",
+            "updateDate": "2025-04-05",
+            "url": "https://api.congress.gov/v3/senate-communication/119/ec/721?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 119,
+            "number": 1190,
+            "referralDate": "2025-06-24",
+            "updateDate": "2025-06-25",
+            "url": "https://api.congress.gov/v3/senate-communication/119/ec/1190?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 116,
+            "number": 4003,
+            "referralDate": "2020-02-24",
+            "updateDate": "2026-08-10",
+            "url": "https://api.congress.gov/v3/senate-communication/116/ec/4003?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 119,
+            "number": 4423,
+            "referralDate": "2026-09-14",
+            "updateDate": "2026-09-02",
+            "url": "https://api.congress.gov/v3/senate-communication/119/ec/4423?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 118,
+            "number": 4610,
+            "referralDate": "2024-05-20",
+            "updateDate": "2024-05-21",
+            "url": "https://api.congress.gov/v3/senate-communication/118/ec/4610?format=json"
+        }
+    ]
+}

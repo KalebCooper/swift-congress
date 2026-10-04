@@ -1,0 +1,35 @@
+{
+    "pagination": {
+        "count": 1013,
+        "next": "https://api.congress.gov/v3/committee-report/117?conference=false&offset=2&limit=2&format=json"
+    },
+    "reports": [
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 117-1",
+            "cmte_rpt_id": 221046,
+            "congress": 117,
+            "number": 1,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2025-04-07T15:01:30Z",
+            "url": "https://api.congress.gov/v3/committee-report/117/HRPT/1?format=json"
+        },
+        {
+            "chamber": "House",
+            "citation": "H. Rept. 117-2",
+            "cmte_rpt_id": 221049,
+            "congress": 117,
+            "number": 2,
+            "part": 1,
+            "type": "HRPT",
+            "updateDate": "2025-04-07T15:00:29Z",
+            "url": "https://api.congress.gov/v3/committee-report/117/HRPT/2?format=json"
+        }
+    ],
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

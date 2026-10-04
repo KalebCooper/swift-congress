@@ -1,0 +1,31 @@
+{
+    "members": [
+        {
+            "bioguideId": "B001323",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/6774217e0b34857ecc909040_200.jpg"
+            },
+            "name": "Begich, Nicholas J.",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2025
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:20Z",
+            "url": "https://api.congress.gov/v3/member/B001323?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 1
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

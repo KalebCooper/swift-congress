@@ -1,0 +1,43 @@
+{
+    "committeeReports": [
+        {
+            "associatedTreaties": [
+                {
+                    "congress": 117,
+                    "number": 3,
+                    "url": "https://api.congress.gov/v3/treaty/117/3?format=json"
+                }
+            ],
+            "chamber": "Senate",
+            "citation": "Ex. Rept. 117-5",
+            "committees": [
+                {
+                    "name": "Foreign Relations Committee",
+                    "systemCode": "ssfr00",
+                    "url": "https://api.congress.gov/v3/committee/senate/ssfr00?format=json"
+                }
+            ],
+            "congress": 117,
+            "isConferenceReport": false,
+            "issueDate": "2022-07-19T04:00:00Z",
+            "number": 5,
+            "part": 1,
+            "reportType": "Ex.Rept.",
+            "sessionNumber": 2,
+            "text": {
+                "count": 2,
+                "url": "https://api.congress.gov/v3/committee-report/117/erpt/5/text?format=json"
+            },
+            "title": "PROTOCOLS TO THE NORTH ATLANTIC TREATY OF 1949 ON THE ACCESSION OF FINLAND AND SWEDEN",
+            "type": "ERPT",
+            "updateDate": "2025-04-07T15:01:30Z"
+        }
+    ],
+    "request": {
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json",
+        "reportNumber": "5",
+        "reportType": "erpt"
+    }
+}

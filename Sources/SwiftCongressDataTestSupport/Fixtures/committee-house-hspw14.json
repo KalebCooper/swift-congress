@@ -1,0 +1,52 @@
+{
+    "committee": {
+        "bills": {
+            "count": 934,
+            "url": "https://api.congress.gov/v3/committee/house/hspw14/bills?format=json"
+        },
+        "committeeWebsiteUrl": "https://transportation.house.gov/",
+        "communications": {
+            "count": 0,
+            "url": "https://api.congress.gov/v3/committee/house/hspw14/house-communication?format=json"
+        },
+        "history": [
+            {
+                "committeeTypeCode": "Subcommittee",
+                "libraryOfCongressName": "Railroads, Pipelines, and Hazardous Materials",
+                "locLinkedDataId": "no2007108147",
+                "officialName": "House Transportation and Infrastructure Subcommittee on Railroads, Pipelines, and Hazardous Materials",
+                "startDate": "2017-01-03T05:00:00Z",
+                "updateDate": "2024-11-05T19:47:15Z"
+            },
+            {
+                "endDate": "2017-01-03T04:59:00Z",
+                "libraryOfCongressName": "Railroads, Pipelines, and Hazardous Materials",
+                "officialName": "House Transportation and Infrastructure Subcommittee on Railroads, Pipelines, and Hazardous Materials",
+                "startDate": "2007-01-03T05:00:00Z",
+                "updateDate": "2020-02-20T23:58:34Z"
+            },
+            {
+                "endDate": "2007-01-03T04:59:00Z",
+                "libraryOfCongressName": "Railroads",
+                "officialName": "House Transportation and Infrastructure Subcommittee on Railroads",
+                "startDate": "2001-01-01T05:00:00Z",
+                "updateDate": "2020-02-20T23:58:08Z"
+            }
+        ],
+        "isCurrent": true,
+        "parent": {
+            "name": "Transportation and Infrastructure Committee",
+            "systemCode": "hspw00",
+            "url": "https://api.congress.gov/v3/committee/house/hspw00?format=json"
+        },
+        "systemCode": "hspw14",
+        "type": "Subcommittee",
+        "updateDate": "2024-12-04T16:16:38Z"
+    },
+    "request": {
+        "chamber": "house",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hspw14"
+    }
+}

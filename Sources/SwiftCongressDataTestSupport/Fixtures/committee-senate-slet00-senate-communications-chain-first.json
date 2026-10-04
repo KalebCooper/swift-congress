@@ -1,0 +1,146 @@
+{
+    "pagination": {
+        "count": 31,
+        "next": "https://api.congress.gov/v3/committee/senate/slet00/senate-communication?offset=11&limit=11&format=json"
+    },
+    "request": {
+        "chamber": "senate",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "slet00"
+    },
+    "senateCommunications": [
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 113,
+            "number": 6935,
+            "referralDate": "2014-09-15",
+            "updateDate": "2019-02-19",
+            "url": "https://api.congress.gov/v3/senate-communication/113/ec/6935?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 105,
+            "number": 189,
+            "referralDate": "1997-01-07",
+            "updateDate": "2015-10-03",
+            "url": "https://api.congress.gov/v3/senate-communication/105/ec/189?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 114,
+            "number": 371,
+            "referralDate": "2015-01-26",
+            "updateDate": "2016-09-15",
+            "url": "https://api.congress.gov/v3/senate-communication/114/ec/371?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 114,
+            "number": 2658,
+            "referralDate": "2015-09-08",
+            "updateDate": "2016-09-15",
+            "url": "https://api.congress.gov/v3/senate-communication/114/ec/2658?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 114,
+            "number": 1017,
+            "referralDate": "2015-04-13",
+            "updateDate": "2016-09-15",
+            "url": "https://api.congress.gov/v3/senate-communication/114/ec/1017?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "PM",
+                "name": "Presidential Message"
+            },
+            "congress": 96,
+            "number": 150,
+            "referralDate": "1980-01-24",
+            "updateDate": "2017-04-14",
+            "url": "https://api.congress.gov/v3/senate-communication/96/pm/150?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 114,
+            "number": 6676,
+            "referralDate": "2016-09-06",
+            "updateDate": "2016-09-15",
+            "url": "https://api.congress.gov/v3/senate-communication/114/ec/6676?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 96,
+            "number": 4631,
+            "referralDate": "1980-09-15",
+            "updateDate": "2017-04-14",
+            "url": "https://api.congress.gov/v3/senate-communication/96/ec/4631?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 115,
+            "number": 1666,
+            "referralDate": "2017-06-06",
+            "updateDate": "2017-06-06",
+            "url": "https://api.congress.gov/v3/senate-communication/115/ec/1666?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 115,
+            "number": 1667,
+            "referralDate": "2017-06-06",
+            "updateDate": "2017-06-06",
+            "url": "https://api.congress.gov/v3/senate-communication/115/ec/1667?format=json"
+        },
+        {
+            "chamber": "Senate",
+            "communicationType": {
+                "code": "POM",
+                "name": "Petition or Memorial"
+            },
+            "congress": 97,
+            "number": 732,
+            "referralDate": "1982-03-22",
+            "updateDate": "2016-06-11",
+            "url": "https://api.congress.gov/v3/senate-communication/97/pom/732?format=json"
+        }
+    ]
+}

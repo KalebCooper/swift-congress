@@ -1,0 +1,55 @@
+{
+    "bills": [
+        {
+            "congress": 119,
+            "latestAction": {
+                "actionDate": "2026-09-30",
+                "text": "Became Public Law No: 119-118."
+            },
+            "laws": [
+                {
+                    "number": "119-118",
+                    "type": "Public Law"
+                }
+            ],
+            "number": "2398",
+            "originChamber": "Senate",
+            "originChamberCode": "S",
+            "title": "Kay Hagan Tick Reauthorization Act",
+            "type": "S",
+            "updateDate": "2026-10-01",
+            "updateDateIncludingText": "2026-10-01",
+            "url": "https://api.congress.gov/v3/bill/119/s/2398?format=json"
+        },
+        {
+            "congress": 119,
+            "latestAction": {
+                "actionDate": "2026-09-25",
+                "text": "Became Public Law No: 119-117."
+            },
+            "laws": [
+                {
+                    "number": "119-117",
+                    "type": "Public Law"
+                }
+            ],
+            "number": "790",
+            "originChamber": "Senate",
+            "originChamberCode": "S",
+            "title": "A bill to redesignate the National Historic Trails Interpretive Center in Casper, Wyoming, as the \"Barbara L. Cubin National Historic Trails Interpretive Center\".",
+            "type": "S",
+            "updateDate": "2026-10-02",
+            "updateDateIncludingText": "2026-10-02",
+            "url": "https://api.congress.gov/v3/bill/119/s/790?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 118,
+        "next": "https://api.congress.gov/v3/law/119/pub?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

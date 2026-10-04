@@ -1,0 +1,51 @@
+{
+    "nominations": [
+        {
+            "citation": "PN1022-10",
+            "congress": 119,
+            "description": "Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years, vice Roselyn Tso, resigned.",
+            "latestAction": {
+                "actionDate": "2026-08-07",
+                "text": "Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 1022,
+            "partNumber": "10",
+            "receivedDate": "2026-06-01",
+            "updateDate": "2026-08-08T15:49:45Z",
+            "url": "https://api.congress.gov/v3/nomination/119/1022-10?format=json"
+        },
+        {
+            "citation": "PN129-13",
+            "congress": 119,
+            "description": "John Simermeyer, of North Carolina, to be Chairman of the National Indian Gaming Commission for the term of three years, vice E. Sequoyah Simermeyer, term expired.",
+            "latestAction": {
+                "actionDate": "2025-06-16",
+                "text": "Received message of withdrawal of nomination from the President."
+            },
+            "nominationType": {
+                "isCivilian": true,
+                "isMilitary": false
+            },
+            "number": 129,
+            "partNumber": "13",
+            "receivedDate": "2025-04-29",
+            "updateDate": "2025-06-17T11:00:20Z",
+            "url": "https://api.congress.gov/v3/nomination/119/129-13?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 96,
+        "next": "https://api.congress.gov/v3/committee/senate/slia00/nominations?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "chamber": "senate",
+        "committeeUrl": "https://api.congress.gov/v3/committee/senate/slia00?format=json",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "slia00"
+    }
+}

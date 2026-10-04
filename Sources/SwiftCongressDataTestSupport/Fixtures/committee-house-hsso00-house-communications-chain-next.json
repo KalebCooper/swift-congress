@@ -1,0 +1,75 @@
+{
+    "houseCommunications": [
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 116,
+            "number": 1749,
+            "referralDate": "2019-07-23",
+            "updateDate": "2020-09-22",
+            "url": "https://api.congress.gov/v3/house-communication/116/ec/1749?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 116,
+            "number": 4924,
+            "referralDate": "2020-08-07",
+            "updateDate": "2020-09-29",
+            "url": "https://api.congress.gov/v3/house-communication/116/ec/4924?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "PT",
+                "name": "Petition"
+            },
+            "congress": 117,
+            "number": 75,
+            "referralDate": "2021-10-28",
+            "updateDate": "2021-10-29",
+            "url": "https://api.congress.gov/v3/house-communication/117/pt/75?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "PT",
+                "name": "Petition"
+            },
+            "congress": 117,
+            "number": 34,
+            "referralDate": "2021-05-25",
+            "updateDate": "2021-05-26",
+            "url": "https://api.congress.gov/v3/house-communication/117/pt/34?format=json"
+        },
+        {
+            "chamber": "House",
+            "communicationType": {
+                "code": "EC",
+                "name": "Executive Communication"
+            },
+            "congress": 117,
+            "number": 1773,
+            "referralDate": "2021-07-28",
+            "updateDate": "2021-07-29",
+            "url": "https://api.congress.gov/v3/house-communication/117/ec/1773?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 15,
+        "next": "https://api.congress.gov/v3/committee/house/hsso00/house-communication?offset=10&limit=5&format=json",
+        "prev": "https://api.congress.gov/v3/committee/house/hsso00/house-communication?offset=0&limit=5&format=json"
+    },
+    "request": {
+        "chamber": "house",
+        "contentType": "application/json",
+        "format": "json",
+        "systemCode": "hsso00"
+    }
+}

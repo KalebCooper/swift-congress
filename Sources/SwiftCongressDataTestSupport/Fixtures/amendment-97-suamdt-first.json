@@ -1,0 +1,37 @@
+{
+    "amendments": [
+        {
+            "congress": 97,
+            "latestAction": {
+                "actionDate": "1981-02-05",
+                "text": "Ordered to be printed.  SP 2 "
+            },
+            "number": "3",
+            "type": "SUAMDT",
+            "updateDate": "2021-08-14T17:03:55Z",
+            "url": "https://api.congress.gov/v3/amendment/97/suamdt/3?format=json"
+        },
+        {
+            "congress": 97,
+            "latestAction": {
+                "actionDate": "1981-03-05",
+                "text": "Amendment agreed to in Senate by Voice Vote. "
+            },
+            "number": "7",
+            "purpose": "To amend the preamble.",
+            "type": "SUAMDT",
+            "updateDate": "2021-08-13T20:30:58Z",
+            "url": "https://api.congress.gov/v3/amendment/97/suamdt/7?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 1583,
+        "next": "https://api.congress.gov/v3/amendment/97/suamdt?offset=2&limit=2&format=json"
+    },
+    "request": {
+        "amendmentType": "suamdt",
+        "congress": "97",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

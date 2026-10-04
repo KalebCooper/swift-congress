@@ -1,0 +1,54 @@
+{
+    "amendment": {
+        "actions": {
+            "count": 7,
+            "url": "https://api.congress.gov/v3/amendment/117/hamdt/173/actions?format=json"
+        },
+        "amendedBill": {
+            "congress": 117,
+            "number": "3076",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "Postal Service Reform Act of 2022",
+            "type": "HR",
+            "updateDateIncludingText": "2026-01-21",
+            "url": "https://api.congress.gov/v3/bill/117/hr/3076?format=json"
+        },
+        "chamber": "House of Representatives",
+        "congress": 117,
+        "description": "An amendment numbered 1 printed in House Report 117-243 to clarifiy the roles and responsibilities of the Office of Personnel Management, the Social Security Administration, and the Centers for Medicare & Medicaid Services regarding the information postal employees will need to enroll in Medicare Part B; specify that performance standards must be submitted to the Postal Regulatory Commission for each product; and make other technical and conforming changes to the bill.",
+        "latestAction": {
+            "actionDate": "2022-02-08",
+            "actionTime": "15:39:53",
+            "text": "On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote. "
+        },
+        "number": "173",
+        "sponsors": [
+            {
+                "bioguideId": "M000087",
+                "district": 12,
+                "firstName": "CAROLYN",
+                "fullName": "Rep. Maloney, Carolyn B. [D-NY-12]",
+                "lastName": "MALONEY",
+                "middleName": "B.",
+                "party": "D",
+                "state": "NY",
+                "url": "https://api.congress.gov/v3/member/M000087?format=json"
+            }
+        ],
+        "submittedDate": "2022-02-08T05:00:00Z",
+        "textVersions": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/amendment/117/hamdt/173/text?format=json"
+        },
+        "type": "HAMDT",
+        "updateDate": "2022-02-18T16:38:41Z"
+    },
+    "request": {
+        "amendmentNumber": "173",
+        "amendmentType": "hamdt",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

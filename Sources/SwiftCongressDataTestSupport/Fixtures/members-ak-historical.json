@@ -1,0 +1,218 @@
+{
+    "members": [
+        {
+            "bioguideId": "B001323",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/6774217e0b34857ecc909040_200.jpg"
+            },
+            "name": "Begich, Nicholas J.",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2025
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:20Z",
+            "url": "https://api.congress.gov/v3/member/B001323?format=json"
+        },
+        {
+            "bioguideId": "B000315",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/3a61ac7097a7c112c140309a28e9e269_200.jpg"
+            },
+            "name": "Begich, Nicholas",
+            "partyName": "Democratic",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1972,
+                        "startYear": 1971
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:18:57Z",
+            "url": "https://api.congress.gov/v3/member/B000315?format=json"
+        },
+        {
+            "bioguideId": "S000888",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/324f895ee55c610828ab93b67cbba4b9_200.jpg"
+            },
+            "name": "Stevens, Ted",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "endYear": 2009,
+                        "startYear": 1967
+                    }
+                ]
+            },
+            "updateDate": "2026-07-15T11:00:30Z",
+            "url": "https://api.congress.gov/v3/member/S000888?format=json"
+        },
+        {
+            "bioguideId": "S001198",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/s001198_200.jpg"
+            },
+            "name": "Sullivan, Dan",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "startYear": 2015
+                    }
+                ]
+            },
+            "updateDate": "2026-03-08T10:32:48Z",
+            "url": "https://api.congress.gov/v3/member/S001198?format=json"
+        },
+        {
+            "bioguideId": "M001153",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/m001153_200.jpg"
+            },
+            "name": "Murkowski, Lisa",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "startYear": 2002
+                    }
+                ]
+            },
+            "updateDate": "2026-03-08T10:32:09Z",
+            "url": "https://api.congress.gov/v3/member/M001153?format=json"
+        },
+        {
+            "bioguideId": "P000619",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/p000619_200.jpg"
+            },
+            "name": "Peltola, Mary Sattler",
+            "partyName": "Democratic",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2025,
+                        "startYear": 2022
+                    }
+                ]
+            },
+            "updateDate": "2025-01-06T13:15:20Z",
+            "url": "https://api.congress.gov/v3/member/P000619?format=json"
+        },
+        {
+            "bioguideId": "Y000033",
+            "depiction": {
+                "attribution": "Congressional Pictorial Directory",
+                "imageUrl": "https://www.congress.gov/img/member/116_rp_ak_0_young_don_200.jpg"
+            },
+            "name": "Young, Don",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2022,
+                        "startYear": 1973
+                    }
+                ]
+            },
+            "updateDate": "2023-01-26T16:10:43Z",
+            "url": "https://api.congress.gov/v3/member/Y000033?format=json"
+        },
+        {
+            "bioguideId": "B001265",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/b001265_200.jpg"
+            },
+            "name": "Begich, Mark",
+            "partyName": "Democratic",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "endYear": 2015,
+                        "startYear": 2009
+                    }
+                ]
+            },
+            "updateDate": "2022-12-16T21:56:51Z",
+            "url": "https://api.congress.gov/v3/member/B001265?format=json"
+        },
+        {
+            "bioguideId": "M001085",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/m001085_200.jpg"
+            },
+            "name": "Murkowski, Frank H.",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "endYear": 2002,
+                        "startYear": 1981
+                    }
+                ]
+            },
+            "updateDate": "2022-12-16T21:56:51Z",
+            "url": "https://api.congress.gov/v3/member/M001085?format=json"
+        },
+        {
+            "bioguideId": "G000388",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/g000388_200.jpg"
+            },
+            "name": "Gravel, Mike",
+            "partyName": "Democratic",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "endYear": 1981,
+                        "startYear": 1969
+                    }
+                ]
+            },
+            "updateDate": "2022-12-16T21:56:51Z",
+            "url": "https://api.congress.gov/v3/member/G000388?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 10
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

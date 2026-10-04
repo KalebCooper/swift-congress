@@ -1,0 +1,32 @@
+{
+    "members": [
+        {
+            "bioguideId": "M001153",
+            "depiction": {
+                "attribution": "<a href=\"http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm\">Courtesy U.S. Senate Historical Office</a>",
+                "imageUrl": "https://www.congress.gov/img/member/m001153_200.jpg"
+            },
+            "name": "Murkowski, Lisa",
+            "partyName": "Republican",
+            "state": "Alaska",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "Senate",
+                        "startYear": 2002
+                    }
+                ]
+            },
+            "updateDate": "2026-03-08T10:32:09Z",
+            "url": "https://api.congress.gov/v3/member/M001153?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 3,
+        "prev": "https://api.congress.gov/v3/member/AK?currentMember=true&offset=0&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "pagination": {
+        "count": 7,
+        "next": "https://api.congress.gov/v3/summaries?fromDateTime=2026-09-01T00:00:00Z&toDateTime=2026-09-02T00:00:00Z&offset=6&limit=2&format=json",
+        "prev": "https://api.congress.gov/v3/summaries?fromDateTime=2026-09-01T00:00:00Z&toDateTime=2026-09-02T00:00:00Z&offset=2&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "summaries": [
+        {
+            "actionDate": "2025-09-17",
+            "actionDesc": "Introduced in House",
+            "bill": {
+                "congress": 119,
+                "number": "5437",
+                "originChamber": "House",
+                "originChamberCode": "H",
+                "title": "Protection of Lawful Commerce in Stone Slab Products Act",
+                "type": "HR",
+                "updateDateIncludingText": "2026-09-19",
+                "url": "https://api.congress.gov/v3/bill/119/hr/5437?format=json"
+            },
+            "currentChamber": "House",
+            "currentChamberCode": "H",
+            "lastSummaryUpdateDate": "2026-09-01T15:23:36Z",
+            "text": "<p><strong>Protection of Lawful Commerce in Stone Slab Products Act</strong></p><p>This bill prohibits civil actions in federal or state court against manufacturers or sellers of certain stone slab products. The term <em>stone slab product</em> includes a product made with quartz, mineral, crystal, glass, porcelain, or other stone, ceramic or similar material, that has been shipped or transported in interstate or foreign commerce.</p><p>Specifically, the bill prohibits a civil action against a manufacturer or seller of a stone slab product for injuries arising from or related to the fabrication of the stone slab product by another party, including injuries caused by exposure to respirable silica or other substances.</p><p>The bill requires any such civil action that is pending on the date of enactment to be dismissed.</p>",
+            "updateDate": "2026-09-01T15:25:12Z",
+            "versionCode": "00"
+        },
+        {
+            "actionDate": "2025-12-17",
+            "actionDesc": "Introduced in Senate",
+            "bill": {
+                "congress": 119,
+                "number": "3516",
+                "originChamber": "Senate",
+                "originChamberCode": "S",
+                "title": "Stopping Grinch Bots Act of 2025",
+                "type": "S",
+                "updateDateIncludingText": "2026-09-08",
+                "url": "https://api.congress.gov/v3/bill/119/s/3516?format=json"
+            },
+            "currentChamber": "Senate",
+            "currentChamberCode": "S",
+            "lastSummaryUpdateDate": "2026-09-01T14:13:31Z",
+            "text": "<p><strong>Stopping Grinch Bots Act of 2025</strong></p><p>This bill makes it unlawful to use tools such as bots to circumvent a website's&nbsp;security or control measures related to&nbsp;purchasing limits or inventory management.</p><p>Specifically, the bill makes it unlawful to&nbsp;circumvent a security measure, access control system, or other technological control or measure that a website or online service uses to enforce posted purchasing limits or manage inventory.</p><p>The bill also prohibits the sale of certain products or services obtained through such a violation.</p><p>The bill provides for enforcement by the Federal Trade Commission and state attorneys general or other authorized state officers.</p>",
+            "updateDate": "2026-09-01T14:15:41Z",
+            "versionCode": "00"
+        }
+    ]
+}

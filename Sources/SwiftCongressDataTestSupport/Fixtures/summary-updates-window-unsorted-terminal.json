@@ -1,0 +1,32 @@
+{
+    "pagination": {
+        "count": 7,
+        "prev": "https://api.congress.gov/v3/summaries?fromDateTime=2026-09-01T00:00:00Z&toDateTime=2026-09-02T00:00:00Z&offset=4&limit=2&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "summaries": [
+        {
+            "actionDate": "2026-06-16",
+            "actionDesc": "Passed Senate",
+            "bill": {
+                "congress": 119,
+                "number": "444",
+                "originChamber": "Senate",
+                "originChamberCode": "S",
+                "title": "A resolution condemning the dictator of the People's Republic of China, Xi Jinping, for deceit, undermining prospects for peace and security, and orchestrating crimes against humanity.",
+                "type": "SRES",
+                "updateDateIncludingText": "2026-09-01",
+                "url": "https://api.congress.gov/v3/bill/119/sres/444?format=json"
+            },
+            "currentChamber": "Senate",
+            "currentChamberCode": "S",
+            "lastSummaryUpdateDate": "2026-09-01T13:48:30Z",
+            "text": "<p>This resolution condemns China's President, Xi Jinping, for deceit, undermining prospects for peace and security, and orchestrating crimes against humanity.</p><p>The resolution also expresses solidarity with the people of China, and people worldwide, who have endured the consequences of rule by the Chinese Communist Party (CCP) and encourages the application of all applicable sanctions authorities against CCP officials.</p>",
+            "updateDate": "2026-09-01T13:50:55Z",
+            "versionCode": "55"
+        }
+    ]
+}

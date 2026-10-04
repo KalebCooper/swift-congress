@@ -1,0 +1,457 @@
+{
+    "members": [
+        {
+            "bioguideId": "J000294",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/j000294_200.jpg"
+            },
+            "district": 8,
+            "name": "Jeffries, Hakeem S.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2013
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:22Z",
+            "url": "https://api.congress.gov/v3/member/J000294?format=json"
+        },
+        {
+            "bioguideId": "M001188",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/m001188_200.jpg"
+            },
+            "district": 6,
+            "name": "Meng, Grace",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2013
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:22Z",
+            "url": "https://api.congress.gov/v3/member/M001188?format=json"
+        },
+        {
+            "bioguideId": "C001067",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/674dfc6b5c48ff736e6e1762_200.jpg"
+            },
+            "district": 9,
+            "name": "Clarke, Yvette D.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2007
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:22Z",
+            "url": "https://api.congress.gov/v3/member/C001067?format=json"
+        },
+        {
+            "bioguideId": "T000469",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/t000469_200.jpg"
+            },
+            "district": 20,
+            "name": "Tonko, Paul",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 2009
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:22Z",
+            "url": "https://api.congress.gov/v3/member/T000469?format=json"
+        },
+        {
+            "bioguideId": "M001137",
+            "depiction": {
+                "attribution": "Image, Congressional Pictorial Directory, 109th.",
+                "imageUrl": "https://www.congress.gov/img/member/m001137_200.jpg"
+            },
+            "district": 5,
+            "name": "Meeks, Gregory W.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 1997
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:22Z",
+            "url": "https://api.congress.gov/v3/member/M001137?format=json"
+        },
+        {
+            "bioguideId": "V000081",
+            "depiction": {
+                "attribution": "Image courtesy of the Member",
+                "imageUrl": "https://www.congress.gov/img/member/v000081_200.jpg"
+            },
+            "district": 7,
+            "name": "Velázquez, Nydia M.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "startYear": 1993
+                    }
+                ]
+            },
+            "updateDate": "2026-10-04T07:40:22Z",
+            "url": "https://api.congress.gov/v3/member/V000081?format=json"
+        },
+        {
+            "bioguideId": "C000165",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/8e14509770fa97a256c7f3c932f9e192_200.jpg"
+            },
+            "district": 1,
+            "name": "Carney, William",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1987,
+                        "startYear": 1979
+                    }
+                ]
+            },
+            "updateDate": "2026-09-21T20:00:32Z",
+            "url": "https://api.congress.gov/v3/member/C000165?format=json"
+        },
+        {
+            "bioguideId": "D000471",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/51b107d31eb7dc1406d20035648941a7_200.jpg"
+            },
+            "district": 2,
+            "name": "Downey, Thomas J.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1993,
+                        "startYear": 1975
+                    }
+                ]
+            },
+            "updateDate": "2026-09-21T20:00:32Z",
+            "url": "https://api.congress.gov/v3/member/D000471?format=json"
+        },
+        {
+            "bioguideId": "F000440",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/b17fe9e338931f7b4e8d7cacb4c77610_200.jpg"
+            },
+            "district": 13,
+            "name": "Fossella, Vito",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2009,
+                        "startYear": 1997
+                    }
+                ]
+            },
+            "updateDate": "2026-09-14T20:00:37Z",
+            "url": "https://api.congress.gov/v3/member/F000440?format=json"
+        },
+        {
+            "bioguideId": "T000134",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/939f11700b5f5db6dfcc3593f4a84fe1_200.jpg"
+            },
+            "district": 34,
+            "name": "Terry, John",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1973,
+                        "startYear": 1971
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:50:18Z",
+            "url": "https://api.congress.gov/v3/member/T000134?format=json"
+        },
+        {
+            "bioguideId": "R000562",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/f2e6e81a4f4a6c5f82fc3553531af870_200.jpg"
+            },
+            "district": 20,
+            "name": "Ryan, William",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1972,
+                        "startYear": 1961
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:47:11Z",
+            "url": "https://api.congress.gov/v3/member/R000562?format=json"
+        },
+        {
+            "bioguideId": "P000366",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/1ec37e8b09bd9d850b1014b20f607aef_200.jpg"
+            },
+            "district": 32,
+            "name": "Pirnie, Alexander",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1973,
+                        "startYear": 1959
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:44:29Z",
+            "url": "https://api.congress.gov/v3/member/P000366?format=json"
+        },
+        {
+            "bioguideId": "H000085",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/785fbf117be88f4ee6a08d492921ea4a_200.jpg"
+            },
+            "district": 6,
+            "name": "Halpern, Seymour",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1973,
+                        "startYear": 1959
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:32:24Z",
+            "url": "https://api.congress.gov/v3/member/H000085?format=json"
+        },
+        {
+            "bioguideId": "D000462",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/4e9a1fbd0a14f412dba471856d60e9c8_200.jpg"
+            },
+            "district": 27,
+            "name": "Dow, John",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1969,
+                        "startYear": 1965
+                    },
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1973,
+                        "startYear": 1971
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:26:24Z",
+            "url": "https://api.congress.gov/v3/member/D000462?format=json"
+        },
+        {
+            "bioguideId": "C000264",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives <a href=\"http://history.house.gov/Collection/Detail/29007?ret=True\">About this object</a>",
+                "imageUrl": "https://www.congress.gov/img/member/bb80c1b80f1b8c14ba6d9d5d7b5322dc_200.jpg"
+            },
+            "district": 10,
+            "name": "Celler, Emanuel",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1973,
+                        "startYear": 1923
+                    }
+                ]
+            },
+            "updateDate": "2026-09-11T12:23:22Z",
+            "url": "https://api.congress.gov/v3/member/C000264?format=json"
+        },
+        {
+            "bioguideId": "G000547",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/2c0b0f3c219e7811db101d947d2e54b1_200.jpg"
+            },
+            "district": 1,
+            "name": "Grucci, Felix J., Jr.",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2003,
+                        "startYear": 2001
+                    }
+                ]
+            },
+            "updateDate": "2026-08-27T20:00:46Z",
+            "url": "https://api.congress.gov/v3/member/G000547?format=json"
+        },
+        {
+            "bioguideId": "H000814",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/cd375c1d1b0b554995c377c2856cb497_200.jpg"
+            },
+            "district": 29,
+            "name": "Houghton, Amo",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2005,
+                        "startYear": 1987
+                    }
+                ]
+            },
+            "updateDate": "2026-08-19T16:00:50Z",
+            "url": "https://api.congress.gov/v3/member/H000814?format=json"
+        },
+        {
+            "bioguideId": "E000179",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/6d61e15c935a9dccdf6f3f2785c04b6b_200.jpg"
+            },
+            "district": 16,
+            "name": "Engel, Eliot L.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 2021,
+                        "startYear": 1989
+                    }
+                ]
+            },
+            "updateDate": "2026-08-19T16:00:49Z",
+            "url": "https://api.congress.gov/v3/member/E000179?format=json"
+        },
+        {
+            "bioguideId": "M000843",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/852af832fa4160dcdf555a21e60cd885_200.jpg"
+            },
+            "district": 13,
+            "name": "Molinari, Susan",
+            "partyName": "Republican",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1999,
+                        "startYear": 1989
+                    }
+                ]
+            },
+            "updateDate": "2026-07-29T16:00:32Z",
+            "url": "https://api.congress.gov/v3/member/M000843?format=json"
+        },
+        {
+            "bioguideId": "S000124",
+            "depiction": {
+                "attribution": "Collection of the U.S. House of Representatives",
+                "imageUrl": "https://www.congress.gov/img/member/7e670fd18b46ab357b2266777634a548_200.jpg"
+            },
+            "district": 8,
+            "name": "Scheuer, James H.",
+            "partyName": "Democratic",
+            "state": "New York",
+            "terms": {
+                "item": [
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1973,
+                        "startYear": 1965
+                    },
+                    {
+                        "chamber": "House of Representatives",
+                        "endYear": 1993,
+                        "startYear": 1975
+                    }
+                ]
+            },
+            "updateDate": "2026-07-14T11:00:30Z",
+            "url": "https://api.congress.gov/v3/member/S000124?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 179,
+        "next": "https://api.congress.gov/v3/member/NY?currentMember=false&offset=40&limit=20&format=json",
+        "prev": "https://api.congress.gov/v3/member/NY?currentMember=false&offset=0&limit=20&format=json"
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

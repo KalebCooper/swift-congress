@@ -1,0 +1,24 @@
+{
+    "pagination": {
+        "count": 4,
+        "next": "https://api.congress.gov/v3/committee-report/109/hrpt/519/text?offset=1&limit=1&format=json"
+    },
+    "request": {
+        "congress": "109",
+        "contentType": "application/json",
+        "format": "json",
+        "reportNumber": "519",
+        "reportType": "hrpt"
+    },
+    "text": [
+        {
+            "formats": [
+                {
+                    "isErrata": "N",
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/109/crpt/hrpt519/generated/CRPT-109hrpt519-pt1.htm"
+                }
+            ]
+        }
+    ]
+}

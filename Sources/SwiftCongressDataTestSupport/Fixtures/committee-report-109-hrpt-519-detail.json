@@ -1,0 +1,77 @@
+{
+    "committeeReports": [
+        {
+            "associatedBill": [
+                {
+                    "congress": 109,
+                    "number": "5316",
+                    "type": "HR",
+                    "url": "https://api.congress.gov/v3/bill/109/hr/5316?format=json"
+                }
+            ],
+            "chamber": "House",
+            "citation": "H. Rept. 109-519,Part 1",
+            "committees": [
+                {
+                    "name": "Oversight and Government Reform Committee",
+                    "systemCode": "hsgo00",
+                    "url": "https://api.congress.gov/v3/committee/house/hsgo00?format=json"
+                }
+            ],
+            "congress": 109,
+            "isConferenceReport": false,
+            "issueDate": "2006-06-22T04:00:00Z",
+            "number": 519,
+            "part": 1,
+            "reportType": "H.Rept.",
+            "sessionNumber": 2,
+            "text": {
+                "count": 4,
+                "url": "https://api.congress.gov/v3/committee-report/109/hrpt/519/text?format=json"
+            },
+            "title": "RESPOND ACT OF 2006",
+            "type": "HRPT",
+            "updateDate": "2025-04-07T13:31:20Z"
+        },
+        {
+            "associatedBill": [
+                {
+                    "congress": 109,
+                    "number": "5316",
+                    "type": "HR",
+                    "url": "https://api.congress.gov/v3/bill/109/hr/5316?format=json"
+                }
+            ],
+            "chamber": "House",
+            "citation": "H. Rept. 109-519,Part 2",
+            "committees": [
+                {
+                    "name": "Transportation and Infrastructure Committee",
+                    "systemCode": "hspw00",
+                    "url": "https://api.congress.gov/v3/committee/house/hspw00?format=json"
+                }
+            ],
+            "congress": 109,
+            "isConferenceReport": false,
+            "issueDate": "2006-06-22T04:00:00Z",
+            "number": 519,
+            "part": 2,
+            "reportType": "H.Rept.",
+            "sessionNumber": 2,
+            "text": {
+                "count": 4,
+                "url": "https://api.congress.gov/v3/committee-report/109/hrpt/519/text?format=json"
+            },
+            "title": "RESPOND ACT OF 2006",
+            "type": "HRPT",
+            "updateDate": "2025-04-07T13:31:20Z"
+        }
+    ],
+    "request": {
+        "congress": "109",
+        "contentType": "application/json",
+        "format": "json",
+        "reportNumber": "519",
+        "reportType": "hrpt"
+    }
+}
